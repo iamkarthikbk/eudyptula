@@ -1,0 +1,44 @@
+bk@karthik:~/Workspace/eudyptula/task01$ cat task01.c
+#include <linux/module.h> //required for all kernel modules
+#include <linux/kernel.h> //for KERN_INFO
+#include <linux/init.h>   //for __init and __exit macros
+
+MODULE_LICENSE("GNU General Public License v3");
+MODULE_AUTHOR("B K Karthik a24a6bdd6a14");
+MODULE_DESCRIPTION("[a24a6bdd6a14] Task 01 results");
+
+static int __init my_init(void)
+{
+	printk(KERN_INFO "Hello world!");
+	return 0;
+}
+
+static void __exit my_exit(void)
+{
+	printk(KERN_INFO "Exiting [a24a6bdd6a14] Task 01 results");
+}
+
+module_init(my_init);
+module_exit(my_exit);
+//The following webpage was used as a reference. "https://www.thegeekstuff.com/2013/07/write-linux-kernel-module/"
+bk@karthik:~/Workspace/eudyptula/task01$ cat Makefile
+obj-m += task01.o
+
+all:
+	make -C /lib/modules/$(shell uname -r)/build M=$(PWD) modules
+
+clean:
+	make -c /lib/modules/$(shell uname -r)/build M=$(PWD) clean
+bk@karthik:~/Workspace/eudyptula/task01$ make
+make -C /lib/modules/4.19.0-9-amd64/build M=/home/bk/Workspace/eudyptula/task01 modules
+make[1]: Entering directory '/usr/src/linux-headers-4.19.0-9-amd64'
+  CC [M]  /home/bk/Workspace/eudyptula/task01/task01.o
+  Building modules, stage 2.
+  MODPOST 1 modules
+  LD [M]  /home/bk/Workspace/eudyptula/task01/task01.ko
+make[1]: Leaving directory '/usr/src/linux-headers-4.19.0-9-amd64'
+bk@karthik:~/Workspace/eudyptula/task01$ sudo insmod task01.ko | sudo dmesg | tail -2
+[108801.506691] Hello world!
+[108806.076569] Exiting [a24a6bdd6a14] Task 01 results
+bk@karthik:~/Workspace/eudyptula/task01$ sudo rmmod task01.ko
+bk@karthik:~/Workspace/eudyptula/task01$

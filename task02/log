@@ -1,0 +1,37 @@
+bk@karthik:~$ uname -a && sudo dmidecode | egrep -i 'manufacturer|product'  && hostnamectl  && sudo dmesg | grep "Hypervisor"
+Linux karthik 5.7.0y-15078-g96144c58abe7 #2 SMP Sun Jun 14 21:21:35 IST 2020 x86_64 GNU/Linux
+	Manufacturer: Dell Inc.
+	Product Name: Inspiron 5559
+	Manufacturer: Dell Inc.
+	Product Name: 07JM0H
+	Manufacturer: Dell Inc.
+	Manufacturer: Intel(R) Corporation
+	Manufacturer: Samsung
+	Manufacturer: Samsung
+	Manufacturer: Dell Inc.
+	Manufacturer: SMP
+   Static hostname: karthik
+         Icon name: computer-laptop
+           Chassis: laptop
+        Machine ID: b7e3c21975ac4be2940e7e0fd02f05a1
+           Boot ID: 755a41e3a7984b488f2bddd3d58746e8
+  Operating System: Debian GNU/Linux 10 (buster)
+            Kernel: Linux 5.7.0y-15078-g96144c58abe7
+      Architecture: x86-64
+bk@karthik:~$ ls -li /boot
+total 212272
+1592059 -rw-r--r-- 1 root root    206194 Apr 27 10:35 config-4.19.0-8-amd64
+1581085 -rw-r--r-- 1 root root    206157 Jun  7 21:12 config-4.19.0-9-amd64
+1580799 -rw-r--r-- 1 root root    171844 Jun 14 21:32 config-5.7.0y-15078-g96144c58abe7
+      1 drwx------ 3 root root      4096 Jan  1  1970 efi
+1587066 drwxr-xr-x 5 root root      4096 Jun 14 21:33 grub
+1586972 -rw-r--r-- 1 root root  36093818 May 14 14:17 initrd.img-4.19.0-8-amd64
+1580792 -rw-r--r-- 1 root root  36093914 Jun 13 09:30 initrd.img-4.19.0-9-amd64
+1580801 -rw-r--r-- 1 root root 117613046 Jun 14 21:32 initrd.img-5.7.0y-15078-g96144c58abe7
+1592058 -rw-r--r-- 1 root root   3408461 Apr 27 10:35 System.map-4.19.0-8-amd64
+1581084 -rw-r--r-- 1 root root   3411735 Jun  7 21:12 System.map-4.19.0-9-amd64
+1580796 -rw-r--r-- 1 root root   4083074 Jun 14 21:32 System.map-5.7.0y-15078-g96144c58abe7
+1592060 -rw-r--r-- 1 root root   5274864 Apr 27 10:35 vmlinuz-4.19.0-8-amd64
+1581086 -rw-r--r-- 1 root root   5274864 Jun  7 21:12 vmlinuz-4.19.0-9-amd64
+1580794 -rw-r--r-- 1 root root   5501152 Jun 14 21:32 vmlinuz-5.7.0y-15078-g96144c58abe7
+bk@karthik:~$ 

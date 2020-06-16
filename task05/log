@@ -1,0 +1,32 @@
+Tue Jun 16  09:13:20  bkkarthik <1711> ~/Workspace/eudyptula/task05$ ls -l
+total 728
+-rw-r--r-- 1 bkkarthik bk    209 Jun 16 21:00 Makefile
+-rw-r--r-- 1 bkkarthik bk     53 Jun 16 21:02 modules.order
+-rw-r--r-- 1 bkkarthik bk      0 Jun 16 21:02 Module.symvers
+-rw-r--r-- 1 bkkarthik bk   1386 Jun 16 21:02 task05.c
+-rw-r--r-- 1 bkkarthik bk 356744 Jun 16 21:02 task05.ko
+-rw-r--r-- 1 bkkarthik bk     53 Jun 16 21:02 task05.mod
+-rw-r--r-- 1 bkkarthik bk    887 Jun 16 21:02 task05.mod.c
+-rw-r--r-- 1 bkkarthik bk 112512 Jun 16 21:02 task05.mod.o
+-rw-r--r-- 1 bkkarthik bk 245784 Jun 16 21:02 task05.o
+Tue Jun 16  09:13:29  bkkarthik <1712> ~/Workspace/eudyptula/task05$ sudo dmesg --level=alert | tail -15
+Tue Jun 16  09:13:37  bkkarthik <1713> ~/Workspace/eudyptula/task05$ sudo insmod task05.ko
+Tue Jun 16  09:13:58  bkkarthik <1714> ~/Workspace/eudyptula/task05$ sudo dmesg -k | tail -15
+[ 5854.648774] r8169 0000:02:00.0 enp2s0: Link is Down
+[ 5856.380378] r8169 0000:02:00.0 enp2s0: Link is Up - 100Mbps/Full - flow control rx/tx
+[ 5856.380400] IPv6: ADDRCONF(NETDEV_CHANGE): enp2s0: link becomes ready
+[ 9461.693722] usb 1-1: new low-speed USB device number 5 using xhci_hcd
+[ 9461.845678] usb 1-1: New USB device found, idVendor=13ee, idProduct=0001, bcdDevice= 0.10
+[ 9461.845686] usb 1-1: New USB device strings: Mfr=1, Product=2, SerialNumber=3
+[ 9461.845691] usb 1-1: Product: AND 
+[ 9461.845695] usb 1-1: Manufacturer: MOON
+[ 9461.845699] usb 1-1: SerialNumber: @ɌAB
+[ 9487.378468] usb 1-1: USB disconnect, device number 5
+[ 9487.685355] usb 1-1: new low-speed USB device number 6 using xhci_hcd
+[ 9487.813382] usb 1-1: device descriptor read/64, error -71
+[ 9802.347305] task05: loading out-of-tree module taints kernel.
+[ 9802.347726] Hello world!
+[ 9802.347755] usbcore: registered new interface driver USBDevice
+Tue Jun 16  09:14:08  bkkarthik <1715> ~/Workspace/eudyptula/task05$
+
+[a24a6bdd6a14] Task 05 results

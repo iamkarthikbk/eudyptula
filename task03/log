@@ -1,0 +1,48 @@
+Mon Jun 15  03:01:43  bkkarthik <1520> ~$ uname -a && sudo dmidecode | egrep -i 'manufacturer|product' && hostnamectl && sudo dmesg | grep "Hypervisor"
+Linux pesu.pes.edu 5.8.0-rc1-eudyptula-00001-gc1966b82e604 #1 SMP Mon Jun 15 14:40:30 IST 2020 x86_64 GNU/Linux
+[sudo] password for bkkarthik: 
+	Manufacturer: Dell Inc.
+	Product Name: Inspiron 5559
+	Manufacturer: Dell Inc.
+	Product Name: 07JM0H
+	Manufacturer: Dell Inc.
+	Manufacturer: Intel(R) Corporation
+	Manufacturer: Samsung
+	Manufacturer: Samsung
+	Manufacturer: Dell Inc.
+	Manufacturer: SMP
+   Static hostname: pesu.pes.edu
+         Icon name: computer-laptop
+           Chassis: laptop
+        Machine ID: b7e3c21975ac4be2940e7e0fd02f05a1
+           Boot ID: 6c82af08d4404c6698d8fa4f515e5eec
+  Operating System: Debian GNU/Linux 10 (buster)
+            Kernel: Linux 5.8.0-rc1-eudyptula-00001-gc1966b82e604
+      Architecture: x86-64
+Mon Jun 15  03:01:49  bkkarthik <1521> ~$ cat Workspace/eudyptula/task03/*.patch
+From c1966b82e604724ca4a9171322be2ed86ab7fa0e Mon Sep 17 00:00:00 2001
+From: bk <karthik.bk2000@live.com>
+Date: Mon, 15 Jun 2020 14:38:39 +0530
+Subject: [PATCH] Adding -eudyptula to EXTRAVERSION
+
+---
+ Makefile | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/Makefile b/Makefile
+index ae5d8220f431..e50e0010b019 100644
+--- a/Makefile
++++ b/Makefile
+@@ -2,7 +2,7 @@
+ VERSION = 5
+ PATCHLEVEL = 8
+ SUBLEVEL = 0
+-EXTRAVERSION = -rc1
++EXTRAVERSION = -rc1-eudyptula
+ NAME = Kleptomaniac Octopus
+ 
+ # *DOCUMENTATION*
+-- 
+2.20.1
+
+Mon Jun 15  03:02:20  bkkarthik <1522> ~$

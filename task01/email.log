@@ -1,0 +1,6 @@
+Jun 13 10:45:26 karthik sendemail[30512]: Message input complete.
+Jun 13 10:45:35 karthik sendemail[30512]: Email was sent successfully!  From: <bkkarthik@pesu.pes.edu> To: <bk.bk2000.kb@gmail.com> Subject: [Test subject, delete asap] Attachment(s): [task01.c] [Makefile] [log_full] Server: [smtp.gmail.com:587]
+Jun 13 11:01:23 karthik sendemail[31479]: ERROR => You must specify at least one recipient via -t, -cc, or -bcc
+Jun 13 11:01:50 karthik sendemail[31503]: ERROR => You must specify at least one recipient via -t, -cc, or -bcc
+Jun 13 11:03:12 karthik sendemail[31711]: Message input complete.
+Jun 13 11:03:21 karthik sendemail[31711]: Email was sent successfully!  From: <bkkarthik@pesu.pes.edu> To: <little@eudyptula-challenge.org> Subject: [a24a6bdd6a14 Task 01 Results] Attachment(s): [task01.c] [Makefile] [log_full] Server: [smtp.gmail.com:587]
