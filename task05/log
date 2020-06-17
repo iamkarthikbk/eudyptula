@@ -1,32 +1,49 @@
-Tue Jun 16  09:13:20  bkkarthik <1711> ~/Workspace/eudyptula/task05$ ls -l
-total 728
--rw-r--r-- 1 bkkarthik bk    209 Jun 16 21:00 Makefile
--rw-r--r-- 1 bkkarthik bk     53 Jun 16 21:02 modules.order
--rw-r--r-- 1 bkkarthik bk      0 Jun 16 21:02 Module.symvers
--rw-r--r-- 1 bkkarthik bk   1386 Jun 16 21:02 task05.c
--rw-r--r-- 1 bkkarthik bk 356744 Jun 16 21:02 task05.ko
--rw-r--r-- 1 bkkarthik bk     53 Jun 16 21:02 task05.mod
--rw-r--r-- 1 bkkarthik bk    887 Jun 16 21:02 task05.mod.c
--rw-r--r-- 1 bkkarthik bk 112512 Jun 16 21:02 task05.mod.o
--rw-r--r-- 1 bkkarthik bk 245784 Jun 16 21:02 task05.o
-Tue Jun 16  09:13:29  bkkarthik <1712> ~/Workspace/eudyptula/task05$ sudo dmesg --level=alert | tail -15
-Tue Jun 16  09:13:37  bkkarthik <1713> ~/Workspace/eudyptula/task05$ sudo insmod task05.ko
-Tue Jun 16  09:13:58  bkkarthik <1714> ~/Workspace/eudyptula/task05$ sudo dmesg -k | tail -15
-[ 5854.648774] r8169 0000:02:00.0 enp2s0: Link is Down
-[ 5856.380378] r8169 0000:02:00.0 enp2s0: Link is Up - 100Mbps/Full - flow control rx/tx
-[ 5856.380400] IPv6: ADDRCONF(NETDEV_CHANGE): enp2s0: link becomes ready
-[ 9461.693722] usb 1-1: new low-speed USB device number 5 using xhci_hcd
-[ 9461.845678] usb 1-1: New USB device found, idVendor=13ee, idProduct=0001, bcdDevice= 0.10
-[ 9461.845686] usb 1-1: New USB device strings: Mfr=1, Product=2, SerialNumber=3
-[ 9461.845691] usb 1-1: Product: AND 
-[ 9461.845695] usb 1-1: Manufacturer: MOON
-[ 9461.845699] usb 1-1: SerialNumber: @ɌAB
-[ 9487.378468] usb 1-1: USB disconnect, device number 5
-[ 9487.685355] usb 1-1: new low-speed USB device number 6 using xhci_hcd
-[ 9487.813382] usb 1-1: device descriptor read/64, error -71
-[ 9802.347305] task05: loading out-of-tree module taints kernel.
-[ 9802.347726] Hello world!
-[ 9802.347755] usbcore: registered new interface driver USBDevice
-Tue Jun 16  09:14:08  bkkarthik <1715> ~/Workspace/eudyptula/task05$
-
-[a24a6bdd6a14] Task 05 results
+Wed Jun 17  11:36:45  bkkarthik <1817> ~/Workspace/eudyptula/task05$ ls -al
+total 820
+drwxr-xr-x 2 bkkarthik bk     4096 Jun 17 11:36 .
+drwxr-xr-x 9 bkkarthik bk     4096 Jun 16 21:20 ..
+-rw-r--r-- 1 bkkarthik bk      209 Jun 16 21:00 Makefile
+-rw-r--r-- 1 bkkarthik bk       53 Jun 17 11:33 modules.order
+-rw-r--r-- 1 bkkarthik bk      211 Jun 17 11:33 .modules.order.cmd
+-rw-r--r-- 1 bkkarthik bk        0 Jun 17 11:33 Module.symvers
+-rw-r--r-- 1 bkkarthik bk      255 Jun 17 11:33 .Module.symvers.cmd
+-rw-r--r-- 1 bkkarthik bk      843 Jun 17 11:22 task05.c
+-rw-r--r-- 1 bkkarthik bk   347768 Jun 17 11:33 task05.ko
+-rw-r--r-- 1 bkkarthik bk      322 Jun 17 11:33 .task05.ko.cmd
+-rw-r--r-- 1 bkkarthik bk       53 Jun 17 11:33 task05.mod
+-rw-r--r-- 1 bkkarthik bk      778 Jun 17 10:30 task05.mod.c
+-rw-r--r-- 1 bkkarthik bk      186 Jun 17 11:33 .task05.mod.cmd
+-rw-r--r-- 1 bkkarthik bk   112320 Jun 17 10:30 task05.mod.o
+-rw-r--r-- 1 bkkarthik bk    31293 Jun 17 10:30 .task05.mod.o.cmd
+-rw-r--r-- 1 bkkarthik bk   236952 Jun 17 11:33 task05.o
+-rw-r--r-- 1 bkkarthik bk    41854 Jun 17 11:33 .task05.o.cmd
+-rw-r--r-- 1 bkkarthik bk     1307 Jun 17 10:28 temp1.c
+-rw-r--r-- 1 bkkarthik bk     1420 Jun 17 10:30 temp3.c
+-rwxr-xr-x 1 root      root     72 Jun 17 11:27 usb_device_added.sh
+-rwxr-xr-x 1 root      root     71 Jun 17 11:29 usb_device_removed.sh
+Wed Jun 17  11:37:07  bkkarthik <1818> ~/Workspace/eudyptula/task05$ sudo cat /etc/udev/rules.d/80-test.rules
+SUBSYSTEM=="usb", ACTION=="add", ENV{DEVTYPE}=="usb_device",  RUN+="/home/Workspace/eudyptula/task05/usb_device_added.sh"
+SUBSYSTEM=="usb", ACTION=="remove", ENV{DEVTYPE}=="usb_device", RUN+="/home/Workspace/eudyptula/task05/usb_device_removed.sh"
+Wed Jun 17  11:37:11  bkkarthik <1819> ~/Workspace/eudyptula/task05$ sudo dmesg -k | tail -5
+[16764.323304] r8169 0000:02:00.0 enp2s0: Link is Up - 100Mbps/Full - flow control rx/tx
+[16768.312564] r8169 0000:02:00.0 enp2s0: Link is Down
+[16770.845541] r8169 0000:02:00.0 enp2s0: Link is Up - 100Mbps/Full - flow control rx/tx
+[16774.937330] r8169 0000:02:00.0 enp2s0: Link is Down
+[16777.881512] r8169 0000:02:00.0 enp2s0: Link is Up - 100Mbps/Full - flow control rx/tx
+Wed Jun 17  11:37:14  bkkarthik <1820> ~/Workspace/eudyptula/task05$ sudo dmesg -k | tail -15
+[16679.981029] usb 1-1: USB disconnect, device number 8
+[16761.909023] r8169 0000:02:00.0 enp2s0: Link is Down
+[16764.323304] r8169 0000:02:00.0 enp2s0: Link is Up - 100Mbps/Full - flow control rx/tx
+[16768.312564] r8169 0000:02:00.0 enp2s0: Link is Down
+[16770.845541] r8169 0000:02:00.0 enp2s0: Link is Up - 100Mbps/Full - flow control rx/tx
+[16774.937330] r8169 0000:02:00.0 enp2s0: Link is Down
+[16777.881512] r8169 0000:02:00.0 enp2s0: Link is Up - 100Mbps/Full - flow control rx/tx
+[16820.854517] A USB Device was connected! - eudyptula-a24a6bdd6a14
+[16825.794046] usb 1-1: new low-speed USB device number 9 using xhci_hcd
+[16825.922579] usb 1-1: Device not responding to setup address.
+[16826.154053] usb 1-1: New USB device found, idVendor=13ee, idProduct=0001, bcdDevice= 0.10
+[16826.154061] usb 1-1: New USB device strings: Mfr=1, Product=2, SerialNumber=3
+[16826.154065] usb 1-1: Product: AND 
+[16826.154069] usb 1-1: Manufacturer: MOON
+[16826.154073] usb 1-1: SerialNumber: @ɌAB
+Wed Jun 17  11:38:07  bkkarthik <1821> ~/Workspace/eudyptula/task05$

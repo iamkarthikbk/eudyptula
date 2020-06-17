@@ -26,13 +26,10 @@ MODULE_INFO(retpoline, "Y");
 static const struct modversion_info ____versions[]
 __used __section(__versions) = {
 	{ 0x3dc32797, "module_layout" },
-	{ 0xbd4e71ab, "usb_deregister" },
-	{ 0x4f48f958, "usb_register_driver" },
 	{ 0x837b7b09, "__dynamic_pr_debug" },
-	{ 0xc5850110, "printk" },
 	{ 0xbdfb6dbb, "__fentry__" },
 };
 
-MODULE_INFO(depends, "usbcore");
+MODULE_INFO(depends, "");
 
 MODULE_ALIAS("usb:v*p*d*dc*dsc*dp*ic03isc01ip01in*");
