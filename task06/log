@@ -1,0 +1,60 @@
+Wed Jun 17  02:22:42  bkkarthik <1813> ~/Workspace/eudyptula/task06$ ls -al
+total 756
+drwxr-xr-x  2 bkkarthik bk   4096 Jun 17 14:18 .
+drwxr-xr-x 10 bkkarthik bk   4096 Jun 17 13:52 ..
+-rw-r--r--  1 bkkarthik bk    209 Jun 17 14:16 Makefile
+-rw-r--r--  1 bkkarthik bk     53 Jun 17 14:18 modules.order
+-rw-r--r--  1 bkkarthik bk    211 Jun 17 14:18 .modules.order.cmd
+-rw-r--r--  1 bkkarthik bk      0 Jun 17 14:18 Module.symvers
+-rw-r--r--  1 bkkarthik bk    255 Jun 17 14:18 .Module.symvers.cmd
+-rw-r--r--  1 bkkarthik bk   1540 Jun 17 14:18 task06.c
+-rw-r--r--  1 bkkarthik bk 323792 Jun 17 14:18 task06.ko
+-rw-r--r--  1 bkkarthik bk    322 Jun 17 14:18 .task06.ko.cmd
+-rw-r--r--  1 bkkarthik bk     53 Jun 17 14:18 task06.mod
+-rw-r--r--  1 bkkarthik bk    901 Jun 17 14:18 task06.mod.c
+-rw-r--r--  1 bkkarthik bk    186 Jun 17 14:18 .task06.mod.cmd
+-rw-r--r--  1 bkkarthik bk 112424 Jun 17 14:18 task06.mod.o
+-rw-r--r--  1 bkkarthik bk  31293 Jun 17 14:18 .task06.mod.o.cmd
+-rw-r--r--  1 bkkarthik bk 212856 Jun 17 14:18 task06.o
+-rw-r--r--  1 bkkarthik bk  39579 Jun 17 14:18 .task06.o.cmd
+Wed Jun 17  02:22:44  bkkarthik <1814> ~/Workspace/eudyptula/task06$ ls /dev
+autofs           dri          hwrng    psaux   sg0       tty0   tty2   tty30  tty41  tty52  tty63    vcs2   vcsu         watchdog
+block            drm_dp_aux0  initctl  ptmx    sg1       tty1   tty20  tty31  tty42  tty53  tty7     vcs3   vcsu1        watchdog0
+bsg              dvd          input    pts     shm       tty10  tty21  tty32  tty43  tty54  tty8     vcs4   vcsu2        wmi
+bus              dvdrw        kmsg     random  snapshot  tty11  tty22  tty33  tty44  tty55  tty9     vcs5   vcsu3        zero
+cdrom            fb0          kvm      rfkill  snd       tty12  tty23  tty34  tty45  tty56  ttyS0    vcs6   vcsu4
+cdrw             fd           log      rtc     sr0       tty13  tty24  tty35  tty46  tty57  ttyS1    vcsa   vcsu5
+char             full         media0   rtc0    stderr    tty14  tty25  tty36  tty47  tty58  ttyS2    vcsa1  vcsu6
+console          fuse         mei0     sda     stdin     tty15  tty26  tty37  tty48  tty59  ttyS3    vcsa2  vga_arbiter
+core             gpiochip0    mem      sda1    stdout    tty16  tty27  tty38  tty49  tty6   urandom  vcsa3  video0
+cpu              hidraw0      mqueue   sda2    tpm0      tty17  tty28  tty39  tty5   tty60  v4l      vcsa4  video1
+cpu_dma_latency  hpet         null     sda3    tpmrm0    tty18  tty29  tty4   tty50  tty61  vcs      vcsa5  vmci
+disk             hugepages    port     sda4    tty       tty19  tty3   tty40  tty51  tty62  vcs1     vcsa6  vsock
+Wed Jun 17  02:22:56  bkkarthik <1815> ~/Workspace/eudyptula/task06$ sudo insmod task06.ko
+Wed Jun 17  02:23:05  bkkarthik <1816> ~/Workspace/eudyptula/task06$ ls /dev
+autofs           dri          hugepages  port    sda4      tty    tty19  tty3   tty40  tty51  tty62    vcs1   vcsa6        vsock
+block            drm_dp_aux0  hwrng      psaux   sg0       tty0   tty2   tty30  tty41  tty52  tty63    vcs2   vcsu         watchdog
+bsg              dvd          initctl    ptmx    sg1       tty1   tty20  tty31  tty42  tty53  tty7     vcs3   vcsu1        watchdog0
+bus              dvdrw        input      pts     shm       tty10  tty21  tty32  tty43  tty54  tty8     vcs4   vcsu2        wmi
+cdrom            eudyptula    kmsg       random  snapshot  tty11  tty22  tty33  tty44  tty55  tty9     vcs5   vcsu3        zero
+cdrw             fb0          kvm        rfkill  snd       tty12  tty23  tty34  tty45  tty56  ttyS0    vcs6   vcsu4
+char             fd           log        rtc     sr0       tty13  tty24  tty35  tty46  tty57  ttyS1    vcsa   vcsu5
+console          full         media0     rtc0    stderr    tty14  tty25  tty36  tty47  tty58  ttyS2    vcsa1  vcsu6
+core             fuse         mei0       sda     stdin     tty15  tty26  tty37  tty48  tty59  ttyS3    vcsa2  vga_arbiter
+cpu              gpiochip0    mem        sda1    stdout    tty16  tty27  tty38  tty49  tty6   urandom  vcsa3  video0
+cpu_dma_latency  hidraw0      mqueue     sda2    tpm0      tty17  tty28  tty39  tty5   tty60  v4l      vcsa4  video1
+disk             hpet         null       sda3    tpmrm0    tty18  tty29  tty4   tty50  tty61  vcs      vcsa5  vmci
+Wed Jun 17  02:23:09  bkkarthik <1817> ~/Workspace/eudyptula/task06$ ls -l /dev/eudyptula
+crw------- 1 root root 10, 58 Jun 17 14:23 /dev/eudyptula
+Wed Jun 17  02:23:24  bkkarthik <1818> ~/Workspace/eudyptula/task06$ sudo chmod 666 /dev/eudyptula
+Wed Jun 17  02:23:43  bkkarthik <1819> ~/Workspace/eudyptula/task06$ ls -l /dev/eudyptula
+crw-rw-rw- 1 root root 10, 58 Jun 17 14:23 /dev/eudyptula
+Wed Jun 17  02:23:46  bkkarthik <1820> ~/Workspace/eudyptula/task06$ cat /dev/eudyptula
+a24a6bdd6a14Wed Jun 17  02:23:56  bkkarthik <1821> ~/Workspace/eudyptula/task06$ cat > /dev/eudyptula
+1234
+cat: write error: Invalid argument
+Wed Jun 17  02:24:13  bkkarthik <1822> ~/Workspace/eudyptula/task06$ cat > /dev/eudyptula
+a24a6bdd6a14
+^C
+Wed Jun 17  02:24:25  bkkarthik <1822> ~/Workspace/eudyptula/task06$ sudo rmmod task06.ko
+Wed Jun 17  02:24:58  bkkarthik <1823> ~/Workspace/eudyptula/task06$
