@@ -19,13 +19,16 @@ MODULE_DESCRIPTION("Misc char device driver with read and write operations. Task
 static ssize_t my_read(struct file *file, char __user *buff, size_t count, loff_t *ppos)
 {
 	char *print_str = TLF_ID;
+	int len = TLF_ID_LENGTH;
 
+	if (count < len)
+ 		return -EINVAL;
 	if (*ppos != 0)
 		return 0;
-	if ((count < TLF_ID_LENGTH) || (copy_to_user(buff, print_str, TLF_ID_LENGTH)))
-		return -EINVAL;
-	*ppos += count;
-	return count;
+	if (copy_to_user(buff, print_str, len))
+ 		return -EINVAL;
+	*ppos = len;
+	return len;
 }
 
 static ssize_t my_write(struct file *file, char const __user *buff, size_t count, loff_t *ppos)

@@ -1,0 +1,2 @@
+#!/bin/bash
+mutt "bk.bk2000.kb@gmail.com" -s "[$tlf_id] Task$1 results" -a "/home/bkkarthik/Workspace/eudyptula/task$1/task$1.c" "/home/bkkarthik/Workspace/eudyptula/task$1/Makefile" "/home/bkkarthik/Workspace/eudyptula/task$1/log"

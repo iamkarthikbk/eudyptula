@@ -1,4 +1,4 @@
-CFLAGS_task06.c = -DDEBUG
+CFLAGS_task06.o = -DDEBUG
 
 obj-m += task06.o
 
