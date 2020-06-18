@@ -29,9 +29,9 @@ __used __section(__versions) = {
 	{ 0xf8d00f68, "misc_deregister" },
 	{ 0x837b7b09, "__dynamic_pr_debug" },
 	{ 0x1c480959, "misc_register" },
-	{ 0x6b10bee1, "_copy_to_user" },
 	{ 0x9a1900c5, "__stack_chk_fail" },
-	{ 0x13c49cc2, "_copy_from_user" },
+	{ 0xbb4f4766, "simple_write_to_buffer" },
+	{ 0x619cb7dd, "simple_read_from_buffer" },
 	{ 0xbdfb6dbb, "__fentry__" },
 };
 

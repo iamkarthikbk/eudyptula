@@ -8,6 +8,7 @@
 #include <linux/fs.h>
 #include <linux/poll.h>
 #include <linux/errno.h>
+#include <linux/init.h>
 
 MODULE_LICENSE("GPL");
 MODULE_AUTHOR("a24a6bdd6a14 B K Karthik");
@@ -21,27 +22,26 @@ static ssize_t my_read(struct file *file, char __user *buff, size_t count, loff_
 	char *print_str = TLF_ID;
 	int len = TLF_ID_LENGTH;
 
-	if (count < len)
- 		return -EINVAL;
-	if (*ppos != 0)
-		return 0;
-	if (copy_to_user(buff, print_str, len))
- 		return -EINVAL;
-	*ppos = len;
-	return len;
+	return simple_read_from_buffer(buff, count, ppos, print_str, len);
 }
 
 static ssize_t my_write(struct file *file, char const __user *buff, size_t count, loff_t *ppos)
 {
 	char *print_str = TLF_ID;
 	char input[TLF_ID_LENGTH];
+	int len = TLF_ID_LENGTH;
+	ssize_t retval = -EINVAL;
 
-	if ((count != TLF_ID_LENGTH) ||
-		(copy_from_user(input, buff, TLF_ID_LENGTH)) ||
-		(strncmp(print_str, input, TLF_ID_LENGTH - 1)))
-		return -EINVAL;
-	else
-		return count;
+	if (count != len)
+		return retval;
+
+	retval = simple_write_to_buffer(input, count, ppos, buff, count);
+
+	if (retval < 0)
+		return retval;
+
+	retval = strncmp(print_str, input, count) ? count : -EINVAL;
+	return retval;
 }
 
 static const struct file_operations my_fops = {
@@ -74,3 +74,4 @@ module_init(my_init);
 module_exit(my_exit);
 
 //https://www.linuxjournal.com/article/2920 was used as a reference.
+//https://gist.github.com/chuckleberryfinn/e50a938083ec355563efc9da1f2fa904 was used as a reference.
