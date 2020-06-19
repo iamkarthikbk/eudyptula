@@ -1,0 +1,23 @@
+Fri Jun 19  10:59:42  bkkarthik <1996> ~$ uname -a
+Linux pesu.pes.edu 5.8.0-rc1-next-20200618 #1 SMP Fri Jun 19 22:35:21 IST 2020 x86_64 GNU/Linux
+Fri Jun 19  10:59:48  bkkarthik <1997> ~$ sudo dmidecode | egrep -i 'manufacturer|product' && hostnamectl && sudo dmesg | grep "Hyper"
+[sudo] password for bkkarthik: 
+	Manufacturer: Dell Inc.
+	Product Name: Inspiron 5559
+	Manufacturer: Dell Inc.
+	Product Name: 07JM0H
+	Manufacturer: Dell Inc.
+	Manufacturer: Intel(R) Corporation
+	Manufacturer: Samsung
+	Manufacturer: Samsung
+	Manufacturer: Dell Inc.
+	Manufacturer: SMP
+   Static hostname: pesu.pes.edu
+         Icon name: computer-laptop
+           Chassis: laptop
+        Machine ID: b7e3c21975ac4be2940e7e0fd02f05a1
+           Boot ID: e8d1718cca4a46bba15dfb38f15edfc9
+  Operating System: Debian GNU/Linux 10 (buster)
+            Kernel: Linux 5.8.0-rc1-next-20200618
+      Architecture: x86-64
+Fri Jun 19  11:00:39  bkkarthik <1998> ~$ 
