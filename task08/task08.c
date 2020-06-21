@@ -113,6 +113,9 @@ static int __init my_init(void)
 	if (!debugfs_create_u32("jiffies", 0444, eudy, (u32*)&jiffies))
 		goto fail;
 
+	if (!debugfs_create_file("foo", 0644, eudy, NULL, &foo_fops))
+		goto fail;
+
 	pr_debug("Hello World!\n");
 	return 0;
 
