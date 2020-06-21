@@ -1,0 +1,26 @@
+From 307877ee4e3a87cad3d3bd28e22c70cc1ee61678 Mon Sep 17 00:00:00 2001
+From: B K Karthik <karthik.bk2000@live.com>
+Date: Sun, 21 Jun 2020 06:39:00 -0400
+Subject: [PATCH] add jiffies file
+
+---
+ task08/task08.c | 3 +++
+ 1 file changed, 3 insertions(+)
+
+diff --git a/task08/task08.c b/task08/task08.c
+index df4fdbf..36d98d9 100644
+--- a/task08/task08.c
++++ b/task08/task08.c
+@@ -61,6 +61,9 @@ static int __init my_init(void)
+ 	if (!debugfs_create_file("id", 0666, eudy, NULL, &id_fops))
+ 		goto fail;
+ 
++	if (!debugfs_create_u32("jiffies", 0444, eudy, (u32*)&jiffies))
++		goto fail;
++
+ 	pr_debug("Hello World!\n");
+ 	return 0;
+ 
+-- 
+2.20.1
+
