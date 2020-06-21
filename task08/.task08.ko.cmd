@@ -1,0 +1,1 @@
+cmd_/home/bkkarthik/Workspace/eudyptula/task08/task08.ko := ld -r -m elf_x86_64  -z max-page-size=0x200000 -T /usr/src/linux-headers-4.19.0-9-common/scripts/module-common.lds  --build-id  -o /home/bkkarthik/Workspace/eudyptula/task08/task08.ko /home/bkkarthik/Workspace/eudyptula/task08/task08.o /home/bkkarthik/Workspace/eudyptula/task08/task08.mod.o ;  true
