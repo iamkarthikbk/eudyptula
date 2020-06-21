@@ -7,40 +7,41 @@
 #include <linux/semaphore.h>
 
 #define TLF_ID "a24a6bdd6a14"
-#define TLF_ID_LEN 13   /* TLF_ID length */
+#define TLF_ID_LENGTH 13   /* TLF_ID length */
 
 MODULE_LICENSE("GPL");
 MODULE_AUTHOR("a24a6bdd6a14");
 MODULE_DESCRIPTION("TASK 08 of THE EUDYPTULA CHALLENGE");
 
-static ssize_t id_read(struct file *file, char __user *buf,
+static struct dentry *eudy;
+
+static ssize_t id_read(struct file *file, char __user *buff,
 			size_t count, loff_t *ppos)
 {
-	char *hello_str = TLF_ID;
+	char *print_str = TLF_ID;
+	int len = TLF_ID_LENGTH;
 
-	if (*ppos != 0)
-		return 0;
-
-	if ((count < TLF_ID_LEN) ||
-		(copy_to_user(buf, hello_str, TLF_ID_LEN)))
-		return -EINVAL;
-
-	*ppos += count;
-	return count;
+	return simple_read_from_buffer(buff, count, ppos, print_str, len);
 }
 
-static ssize_t id_write(struct file *file, char const __user *buf,
+static ssize_t id_write(struct file *file, char const __user *buff,
 			size_t count, loff_t *ppos)
 {
-	char *hello_str = TLF_ID;
-	char input[TLF_ID_LEN];
+	char *print_str = TLF_ID;
+        char input[TLF_ID_LENGTH];
+        int len = TLF_ID_LENGTH;
+        ssize_t retval = -EINVAL;
 
-	if ((count != TLF_ID_LEN) ||
-		(copy_from_user(input, buf, TLF_ID_LEN)) ||
-		(strncmp(hello_str, input, TLF_ID_LEN)))
-		return -EINVAL;
-	else
-		return count;
+        if (count != len)
+                return retval;
+
+        retval = simple_write_to_buffer(input, count, ppos, buff, count);
+
+        if (retval < 0)
+                return retval;
+
+        retval = strncmp(print_str, input, count) ? count : -EINVAL;
+        return retval;
 }
 
 static const struct file_operations id_fops = {
@@ -48,6 +49,8 @@ static const struct file_operations id_fops = {
 	.read = id_read,
 	.write = id_write
 };
+
+
 
 static int __init my_init(void)
 {
@@ -58,8 +61,10 @@ static int __init my_init(void)
 	if (!debugfs_create_file("id", 0666, eudy, NULL, &id_fops))
 		goto fail;
 
+	if (!debugfs_create_u32("jiffies", 0444, eudy, (u32*)&jiffies))
+		goto fail;
+
 	pr_debug("Hello World!\n");
-	foo_len = 0;
 	return 0;
 
 fail:	pr_alert("Could not create devices");
