@@ -54,6 +54,7 @@ static int __init my_init(void)
 {
 	eudy = debugfs_create_dir("eudyptula", NULL);
 	debugfs_create_file("id", 0666, eudy, NULL, &id_fops);
+	debugfs_create_u32("jiffies", 0444, eudy, (u32*)&jiffies);
 	pr_debug("Hello World!\n");
 	return 0;
 }
