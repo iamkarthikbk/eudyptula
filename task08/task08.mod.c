@@ -27,7 +27,6 @@ __used
 __attribute__((section("__versions"))) = {
 	{ 0x7ba62dba, "module_layout" },
 	{ 0x4a16f3de, "debugfs_remove_recursive" },
-	{ 0x7c32d0f0, "printk" },
 	{ 0x9b7fe4d4, "__dynamic_pr_debug" },
 	{ 0x22e4ca3a, "debugfs_create_u32" },
 	{ 0x15ba50a6, "jiffies" },

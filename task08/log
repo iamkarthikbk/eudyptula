@@ -1,4 +1,4 @@
- Jun 21 07:03:01 bkkarthik <354> :~/Workspace/eudyptula/task08$ make
+ Jun 22 01:05:17 bkkarthik <474> :~/Workspace/eudyptula/task08$ sudo ./run.sh
 make -C /lib/modules/4.19.0-9-amd64/build M=/home/bkkarthik/Workspace/eudyptula/task08 modules
 make[1]: Entering directory '/usr/src/linux-headers-4.19.0-9-amd64'
   CC [M]  /home/bkkarthik/Workspace/eudyptula/task08/task08.o
@@ -7,23 +7,16 @@ make[1]: Entering directory '/usr/src/linux-headers-4.19.0-9-amd64'
   CC      /home/bkkarthik/Workspace/eudyptula/task08/task08.mod.o
   LD [M]  /home/bkkarthik/Workspace/eudyptula/task08/task08.ko
 make[1]: Leaving directory '/usr/src/linux-headers-4.19.0-9-amd64'
- Jun 21 07:03:04 bkkarthik <355> :~/Workspace/eudyptula/task08$ sudo insmod task08.ko
- Jun 21 07:03:12 bkkarthik <356> :~/Workspace/eudyptula/task08$ sudo ls /sys/kernel/debug/eudyptula
-foo  id  jiffies
- Jun 21 07:03:24 bkkarthik <357> :~/Workspace/eudyptula/task08$ sudo cat /sys/kernel/debug/eudyptula/id
-a24a6bdd6a14 Jun 21 07:03:41 bkkarthik <358> :~/Workspace/eudyptula/task08$ su -c "cat > /sys/kernel/debug/eudyptula/id"
-Password: 
-nucg w
-cat: write error: Invalid argument
- Jun 21 07:04:10 bkkarthik <359> :~/Workspace/eudyptula/task08$ su -c "cat > /sys/kernel/debug/eudyptula/id"
-Password: 
-a24a6bdd6a14
-^CInterrupt
- Jun 21 07:04:18 bkkarthik <359> :~/Workspace/eudyptula/task08$ sudo cat /sys/kernel/debug/eudyptula/jiffies
-2858397
- Jun 21 07:04:31 bkkarthik <360> :~/Workspace/eudyptula/task08$ sudo cat /sys/kernel/debug/eudyptula/jiffies
-2859260
- Jun 21 07:04:34 bkkarthik <360> :~/Workspace/eudyptula/task08$ sudo cat /sys/kernel/debug/eudyptula/jiffies
-2859692
- Jun 21 07:04:36 bkkarthik <360> :~/Workspace/eudyptula/task08$ sudo rmmod task08.ko
- Jun 21 07:04:54 bkkarthik <361> :~/Workspace/eudyptula/task08$ 
+total 0
+drwxr-xr-x  2 root root 0 Jun 22 13:05 .
+drwx------ 39 root root 0 Jun 22 13:02 ..
+-rw-r--r--  1 root root 0 Jun 22 13:05 foo
+-rw-rw-rw-  1 root root 0 Jun 22 13:05 id
+-r--r--r--  1 root root 0 Jun 22 13:05 jiffies
+a24a6bdd6a145594945
+5594946
+./run.sh: line 10: echo: write error: Invalid argument
+1
+0
+I am root :)
+ Jun 22 01:05:22 bkkarthik <475> :~/Workspace/eudyptula/task08$

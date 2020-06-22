@@ -1,0 +1,22 @@
+ Jun 22 01:02:19 bkkarthik <453> :~/Workspace/eudyptula$ sudo ./run.sh
+make -C /lib/modules/4.19.0-9-amd64/build M=/home/bkkarthik/Workspace/eudyptula modules
+make[1]: Entering directory '/usr/src/linux-headers-4.19.0-9-amd64'
+  CC [M]  /home/bkkarthik/Workspace/eudyptula/task08.o
+  Building modules, stage 2.
+  MODPOST 1 modules
+  CC      /home/bkkarthik/Workspace/eudyptula/task08.mod.o
+  LD [M]  /home/bkkarthik/Workspace/eudyptula/task08.ko
+make[1]: Leaving directory '/usr/src/linux-headers-4.19.0-9-amd64'
+total 0
+drwxr-xr-x  2 root root 0 Jun 22 13:02 .
+drwx------ 39 root root 0 Jun 22 12:58 ..
+-rw-r--r--  1 root root 0 Jun 22 13:02 foo
+-rw-rw-rw-  1 root root 0 Jun 22 13:02 id
+-r--r--r--  1 root root 0 Jun 22 13:02 jiffies
+a24a6bdd6a145550857
+5550857
+./run.sh: line 10: echo: write error: Invalid argument
+1
+0
+I am root :)
+ Jun 22 01:02:25 bkkarthik <454> :~/Workspace/eudyptula$ 
