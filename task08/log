@@ -1,0 +1,29 @@
+ Jun 21 07:03:01 bkkarthik <354> :~/Workspace/eudyptula/task08$ make
+make -C /lib/modules/4.19.0-9-amd64/build M=/home/bkkarthik/Workspace/eudyptula/task08 modules
+make[1]: Entering directory '/usr/src/linux-headers-4.19.0-9-amd64'
+  CC [M]  /home/bkkarthik/Workspace/eudyptula/task08/task08.o
+  Building modules, stage 2.
+  MODPOST 1 modules
+  CC      /home/bkkarthik/Workspace/eudyptula/task08/task08.mod.o
+  LD [M]  /home/bkkarthik/Workspace/eudyptula/task08/task08.ko
+make[1]: Leaving directory '/usr/src/linux-headers-4.19.0-9-amd64'
+ Jun 21 07:03:04 bkkarthik <355> :~/Workspace/eudyptula/task08$ sudo insmod task08.ko
+ Jun 21 07:03:12 bkkarthik <356> :~/Workspace/eudyptula/task08$ sudo ls /sys/kernel/debug/eudyptula
+foo  id  jiffies
+ Jun 21 07:03:24 bkkarthik <357> :~/Workspace/eudyptula/task08$ sudo cat /sys/kernel/debug/eudyptula/id
+a24a6bdd6a14 Jun 21 07:03:41 bkkarthik <358> :~/Workspace/eudyptula/task08$ su -c "cat > /sys/kernel/debug/eudyptula/id"
+Password: 
+nucg w
+cat: write error: Invalid argument
+ Jun 21 07:04:10 bkkarthik <359> :~/Workspace/eudyptula/task08$ su -c "cat > /sys/kernel/debug/eudyptula/id"
+Password: 
+a24a6bdd6a14
+^CInterrupt
+ Jun 21 07:04:18 bkkarthik <359> :~/Workspace/eudyptula/task08$ sudo cat /sys/kernel/debug/eudyptula/jiffies
+2858397
+ Jun 21 07:04:31 bkkarthik <360> :~/Workspace/eudyptula/task08$ sudo cat /sys/kernel/debug/eudyptula/jiffies
+2859260
+ Jun 21 07:04:34 bkkarthik <360> :~/Workspace/eudyptula/task08$ sudo cat /sys/kernel/debug/eudyptula/jiffies
+2859692
+ Jun 21 07:04:36 bkkarthik <360> :~/Workspace/eudyptula/task08$ sudo rmmod task08.ko
+ Jun 21 07:04:54 bkkarthik <361> :~/Workspace/eudyptula/task08$ 

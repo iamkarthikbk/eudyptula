@@ -1,2 +1,2 @@
 #!/bin/bash
-mutt $little -s "[$tlf_id] Task $1 results" -a "/home/bkkarthik/Workspace/eudyptula/task$1/log" "/home/bkkarthik/Workspace/eudyptula/task$1/task$1.c" "/home/bkkarthik/Workspace/eudyptula/task$1/Makefile"
+neomutt $little -s "[$tlf_id] Task $1 results" -a "/home/bkkarthik/Workspace/eudyptula/task$1/log" "/home/bkkarthik/Workspace/eudyptula/task$1/task$1.c" "/home/bkkarthik/Workspace/eudyptula/task$1/Makefile"
