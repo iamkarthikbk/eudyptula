@@ -53,17 +53,9 @@ static const struct file_operations id_fops = {
 static int __init my_init(void)
 {
 	eudy = debugfs_create_dir("eudyptula", NULL);
-	if (!eudy)
-		goto fail;
-
-	if (!debugfs_create_file("id", 0666, eudy, NULL, &id_fops))
-		goto fail;
-
+	debugfs_create_file("id", 0666, eudy, NULL, &id_fops)
 	pr_debug("Hello World!\n");
 	return 0;
-
-fail:	pr_alert("Could not create devices");
-	return -ENODEV;
 }
 
 static void __exit my_exit(void)
