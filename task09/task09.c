@@ -7,10 +7,10 @@
 #include <linux/jiffies.h>
 
 #define TLF_ID "a24a6bdd6a14"
-#define TLF_ID_LENGTHGTH 13
+#define TLF_ID_LENGTH 13
 
 MODULE_LICENSE("GPL");
-MODULE_AUTHOR("a24a6bdd6a14");
+MODULE_AUTHOR("a24a6bdd6a14 B K Karthik");
 MODULE_DESCRIPTION("[SYSFS] Task 09 of The Eudyptula Challenge");
 
 static DEFINE_MUTEX(foo_mutex);
@@ -31,8 +31,9 @@ static ssize_t id_write(struct kobject *kobj, struct kobj_attribute *attr, const
 {
 	char *print_str = TLF_ID;
 
-	if (strncmp(print_str, buff, TLF_ID_LENGTH) || count != TLF_ID_LENGTH)
+	if (strncmp(print_str, buff, TLF_ID_LENGTH)) {
 		return -EINVAL;
+	}
 	else
 		return TLF_ID_LENGTH;
 }
@@ -70,7 +71,7 @@ static ssize_t foo_write(struct kobject *kobj, struct kobj_attribute *attr, cons
 }
 
 
-static struct kobj_attribute id_attribute = __ATTR(id, 0666, id_read, id_write);
+static struct kobj_attribute id_attribute = __ATTR(id, 0664, id_read, id_write);
 static struct kobj_attribute jiffies_attribute = __ATTR(jiffies, 0444, jiffies_read, jiffies_write);
 static struct kobj_attribute foo_attribute = __ATTR(foo, 0644, foo_read, foo_write);
 
@@ -108,3 +109,18 @@ static void __exit my_exit(void)
 
 module_init(my_init);
 module_exit(my_exit);
+
+/*https://www.kernel.org/doc/Documentation/kobject.txt was used as a reference.
+ *https://www.google.com/url?sa=t&source=web&rct=j&url=https://www.cs.swarthmore.edu/~newhall/sysfstutorial.pdf&ved=2ahUKEwj134KJhJbqAhX5yDgGHZhHAWgQFjACegQIBBAB&usg=AOvVaw3vtjGN2zji2DU5x_aLtQCr was used as a reference.
+ *https://www.linuxfoundation.org/blog/2013/06/how-to-create-a-sysfs-file-correctly/ was used as a reference.
+ *https://www.thegeekdiary.com/understanding-the-sysfs-file-system-in-linux/amp/ was used as a reference.
+ *https://www.linux.com/news/how-create-sysfs-file-correctly/ was used as a reference.
+ *http://pradheepshrinivasan.github.io/2015/07/02/Creating-an-simple-sysfs/ was used as a reference.
+ *https://www.geeksforgeeks.org/mutex-vs-semaphore/ was used as a reference.
+ *https://stackoverflow.com/questions/62814/difference-between-binary-semaphore-and-mutex was used as a reference.
+ *https://www.justsoftwaresolutions.co.uk/threading/locks-mutexes-semaphores.html was used as a reference.
+ *http://lkml.iu.edu/hypermail/linux/kernel/0707.2/1361.html was used as a reference.
+ *https://lore.kernel.org/patchwork/patch/416778/ was used as a reference.
+ *https://unix.stackexchange.com/questions/302003/shared-access-of-sysfs was used as a reference.
+ *https://unix.stackexchange.com/questions/594504/negetive-width-in-bit-field-anonymous-while-running-make was used as a reference.
+ */

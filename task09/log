@@ -1,0 +1,24 @@
+ Jun 23 05:32:58 bkkarthik <859> :~/Workspace/eudyptula/task09$ sudo ./run.sh
+make -C /lib/modules/4.19.0-9-amd64/build M=/home/bkkarthik/Workspace/eudyptula/task09 modules
+make[1]: Entering directory '/usr/src/linux-headers-4.19.0-9-amd64'
+  Building modules, stage 2.
+  MODPOST 1 modules
+make[1]: Leaving directory '/usr/src/linux-headers-4.19.0-9-amd64'
+total 0
+drwxr-xr-x  2 root root    0 Jun 23 05:33 .
+drwxr-xr-x 13 root root    0 Jun 23 05:33 ..
+-rw-r--r--  1 root root 4096 Jun 23 05:33 foo
+-rw-rw-r--  1 root root 4096 Jun 23 05:33 id
+-r--r--r--  1 root root 4096 Jun 23 05:33 jiffies
+a24a6bdd6a14
+0
+echo: write error: Invalid argument
+1
+4302573835
+4302573837
+WARNING: EXTREMELY LONG TEXT:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::LONG TEXT ENDED
+5000+0 records in
+5000+0 records out
+15000 bytes (15 kB, 15 KiB) copied, 0.00807729 s, 1.9 MB/s
+ Jun 23 05:33:06 bkkarthik <860> :~/Workspace/eudyptula/task09$ 
+

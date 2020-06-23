@@ -761,6 +761,7 @@ deps_/home/bkkarthik/Workspace/eudyptula/task09/task09.o := \
     $(wildcard include/config/modules/use/elf/rel.h) \
     $(wildcard include/config/modules/use/elf/rela.h) \
   /usr/src/linux-headers-4.19.0-9-common/arch/x86/include/asm/orc_types.h \
+  /usr/src/linux-headers-4.19.0-9-common/include/linux/semaphore.h \
   /usr/src/linux-headers-4.19.0-9-common/include/linux/poll.h \
   /usr/src/linux-headers-4.19.0-9-common/include/linux/fs.h \
     $(wildcard include/config/fs/posix/acl.h) \
@@ -793,7 +794,6 @@ deps_/home/bkkarthik/Workspace/eudyptula/task09/task09.o := \
   /usr/src/linux-headers-4.19.0-9-common/include/linux/xarray.h \
   /usr/src/linux-headers-4.19.0-9-common/include/linux/capability.h \
   /usr/src/linux-headers-4.19.0-9-common/include/uapi/linux/capability.h \
-  /usr/src/linux-headers-4.19.0-9-common/include/linux/semaphore.h \
   /usr/src/linux-headers-4.19.0-9-common/include/linux/fcntl.h \
   /usr/src/linux-headers-4.19.0-9-common/include/uapi/linux/fcntl.h \
   /usr/src/linux-headers-4.19.0-9-common/arch/x86/include/uapi/asm/fcntl.h \
