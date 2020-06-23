@@ -20,9 +20,9 @@ submitting your results, as I (a dumb script) need some way to determine
 what is going on.  So, please, for every email you write to me from now
 on, use your id in the Subject: line like this:
 
-    [a24a6bdd6a14] Task 02 results
+    [YOUR_ID] Task 02 results
 
-And yes, if you haven't guessed it already, "a24a6bdd6a14" is your
+And yes, if you haven't guessed it already, "YOUR_ID" is your
 unique id.  Please don't lose it.  I can, through some difficulty,
 figure it out again, but we really don't want to have to get my human
 involved in this process, that only slows things down.
@@ -33,7 +33,7 @@ be fine, if not, the scripts will notify you.
 Always send submissions in from this email address, the one that you
 signed up with, emails from any other address will be silently
 discarded.  If you need to change email addresses in the future, just
-email me and tell me your existing id (a24a6bdd6a14), your original
+email me and tell me your existing id (YOUR_ID), your original
 email address, and your new email address, and it will be changed.
 
 When you submit a task, you will receive an autoresponse saying where
@@ -101,8 +101,6 @@ to keep that in mind during this.
 
 As the Big Penguin says, "Have fun!"
 
-#Task 01
-
 This is Task 01 of the Eudyptula Challenge
 ------------------------------------------
 
@@ -123,10 +121,8 @@ Remember to use your ID assigned in the Subject: line when responding to
 this task, so that I can figure out who to attribute it to.  You can
 just respond to the task with the answers and all should be fine.
 
-If you forgot, your id is "a24a6bdd6a14".  But of course you have not
+If you forgot, your id is "YOUR_ID".  But of course you have not
 forgotten that yet, you are better than that.
-
-#Task 02
 
 This is Task 02 of the Eudyptula Challenge
 ------------------------------------------
@@ -166,11 +162,9 @@ umbrella, it deserves better than that.
 Remember to use your ID assigned in the subject line when responding to
 this task, so that I can figure out who to attribute it to.
 
-If you forgot, your id is "a24a6bdd6a14".  But why do I repeat myself?
+If you forgot, your id is "YOUR_ID".  But why do I repeat myself?
 Of course you know your id, you made it through the first task just fine
 with it.
-
-#Task 03
 
 This is Task 03 of the Eudyptula Challenge
 ------------------------------------------
@@ -194,11 +188,9 @@ The tasks for this round are:
 Remember to use your ID assigned in the subject line when responding to
 this task, so that I can figure out who to attribute it to.
 
-If you forgot, your id is "a24a6bdd6a14".  Surely I don't need to keep
+If you forgot, your id is "YOUR_ID".  Surely I don't need to keep
 saying this right?  I know, _you_ wouldn't forget, but someone else, of
 course they would, so I'll just leave it here for those "others."
-
-#Task 04
 
 This is Task 04 of the Eudyptula Challenge
 ------------------------------------------
@@ -252,9 +244,7 @@ it, you don't want to get on their bad side.
 As always, please remember to use your ID in the subject line when
 responding to this task, so that I can figure out who to attribute it
 to.  And if you forgot (which of course you have not, we've been through
-all of this before), your id is "a24a6bdd6a14".
-
-#Task 05
+all of this before), your id is "YOUR_ID".
 
 This is Task 05 of the Eudyptula Challenge
 ------------------------------------------
@@ -275,9 +265,7 @@ Yes, so simple, and yet, it's a bit tricky.  As a hint, go read chapter
 free, and online, no need to go buy anything.
 
 As always, please remember to use your ID, yadda yadda yadda...
-It's "a24a6bdd6a14" of course.
-
-#Task 06
+It's "YOUR_ID" of course.
 
 This is Task 06 of the Eudyptula Challenge
 ------------------------------------------
@@ -310,9 +298,7 @@ The tasks this time are:
   - Provide some "proof" this all works properly.
 
 As you will be putting your id into the kernel module, of course you
-haven't forgotten it, but just to be safe, it's "a24a6bdd6a14".
-
-#Task 07
+haven't forgotten it, but just to be safe, it's "YOUR_ID".
 
 This is Task 07 of the Eudyptula Challenge
 ------------------------------------------
@@ -343,8 +329,6 @@ do it.
 As always, please respond to this challenge with your id.  I know you
 know what it is.  I'll not even include it this time, I trust you.
 Don't make me feel that is a mistake.
-
-#Task 08
 
 This is Task 08 of the Eudyptula Challenge
 ------------------------------------------
@@ -399,18 +383,16 @@ no need to repeat it again.
 So, for this task, I expect to see 3 emails, all "linked" somehow, in my
 mailbox.  They should look something like this:
 
-        [a24a6bdd6a14] Task 08 results
-        ├─>[a24a6bdd6a14] [PATCH 01/02] Task 08: add jiffies file
-        └─>[a24a6bdd6a14] [PATCH 02/02] Task 08: add foo file
+        [YOUR_ID] Task 08 results
+        ├─>[YOUR_ID] [PATCH 01/02] Task 08: add jiffies file
+        └─>[YOUR_ID] [PATCH 02/02] Task 08: add foo file
 
 Or, even better:
-        [a24a6bdd6a14] Task 08 results
-        └─>[a24a6bdd6a14] [PATCH 01/02] Task 08: add jiffies file
-          └─>[a24a6bdd6a14] [PATCH 02/02] Task 08: add foo file
+        [YOUR_ID] Task 08 results
+        └─>[YOUR_ID] [PATCH 01/02] Task 08: add jiffies file
+          └─>[YOUR_ID] [PATCH 02/02] Task 08: add foo file
 
 Hint, look at using 'git send-email' as a way to send these files out.
-
-#Task 09
 
 This is Task 09 of the Eudyptula Challenge
 ------------------------------------------
