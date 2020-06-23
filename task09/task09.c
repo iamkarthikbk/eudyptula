@@ -19,7 +19,7 @@ static int foo_len;
 
 static struct kobject *my_kobj;
 
-static ssize_t id_read(struct kobject *kobj, struct kobj_attribute *attr, char *buff)
+static ssize_t id_show(struct kobject *kobj, struct kobj_attribute *attr, char *buff)
 {
 	char *print_str = TLF_ID;
 
@@ -27,7 +27,7 @@ static ssize_t id_read(struct kobject *kobj, struct kobj_attribute *attr, char *
 	return TLF_ID_LENGTH;
 }
 
-static ssize_t id_write(struct kobject *kobj, struct kobj_attribute *attr, const char *buff, size_t count)
+static ssize_t id_store(struct kobject *kobj, struct kobj_attribute *attr, const char *buff, size_t count)
 {
 	char *print_str = TLF_ID;
 
@@ -38,17 +38,17 @@ static ssize_t id_write(struct kobject *kobj, struct kobj_attribute *attr, const
 		return TLF_ID_LENGTH;
 }
 
-static ssize_t jiffies_read(struct kobject *kobj, struct kobj_attribute *attr, char *buff)
+static ssize_t jiffies_show(struct kobject *kobj, struct kobj_attribute *attr, char *buff)
 {
 	return sprintf(buff, "%lu\n", jiffies);
 }
 
-static ssize_t jiffies_write(struct kobject *kobj, struct kobj_attribute *attr, const char *buff, size_t count)
+static ssize_t jiffies_store(struct kobject *kobj, struct kobj_attribute *attr, const char *buff, size_t count)
 {
 	return -EINVAL;
 }
 
-static ssize_t foo_read(struct kobject *kobj, struct kobj_attribute *attr, char *buff)
+static ssize_t foo_show(struct kobject *kobj, struct kobj_attribute *attr, char *buff)
 {
 	mutex_lock(&foo_mutex);
 	strncpy(buff, foo_data, foo_len);
@@ -57,7 +57,7 @@ static ssize_t foo_read(struct kobject *kobj, struct kobj_attribute *attr, char 
 	return foo_len;
 }
 
-static ssize_t foo_write(struct kobject *kobj, struct kobj_attribute *attr, const char *buff, size_t count)
+static ssize_t foo_store(struct kobject *kobj, struct kobj_attribute *attr, const char *buff, size_t count)
 {
 	if (count > PAGE_SIZE)
 		return -EINVAL;
@@ -71,9 +71,9 @@ static ssize_t foo_write(struct kobject *kobj, struct kobj_attribute *attr, cons
 }
 
 
-static struct kobj_attribute id_attribute = __ATTR(id, 0664, id_read, id_write);
-static struct kobj_attribute jiffies_attribute = __ATTR(jiffies, 0444, jiffies_read, jiffies_write);
-static struct kobj_attribute foo_attribute = __ATTR(foo, 0644, foo_read, foo_write);
+static struct kobj_attribute id_attribute = __ATTR_RW(id);
+static struct kobj_attribute jiffies_attribute = __ATTR_RO(jiffies);
+static struct kobj_attribute foo_attribute = __ATTR_RW(foo);
 
 static struct attribute *attrs[] = {
 	&id_attribute.attr,
@@ -123,4 +123,5 @@ module_exit(my_exit);
  *https://lore.kernel.org/patchwork/patch/416778/ was used as a reference.
  *https://unix.stackexchange.com/questions/302003/shared-access-of-sysfs was used as a reference.
  *https://unix.stackexchange.com/questions/594504/negetive-width-in-bit-field-anonymous-while-running-make was used as a reference.
+ *https://www.kernel.org/doc/Documentation/filesystems/sysfs.txt was used as a reference;
  */
