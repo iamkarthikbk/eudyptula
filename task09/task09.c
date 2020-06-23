@@ -19,7 +19,8 @@ static int foo_len;
 
 static struct kobject *my_kobj;
 
-static ssize_t id_show(struct kobject *kobj, struct kobj_attribute *attr, char *buff)
+static ssize_t id_show(struct kobject *kobj, struct kobj_attribute *attr,
+				char *buff)
 {
 	char *print_str = TLF_ID;
 
@@ -27,7 +28,8 @@ static ssize_t id_show(struct kobject *kobj, struct kobj_attribute *attr, char *
 	return TLF_ID_LENGTH;
 }
 
-static ssize_t id_store(struct kobject *kobj, struct kobj_attribute *attr, const char *buff, size_t count)
+static ssize_t id_store(struct kobject *kobj, struct kobj_attribute *attr,
+				const char *buff, size_t count)
 {
 	char *print_str = TLF_ID;
 
@@ -38,17 +40,14 @@ static ssize_t id_store(struct kobject *kobj, struct kobj_attribute *attr, const
 		return TLF_ID_LENGTH;
 }
 
-static ssize_t jiffies_show(struct kobject *kobj, struct kobj_attribute *attr, char *buff)
+static ssize_t jiffies_show(struct kobject *kobj,
+				struct kobj_attribute *attr, char *buff)
 {
 	return sprintf(buff, "%lu\n", jiffies);
 }
 
-static ssize_t jiffies_store(struct kobject *kobj, struct kobj_attribute *attr, const char *buff, size_t count)
-{
-	return -EINVAL;
-}
-
-static ssize_t foo_show(struct kobject *kobj, struct kobj_attribute *attr, char *buff)
+static ssize_t foo_show(struct kobject *kobj, struct kobj_attribute *attr,
+				char *buff)
 {
 	mutex_lock(&foo_mutex);
 	strncpy(buff, foo_data, foo_len);
@@ -57,7 +56,8 @@ static ssize_t foo_show(struct kobject *kobj, struct kobj_attribute *attr, char 
 	return foo_len;
 }
 
-static ssize_t foo_store(struct kobject *kobj, struct kobj_attribute *attr, const char *buff, size_t count)
+static ssize_t foo_store(struct kobject *kobj, struct kobj_attribute *attr,
+				const char *buff, size_t count)
 {
 	if (count > PAGE_SIZE)
 		return -EINVAL;
@@ -110,18 +110,39 @@ static void __exit my_exit(void)
 module_init(my_init);
 module_exit(my_exit);
 
-/*https://www.kernel.org/doc/Documentation/kobject.txt was used as a reference.
- *https://www.google.com/url?sa=t&source=web&rct=j&url=https://www.cs.swarthmore.edu/~newhall/sysfstutorial.pdf&ved=2ahUKEwj134KJhJbqAhX5yDgGHZhHAWgQFjACegQIBBAB&usg=AOvVaw3vtjGN2zji2DU5x_aLtQCr was used as a reference.
- *https://www.linuxfoundation.org/blog/2013/06/how-to-create-a-sysfs-file-correctly/ was used as a reference.
- *https://www.thegeekdiary.com/understanding-the-sysfs-file-system-in-linux/amp/ was used as a reference.
- *https://www.linux.com/news/how-create-sysfs-file-correctly/ was used as a reference.
- *http://pradheepshrinivasan.github.io/2015/07/02/Creating-an-simple-sysfs/ was used as a reference.
- *https://www.geeksforgeeks.org/mutex-vs-semaphore/ was used as a reference.
- *https://stackoverflow.com/questions/62814/difference-between-binary-semaphore-and-mutex was used as a reference.
- *https://www.justsoftwaresolutions.co.uk/threading/locks-mutexes-semaphores.html was used as a reference.
- *http://lkml.iu.edu/hypermail/linux/kernel/0707.2/1361.html was used as a reference.
- *https://lore.kernel.org/patchwork/patch/416778/ was used as a reference.
- *https://unix.stackexchange.com/questions/302003/shared-access-of-sysfs was used as a reference.
- *https://unix.stackexchange.com/questions/594504/negetive-width-in-bit-field-anonymous-while-running-make was used as a reference.
- *https://www.kernel.org/doc/Documentation/filesystems/sysfs.txt was used as a reference;
+/*https://www.kernel.org/doc/Documentation/kobject.txt
+ *	 was used as a reference.
+ *https://www.google.com/url?sa=t&source=web&rct=j&url=
+ *	https://www.cs.swarthmore.edu/~newhall/
+ *	sysfstutorial.pdf&ved=2ahUKEwj134KJhJbqAhX5yDgG
+ *	HZhHAWgQFjACegQIBBAB&usg=AOvVaw3vtjGN2zji2DU5x_
+ *	aLtQCr was used as a reference.
+ *https://www.linuxfoundation.org/blog/2013/06/
+ *	how-to-create-a-sysfs-file-correctly/
+ *	was used as a reference.
+ *https://www.thegeekdiary.com/
+ *	understanding-the-sysfs-file-system-in-linux/amp/
+ *	was used as a reference.
+ *https://www.linux.com/news/how-create-sysfs-file-correctly/
+ *	was used as a reference.
+ *http://pradheepshrinivasan.github.io/2015/07/02/
+ *	Creating-an-simple-sysfs/ was used as a reference.
+ *https://www.geeksforgeeks.org/mutex-vs-semaphore/
+ *	was used as a reference.
+ *https://stackoverflow.com/questions/62814/
+ *	difference-between-binary-semaphore-and-mutex
+ *	was used as a reference.
+ *https://www.justsoftwaresolutions.co.uk/threading/
+ *	locks-mutexes-semaphores.html was used as a reference.
+ *http://lkml.iu.edu/hypermail/linux/kernel/0707.2/1361.html
+ *	was used as a reference.
+ *https://lore.kernel.org/patchwork/patch/416778/
+ *	was used as a reference.
+ *https://unix.stackexchange.com/questions/302003/
+ *	shared-access-of-sysfs was used as a reference.
+ *https://unix.stackexchange.com/questions/594504/
+ *	negetive-width-in-bit-field-anonymous-while-running
+ *	-make was used as a reference.
+ *https://www.kernel.org/doc/Documentation/filesystems/sysfs.txt
+ *	was used as a reference;
  */

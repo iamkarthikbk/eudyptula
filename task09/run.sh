@@ -1,5 +1,5 @@
 #!/bin/bash
-make
+sudo make
 sudo insmod task09.ko
 ls -al /sys/kernel/eudyptula/
 cat /sys/kernel/eudyptula/id
