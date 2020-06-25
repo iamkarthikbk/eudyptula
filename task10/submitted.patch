@@ -1,0 +1,71 @@
+From efe4a7c42c4c58f34e47ccde12929c3296381541 Mon Sep 17 00:00:00 2001
+From: B K Karthik <karthik.bk2000@live.com>
+Date: Thu, 25 Jun 2020 11:10:11 -0400
+Subject: [PATCH] From: B K Karthik <bkkarthik@pesu.pes.edu> Date: Thu, 25 Jun
+ 20:53:08 +0530 Subject: [PATCH 1/1] staging: media: soc_camera: Adding
+ parentheses to macro defination at line 241, Clearing alignment issues at
+ lines 410 and 1270, fixing return values at EPOLLERR
+
+staging: media: soc_camera: soc_camera.c: Clearing coding-style problem
+"Macros with complex values should be enclosed in parentheses" in line 241 by adding parentheses.
+staging: media: soc_camera: soc_camera.c: Clearing coding-style problem
+"Alignment should match open parenthesis" by adding tab spaces in line 410.
+staging: media: soc_camera: soc_camera.c: Clearing coding-style problem
+"return of an errno should typically be negative" by adding a "-" in front of EPOLLER in line 812.
+staging: media: soc_camera: soc_camera.c: Clearing coding-style problem
+"Alignment should match open parenthesis" by adding tab spaces in line 1270.
+
+Signed-off-by: B K Karthik <karthik.bk2000@live.com>
+---
+ drivers/staging/media/soc_camera/soc_camera.c | 12 ++++++------
+ 1 file changed, 6 insertions(+), 6 deletions(-)
+
+diff --git a/drivers/staging/media/soc_camera/soc_camera.c b/drivers/staging/media/soc_camera/soc_camera.c
+index 39f513f69b89..66a14ebd8093 100644
+--- a/drivers/staging/media/soc_camera/soc_camera.c
++++ b/drivers/staging/media/soc_camera/soc_camera.c
+@@ -238,8 +238,8 @@ unsigned long soc_camera_apply_board_flags(struct soc_camera_subdev_desc *ssdd,
+ }
+ EXPORT_SYMBOL(soc_camera_apply_board_flags);
+ 
+-#define pixfmtstr(x) (x) & 0xff, ((x) >> 8) & 0xff, ((x) >> 16) & 0xff, \
+-	((x) >> 24) & 0xff
++#define pixfmtstr(x) ((x) & 0xff, ((x) >> 8) & 0xff, ((x) >> 16) & 0xff, \
++	((x) >> 24) & 0xff)
+ 
+ static int soc_camera_try_fmt(struct soc_camera_device *icd,
+ 			      struct v4l2_format *f)
+@@ -407,7 +407,7 @@ static int soc_camera_dqbuf(struct file *file, void *priv,
+ }
+ 
+ static int soc_camera_create_bufs(struct file *file, void *priv,
+-			    struct v4l2_create_buffers *create)
++			    		struct v4l2_create_buffers *create)
+ {
+ 	struct soc_camera_device *icd = file->private_data;
+ 	int ret;
+@@ -806,10 +806,10 @@ static __poll_t soc_camera_poll(struct file *file, poll_table *pt)
+ {
+ 	struct soc_camera_device *icd = file->private_data;
+ 	struct soc_camera_host *ici = to_soc_camera_host(icd->parent);
+-	__poll_t res = EPOLLERR;
++	__poll_t res = -EPOLLERR;
+ 
+ 	if (icd->streamer != file)
+-		return EPOLLERR;
++		return -EPOLLERR;
+ 
+ 	mutex_lock(&ici->host_lock);
+ 	res = ici->ops->poll(file, pt);
+@@ -1267,7 +1267,7 @@ static int soc_camera_i2c_init(struct soc_camera_device *icd,
+ 	}
+ 
+ 	subdev = v4l2_i2c_new_subdev_board(&ici->v4l2_dev, adap,
+-				shd->board_info, NULL);
++						shd->board_info, NULL);
+ 	if (!subdev) {
+ 		ret = -ENODEV;
+ 		goto ei2cnd;
+-- 
+2.20.1
+
