@@ -1,0 +1,22 @@
+---------------------------
+drivers/staging/nvec/nvec.c
+---------------------------
+CHECK: Lines should not end with a '('
+#385: FILE: drivers/staging/nvec/nvec.c:385:
++               err = wait_for_completion_interruptible_timeout(
+
+CHECK: usleep_range is preferred over udelay; see Documentation/timers/timers-howto.rst
+#629: FILE: drivers/staging/nvec/nvec.c:629:
++                       udelay(33);
+
+CHECK: usleep_range is preferred over udelay; see Documentation/timers/timers-howto.rst
+#716: FILE: drivers/staging/nvec/nvec.c:716:
++       udelay(100);
+
+total: 0 errors, 0 warnings, 3 checks, 957 lines checked
+
+NOTE: For some of the reported defects, checkpatch may be able to
+      mechanically convert to the typical style using --fix or --fix-inplace.
+
+drivers/staging/nvec/nvec.c has style problems, please review.
+

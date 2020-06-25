@@ -1,0 +1,49 @@
+drivers/staging/media/soc_camera/soc_camera.c
+---------------------------------------------
+CHECK: Lines should not end with a '('
+#195: FILE: drivers/staging/media/soc_camera/soc_camera.c:195:
++const struct soc_camera_format_xlate *soc_camera_xlate_by_fourcc(
+
+ERROR: Macros with complex values should be enclosed in parentheses
+#241: FILE: drivers/staging/media/soc_camera/soc_camera.c:241:
++#define pixfmtstr(x) (x) & 0xff, ((x) >> 8) & 0xff, ((x) >> 16) & 0xff, \
++	((x) >> 24) & 0xff
+
+CHECK: Macro argument reuse 'x' - possible side-effects?
+#241: FILE: drivers/staging/media/soc_camera/soc_camera.c:241:
++#define pixfmtstr(x) (x) & 0xff, ((x) >> 8) & 0xff, ((x) >> 16) & 0xff, \
++	((x) >> 24) & 0xff
+
+CHECK: Alignment should match open parenthesis
+#348: FILE: drivers/staging/media/soc_camera/soc_camera.c:348:
++static int soc_camera_enum_framesizes(struct file *file, void *fh,
++					 struct v4l2_frmsizeenum *fsize)
+
+CHECK: Alignment should match open parenthesis
+#410: FILE: drivers/staging/media/soc_camera/soc_camera.c:410:
++static int soc_camera_create_bufs(struct file *file, void *priv,
++			    struct v4l2_create_buffers *create)
+
+WARNING: ENOSYS means 'invalid syscall nr' and nothing else
+#688: FILE: drivers/staging/media/soc_camera/soc_camera.c:688:
++		if (ret < 0 && ret != -ENOSYS)
+
+WARNING: return of an errno should typically be negative (ie: return -EPOLLERR)
+#812: FILE: drivers/staging/media/soc_camera/soc_camera.c:812:
++		return EPOLLERR;
+
+CHECK: Alignment should match open parenthesis
+#1270: FILE: drivers/staging/media/soc_camera/soc_camera.c:1270:
++	subdev = v4l2_i2c_new_subdev_board(&ici->v4l2_dev, adap,
++				shd->board_info, NULL);
+
+WARNING: Missing a blank line after declarations
+#1743: FILE: drivers/staging/media/soc_camera/soc_camera.c:1743:
++		struct device_driver *drv = dev ? dev->driver : NULL;
++		if (drv) {
+
+total: 1 errors, 3 warnings, 5 checks, 2164 lines checked
+
+NOTE: For some of the reported defects, checkpatch may be able to
+      mechanically convert to the typical style using --fix or --fix-inplace.
+

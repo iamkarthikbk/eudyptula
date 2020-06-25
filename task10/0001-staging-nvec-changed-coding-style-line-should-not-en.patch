@@ -1,0 +1,29 @@
+From 71651f5309d17e084a1a05fa6c025c6fea404a6a Mon Sep 17 00:00:00 2001
+From: B K Karthik <karthik.bk2000@live.com>
+Date: Thu, 25 Jun 2020 09:45:42 -0400
+Subject: [PATCH] staging: nvec: changed coding style, line should not end with
+ a (
+
+Signed-off-by: B K Karthik <karthik.bk2000@live.com>
+---
+ drivers/staging/nvec/nvec.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/drivers/staging/nvec/nvec.c b/drivers/staging/nvec/nvec.c
+index 360ec0407740..16afbe1dfdeb 100644
+--- a/drivers/staging/nvec/nvec.c
++++ b/drivers/staging/nvec/nvec.c
+@@ -382,8 +382,8 @@ static void nvec_request_master(struct work_struct *work)
+ 		msg = list_first_entry(&nvec->tx_data, struct nvec_msg, node);
+ 		spin_unlock_irqrestore(&nvec->tx_lock, flags);
+ 		nvec_gpio_set_value(nvec, 0);
+-		err = wait_for_completion_interruptible_timeout(
+-				&nvec->ec_transfer, msecs_to_jiffies(5000));
++		err = wait_for_completion_interruptible_timeout(&nvec->ec_transfer,
++						msecs_to_jiffies(5000));
+ 
+ 		if (err == 0) {
+ 			dev_warn(nvec->dev, "timeout waiting for ec transfer\n");
+-- 
+2.20.1
+

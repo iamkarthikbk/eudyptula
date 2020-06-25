@@ -1,0 +1,33 @@
+From e3ad0cb27c86c76a061948f9ecd8745cefc46da5 Mon Sep 17 00:00:00 2001
+From: B K Karthik <karthik.bk2000@live.com>
+Date: Tue, 23 Jun 2020 22:07:17 -0400
+Subject: [PATCH] Coding style problem fixed
+
+ashmem.c:
+
+fixing WARNING: Possible unwrapped text
+		(prefer a maximum of 75 charecters per line)
+
+Signed-off-by: B K Karthik <karthik.bk2000@live.com>
+
+---
+ drivers/staging/android/ashmem.c | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+diff --git a/drivers/staging/android/ashmem.c b/drivers/staging/android/ashmem.c
+index c05a214191da..76c12cfe0610 100644
+--- a/drivers/staging/android/ashmem.c
++++ b/drivers/staging/android/ashmem.c
+@@ -166,7 +166,8 @@ static inline void lru_del(struct ashmem_range *range)
+ /**
+  * range_alloc() - Allocates and initializes a new ashmem_range structure
+  * @asma:	   The associated ashmem_area
+- * @prev_range:	   The previous ashmem_range in the sorted asma->unpinned list
++ * @prev_range:	   The previous ashmem_range in the sorted
++ *	asma->unpinned list
+  * @purged:	   Initial purge status (ASMEM_NOT_PURGED or ASHMEM_WAS_PURGED)
+  * @start:	   The starting page (inclusive)
+  * @end:	   The ending page (inclusive)
+-- 
+2.20.1
+
