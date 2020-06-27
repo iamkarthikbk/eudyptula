@@ -1,0 +1,24 @@
+drivers/staging/media/usbvision/usbvision-i2c.c
+-----------------------------------------------
+CHECK: Please don't use multiple blank lines
+#13: FILE: drivers/staging/media/usbvision/usbvision-i2c.c:13:
++
++
+
+CHECK: Prefer using the BIT macro
+#25: FILE: drivers/staging/media/usbvision/usbvision-i2c.c:25:
++#define DBG_I2C		(1 << 0)
+
+CHECK: line length of 101 exceeds 100 columns
+#29: FILE: drivers/staging/media/usbvision/usbvision-i2c.c:29:
++module_param(i2c_debug, int, 0644);			/* debug_i2c_usb mode of the device driver */
+
+WARNING: Prefer [subsystem eg: netdev]_info([subsystem]dev, ... then dev_info(dev, ... then pr_info(...  to printk(KERN_INFO ...
+#34: FILE: drivers/staging/media/usbvision/usbvision-i2c.c:34:
++			printk(KERN_INFO KBUILD_MODNAME ":[%s:%d] " fmt, \
+
+ERROR: space prohibited before that ',' (ctx:WxW)
+#35: FILE: drivers/staging/media/usbvision/usbvision-i2c.c:35:
++				__func__, __LINE__ , ## args); \
+ 				                   ^
+
