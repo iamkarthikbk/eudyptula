@@ -1,0 +1,29 @@
+From d8724921dc53e8ecff61ab5d1319597e16530be2 Mon Sep 17 00:00:00 2001
+From: B K Karthik <karthik.bk2000@live.com>
+Date: Mon, 29 Jun 2020 03:57:45 -0400
+Subject: [PATCH] staging: rtl8188eu: include: odm.h: fixed a blank space
+ coding style issue.
+
+added blank space and enclosed complex valued macros in parentheses for improved code readability.
+
+Signed-off-by: B K Karthik <karthik.bk2000@live.com>
+---
+ drivers/staging/rtl8188eu/include/odm.h | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/drivers/staging/rtl8188eu/include/odm.h b/drivers/staging/rtl8188eu/include/odm.h
+index 9d39fe13626a..27bffc2ead66 100644
+--- a/drivers/staging/rtl8188eu/include/odm.h
++++ b/drivers/staging/rtl8188eu/include/odm.h
+@@ -244,7 +244,7 @@ struct odm_rate_adapt {
+
+ #define AVG_THERMAL_NUM		8
+ #define IQK_Matrix_REG_NUM	8
+-#define IQK_Matrix_Settings_NUM	1+24+21
++#define IQK_Matrix_Settings_NUM	(1 + 24 + 21)
+
+ #define	DM_Type_ByFWi		0
+ #define	DM_Type_ByDriver	1
+--
+2.20.1
+

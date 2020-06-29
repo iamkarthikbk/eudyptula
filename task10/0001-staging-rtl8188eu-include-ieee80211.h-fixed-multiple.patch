@@ -1,0 +1,81 @@
+From 9f731e01b0fe52923282ea2ad1475d49f5b091e4 Mon Sep 17 00:00:00 2001
+From: B K Karthik <karthik.bk2000@live.com>
+Date: Mon, 29 Jun 2020 03:52:52 -0400
+Subject: [PATCH] staging: rtl8188eu: include: ieee80211.h: fixed multiple
+ blank line coding style issues.
+
+removed multiple blank lines to improve code readability.
+
+Signed-off-by: B K Karthik <karthik.bk2000@live.com>
+---
+ drivers/staging/rtl8188eu/include/ieee80211.h | 9 ---------
+ 1 file changed, 9 deletions(-)
+
+diff --git a/drivers/staging/rtl8188eu/include/ieee80211.h b/drivers/staging/rtl8188eu/include/ieee80211.h
+index 75f0ebe0faf5..93fd0e9c49dc 100644
+--- a/drivers/staging/rtl8188eu/include/ieee80211.h
++++ b/drivers/staging/rtl8188eu/include/ieee80211.h
+@@ -90,7 +90,6 @@ enum {
+ #define IEEE_CRYPT_ERR_TX_KEY_SET_FAILED		6
+ #define IEEE_CRYPT_ERR_CARD_CONF_FAILED		7
+
+-
+ #define	IEEE_CRYPT_ALG_NAME_LEN			16
+
+ #define WPA_CIPHER_NONE		BIT(0)
+@@ -99,8 +98,6 @@ enum {
+ #define WPA_CIPHER_TKIP		BIT(3)
+ #define WPA_CIPHER_CCMP		BIT(4)
+
+-
+-
+ #define WPA_SELECTOR_LEN 4
+ extern u8 RTW_WPA_OUI_TYPE[];
+ extern u8 WPA_AUTH_KEY_MGMT_NONE[];
+@@ -113,7 +110,6 @@ extern u8 WPA_CIPHER_SUITE_WRAP[];
+ extern u8 WPA_CIPHER_SUITE_CCMP[];
+ extern u8 WPA_CIPHER_SUITE_WEP104[];
+
+-
+ #define RSN_HEADER_LEN 4
+ #define RSN_SELECTOR_LEN 4
+
+@@ -192,7 +188,6 @@ enum NETWORK_TYPE {
+ #define IsSupportedTxMCS(NetType)				\
+ 	((NetType) & (WIRELESS_11_24N | WIRELESS_11_5N) ? true : false)
+
+-
+ struct ieee_param {
+ 	u32 cmd;
+ 	u8 sta_addr[ETH_ALEN];
+@@ -270,11 +265,9 @@ struct sta_data {
+  * WEP IV and ICV. (this interpretation suggested by Ramiro Barreiro)
+  */
+
+-
+ #define IEEE80211_HLEN			30
+ #define IEEE80211_FRAME_LEN		(IEEE80211_DATA_LEN + IEEE80211_HLEN)
+
+-
+ /* this is stolen from ipw2200 driver */
+ #define IEEE_IBSS_MAC_HASH_SIZE 31
+
+@@ -297,7 +290,6 @@ enum eap_type {
+ #define RTW_IEEE80211_SCTL_FRAG	0x000F
+ #define RTW_IEEE80211_SCTL_SEQ	0xFFF0
+
+-
+ #define RTW_ERP_INFO_NON_ERP_PRESENT BIT(0)
+ #define RTW_ERP_INFO_USE_PROTECTION BIT(1)
+ #define RTW_ERP_INFO_BARKER_PREAMBLE_MODE BIT(2)
+@@ -354,7 +346,6 @@ struct ieee80211_snap_hdr {
+ #define IEEE80211_CCK_RATE_LEN			4
+ #define IEEE80211_NUM_OFDM_RATESLEN	8
+
+-
+ #define IEEE80211_CCK_RATE_1MB			0x02
+ #define IEEE80211_CCK_RATE_2MB			0x04
+ #define IEEE80211_CCK_RATE_5MB			0x0B
+--
+2.20.1
+
