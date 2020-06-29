@@ -1,0 +1,25 @@
+From 18fba2bb72d1a8833cb674e435175a07bb982f04 Mon Sep 17 00:00:00 2001
+From: B K Karthik <karthik.bk2000@live.com>
+Date: Sat, 27 Jun 2020 02:04:29 -0400
+Subject: [PATCH] qlge.h: Adding the missing blank line after declarations
+
+Signed-off-by: B K Karthik <karthik.bk2000@live.com>
+---
+ drivers/staging/qlge/qlge.h | 1 +
+ 1 file changed, 1 insertion(+)
+
+diff --git a/drivers/staging/qlge/qlge.h b/drivers/staging/qlge/qlge.h
+index fc8c5ca8935d..0b971a633001 100644
+--- a/drivers/staging/qlge/qlge.h
++++ b/drivers/staging/qlge/qlge.h
+@@ -2224,6 +2224,7 @@ static inline void ql_write_db_reg_relaxed(u32 val, void __iomem *addr)
+ static inline u32 ql_read_sh_reg(__le32  *addr)
+ {
+ 	u32 reg;
++
+ 	reg =  le32_to_cpu(*addr);
+ 	rmb();
+ 	return reg;
+-- 
+2.20.1
+

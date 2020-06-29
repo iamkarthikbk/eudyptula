@@ -1,0 +1,33 @@
+From 6a82152d68066b887187beb10e7ca7eefb0fcb41 Mon Sep 17 00:00:00 2001
+From: B K Karthik <karthik.bk2000@live.com>
+Date: Sun, 28 Jun 2020 00:28:39 -0400
+Subject: [PATCH] staging: media: atomisp: i2c: atomisp-ov2680.c: fixed a brace coding style issue.
+
+Fixed a coding style issue.
+
+Signed-off-by: B K Karthik <karthik.bk2000@live.com>
+---
+ drivers/staging/media/atomisp/i2c/atomisp-ov2680.c | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+
+diff --git a/drivers/staging/media/atomisp/i2c/atomisp-ov2680.c b/drivers/staging/media/atomisp/i2c/atomisp-ov2680.c
+index 90d125ba080f..c90730513438 100644
+--- a/drivers/staging/media/atomisp/i2c/atomisp-ov2680.c
++++ b/drivers/staging/media/atomisp/i2c/atomisp-ov2680.c
+@@ -495,11 +495,11 @@ static int ov2680_h_flip(struct v4l2_subdev *sd, s32 value)
+ 	ret = ov2680_read_reg(client, 1, OV2680_MIRROR_REG, &val);
+ 	if (ret)
+ 		return ret;
+-	if (value) {
++	if (value)
+ 		val |= OV2680_FLIP_MIRROR_BIT_ENABLE;
+-	} else {
++	else
+ 		val &= ~OV2680_FLIP_MIRROR_BIT_ENABLE;
+-	}
++
+ 	ret = ov2680_write_reg(client, 1,
+ 			       OV2680_MIRROR_REG, val);
+ 	if (ret)
+--
+2.20.1
