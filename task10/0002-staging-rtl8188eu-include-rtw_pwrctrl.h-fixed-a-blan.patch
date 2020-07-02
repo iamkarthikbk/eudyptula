@@ -1,0 +1,28 @@
+From bdfcb6156d8bed91e78b6d125207580d1ccc4d06 Mon Sep 17 00:00:00 2001
+From: B K Karthik <karthik.bk2000@live.com>
+Date: Thu, 2 Jul 2020 00:35:13 -0400
+Subject: [PATCH 2/2] staging: rtl8188eu: include: rtw_pwrctrl.h: fixed a blank space coding style issue.
+
+add blank spaces to improve code readability.
+
+Signed-off-by: B K Karthik <karthik.bk2000@live.com>
+---
+ drivers/staging/rtl8188eu/include/rtw_pwrctrl.h | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/drivers/staging/rtl8188eu/include/rtw_pwrctrl.h b/drivers/staging/rtl8188eu/include/rtw_pwrctrl.h
+index c89328142731..b4cf0f1ce6d3 100644
+--- a/drivers/staging/rtl8188eu/include/rtw_pwrctrl.h
++++ b/drivers/staging/rtl8188eu/include/rtw_pwrctrl.h
+@@ -84,7 +84,7 @@ struct reportpwrstate_parm {
+	unsigned short rsvd;
+ };
+
+-#define LPS_DELAY_TIME	(i*HZ) /*  1 sec */
++#define LPS_DELAY_TIME	(1 * HZ) /*  1 sec */
+
+ #define EXE_PWR_NONE	0x01
+ #define EXE_PWR_IPS		0x02
+--
+2.20.1
+

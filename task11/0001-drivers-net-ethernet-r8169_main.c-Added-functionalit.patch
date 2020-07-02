@@ -1,0 +1,114 @@
+From f8d3ddbe90e785ed848084e244463d95de90a04c Mon Sep 17 00:00:00 2001
+From: B K Karthik <karthik.bk2000@live.com>
+Date: Tue, 30 Jun 2020 10:51:13 -0400
+Subject: [PATCH] drivers: net: ethernet: r8169_main.c: Added functionality -
+ create id file under eth0 in /sys/kernel/eth0
+
+The driver upon being loaded now creates a file named "id" under
+/sys/kernel/eth0 that returns 0 upon being fed the ID and returns
+-EINVAL otherwise. permissions for this file are 0664.
+
+The driver also cleans up the file in /sys/kernel/eth0 upon being
+unloaded.
+
+Signed-off-by: B K Karthik <karthik.bk2000@live.com>
+---
+ drivers/net/ethernet/realtek/r8169_main.c | 49 +++++++++++++++++++++++
+ 1 file changed, 49 insertions(+)
+
+diff --git a/drivers/net/ethernet/realtek/r8169_main.c b/drivers/net/ethernet/realtek/r8169_main.c
+index 07a33af1f64e..d24c2150ae66 100644
+--- a/drivers/net/ethernet/realtek/r8169_main.c
++++ b/drivers/net/ethernet/realtek/r8169_main.c
+@@ -29,11 +29,18 @@
+ #include <linux/prefetch.h>
+ #include <linux/ipv6.h>
+ #include <net/ip6_checksum.h>
++#include <linux/semaphore.h>
++#include <linux/errno.h>
++#include <linux/string.h>
++#include <linux/poll.h>
++#include <linux/kobject.h>
+ 
+ #include "r8169.h"
+ #include "r8169_firmware.h"
+ 
+ #define MODULENAME "r8169"
++#define LFID "a24a6bdd6a14"	/* My LFID */
++#define LFID_LENGTH "13"	/* My LFID LENGTH */
+ 
+ #define FIRMWARE_8168D_1	"rtl_nic/rtl8168d-1.fw"
+ #define FIRMWARE_8168D_2	"rtl_nic/rtl8168d-2.fw"
+@@ -88,6 +95,39 @@
+ #define JUMBO_7K	(7 * SZ_1K - VLAN_ETH_HLEN - ETH_FCS_LEN)
+ #define JUMBO_9K	(9 * SZ_1K - VLAN_ETH_HLEN - ETH_FCS_LEN)
+ 
++static struct kobject *my_kobj;
++
++static ssize_t id_show(struct kobject *kobj, struct kobj_attribute *attr,
++			char *buff)
++{
++	char *print_str = LFID;
++
++	strncpy(buff, print_str, LFID_LENGTH);
++	return LFID_LENGTH;
++}
++
++static ssize_t id_store(struct kobject *kobj, struct kobj_attribute *attr,
++			const char *buff, size_t count)
++{
++	char *print_str = LFID;
++
++	if (strncmp(print_str, buff, LFID_LENGTH))
++		return -EINVAL;
++	else
++		return LFID_LENGTH;
++}
++
++static struct kobj_attribute id_attribute = __ATTR_RW(id);
++
++static struct attribute *attrs[] = {
++	&id_attribute.attr,
++	NULL,
++};
++
++static struct attribute_group my_group = {
++	.attrs = attrs,
++};
++
+ static const struct {
+ 	const char *name;
+ 	const char *fw_name;
+@@ -4884,6 +4924,8 @@ static void rtl_remove_one(struct pci_dev *pdev)
+ 
+ 	/* restore original MAC address */
+ 	rtl_rar_set(tp, tp->dev->perm_addr);
++
++	kobject_put(my_kobj);
+ }
+ 
+ static const struct net_device_ops rtl_netdev_ops = {
+@@ -5163,6 +5205,7 @@ static void rtl_init_mac_address(struct rtl8169_private *tp)
+ 
+ static int rtl_init_one(struct pci_dev *pdev, const struct pci_device_id *ent)
+ {
++	int my_retval;
+ 	struct rtl8169_private *tp;
+ 	int jumbo_max, region, rc;
+ 	enum mac_version chipset;
+@@ -5173,6 +5216,12 @@ static int rtl_init_one(struct pci_dev *pdev, const struct pci_device_id *ent)
+ 	if (!dev)
+ 		return -ENOMEM;
+ 
++	my_kobj = kobject_create_and_add("eth0", kernel_kobj);
++	my_retval = sysfs_create_group(my_kobj, &my_group);
++	if (my_retval)
++		kobject_put(my_kobject);
++
++	pr_debug("Hello World! I've created the id file under eth0");
+ 	SET_NETDEV_DEV(dev, &pdev->dev);
+ 	dev->netdev_ops = &rtl_netdev_ops;
+ 	tp = netdev_priv(dev);
+-- 
+2.20.1
+

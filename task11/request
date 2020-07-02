@@ -1,0 +1,26 @@
+Hi, sorry to bother you but i am facing a few issues with task 11,
+and it would be really helpfull if you are willing to help me out.
+
+1) I do not use a lot of external hardware with my laptop
+(which happens to be the only computer I use) and to test the driver with
+something i am using, it would either be an ethernet cable,
+or a usb storage device, or a usb keyboard. what i mean to ask is,
+i was unable to find the use of sysfs (the static int create_sysfs_attrs)
+with either of these drivers. Am i supposed to go about it this way?
+or can i do it with any driver that came along when i compiled the kernel?
+(i can include all drivers that way and it would kill the purpose of this task)
+
+2)I could notice that drivers/usb/serial/ftdi_sio.c was using the above mentioned piece of code already
+but i do not use a device that requires this driver.
+
+please let me know if i am doing something terribly wrong, because it would be easy to make a patch
+to ftdi_sio.c but it doesn't serve the purpose.
+
+also, i am going to attatch a patch i made to r8169 because i figured out my realtek ethernet connector uses this driver.
+
+please tell me if this was way too much to ask
+
+I apologize if my message was hurtful / disrespectfull in any manner,
+thank you for reading this message.
+
+karthik

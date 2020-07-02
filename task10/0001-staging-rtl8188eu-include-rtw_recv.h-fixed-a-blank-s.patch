@@ -1,0 +1,29 @@
+From 62e9a9f2f9344fe39dc77462df1ac6a05ec5c915 Mon Sep 17 00:00:00 2001
+From: B K Karthik <karthik.bk2000@live.com>
+Date: Thu, 2 Jul 2020 00:38:26 -0400
+Subject: [PATCH] staging: rtl8188eu: include: rtw_recv.h: fixed a blank space
+ coding style issue.
+
+added blank spaces to improve code readability.
+
+Signed-off-by: B K Karthik <karthik.bk2000@live.com>
+---
+ drivers/staging/rtl8188eu/include/rtw_recv.h | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/drivers/staging/rtl8188eu/include/rtw_recv.h b/drivers/staging/rtl8188eu/include/rtw_recv.h
+index e383cb119e1b..b281b9e7fcea 100644
+--- a/drivers/staging/rtl8188eu/include/rtw_recv.h
++++ b/drivers/staging/rtl8188eu/include/rtw_recv.h
+@@ -13,7 +13,7 @@
+ #define NR_RECVFRAME 256
+
+ #define RXFRAME_ALIGN	8
+-#define RXFRAME_ALIGN_SZ	(1<<RXFRAME_ALIGN)
++#define RXFRAME_ALIGN_SZ	(1 << RXFRAME_ALIGN)
+
+ #define MAX_RXFRAME_CNT	512
+ #define MAX_RX_NUMBLKS		(32)
+--
+2.20.1
+

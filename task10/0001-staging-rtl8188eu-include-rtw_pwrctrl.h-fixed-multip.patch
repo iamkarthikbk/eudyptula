@@ -1,0 +1,37 @@
+From 683e78380dde4682b614e6724fabd89d31e4c27f Mon Sep 17 00:00:00 2001
+From: B K Karthik <karthik.bk2000@live.com>
+Date: Thu, 2 Jul 2020 00:32:14 -0400
+Subject: [PATCH 1/2] staging: rtl8188eu: include: rtw_pwrctrl.h: fixed multiple parentheses coding style issues.
+
+add parentheses since complex valued macros must be enclosed within parentheses.
+
+Signed-off-by: B K Karthik <karthik.bk2000@live.com>
+---
+ drivers/staging/rtl8188eu/include/rtw_pwrctrl.h | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/drivers/staging/rtl8188eu/include/rtw_pwrctrl.h b/drivers/staging/rtl8188eu/include/rtw_pwrctrl.h
+index 404634999e35..c89328142731 100644
+--- a/drivers/staging/rtl8188eu/include/rtw_pwrctrl.h
++++ b/drivers/staging/rtl8188eu/include/rtw_pwrctrl.h
+@@ -84,7 +84,7 @@ struct reportpwrstate_parm {
+ 	unsigned short rsvd;
+ };
+
+-#define LPS_DELAY_TIME	1*HZ /*  1 sec */
++#define LPS_DELAY_TIME	(1*HZ) /*  1 sec */
+
+ #define EXE_PWR_NONE	0x01
+ #define EXE_PWR_IPS		0x02
+@@ -201,7 +201,7 @@ struct pwrctrl_priv {
+ };
+
+ #define rtw_get_ips_mode_req(pwrctrlpriv) \
+-	(pwrctrlpriv)->ips_mode_req
++	((pwrctrlpriv)->ips_mode_req)
+
+ #define rtw_ips_mode_req(pwrctrlpriv, ips_mode) \
+ 	((pwrctrlpriv)->ips_mode_req = (ips_mode))
+--
+2.20.1
+
