@@ -1,0 +1,15 @@
+ Jul 03 02:12:27 bkkarthik <2189> :~/Workspace/eudyptula/task12$ sudo insmod task12.ko
+ Jul 03 02:12:29 bkkarthik <2190> :~/Workspace/eudyptula/task12$ sudo dmesg -k | tail -11
+[45665.662801] Hello world! I'm Task 12 of The Eudyptula Challenge
+[45665.662823] a24a6bdd6a14 Task 12: identity 1: Alice created successfully
+[45665.662840] a24a6bdd6a14 Task 12: identity 2: Bob created successfully
+[45665.662857] a24a6bdd6a14 Task 12: identity 3: Dave created successfully
+[45665.662875] a24a6bdd6a14 Task 12: identity 10: Gena created successfully
+[45665.662877] id 3 = Dave
+[45665.662878] id 42 not found
+[45665.662881] a24a6bdd6a14 Task 12: destroying identity 2: Bob
+[45665.662890] a24a6bdd6a14 Task 12: destroying identity 1: Alice
+[45665.662900] a24a6bdd6a14 Task 12: destroying identity 10: Gena
+[45665.662909] a24a6bdd6a14 Task 12: destroying identity 3: Dave
+ Jul 03 02:12:33 bkkarthik <2191> :~/Workspace/eudyptula/task12$ sudo rmmod task12.ko
+ Jul 03 02:12:42 bkkarthik <2192> :~/Workspace/eudyptula/task12$ 
