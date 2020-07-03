@@ -557,5 +557,5 @@ task 04, that does the following:
 
 As always, please send the full module (following the proper kernel
 coding style rules), and "proof" of it working properly.  And remember
-to use your id of "a24a6bdd6a14" in the Subject line properly.
+to use your id of "YOUR_ID" in the Subject line properly.
 
