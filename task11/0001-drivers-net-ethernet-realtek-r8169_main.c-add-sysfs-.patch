@@ -1,0 +1,72 @@
+From a7e135f04999f948761f6cd9fcc0a18dc6962673 Mon Sep 17 00:00:00 2001
+From: B K Karthik <karthik.bk2000@live.com>
+Date: Thu, 2 Jul 2020 11:21:38 -0400
+Subject: [PATCH] drivers: net: ethernet: realtek: r8169_main.c: add sysfs file upon driver probe for RTL8125A chips.
+
+a file by the name "id" with permissions 0644 is now added in sysfs
+when the device is an RTL8125A chipset where mac_version >= RTL_GIGA_MAC_VER_60 is true .
+
+Signed-off-by: B K Karthik <karthik.bk2000@live.com>
+---
+ drivers/net/ethernet/realtek/r8169_main.c | 31 +++++++++++++++++++++++
+ 1 file changed, 31 insertions(+)
+
+diff --git a/drivers/net/ethernet/realtek/r8169_main.c b/drivers/net/ethernet/realtek/r8169_main.c
+index 745e1739e9c8..5eea8f9b141f 100644
+--- a/drivers/net/ethernet/realtek/r8169_main.c
++++ b/drivers/net/ethernet/realtek/r8169_main.c
+@@ -88,6 +88,31 @@
+ #define JUMBO_7K	(7 * SZ_1K - VLAN_ETH_HLEN - ETH_FCS_LEN)
+ #define JUMBO_9K	(9 * SZ_1K - VLAN_ETH_HLEN - ETH_FCS_LEN)
+
++#define LFID "a24a6bdd6a14"
++#define LFID_LENGTH 13
++
++static ssize_t id_show(struct device *dev, struct device_attribute *attr,
++		       char *buff)
++{
++	char *print_str = LFID;
++
++	strncpy(buff, print_str, LFID_LENGTH);
++	return LFID_LENGTH;
++}
++
++static ssize_t id_store(struct device *dev, struct device_attribute *attr,
++			const char *buf, size_t count)
++{
++	char *print_str = LFID;
++
++	if ((count != LFID_LENGTH) || (strncmp(print_str, buff, LFID_LENGTH)))
++		return -EINVAL;
++	else
++		return LFID_LENGTH;
++}
++
++static DEVICE_ATTR(id, 0664, id_show, id_store);
++
+ static const struct {
+ 	const char *name;
+ 	const char *fw_name;
+@@ -4884,6 +4909,9 @@ static void rtl_remove_one(struct pci_dev *pdev)
+
+ 	/* restore original MAC address */
+ 	rtl_rar_set(tp, tp->dev->perm_addr);
++
++	if (&tp->mac_version >= RTL_GIGA_MAC_VER_60)
++		device_remove_file(&tp->dev, &dev_attr_id);
+ }
+
+ static const struct net_device_ops rtl_netdev_ops = {
+@@ -5351,6 +5379,9 @@ static int rtl_init_one(struct pci_dev *pdev, const struct pci_device_id *ent)
+ 	if (pci_dev_run_wake(pdev))
+ 		pm_runtime_put_sync(&pdev->dev);
+
++	if (&tp->mac_version >= RTL_GIGA_MAC_VER_60)
++		device_create_file(&tp->dev, &dev_attr_id);
++
+ 	return 0;
+ }
+
+--
+2.20.1
+
