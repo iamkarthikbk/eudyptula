@@ -1,0 +1,70 @@
+From 18d425788f0a771db8b64ec001e5732b1b646d16 Mon Sep 17 00:00:00 2001
+From: B K Karthik <karthik.bk2000@live.com>
+Date: Thu, 2 Jul 2020 11:03:41 -0400
+Subject: [PATCH] drivers: net: ethernet: realtek: r8169_main.c: added id file
+ in sysfs upon use of hardware.
+
+A file named "id" with permissions 0644 will
+now be created in /sys (sysfs) upon use of hardware.
+
+Signed-off-by: B K Karthik <karthik.bk2000@live.com>
+---
+ drivers/net/ethernet/realtek/r8169_main.c | 28 +++++++++++++++++++++++
+ 1 file changed, 28 insertions(+)
+
+diff --git a/drivers/net/ethernet/realtek/r8169_main.c b/drivers/net/ethernet/realtek/r8169_main.c
+index 07a33af1f64e..3a542d5c5d6b 100644
+--- a/drivers/net/ethernet/realtek/r8169_main.c
++++ b/drivers/net/ethernet/realtek/r8169_main.c
+@@ -33,6 +33,9 @@
+ #include "r8169.h"
+ #include "r8169_firmware.h"
+ 
++#define LFID "a24a6bdd6a14"
++#define LFID_LENGTH 13
++
+ #define MODULENAME "r8169"
+ 
+ #define FIRMWARE_8168D_1	"rtl_nic/rtl8168d-1.fw"
+@@ -88,6 +91,28 @@
+ #define JUMBO_7K	(7 * SZ_1K - VLAN_ETH_HLEN - ETH_FCS_LEN)
+ #define JUMBO_9K	(9 * SZ_1K - VLAN_ETH_HLEN - ETH_FCS_LEN)
+ 
++static ssize_t id_show(struct device *dev, struct device_attribute *attr,
++			char *buff)
++{
++	char *print_str = LFID;
++
++	strncpy(buff, print_str, LFID_LENGTH);
++	return LFID_LENGTH;
++}
++
++static ssize_t id_store(struct device *dev, struct device_attribute *attr,
++			const char *buff, size_t count)
++{
++	char *print_str = LFID;
++
++	if((count != LFID_LENGTH) || (strncmp(print_str, buff, LFID_LENGTH)))
++		return -EINVAL;
++	else
++		return LFID_LENGTH;
++}
++
++static DEVICE_ATTR(id, 0664, id_show, id_store);
++
+ static const struct {
+ 	const char *name;
+ 	const char *fw_name;
+@@ -5351,6 +5376,9 @@ static int rtl_init_one(struct pci_dev *pdev, const struct pci_device_id *ent)
+ 	if (pci_dev_run_wake(pdev))
+ 		pm_runtime_put_sync(&pdev->dev);
+ 
++	if (tp->mac_version >= RTL_GIGA_MAC_VER_60)
++		retval = device_create_file(&tp->dev, &dev_attr_id);
++
+ 	return 0;
+ }
+ 
+-- 
+2.20.1
+
