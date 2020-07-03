@@ -1,0 +1,138 @@
+[[0;32m  OK  [0m] Reached target Login Prompts.
+[[0;32m  OK  [0m] Reached target Multi-User System.
+[[0;32m  OK  [0m] Reached target Graphical Interface.
+         Starting Update UTMP about System Runlevel Changes...
+[[0;32m  OK  [0m] Started Update UTMP about System Runlevel Changes.
+
+
+Debian GNU/Linux 9 syzkaller ttyS0
+
+Warning: Permanently added '10.128.10.30' (ECDSA) to the list of known hosts.
+executing program
+executing program
+syzkaller login: [  844.569463][ T7073] ==================================================================
+[  844.569638][ T7073] BUG: KASAN: null-ptr-deref in uncore_pmu_event_add+0xa25/0x16d0
+[  844.569649][ T7073] Read of size 8 at addr 0000000000000000 by task syz-executor764/7073
+[  844.569653][ T7073] 
+[  844.569668][ T7073] CPU: 0 PID: 7073 Comm: syz-executor764 Not tainted 5.7.0-rc1-next-20200415-syzkaller #0
+[  844.569676][ T7073] Hardware name: Google Google Compute Engine/Google Compute Engine, BIOS Google 01/01/2011
+[  844.569701][ T7073] Call Trace:
+[  844.569734][ T7073]  <IRQ>
+[  844.569805][ T7073]  dump_stack+0x188/0x20d
+[  844.569823][ T7073]  ? uncore_pmu_event_add+0xa25/0x16d0
+[  844.569884][ T7073]  __kasan_report.cold+0x5/0x4d
+[  844.569902][ T7073]  ? uncore_pmu_event_add+0xa25/0x16d0
+[  844.569919][ T7073]  ? uncore_pmu_event_add+0xa25/0x16d0
+[  844.569931][ T7073]  kasan_report+0x33/0x50
+[  844.569953][ T7073]  check_memory_region+0x141/0x190
+[  844.569969][ T7073]  uncore_pmu_event_add+0xa25/0x16d0
+[  844.570036][ T7073]  ? interrupt_entry+0xb8/0xc0
+[  844.570050][ T7073]  ? apic_timer_interrupt+0xa/0x20
+[  844.570056][ T7073]  </IRQ>
+[  844.570104][ T7073]  ? vga16fb_fillrect+0x9da/0x1960
+[  844.570118][ T7073]  ? vga16fb_fillrect+0x9c6/0x1960
+[  844.570161][ T7073]  ? __sanitizer_cov_trace_pc+0x31/0x60
+[  844.570176][ T7073]  ? vga16fb_fillrect+0x9c6/0x1960
+[  844.570192][ T7073]  ? memcpy+0x39/0x60
+[  844.570229][ T7073]  ? bit_clear_margins+0x3f6/0x4a0
+[  844.570244][ T7073]  ? bit_bmove+0x210/0x210
+[  844.570259][ T7073]  ? vesafb_probe.cold+0x1162/0x1162
+[  844.570301][ T7073]  ? fbcon_clear_margins+0x1de/0x240
+[  844.570317][ T7073]  ? fbcon_switch+0xd21/0x1740
+[  844.570337][ T7073]  ? fbcon_set_def_font+0x370/0x370
+[  844.570365][ T7073]  ? fbcon_cursor+0x477/0x650
+[  844.570377][ T7073]  ? bit_clear+0x4e0/0x4e0
+[  844.570412][ T7073]  ? is_console_locked+0x5/0x10
+[  844.570424][ T7073]  ? fbcon_set_origin+0x26/0x50
+[  844.570467][ T7073]  ? redraw_screen+0x2ae/0x770
+[  844.570479][ T7073]  ? vesafb_probe.cold+0x1162/0x1162
+[  844.570494][ T7073]  ? respond_string+0x290/0x290
+[  844.570510][ T7073]  ? fbcon_set_palette+0x3b1/0x4a0
+[  844.570527][ T7073]  ? fbcon_modechanged+0x5c3/0x790
+[  844.570545][ T7073]  ? fbcon_set_all_vcs+0x3b3/0x460
+[  844.570564][ T7073]  ? fbcon_update_vcs+0x26/0x50
+[  844.570578][ T7073]  ? fb_set_var+0xad0/0xd40
+[  844.570593][ T7073]  ? fb_blank+0x190/0x190
+[  844.570617][ T7073]  ? mark_held_locks+0xe0/0xe0
+[  844.570666][ T7073]  ? _raw_spin_unlock_irqrestore+0x62/0xe0
+[  844.570685][ T7073]  ? do_fb_ioctl+0x390/0x6e0
+[  844.570700][ T7073]  ? fb_mmap+0x550/0x550
+[  844.570786][ T7073]  ? tomoyo_execute_permission+0x470/0x470
+[  844.570818][ T7073]  ? __sanitizer_cov_trace_switch+0x45/0x70
+[  844.570878][ T7073]  ? do_vfs_ioctl+0x50c/0x12d0
+[  844.570908][ T7073]  ? up_read+0x1a8/0x750
+[  844.570924][ T7073]  ? down_read_nested+0x430/0x430
+[  844.570948][ T7073]  ? fb_ioctl+0xdd/0x130
+[  844.570961][ T7073]  ? do_fb_ioctl+0x6e0/0x6e0
+[  844.570974][ T7073]  ? ksys_ioctl+0x11a/0x180
+[  844.570991][ T7073]  ? __x64_sys_ioctl+0x6f/0xb0
+[  844.571004][ T7073]  ? lockdep_hardirqs_on+0x463/0x620
+[  844.571041][ T7073]  ? do_syscall_64+0xf6/0x7d0
+[  844.571058][ T7073]  ? entry_SYSCALL_64_after_hwframe+0x49/0xb3
+[  844.571079][ T7073] ==================================================================
+[  844.571083][ T7073] Disabling lock debugging due to kernel taint
+[  844.571090][ T7073] Kernel panic - not syncing: panic_on_warn set ...
+[  844.571103][ T7073] CPU: 0 PID: 7073 Comm: syz-executor764 Tainted: G    B             5.7.0-rc1-next-20200415-syzkaller #0
+[  844.571110][ T7073] Hardware name: Google Google Compute Engine/Google Compute Engine, BIOS Google 01/01/2011
+[  844.571113][ T7073] Call Trace:
+[  844.571117][ T7073]  <IRQ>
+[  844.571128][ T7073]  dump_stack+0x188/0x20d
+[  844.571176][ T7073]  panic+0x2e3/0x75c
+[  844.571189][ T7073]  ? add_taint.cold+0x16/0x16
+[  844.571205][ T7073]  ? uncore_pmu_event_add+0xa25/0x16d0
+[  844.571223][ T7073]  ? trace_hardirqs_off+0x50/0x220
+[  844.571234][ T7073]  ? trace_hardirqs_off+0x50/0x220
+[  844.571248][ T7073]  ? uncore_pmu_event_add+0xa25/0x16d0
+[  844.571260][ T7073]  end_report+0x4d/0x53
+[  844.571272][ T7073]  __kasan_report.cold+0xd/0x4d
+[  844.571287][ T7073]  ? uncore_pmu_event_add+0xa25/0x16d0
+[  844.571300][ T7073]  ? uncore_pmu_event_add+0xa25/0x16d0
+[  844.571311][ T7073]  kasan_report+0x33/0x50
+[  844.571324][ T7073]  check_memory_region+0x141/0x190
+[  844.571338][ T7073]  uncore_pmu_event_add+0xa25/0x16d0
+[  844.571348][ T7073]  ? interrupt_entry+0xb8/0xc0
+[  844.571360][ T7073]  ? apic_timer_interrupt+0xa/0x20
+[  844.571364][ T7073]  </IRQ>
+[  844.571377][ T7073]  ? vga16fb_fillrect+0x9da/0x1960
+[  844.571386][ T7073]  ? vga16fb_fillrect+0x9c6/0x1960
+[  844.571396][ T7073]  ? __sanitizer_cov_trace_pc+0x31/0x60
+[  844.571408][ T7073]  ? vga16fb_fillrect+0x9c6/0x1960
+[  844.571419][ T7073]  ? memcpy+0x39/0x60
+[  844.571432][ T7073]  ? bit_clear_margins+0x3f6/0x4a0
+[  844.571443][ T7073]  ? bit_bmove+0x210/0x210
+[  844.571454][ T7073]  ? vesafb_probe.cold+0x1162/0x1162
+[  844.571471][ T7073]  ? fbcon_clear_margins+0x1de/0x240
+[  844.571483][ T7073]  ? fbcon_switch+0xd21/0x1740
+[  844.571497][ T7073]  ? fbcon_set_def_font+0x370/0x370
+[  844.571513][ T7073]  ? fbcon_cursor+0x477/0x650
+[  844.571523][ T7073]  ? bit_clear+0x4e0/0x4e0
+[  844.571534][ T7073]  ? is_console_locked+0x5/0x10
+[  844.571544][ T7073]  ? fbcon_set_origin+0x26/0x50
+[  844.571557][ T7073]  ? redraw_screen+0x2ae/0x770
+[  844.571567][ T7073]  ? vesafb_probe.cold+0x1162/0x1162
+[  844.571580][ T7073]  ? respond_string+0x290/0x290
+[  844.571592][ T7073]  ? fbcon_set_palette+0x3b1/0x4a0
+[  844.571604][ T7073]  ? fbcon_modechanged+0x5c3/0x790
+[  844.571617][ T7073]  ? fbcon_set_all_vcs+0x3b3/0x460
+[  844.571630][ T7073]  ? fbcon_update_vcs+0x26/0x50
+[  844.571642][ T7073]  ? fb_set_var+0xad0/0xd40
+[  844.571654][ T7073]  ? fb_blank+0x190/0x190
+[  844.571667][ T7073]  ? mark_held_locks+0xe0/0xe0
+[  844.571694][ T7073]  ? _raw_spin_unlock_irqrestore+0x62/0xe0
+[  844.571708][ T7073]  ? do_fb_ioctl+0x390/0x6e0
+[  844.571719][ T7073]  ? fb_mmap+0x550/0x550
+[  844.571732][ T7073]  ? tomoyo_execute_permission+0x470/0x470
+[  844.571751][ T7073]  ? __sanitizer_cov_trace_switch+0x45/0x70
+[  844.571763][ T7073]  ? do_vfs_ioctl+0x50c/0x12d0
+[  844.571781][ T7073]  ? up_read+0x1a8/0x750
+[  844.571793][ T7073]  ? down_read_nested+0x430/0x430
+[  844.571806][ T7073]  ? fb_ioctl+0xdd/0x130
+[  844.571818][ T7073]  ? do_fb_ioctl+0x6e0/0x6e0
+[  844.571829][ T7073]  ? ksys_ioctl+0x11a/0x180
+[  844.571843][ T7073]  ? __x64_sys_ioctl+0x6f/0xb0
+[  844.571854][ T7073]  ? lockdep_hardirqs_on+0x463/0x620
+[  844.571867][ T7073]  ? do_syscall_64+0xf6/0x7d0
+[  844.571880][ T7073]  ? entry_SYSCALL_64_after_hwframe+0x49/0xb3
+[  845.748127][ T7073] Shutting down cpus with NMI
+[  845.750244][ T7073] Kernel Offset: disabled
+[  846.436980][ T7073] Rebooting in 86400 seconds..

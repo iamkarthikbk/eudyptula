@@ -1,0 +1,31 @@
+reached runlevel 4
+reached runlevel 5
+hostname -- Debian GNU/Linux 9 syzkaller
+login ttyS0 -- syzkaller
+[BUG] KASAN: null pointer dereferenced in uncore_pmu_event_add0xa25/0x16d0
+Kernel Version: 5.7.0-rc1-next-20200415-syzkaller #0
+Physical System: Google Compute Engine with BIOS dated 01/01/2011
+start trace:
+	<IRQ>
+	dump_stack using lib/earlycpio.c:72
+	add new uncore pmu event 0xa25/0x16d0
+	KASAN report at 0x5/0x4d
+	add new uncore pmu event 0xa25/0x16d0
+	add new uncore pmu event 0xa25/0x16d0
+	KASAN report using mm/kasan/report.c
+	check memory region using mm/kasan/generic.c
+	add new uncore pmu event 0xa25/0x16d0
+	interrupt entry 0xb8/0xc0
+	apic timer interrupt 0xa/0x20
+	</IRQ>
+
+	fill rectangle over vga at 0x9da/0x1960
+	fill rectangle over vga at 0x9ca/0x1960
+
+	KASAN sanitize 0x31/0x60
+	memory copy using mm/kasan/common.c -- discriminator 1
+	..
+	video drivers doing their job
+	..
+
+	...
