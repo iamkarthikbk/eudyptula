@@ -1,0 +1,11 @@
+ Jul 04 10:01:25 bkkarthik <2047> :~/Workspace/eudyptula/task13$ sudo cat /proc/slabinfo | head -10
+slabinfo - version: 2.1
+# name            <active_objs> <num_objs> <objsize> <objperslab> <pagesperslab> : tunables <limit> <batchcount> <sharedfactor> : slabdata <active_slabs> <num_slabs> <sharedavail>
+identity              73     73     56   73    1 : tunables    0    0    0 : slabdata      1      1      0
+pid_3                316    416    256   16    1 : tunables    0    0    0 : slabdata     26     26      0
+pid_2                 84     84    192   21    1 : tunables    0    0    0 : slabdata      4      4      0
+fuse_request          60     60    200   20    1 : tunables    0    0    0 : slabdata      3      3      0
+fuse_inode            54     54    896   18    4 : tunables    0    0    0 : slabdata      3      3      0
+fat_inode_cache       57     57    848   19    4 : tunables    0    0    0 : slabdata      3      3      0
+fat_cache              0      0     64   64    1 : tunables    0    0    0 : slabdata      0      0      0
+
