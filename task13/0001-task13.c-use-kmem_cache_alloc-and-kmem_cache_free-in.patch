@@ -1,0 +1,78 @@
+From c46969a287d47b77acb196b73930ce560d7eb9ec Mon Sep 17 00:00:00 2001
+From: B K Karthik <karthik.bk2000@live.com>
+Date: Sat, 4 Jul 2020 09:52:27 -0400
+Subject: [PATCH] task13.c: use kmem_cache_alloc() and kmem_cache_free() instead of kmalloc() and kfree().
+
+Instead of using kmalloc() and kfree() in the module, use
+kmem_cache_alloc() and kmem_cache_free() instead.  Of course this means
+you will have to initialize your memory cache properly when the module
+starts up.  Don't forget to do that.  You are free to name your memory
+cache whatever you wish, but it should show up in the /proc/slabinfo
+file.
+
+Signed-off-by: B K Karthik <karthik.bk2000@live.com>
+---
+ task13/task13.c | 14 ++++++++++++--
+ 1 file changed, 12 insertions(+), 2 deletions(-)
+
+diff --git a/task13/task13.c b/task13/task13.c
+index 43ba565..3c2c02a 100644
+--- a/task13/task13.c
++++ b/task13/task13.c
+@@ -9,6 +9,8 @@
+
+ #define NAME_LENGTH 10
+
++static struct kmem_cache *identity_cache;
++
+ MODULE_LICENSE("GPL");
+ MODULE_AUTHOR("a24a6bdd6a14 B K Karthik");
+ MODULE_DESCRIPTION("Linked Lists (Even after Bjarne Stroustrup asked us to avoid them) Task 12 of The Eudyptula Challenge");
+@@ -52,7 +54,7 @@ int identity_create(char *name, int id)
+ 	if (identity_find(id))
+ 		return retval;
+
+-	temp_identity = kmalloc(sizeof(*temp_identity), GFP_KERNEL);
++	temp_identity = kmem_cache_alloc(identity_cache, GFP_KERNEL);
+ 	if (!temp_identity)
+ 		return retval;
+
+@@ -81,7 +83,7 @@ void identity_destroy(int id)
+
+ 	pr_debug("a24a6bdd6a14 Task 12: destroying identity %i: %s\n", temp_identity->id, temp_identity->name);
+ 	list_del(&(temp_identity->list));
+-	kfree(temp_identity);
++	kmem_cache_free(identity_cache, temp_identity);
+ }
+
+ static int __init my_init(void)
+@@ -89,6 +91,10 @@ static int __init my_init(void)
+ 	struct identity *temp_identity;
+
+ 	pr_debug("Hello world! I'm Task 12 of The Eudyptula Challenge\n");
++	identity_cache = kmem_cache_create("identity", sizeof(struct identity), 0, 0, NULL);
++	if (!identity_cache)
++		return -ENOMEM;
++
+	if (identity_create("Alice", 1))
+		pr_debug("Error creating identity \"Alice\"\n");
+ 	if (identity_create("Bob", 2))
+@@ -122,6 +128,8 @@ static int __init my_init(void)
+ static void __exit my_exit(void)
+ {
+ 	pr_debug("a24a6bdd6a14 Exiting Task 12 of The Eudyptula Challenge");
++	if (identity_cache)
++		kmem_cache_destroy(identity_cache);
+ }
+
+ module_init(my_init);
+@@ -132,4 +140,6 @@ module_exit(my_exit);
+  * https://kernelnewbies.org/FAQ/LinkedLists was used as a reference
+  * https://algorithmsandme.com/linked-list-implementation-in-linux-kernel/ was used as a reference.
+  * https://tuxthink.blogspot.com/2014/02/creating-linked-list-in-liinux-kernel.html was used as a reference.
++ * https://www.kernel.org/doc/gorman/html/understand/understand011.html was used as a reference.
++ * http://www.secretmango.com/jimb/Whitepapers/slabs/slab.html was used as a reference.
+  */
+--
+2.20.1
+
