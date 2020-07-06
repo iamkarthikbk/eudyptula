@@ -1,0 +1,197 @@
+ Jul 05 10:34:59 bkkarthik <2032> :~/Workspace/eudyptula/linux-next$ git branch
+* master
+ Jul 05 10:35:12 bkkarthik <2033> :~/Workspace/eudyptula/linux-next$ git branch mrinal
+ Jul 05 10:35:19 bkkarthik <2034> :~/Workspace/eudyptula/linux-next$ ls drivers/staging/rtl8188eu
+core  hal  include  Kconfig  Makefile  os_dep  TODO
+ Jul 05 10:36:12 bkkarthik <2035> :~/Workspace/eudyptula/linux-next$ ls drivers/staging/rtl8188eu/include
+basic_types.h             HalVerDef.h     odm_rtl8188e.h        pwrseq.h         rtl8188e_xmit.h  rtw_ht.h         rtw_recv.h       wlan_bssdef.h
+drv_types.h               ieee80211.h     odm_types.h           recv_osdep.h     rtw_android.h    rtw_ioctl.h      rtw_rf.h         xmit_osdep.h
+fw.h                      mlme_osdep.h    osdep_intf.h          rf.h             rtw_ap.h         rtw_ioctl_set.h  rtw_security.h
+hal8188e_phy_cfg.h        mon.h           osdep_service.h       rtl8188e_cmd.h   rtw_cmd.h        rtw_iol.h        rtw_sreset.h
+hal8188e_phy_reg.h        odm_debug.h     phydm_regdefine11n.h  rtl8188e_dm.h    rtw_debug.h      rtw_led.h        rtw_xmit.h
+hal8188e_rate_adaptive.h  odm.h           phydm_reg.h           rtl8188e_hal.h   rtw_eeprom.h     rtw_mlme_ext.h   sta_info.h
+hal_com.h                 odm_hwconfig.h  phy.h                 rtl8188e_recv.h  rtw_efuse.h      rtw_mlme.h       usb_ops_linux.h
+hal_intf.h                odm_precomp.h   pwrseqcmd.h           rtl8188e_spec.h  rtw_event.h      rtw_pwrctrl.h    wifi.h
+ Jul 05 10:36:17 bkkarthik <2036> :~/Workspace/eudyptula/linux-next$ perl scripts/checkpatch.pl -f drivers/staging/rtl8188eu/include/fw.h
+total: 0 errors, 0 warnings, 0 checks, 44 lines checked
+
+drivers/staging/rtl8188eu/include/fw.h has no obvious style problems and is ready for submission.
+ Jul 05 10:36:51 bkkarthik <2037> :~/Workspace/eudyptula/linux-next$ perl scripts/checkpatch.pl -f drivers/staging/rtl8188eu/include/basic_types.h
+ERROR: Macros with complex values should be enclosed in parentheses
+#113: FILE: drivers/staging/rtl8188eu/include/basic_types.h:113:
++#define SET_BITS_TO_LE_4BYTE(__pstart, __bitoffset, __bitlen, __val) \
++		*((u32 *)(__pstart)) =				\
++		(							\
++		LE_BITS_CLEARED_TO_4BYTE(__pstart, __bitoffset, __bitlen) | \
++		((((u32)__val) & BIT_LEN_MASK_32(__bitlen)) << (__bitoffset)) \
++		)
+
+CHECK: Macro argument reuse '__pstart' - possible side-effects?
+#113: FILE: drivers/staging/rtl8188eu/include/basic_types.h:113:
++#define SET_BITS_TO_LE_4BYTE(__pstart, __bitoffset, __bitlen, __val) \
++		*((u32 *)(__pstart)) =				\
++		(							\
++		LE_BITS_CLEARED_TO_4BYTE(__pstart, __bitoffset, __bitlen) | \
++		((((u32)__val) & BIT_LEN_MASK_32(__bitlen)) << (__bitoffset)) \
++		)
+
+CHECK: Macro argument reuse '__bitoffset' - possible side-effects?
+#113: FILE: drivers/staging/rtl8188eu/include/basic_types.h:113:
++#define SET_BITS_TO_LE_4BYTE(__pstart, __bitoffset, __bitlen, __val) \
++		*((u32 *)(__pstart)) =				\
++		(							\
++		LE_BITS_CLEARED_TO_4BYTE(__pstart, __bitoffset, __bitlen) | \
++		((((u32)__val) & BIT_LEN_MASK_32(__bitlen)) << (__bitoffset)) \
++		)
+
+CHECK: Macro argument reuse '__bitlen' - possible side-effects?
+#113: FILE: drivers/staging/rtl8188eu/include/basic_types.h:113:
++#define SET_BITS_TO_LE_4BYTE(__pstart, __bitoffset, __bitlen, __val) \
++		*((u32 *)(__pstart)) =				\
++		(							\
++		LE_BITS_CLEARED_TO_4BYTE(__pstart, __bitoffset, __bitlen) | \
++		((((u32)__val) & BIT_LEN_MASK_32(__bitlen)) << (__bitoffset)) \
++		)
+
+ERROR: Macros with multiple statements should be enclosed in a do - while loop
+#120: FILE: drivers/staging/rtl8188eu/include/basic_types.h:120:
++#define SET_BITS_TO_LE_2BYTE(__pstart, __bitoffset, __bitlen, __val) \
++		*((u16 *)(__pstart)) =				\
++		(						\
++		LE_BITS_CLEARED_TO_2BYTE(__pstart, __bitoffset, __bitlen) | \
++		((((u16)__val) & BIT_LEN_MASK_16(__bitlen)) << (__bitoffset)) \
++		);
+
+CHECK: Macro argument reuse '__pstart' - possible side-effects?
+#120: FILE: drivers/staging/rtl8188eu/include/basic_types.h:120:
++#define SET_BITS_TO_LE_2BYTE(__pstart, __bitoffset, __bitlen, __val) \
++		*((u16 *)(__pstart)) =				\
++		(						\
++		LE_BITS_CLEARED_TO_2BYTE(__pstart, __bitoffset, __bitlen) | \
++		((((u16)__val) & BIT_LEN_MASK_16(__bitlen)) << (__bitoffset)) \
++		);
+
+CHECK: Macro argument reuse '__bitoffset' - possible side-effects?
+#120: FILE: drivers/staging/rtl8188eu/include/basic_types.h:120:
++#define SET_BITS_TO_LE_2BYTE(__pstart, __bitoffset, __bitlen, __val) \
++		*((u16 *)(__pstart)) =				\
++		(						\
++		LE_BITS_CLEARED_TO_2BYTE(__pstart, __bitoffset, __bitlen) | \
++		((((u16)__val) & BIT_LEN_MASK_16(__bitlen)) << (__bitoffset)) \
++		);
+
+CHECK: Macro argument reuse '__bitlen' - possible side-effects?
+#120: FILE: drivers/staging/rtl8188eu/include/basic_types.h:120:
++#define SET_BITS_TO_LE_2BYTE(__pstart, __bitoffset, __bitlen, __val) \
++		*((u16 *)(__pstart)) =				\
++		(						\
++		LE_BITS_CLEARED_TO_2BYTE(__pstart, __bitoffset, __bitlen) | \
++		((((u16)__val) & BIT_LEN_MASK_16(__bitlen)) << (__bitoffset)) \
++		);
+
+WARNING: macros should not use a trailing semicolon
+#120: FILE: drivers/staging/rtl8188eu/include/basic_types.h:120:
++#define SET_BITS_TO_LE_2BYTE(__pstart, __bitoffset, __bitlen, __val) \
++		*((u16 *)(__pstart)) =				\
++		(						\
++		LE_BITS_CLEARED_TO_2BYTE(__pstart, __bitoffset, __bitlen) | \
++		((((u16)__val) & BIT_LEN_MASK_16(__bitlen)) << (__bitoffset)) \
++		);
+
+ERROR: Macros with complex values should be enclosed in parentheses
+#127: FILE: drivers/staging/rtl8188eu/include/basic_types.h:127:
++#define SET_BITS_TO_LE_1BYTE(__pstart, __bitoffset, __bitlen, __val) \
++		*((u8 *)(__pstart)) = EF1BYTE			\
++		(						\
++		LE_BITS_CLEARED_TO_1BYTE(__pstart, __bitoffset, __bitlen) | \
++		((((u8)__val) & BIT_LEN_MASK_8(__bitlen)) << (__bitoffset)) \
++		)
+
+CHECK: Macro argument reuse '__pstart' - possible side-effects?
+#127: FILE: drivers/staging/rtl8188eu/include/basic_types.h:127:
++#define SET_BITS_TO_LE_1BYTE(__pstart, __bitoffset, __bitlen, __val) \
++		*((u8 *)(__pstart)) = EF1BYTE			\
++		(						\
++		LE_BITS_CLEARED_TO_1BYTE(__pstart, __bitoffset, __bitlen) | \
++		((((u8)__val) & BIT_LEN_MASK_8(__bitlen)) << (__bitoffset)) \
++		)
+
+CHECK: Macro argument reuse '__bitoffset' - possible side-effects?
+#127: FILE: drivers/staging/rtl8188eu/include/basic_types.h:127:
++#define SET_BITS_TO_LE_1BYTE(__pstart, __bitoffset, __bitlen, __val) \
++		*((u8 *)(__pstart)) = EF1BYTE			\
++		(						\
++		LE_BITS_CLEARED_TO_1BYTE(__pstart, __bitoffset, __bitlen) | \
++		((((u8)__val) & BIT_LEN_MASK_8(__bitlen)) << (__bitoffset)) \
++		)
+
+CHECK: Macro argument reuse '__bitlen' - possible side-effects?
+#127: FILE: drivers/staging/rtl8188eu/include/basic_types.h:127:
++#define SET_BITS_TO_LE_1BYTE(__pstart, __bitoffset, __bitlen, __val) \
++		*((u8 *)(__pstart)) = EF1BYTE			\
++		(						\
++		LE_BITS_CLEARED_TO_1BYTE(__pstart, __bitoffset, __bitlen) | \
++		((((u8)__val) & BIT_LEN_MASK_8(__bitlen)) << (__bitoffset)) \
++		)
+
+total: 3 errors, 1 warnings, 9 checks, 134 lines checked
+
+NOTE: For some of the reported defects, checkpatch may be able to
+      mechanically convert to the typical style using --fix or --fix-inplace.
+
+drivers/staging/rtl8188eu/include/basic_types.h has style problems, please review.
+
+NOTE: If any of the errors are false positives, please report
+      them to the maintainer, see CHECKPATCH in MAINTAINERS.
+ Jul 05 10:37:02 bkkarthik <2038> :~/Workspace/eudyptula/linux-next$ echo "take a look at the first error, they are indeed enclosed within patentheses, but checkpatch says they're not"
+take a look at the first error, they are indeed enclosed within patentheses, but checkpatch says they're not
+ Jul 05 10:38:27 bkkarthik <2039> :~/Workspace/eudyptula/linux-next$ echo "I am modifying drivers/staging/rtl8188eu/include/basic_types.h:113:"
+I am modifying drivers/staging/rtl8188eu/include/basic_types.h:113:
+ Jul 05 10:39:03 bkkarthik <2040> :~/Workspace/eudyptula/linux-next$ vim drivers/staging/rtl8188eu/include/basic_types.h
+ Jul 05 10:40:15 bkkarthik <2041> :~/Workspace/eudyptula/linux-next$ echo modified
+modified
+ Jul 05 10:40:20 bkkarthik <2042> :~/Workspace/eudyptula/linux-next$ git add drivers/staging/rtl8188eu/include/basic_types.h
+ Jul 05 10:40:30 bkkarthik <2043> :~/Workspace/eudyptula/linux-next$ git commit -s -v
+[master c7775601e147] drivers: staging: rtl8188eu: include: basic_types.h: fixed a parentheses coding style issue.
+ 1 file changed, 3 insertions(+), 5 deletions(-)
+ Jul 05 10:41:48 bkkarthik <2044> :~/Workspace/eudyptula/linux-next$ git format-patch -1
+0001-drivers-staging-rtl8188eu-include-basic_types.h-fixe.patch
+ Jul 05 10:41:57 bkkarthik <2045> :~/Workspace/eudyptula/linux-next$ perl scripts/checkpatch.pl -f 0001-drivers-staging-rtl8188eu-include-basic_types.h-fixe.patch
+ERROR: trailing whitespace
+#30: FILE: 0001-drivers-staging-rtl8188eu-include-basic_types.h-fixe.patch:30:
++ $
+
+ERROR: trailing whitespace
+#33: FILE: 0001-drivers-staging-rtl8188eu-include-basic_types.h-fixe.patch:33:
++-- $
+
+total: 2 errors, 0 warnings, 35 lines checked
+
+NOTE: For some of the reported defects, checkpatch may be able to
+      mechanically convert to the typical style using --fix or --fix-inplace.
+
+NOTE: Whitespace errors detected.
+      You may wish to use scripts/cleanpatch or scripts/cleanfile
+
+0001-drivers-staging-rtl8188eu-include-basic_types.h-fixe.patch has style problems, please review.
+
+NOTE: If any of the errors are false positives, please report
+      them to the maintainer, see CHECKPATCH in MAINTAINERS.
+ Jul 05 10:42:10 bkkarthik <2046> :~/Workspace/eudyptula/linux-next$ echo "Those trailing whitespaces were not supposed to be reported. i did not intend for them to be there"
+Those trailing whitespaces were not supposed to be reported. i did not intend for them to be there
+ Jul 05 10:42:38 bkkarthik <2047> :~/Workspace/eudyptula/linux-next$ git log | less
+ Jul 05 10:43:03 bkkarthik <2048> :~/Workspace/eudyptula/linux-next$ git revert c7775601e147546350b1ecd319e599e45e11c492
+[master 1a014f61ac09] Revert "drivers: staging: rtl8188eu: include: basic_types.h: fixed a parentheses coding style issue."
+ 1 file changed, 5 insertions(+), 3 deletions(-)
+ Jul 05 10:43:30 bkkarthik <2049> :~/Workspace/eudyptula/linux-next$ git reset --hard origin/master
+HEAD is now at 9e50b94b3eb0 Add linux-next specific files for 20200703
+ Jul 05 10:43:42 bkkarthik <2050> :~/Workspace/eudyptula/linux-next$ git fetch
+ Jul 05 10:43:47 bkkarthik <2051> :~/Workspace/eudyptula/linux-next$ git pull
+Already up to date.
+ Jul 05 10:43:50 bkkarthik <2052> :~/Workspace/eudyptula/linux-next$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+ Jul 05 10:43:55 bkkarthik <2053> :~/Workspace/eudyptula/linux-next$ 
+
