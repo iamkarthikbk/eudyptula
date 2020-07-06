@@ -1,0 +1,95 @@
+From e61be6fa1b7f713dd4486fa0ae704fa553e1c331 Mon Sep 17 00:00:00 2001
+From: B K Karthik <karthik.bk2000@live.com>
+Date: Sun, 5 Jul 2020 12:36:28 -0400
+Subject: [PATCH]   - Add a new syscall to the kernel called "sys_eudyptula",
+ so this is     all going to be changes to the kernel tree itself, no
+ stand-alone     module needed for this task (unless you want to do it that
+ way     without hacking around the syscall table, if so, bonus points for    
+ you...)   - The syscall number needs to be the next syscall number for the   
+  architecture you test it on (some of you all are doing this on ARM    
+ systems, showoffs, and syscall numbers are not the same across all    
+ architectures).  Document the arch you are using and why you picked     this
+ number in the module.   - The syscall should take two parameters: int
+ high_id, int low_id.   - The syscall will take the two values, mush them
+ together into one     64bit value (low_id being the lower 32bits of the id,
+ high_id being     the upper 32bits of the id).   - If the id value matches
+ your id (which of course you know as     "a24a6bdd6a14", then the syscall
+ returns success.  Otherwise it     returns a return code signifying an
+ invalid value was passed to it.
+
+Signed-off-by: B K Karthik <karthik.bk2000@live.com>
+---
+ arch/x86/entry/syscalls/syscall_64.tbl |  1 +
+ arch/x86/kernel/Makefile               |  4 ++++
+ arch/x86/kernel/eudyptula_task15.c     | 21 +++++++++++++++++++++
+ include/linux/syscalls.h               |  1 +
+ 4 files changed, 27 insertions(+)
+ create mode 100644 arch/x86/kernel/eudyptula_task15.c
+
+diff --git a/arch/x86/entry/syscalls/syscall_64.tbl b/arch/x86/entry/syscalls/syscall_64.tbl
+index 8f959d90338a..50ed2cee888f 100644
+--- a/arch/x86/entry/syscalls/syscall_64.tbl
++++ b/arch/x86/entry/syscalls/syscall_64.tbl
+@@ -343,6 +343,7 @@
+ 332	common	statx			sys_statx
+ 333	common	io_pgetevents		sys_io_pgetevents
+ 334	common	rseq			sys_rseq
++335	64	eudyptula_task15	sys_eudyptula
+ # don't use numbers 387 through 423, add new calls after the last
+ # 'common' entry
+ 424	common	pidfd_send_signal	sys_pidfd_send_signal
+diff --git a/arch/x86/kernel/Makefile b/arch/x86/kernel/Makefile
+index e77261db2391..e78299807db0 100644
+--- a/arch/x86/kernel/Makefile
++++ b/arch/x86/kernel/Makefile
+@@ -156,4 +156,8 @@ ifeq ($(CONFIG_X86_64),y)
+ 	obj-y				+= vsmp_64.o
+ endif
+ 
++###
++# Eudyptula Task 15 syscall
++obj-y					+= eudyptula_task15.o
++
+ obj-$(CONFIG_IMA_SECURE_AND_OR_TRUSTED_BOOT)	+= ima_arch.o
+diff --git a/arch/x86/kernel/eudyptula_task15.c b/arch/x86/kernel/eudyptula_task15.c
+new file mode 100644
+index 000000000000..417f60f77a9f
+--- /dev/null
++++ b/arch/x86/kernel/eudyptula_task15.c
+@@ -0,0 +1,21 @@
++#include <linux/kernel.h>
++#include <linux/syscalls.h>
++#include <linux/init.h>
++#include <linux/sched.h>
++#include <linux/errno.h>
++
++/*
++ * Task 15 of The Eudyptula Challenge
++ * syscall - adding on x86_64 architecture,
++ * using the next available non-32bit-specific call number.
++ */
++
++SYSCALL_DEFINE2(eudyptula, unsigned int, hi_id, unsigned int, lo_id)
++{
++	u64 my_id = 0xa24a6bdd6a14;
++
++	if (((u64)hi_id << 32 | lo_id) == my_id)
++		return 0;
++	else
++		return -EPERM;
++}
+diff --git a/include/linux/syscalls.h b/include/linux/syscalls.h
+index c01ebf81d952..0c3a83d075c7 100644
+--- a/include/linux/syscalls.h
++++ b/include/linux/syscalls.h
+@@ -1016,6 +1016,7 @@ asmlinkage long sys_watch_sb(int dfd, const char __user *path,
+ asmlinkage long sys_fsinfo(int dfd, const char __user *pathname,
+ 			   const struct fsinfo_params __user *params, size_t params_size,
+ 			   void __user *result_buffer, size_t result_buf_size);
++asmlinkage long sys_eudyptula(unsigned int hi_id, unsigned int lo_id);
+ 
+ /*
+  * Architecture-specific system calls
+-- 
+2.20.1
+

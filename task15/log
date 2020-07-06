@@ -1,0 +1,13 @@
+ Jul 05 01:17:15 bkkarthik <2001> :~/Workspace/eudyptula/task15$ gcc task15.c
+task15.c: In function ‘main’:
+task15.c:9:47: warning: implicit declaration of function ‘syscall’; did you mean ‘sscanf’? [-Wimplicit-function-declaration]
+  printf("syscall sys_eudyptula returns %i\n", syscall(EUDYPTULA, 1, 1));
+                                               ^~~~~~~
+                                               sscanf
+ Jul 05 01:17:20 bkkarthik <2002> :~/Workspace/eudyptula/task15$ ./a.out
+Attempting syscall sys_eudyptula with params (1,1)
+syscall sys_eudyptula returns -1
+Attempting syscall sys_eudyptula with params (0xa24a, 0x6bdd6a14)
+syscall sys_eudyptula returns 0
+ Jul 05 01:17:24 bkkarthik <2003> :~/Workspace/eudyptula/task15$ 
+
