@@ -1,0 +1,37 @@
+Jul 06 02:54:55 bkkarthik <2083> :~/Workspace/eudyptula/linux-next$ make C=1 M=drivers/staging/rtl8192e/
+  AR      drivers/staging/rtl8192e//built-in.a
+  MODPOST drivers/staging/rtl8192e//Module.symvers
+ Jul 06 02:55:14 bkkarthik <2084> :~/Workspace/eudyptula/linux-next$ make C=1 M=drivers/staging/fwserial/
+  AR      drivers/staging/fwserial//built-in.a
+  MODPOST drivers/staging/fwserial//Module.symvers
+ Jul 06 02:55:22 bkkarthik <2085> :~/Workspace/eudyptula/linux-next$ make C=1 M=drivers/staging/fwserial
+  AR      drivers/staging/fwserial/built-in.a
+  MODPOST drivers/staging/fwserial/Module.symvers
+ Jul 06 02:55:28 bkkarthik <2086> :~/Workspace/eudyptula/linux-next$ make C=1 M=drivers/staging/wfx
+  AR      drivers/staging/wfx/built-in.a
+  MODPOST drivers/staging/wfx/Module.symvers
+ Jul 06 02:55:37 bkkarthik <2087> :~/Workspace/eudyptula/linux-next$ make C=1 M=drivers/staging/clocking-wizard
+  AR      drivers/staging/clocking-wizard/built-in.a
+  MODPOST drivers/staging/clocking-wizard/Module.symvers
+ Jul 06 02:55:48 bkkarthik <2088> :~/Workspace/eudyptula/linux-next$ make C=1 M=drivers/staging/fieldbus
+  AR      drivers/staging/fieldbus/built-in.a
+  MODPOST drivers/staging/fieldbus/Module.symvers
+ Jul 06 02:55:58 bkkarthik <2089> :~/Workspace/eudyptula/linux-next$ make C=2 M=drivers/staging/fieldbus
+ Jul 06 02:56:25 bkkarthik <2090> :~/Workspace/eudyptula/linux-next$ make C=2 M=drivers/staging/rtl8188eu/
+ Jul 06 02:56:36 bkkarthik <2091> :~/Workspace/eudyptula/linux-next$ make C=1 M=fs/ext4
+  AR      fs/ext4/built-in.a
+  MODPOST fs/ext4/Module.symvers
+  CC [M]  fs/ext4/ext4.mod.o
+  LD [M]  fs/ext4/ext4.ko
+ Jul 06 02:57:18 bkkarthik <2092> :~/Workspace/eudyptula/linux-next$ make C=2 M=fs/ext4
+  CHECK   fs/ext4/balloc.c
+/bin/sh: 1: sparse: Permission denied
+make[1]: *** [scripts/Makefile.build:281: fs/ext4/balloc.o] Error 127
+make: *** [Makefile:1765: fs/ext4] Error 2
+ Jul 06 02:57:33 bkkarthik <2093> :~/Workspace/eudyptula/linux-next$ make C=2 M=drivers/staging/*
+scripts/Makefile.build:44: drivers/staging/Module.symvers/Makefile: Not a directory
+make[1]: *** No rule to make target 'drivers/staging/Module.symvers/Makefile'.  Stop.
+make: *** [Makefile:1765: drivers/staging/Module.symvers] Error 2
+ Jul 06 02:58:02 bkkarthik <2094> :~/Workspace/eudyptula/linux-next$ 
+
+
