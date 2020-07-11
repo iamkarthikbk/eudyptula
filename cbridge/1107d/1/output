@@ -1,0 +1,95 @@
+[[0;32m  OK  [0m] Started Getty on tty4.
+[[0;32m  OK  [0m] Started Getty on tty3.
+[[0;32m  OK  [0m] Started Getty on tty2.
+[[0;32m  OK  [0m] Started Getty on tty1.
+[[0;32m  OK  [0m] Started Serial Getty on ttyS0.
+[[0;32m  OK  [0m] Reached target Login Prompts.
+[[0;32m  OK  [0m] Reached target Multi-User System.
+[[0;32m  OK  [0m] Reached target Graphical Interface.
+Starting Update UTMP about System Runlevel Changes...
+[[0;32m  OK  [0m] Started Update UTMP about System Runlevel Changes.
+Starting Load/Save RF Kill Switch Status...
+[[0;32m  OK  [0m] Started Load/Save RF Kill Switch Status.
+
+
+Debian GNU/Linux 9 syzkaller ttyS0
+
+Warning: Permanently added '10.128.0.210' (ECDSA) to the list of known hosts.
+executing program
+syzkaller login: [   58.568049][   T12] ------------[ cut here ]------------
+[ 58.573856][ T12] WARNING: CPU: 0 PID: 12 at fs/read_write.c:528 __kernel_write (./include/linux/fs.h:2342 /home/bkkarthik/Workspace/eudyptula/linux-next/fs/read_write.c:392) 
+[   58.583727][   T12] Kernel panic - not syncing: panic_on_warn set ...
+[   58.590337][   T12] CPU: 0 PID: 12 Comm: kworker/0:1 Not tainted 5.8.0-rc4-next-20200708-syzkaller #0
+[   58.599679][   T12] Hardware name: Google Google Compute Engine/Google Compute Engine, BIOS Google 01/01/2011
+[   58.609720][   T12] Workqueue: events p9_write_work
+[   58.614716][   T12] Call Trace:
+[ 58.617983][ T12] dump_stack (lib/earlycpio.c:70) 
+[ 58.622293][ T12] panic (kernel/panic.c:324 (discriminator 5)) 
+[ 58.626181][ T12] ? __warn_printk (kernel/panic.c:178) 
+[ 58.631505][ T12] ? printk (kernel/printk/printk.c:2074) 
+[ 58.635474][ T12] ? log_store.cold+0x16/0x16 
+[ 58.640144][ T12] ? __warn.cold+0x5/0x45 
+[ 58.644461][ T12] ? __warn (kernel/panic.c:586) 
+[ 58.648504][ T12] ? __kernel_write (./include/linux/fs.h:2342 /home/bkkarthik/Workspace/eudyptula/linux-next/fs/read_write.c:392) 
+[ 58.653335][ T12] __warn.cold+0x20/0x45 
+[ 58.657572][ T12] ? __kernel_write (./include/linux/fs.h:2342 /home/bkkarthik/Workspace/eudyptula/linux-next/fs/read_write.c:392) 
+[ 58.662410][ T12] report_bug (lib/bug.c:216 /home/bkkarthik/Workspace/eudyptula/linux-next/lib/bug.c:232) 
+[ 58.666729][ T12] handle_bug (arch/x86/kernel/traps.c:235) 
+[ 58.670870][ T12] exc_invalid_op (arch/x86/kernel/traps.c:255 (discriminator 1)) 
+[ 58.675365][ T12] asm_exc_invalid_op (./arch/x86/include/asm/idtentry.h:563) 
+[ 58.680208][ T12] RIP: 0010:__kernel_write (./include/linux/fs.h:2342 /home/bkkarthik/Workspace/eudyptula/linux-next/fs/read_write.c:392) 
+[ 58.685660][ T12] Code: 01 89 c6 89 04 24 e8 d7 90 b5 ff 8b 04 24 85 c0 0f 84 c7 fa ff ff e9 b9 fa ff ff e8 42 94 b5 ff e9 e9 fe ff ff e8 38 94 b5 ff <0f> 0b 49 c7 c5 f7 ff ff ff e9 0e ff ff ff 4c 89 f7 e8 d2 48 f5 ff
+All code
+========
+   0:	01 89 c6 89 04 24    	add    %ecx,0x240489c6(%rcx)
+   6:	e8 d7 90 b5 ff       	callq  0xffffffffffb590e2
+   b:	8b 04 24             	mov    (%rsp),%eax
+   e:	85 c0                	test   %eax,%eax
+  10:	0f 84 c7 fa ff ff    	je     0xfffffffffffffadd
+  16:	e9 b9 fa ff ff       	jmpq   0xfffffffffffffad4
+  1b:	e8 42 94 b5 ff       	callq  0xffffffffffb59462
+  20:	e9 e9 fe ff ff       	jmpq   0xffffffffffffff0e
+  25:	e8 38 94 b5 ff       	callq  0xffffffffffb59462
+  2a:*	0f 0b                	ud2    		<-- trapping instruction
+  2c:	49 c7 c5 f7 ff ff ff 	mov    $0xfffffffffffffff7,%r13
+  33:	e9 0e ff ff ff       	jmpq   0xffffffffffffff46
+  38:	4c 89 f7             	mov    %r14,%rdi
+  3b:	e8 d2 48 f5 ff       	callq  0xfffffffffff54912
+
+Code starting with the faulting instruction
+===========================================
+   0:	0f 0b                	ud2    
+   2:	49 c7 c5 f7 ff ff ff 	mov    $0xfffffffffffffff7,%r13
+   9:	e9 0e ff ff ff       	jmpq   0xffffffffffffff1c
+   e:	4c 89 f7             	mov    %r14,%rdi
+  11:	e8 d2 48 f5 ff       	callq  0xfffffffffff548e8
+[   58.706221][   T12] RSP: 0018:ffffc90000d2fb18 EFLAGS: 00010293
+[   58.712289][   T12] RAX: 0000000000000000 RBX: 1ffff920001a5f67 RCX: ffffffff81be629e
+[   58.720267][   T12] RDX: ffff8880a95f4300 RSI: ffffffff81be69f8 RDI: 0000000000000005
+[   58.728241][   T12] RBP: ffff888094301158 R08: 0000000000000001 R09: ffff8880a95f4bd0
+[   58.736212][   T12] R10: 0000000000000000 R11: 0000000000000000 R12: ffff888094301040
+[   58.744179][   T12] R13: 0000000000000000 R14: ffff8880943010c4 R15: 0000000000080001
+[ 58.752172][ T12] ? __kernel_write (./arch/x86/include/asm/current.h:15 /home/bkkarthik/Workspace/eudyptula/linux-next/fs/read_write.c:522) 
+[ 58.756936][ T12] ? __kernel_write (./include/linux/fs.h:2342 /home/bkkarthik/Workspace/eudyptula/linux-next/fs/read_write.c:392) 
+[ 58.761792][ T12] ? __kernel_write (./include/linux/fs.h:2342 /home/bkkarthik/Workspace/eudyptula/linux-next/fs/read_write.c:392) 
+[ 58.766658][ T12] ? vfs_read (./arch/x86/include/asm/uaccess.h:31 /home/bkkarthik/Workspace/eudyptula/linux-next/fs/read_write.c:537) 
+[ 58.770989][ T12] ? apparmor_file_permission (security/apparmor/include/label.h:405 /home/bkkarthik/Workspace/eudyptula/linux-next/security/apparmor/include/label.h:433 /home/bkkarthik/Workspace/eudyptula/linux-next/security/apparmor/include/label.h:419 /home/bkkarthik/Workspace/eudyptula/linux-next/security/apparmor/include/cred.h:143 /home/bkkarthik/Workspace/eudyptula/linux-next/security/apparmor/lsm.c:137) 
+[ 58.776699][ T12] ? security_file_permission (security/security.c:1473) 
+[ 58.782395][ T12] ? lock_downgrade+0x820/0x820 
+[ 58.787248][ T12] kernel_write (fs/read_write.c:578) 
+[ 58.791644][ T12] p9_write_work+0x25e/0xca0 
+[ 58.796215][ T12] process_one_work (kernel/workqueue.c:2512) 
+[ 58.810278][ T12] ? lock_release+0x8d0/0x8d0 
+[ 58.814931][ T12] ? pwq_dec_nr_in_flight (./include/linux/instrumented.h:56 /home/bkkarthik/Workspace/eudyptula/linux-next/./include/asm-generic/bitops/instrumented-non-atomic.h:110 /home/bkkarthik/Workspace/eudyptula/linux-next/kernel/workqueue.c:615 /home/bkkarthik/Workspace/eudyptula/linux-next/kernel/workqueue.c:629 /home/bkkarthik/Workspace/eudyptula/linux-next/kernel/workqueue.c:1293 /home/bkkarthik/Workspace/eudyptula/linux-next/kernel/workqueue.c:1232) 
+[ 58.820290][ T12] ? rwlock_bug.part.0+0x90/0x90 
+[ 58.825215][ T12] ? lockdep_hardirqs_off+0x66/0xa0 
+[ 58.830408][ T12] worker_thread (kernel/workqueue.c:3537) 
+[ 58.835074][ T12] ? __kthread_parkme (kernel/kthread.c:78 /home/bkkarthik/Workspace/eudyptula/linux-next/kernel/kthread.c:255) 
+[ 58.840081][ T12] ? process_one_work (./arch/x86/include/asm/current.h:15 /home/bkkarthik/Workspace/eudyptula/linux-next/./include/linux/rcuwait.h:47 /home/bkkarthik/Workspace/eudyptula/linux-next/kernel/workqueue.c:3557) 
+[ 58.845260][ T12] kthread (kernel/kthread.c:835) 
+[ 58.849325][ T12] ? __kthread_bind_mask (kernel/kthread.c:1301) 
+[ 58.854421][ T12] ? __kthread_bind_mask (kernel/kthread.c:1301) 
+[ 58.859533][ T12] ret_from_fork (arch/x86/entry/entry_64.S:294) 
+[   58.865129][   T12] Kernel Offset: disabled
+[   58.869506][   T12] Rebooting in 86400 seconds..
+
