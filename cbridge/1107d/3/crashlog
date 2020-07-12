@@ -1,0 +1,115 @@
+[[0;32m  OK  [0m] Started Serial Getty on ttyS0.
+[[0;32m  OK  [0m] Started Getty on tty1.
+[[0;32m  OK  [0m] Reached target Login Prompts.
+[[0;32m  OK  [0m] Reached target Multi-User System.
+[[0;32m  OK  [0m] Reached target Graphical Interface.
+         Starting Update UTMP about System Runlevel Changes...
+[[0;32m  OK  [0m] Started Update UTMP about System Runlevel Changes.
+[   47.800783][ T6721] sshd (6721) used greatest stack depth: 23560 bytes left
+         Starting Load/Save RF Kill Switch Status...
+[[0;32m  OK  [0m] Started Load/Save RF Kill Switch Status.
+
+
+Debian GNU/Linux 9 syzkaller ttyS0
+
+Warning: Permanently added '10.128.0.128' (ECDSA) to the list of known hosts.
+executing program
+syzkaller login: [   55.436738][ T6821] ------------[ cut here ]------------
+[   55.442201][ T6821] Trying to write to read-only block-device nullb0 (partno 0)
+[   55.450606][ T6821] WARNING: CPU: 0 PID: 6821 at block/blk-core.c:857 submit_bio_checks+0x1aba/0x1f70
+[   55.460587][ T6821] Kernel panic - not syncing: panic_on_warn set ...
+[   55.467166][ T6821] CPU: 0 PID: 6821 Comm: syz-executor914 Not tainted 5.8.0-rc3-next-20200703-syzkaller #0
+[   55.477064][ T6821] Hardware name: Google Google Compute Engine/Google Compute Engine, BIOS Google 01/01/2011
+[   55.487093][ T6821] Call Trace:
+[   55.490452][ T6821]  dump_stack+0x18f/0x20d
+[   55.494758][ T6821]  panic+0x2e3/0x75c
+[   55.498628][ T6821]  ? __warn_printk+0xf3/0xf3
+[   55.503195][ T6821]  ? __warn.cold+0x5/0x45
+[   55.507498][ T6821]  ? __warn+0xd6/0x1f2
+[   55.511539][ T6821]  ? submit_bio_checks+0x1aba/0x1f70
+[   55.516796][ T6821]  __warn.cold+0x20/0x45
+[   55.521008][ T6821]  ? wake_up_klogd.part.0+0x8c/0xc0
+[   55.526178][ T6821]  ? submit_bio_checks+0x1aba/0x1f70
+[   55.531468][ T6821]  report_bug+0x1bd/0x210
+[   55.535783][ T6821]  handle_bug+0x38/0x90
+[   55.539910][ T6821]  exc_invalid_op+0x13/0x40
+[   55.544385][ T6821]  asm_exc_invalid_op+0x12/0x20
+[   55.549207][ T6821] RIP: 0010:submit_bio_checks+0x1aba/0x1f70
+[   55.555072][ T6821] Code: 04 00 00 45 8b a4 24 a4 05 00 00 48 8d 74 24 68 48 89 ef e8 b8 21 fe ff 48 c7 c7 e0 ce 91 88 48 89 c6 44 89 e2 e8 08 df c0 fd <0f> 0b 48 b8 00 00 00 00 00 fc ff df 4c 89 ea 48 c1 ea 03 80 3c 02
+[   55.574648][ T6821] RSP: 0018:ffffc90001277338 EFLAGS: 00010286
+[   55.580683][ T6821] RAX: 0000000000000000 RBX: ffff8880a0cb2240 RCX: 0000000000000000
+[   55.588627][ T6821] RDX: ffff8880a8ebc180 RSI: ffffffff815d7d27 RDI: fffff5200024ee59
+[   55.596570][ T6821] RBP: ffff8880a03101c0 R08: 0000000000000001 R09: ffff8880ae6318e7
+[   55.604513][ T6821] R10: 0000000000000000 R11: 0000000000000000 R12: 0000000000000000
+[   55.612457][ T6821] R13: ffff8880a03101c8 R14: 0000000000000000 R15: ffff8880a03101e8
+[   55.620413][ T6821]  ? vprintk_func+0x97/0x1a6
+[   55.624980][ T6821]  ? submit_bio_checks+0x1aba/0x1f70
+[   55.630237][ T6821]  ? mark_lock+0xbc/0x1710
+[   55.634625][ T6821]  ? blk_update_request+0x1230/0x1230
+[   55.639967][ T6821]  ? __lock_acquire+0xc1e/0x56e0
+[   55.644880][ T6821]  submit_bio_noacct+0x89/0x12d0
+[   55.649800][ T6821]  ? lockdep_hardirqs_on_prepare+0x590/0x590
+[   55.655754][ T6821]  ? blk_queue_enter+0xcd0/0xcd0
+[   55.660660][ T6821]  ? find_held_lock+0x2d/0x110
+[   55.665398][ T6821]  ? bio_associate_blkg_from_css+0x5f3/0x1080
+[   55.671434][ T6821]  ? lock_acquire+0x1f1/0xad0
+[   55.676081][ T6821]  ? bio_truncate+0x70/0x70
+[   55.680559][ T6821]  submit_bio+0x263/0x5b0
+[   55.684862][ T6821]  ? submit_bio_noacct+0x12d0/0x12d0
+[   55.690118][ T6821]  ? lock_is_held_type+0xb0/0xe0
+[   55.695031][ T6821]  submit_bh_wbc+0x685/0x8e0
+[   55.699595][ T6821]  __block_write_full_page+0x837/0x12e0
+[   55.705112][ T6821]  ? bdev_evict_inode+0x410/0x410
+[   55.710107][ T6821]  block_write_full_page+0x214/0x270
+[   55.715363][ T6821]  ? bdev_evict_inode+0x410/0x410
+[   55.720357][ T6821]  __writepage+0x60/0x170
+[   55.724662][ T6821]  write_cache_pages+0x736/0x11b0
+[   55.729658][ T6821]  ? tag_pages_for_writeback+0x450/0x450
+[   55.735265][ T6821]  ? clear_page_dirty_for_io+0x920/0x920
+[   55.740880][ T6821]  ? lockdep_hardirqs_on_prepare+0x590/0x590
+[   55.746834][ T6821]  ? find_held_lock+0x2d/0x110
+[   55.751570][ T6821]  ? __lock_acquire+0x16e3/0x56e0
+[   55.756570][ T6821]  ? blkdev_readahead+0x20/0x20
+[   55.761403][ T6821]  generic_writepages+0xe2/0x150
+[   55.766314][ T6821]  ? write_cache_pages+0x11b0/0x11b0
+[   55.771585][ T6821]  ? find_held_lock+0x2d/0x110
+[   55.776320][ T6821]  ? wbc_attach_and_unlock_inode+0x11d/0x9d0
+[   55.782271][ T6821]  do_writepages+0xec/0x290
+[   55.786747][ T6821]  ? writeback_set_ratelimit+0x150/0x150
+[   55.792349][ T6821]  ? do_raw_spin_lock+0x120/0x2b0
+[   55.797345][ T6821]  ? do_raw_spin_unlock+0x171/0x230
+[   55.802515][ T6821]  ? _raw_spin_unlock+0x24/0x40
+[   55.807350][ T6821]  ? wbc_attach_and_unlock_inode+0x11d/0x9d0
+[   55.813390][ T6821]  __filemap_fdatawrite_range+0x2a1/0x380
+[   55.819094][ T6821]  ? lock_is_held_type+0xb0/0xe0
+[   55.824004][ T6821]  ? delete_from_page_cache_batch+0xe20/0xe20
+[   55.830051][ T6821]  ? lock_downgrade+0x820/0x820
+[   55.834872][ T6821]  ? blkdev_put+0x30/0x520
+[   55.839264][ T6821]  filemap_write_and_wait_range+0xe1/0x1c0
+[   55.845042][ T6821]  __blkdev_put+0x69a/0x890
+[   55.849518][ T6821]  ? fsync_bdev+0xd0/0xd0
+[   55.853821][ T6821]  ? locks_remove_file+0x319/0x580
+[   55.858905][ T6821]  ? blkdev_put+0x520/0x520
+[   55.863379][ T6821]  ? blkdev_put+0x85/0x520
+[   55.867781][ T6821]  ? blkdev_put+0x520/0x520
+[   55.872257][ T6821]  blkdev_close+0x8c/0xb0
+[   55.876563][ T6821]  __fput+0x33c/0x880
+[   55.880519][ T6821]  task_work_run+0xdd/0x190
+[   55.885008][ T6821]  do_exit+0xb72/0x2a40
+[   55.889137][ T6821]  ? blkdev_ioctl+0xc9/0x700
+[   55.893719][ T6821]  ? mm_update_next_owner+0x7a0/0x7a0
+[   55.899073][ T6821]  do_group_exit+0x125/0x310
+[   55.903634][ T6821]  __x64_sys_exit_group+0x3a/0x50
+[   55.908630][ T6821]  do_syscall_64+0x60/0xe0
+[   55.913032][ T6821]  entry_SYSCALL_64_after_hwframe+0x44/0xa9
+[   55.918896][ T6821] RIP: 0033:0x43ee48
+[   55.922760][ T6821] Code: Bad RIP value.
+[   55.926796][ T6821] RSP: 002b:00007ffdd4c8f808 EFLAGS: 00000246 ORIG_RAX: 00000000000000e7
+[   55.935178][ T6821] RAX: ffffffffffffffda RBX: 0000000000000000 RCX: 000000000043ee48
+[   55.943132][ T6821] RDX: 0000000000000000 RSI: 000000000000003c RDI: 0000000000000000
+[   55.951078][ T6821] RBP: 00000000004be648 R08: 00000000000000e7 R09: ffffffffffffffd0
+[   55.959030][ T6821] R10: 0000000000000003 R11: 0000000000000246 R12: 0000000000000001
+[   55.966977][ T6821] R13: 00000000006d0180 R14: 0000000000000000 R15: 0000000000000000
+[   55.976246][ T6821] Kernel Offset: disabled
+[   55.980608][ T6821] Rebooting in 86400 seconds..
+
