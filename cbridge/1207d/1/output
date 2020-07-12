@@ -1,0 +1,149 @@
+[[0;32m  OK  [0m] Started Serial Getty on ttyS0.
+[[0;32m  OK  [0m] Started Getty on tty1.
+[[0;32m  OK  [0m] Reached target Login Prompts.
+[[0;32m  OK  [0m] Reached target Multi-User System.
+[[0;32m  OK  [0m] Reached target Graphical Interface.
+Starting Update UTMP about System Runlevel Changes...
+[[0;32m  OK  [0m] Started Update UTMP about System Runlevel Changes.
+[   47.800783][ T6721] sshd (6721) used greatest stack depth: 23560 bytes left
+Starting Load/Save RF Kill Switch Status...
+[[0;32m  OK  [0m] Started Load/Save RF Kill Switch Status.
+
+
+Debian GNU/Linux 9 syzkaller ttyS0
+
+Warning: Permanently added '10.128.0.128' (ECDSA) to the list of known hosts.
+executing program
+syzkaller login: [   55.436738][ T6821] ------------[ cut here ]------------
+[   55.442201][ T6821] Trying to write to read-only block-device nullb0 (partno 0)
+[ 55.450606][ T6821] WARNING: CPU: 0 PID: 6821 at block/blk-core.c:857 submit_bio_checks (block/blk-core.c:703) 
+[   55.460587][ T6821] Kernel panic - not syncing: panic_on_warn set ...
+[   55.467166][ T6821] CPU: 0 PID: 6821 Comm: syz-executor914 Not tainted 5.8.0-rc3-next-20200703-syzkaller #0
+[   55.477064][ T6821] Hardware name: Google Google Compute Engine/Google Compute Engine, BIOS Google 01/01/2011
+[   55.487093][ T6821] Call Trace:
+[ 55.490452][ T6821] dump_stack (lib/earlycpio.c:70) 
+[ 55.494758][ T6821] panic (kernel/panic.c:324 (discriminator 5)) 
+[ 55.498628][ T6821] ? __warn_printk (kernel/panic.c:178) 
+[ 55.503195][ T6821] ? __warn.cold+0x5/0x45 
+[ 55.507498][ T6821] ? __warn (kernel/panic.c:586) 
+[ 55.511539][ T6821] ? submit_bio_checks (block/blk-core.c:703) 
+[ 55.516796][ T6821] __warn.cold+0x20/0x45 
+[ 55.521008][ T6821] ? wake_up_klogd.part.0+0x8c/0xc0 
+[ 55.526178][ T6821] ? submit_bio_checks (block/blk-core.c:703) 
+[ 55.531468][ T6821] report_bug (lib/bug.c:216 /home/bkkarthik/Workspace/eudyptula/linux-next/lib/bug.c:232) 
+[ 55.535783][ T6821] handle_bug (arch/x86/kernel/traps.c:235) 
+[ 55.539910][ T6821] exc_invalid_op (arch/x86/kernel/traps.c:255 (discriminator 1)) 
+[ 55.544385][ T6821] asm_exc_invalid_op (./arch/x86/include/asm/idtentry.h:563) 
+[ 55.549207][ T6821] RIP: 0010:submit_bio_checks (block/blk-core.c:703) 
+[ 55.555072][ T6821] Code: 04 00 00 45 8b a4 24 a4 05 00 00 48 8d 74 24 68 48 89 ef e8 b8 21 fe ff 48 c7 c7 e0 ce 91 88 48 89 c6 44 89 e2 e8 08 df c0 fd <0f> 0b 48 b8 00 00 00 00 00 fc ff df 4c 89 ea 48 c1 ea 03 80 3c 02
+All code
+========
+   0:	04 00                	add    $0x0,%al
+   2:	00 45 8b             	add    %al,-0x75(%rbp)
+   5:	a4                   	movsb  %ds:(%rsi),%es:(%rdi)
+   6:	24 a4                	and    $0xa4,%al
+   8:	05 00 00 48 8d       	add    $0x8d480000,%eax
+   d:	74 24                	je     0x33
+   f:	68 48 89 ef e8       	pushq  $0xffffffffe8ef8948
+  14:	b8 21 fe ff 48       	mov    $0x48fffe21,%eax
+  19:	c7 c7 e0 ce 91 88    	mov    $0x8891cee0,%edi
+  1f:	48 89 c6             	mov    %rax,%rsi
+  22:	44 89 e2             	mov    %r12d,%edx
+  25:	e8 08 df c0 fd       	callq  0xfffffffffdc0df32
+  2a:*	0f 0b                	ud2    		<-- trapping instruction
+  2c:	48 b8 00 00 00 00 00 	movabs $0xdffffc0000000000,%rax
+  33:	fc ff df 
+  36:	4c 89 ea             	mov    %r13,%rdx
+  39:	48 c1 ea 03          	shr    $0x3,%rdx
+  3d:	80                   	.byte 0x80
+  3e:	3c 02                	cmp    $0x2,%al
+
+Code starting with the faulting instruction
+===========================================
+   0:	0f 0b                	ud2    
+   2:	48 b8 00 00 00 00 00 	movabs $0xdffffc0000000000,%rax
+   9:	fc ff df 
+   c:	4c 89 ea             	mov    %r13,%rdx
+   f:	48 c1 ea 03          	shr    $0x3,%rdx
+  13:	80                   	.byte 0x80
+  14:	3c 02                	cmp    $0x2,%al
+[   55.574648][ T6821] RSP: 0018:ffffc90001277338 EFLAGS: 00010286
+[   55.580683][ T6821] RAX: 0000000000000000 RBX: ffff8880a0cb2240 RCX: 0000000000000000
+[   55.588627][ T6821] RDX: ffff8880a8ebc180 RSI: ffffffff815d7d27 RDI: fffff5200024ee59
+[   55.596570][ T6821] RBP: ffff8880a03101c0 R08: 0000000000000001 R09: ffff8880ae6318e7
+[   55.604513][ T6821] R10: 0000000000000000 R11: 0000000000000000 R12: 0000000000000000
+[   55.612457][ T6821] R13: ffff8880a03101c8 R14: 0000000000000000 R15: ffff8880a03101e8
+[ 55.620413][ T6821] ? vprintk_func (kernel/printk/printk_safe.c:378) 
+[ 55.624980][ T6821] ? submit_bio_checks (block/blk-core.c:703) 
+[ 55.630237][ T6821] ? mark_lock+0xbc/0x1710 
+[ 55.634625][ T6821] ? blk_update_request (./include/trace/events/block.h:276) 
+[ 55.639967][ T6821] ? __lock_acquire+0xc1e/0x56e0 
+[ 55.644880][ T6821] submit_bio_noacct (block/blk-core.c:1199) 
+[ 55.649800][ T6821] ? lockdep_hardirqs_on_prepare+0x590/0x590 
+[ 55.655754][ T6821] ? blk_queue_enter (./include/linux/vmstat.h:81 /home/bkkarthik/Workspace/eudyptula/linux-next/block/blk-core.c:1253) 
+[ 55.660660][ T6821] ? find_held_lock+0x2d/0x110 
+[ 55.665398][ T6821] ? bio_associate_blkg_from_css (block/blk-cgroup.c:586) 
+[ 55.671434][ T6821] ? lock_acquire+0x1f1/0xad0 
+[ 55.676081][ T6821] ? bio_truncate (block/bio.c:616) 
+[ 55.680559][ T6821] submit_bio (./include/linux/sched.h:1361 /home/bkkarthik/Workspace/eudyptula/linux-next/block/blk-core.c:1258) 
+[ 55.684862][ T6821] ? submit_bio_noacct (block/blk-core.c:1442) 
+[ 55.690118][ T6821] ? lock_is_held_type+0xb0/0xe0 
+[ 55.695031][ T6821] submit_bh_wbc (fs/buffer.c:1574) 
+[ 55.699595][ T6821] __block_write_full_page (fs/buffer.c:2840) 
+[ 55.705112][ T6821] ? bdev_evict_inode (fs/block_dev.c:348 /home/bkkarthik/Workspace/eudyptula/linux-next/fs/block_dev.c:465) 
+[ 55.710107][ T6821] block_write_full_page (fs/buffer.c:2860) 
+[ 55.715363][ T6821] ? bdev_evict_inode (fs/block_dev.c:348 /home/bkkarthik/Workspace/eudyptula/linux-next/fs/block_dev.c:465) 
+[ 55.720357][ T6821] __writepage (./include/linux/pagemap.h:57 /home/bkkarthik/Workspace/eudyptula/linux-next/mm/page-writeback.c:2312) 
+[ 55.724662][ T6821] write_cache_pages (mm/page-writeback.c:2328) 
+[ 55.729658][ T6821] ? tag_pages_for_writeback (./include/trace/events/writeback.h:88 /home/bkkarthik/Workspace/eudyptula/linux-next/mm/page-writeback.c:2836 /home/bkkarthik/Workspace/eudyptula/linux-next/mm/page-writeback.c:2833) 
+[ 55.735265][ T6821] ? clear_page_dirty_for_io (mm/page-writeback.c:2294) 
+[ 55.740880][ T6821] ? lockdep_hardirqs_on_prepare+0x590/0x590 
+[ 55.746834][ T6821] ? find_held_lock+0x2d/0x110 
+[ 55.751570][ T6821] ? __lock_acquire+0x16e3/0x56e0 
+[ 55.756570][ T6821] ? blkdev_readahead (fs/block_dev.c:2041) 
+[ 55.761403][ T6821] generic_writepages (mm/page-writeback.c:2340) 
+[ 55.766314][ T6821] ? write_cache_pages (mm/page-writeback.c:731 /home/bkkarthik/Workspace/eudyptula/linux-next/mm/page-writeback.c:1969) 
+[ 55.771585][ T6821] ? find_held_lock+0x2d/0x110 
+[ 55.776320][ T6821] ? wbc_attach_and_unlock_inode (fs/fs-writeback.c:570) 
+[ 55.782271][ T6821] do_writepages (mm/page-writeback.c:2336 /home/bkkarthik/Workspace/eudyptula/linux-next/mm/page-writeback.c:2326 /home/bkkarthik/Workspace/eudyptula/linux-next/mm/page-writeback.c:2354) 
+[ 55.786747][ T6821] ? writeback_set_ratelimit (mm/page-writeback.c:550) 
+[ 55.792349][ T6821] ? do_raw_spin_lock+0x120/0x2b0 
+[ 55.797345][ T6821] ? do_raw_spin_unlock+0x171/0x230 
+[ 55.802515][ T6821] ? _raw_spin_unlock+0x24/0x40 
+[ 55.807350][ T6821] ? wbc_attach_and_unlock_inode (fs/fs-writeback.c:570) 
+[ 55.813390][ T6821] __filemap_fdatawrite_range (mm/filemap.c:555 /home/bkkarthik/Workspace/eudyptula/linux-next/mm/filemap.c:664 /home/bkkarthik/Workspace/eudyptula/linux-next/mm/filemap.c:649) 
+[ 55.819094][ T6821] ? lock_is_held_type+0xb0/0xe0 
+[ 55.824004][ T6821] ? delete_from_page_cache_batch (mm/filemap.c:1412) 
+[ 55.830051][ T6821] ? lock_downgrade+0x820/0x820 
+[ 55.834872][ T6821] ? blkdev_put (fs/block_dev.c:1900) 
+[ 55.839264][ T6821] filemap_write_and_wait_range (mm/filemap.c:630 /home/bkkarthik/Workspace/eudyptula/linux-next/mm/filemap.c:760) 
+[ 55.845042][ T6821] __blkdev_put (fs/block_dev.c:1601) 
+[ 55.849518][ T6821] ? fsync_bdev (fs/block_dev.c:489 /home/bkkarthik/Workspace/eudyptula/linux-next/fs/block_dev.c:556) 
+[ 55.853821][ T6821] ? locks_remove_file (fs/locks.c:2956) 
+[ 55.858905][ T6821] ? blkdev_put (fs/block_dev.c:975) 
+[ 55.863379][ T6821] ? blkdev_put (fs/block_dev.c:1911 (discriminator 3)) 
+[ 55.867781][ T6821] ? blkdev_put (fs/block_dev.c:975) 
+[ 55.872257][ T6821] blkdev_close (fs/block_dev.c:690) 
+[ 55.876563][ T6821] __fput (fs/file_table.c:282) 
+[ 55.880519][ T6821] task_work_run (kernel/extable.c:47) 
+[ 55.885008][ T6821] do_exit (./include/linux/list.h:70 /home/bkkarthik/Workspace/eudyptula/linux-next/./include/linux/list.h:86 /home/bkkarthik/Workspace/eudyptula/linux-next/kernel/exit.c:671 /home/bkkarthik/Workspace/eudyptula/linux-next/kernel/exit.c:827) 
+[ 55.889137][ T6821] ? blkdev_ioctl (block/ioctl.c:623) 
+[ 55.893719][ T6821] ? mm_update_next_owner (kernel/exit.c:790) 
+[ 55.899073][ T6821] do_group_exit (kernel/exit.c:913) 
+[ 55.903634][ T6821] __x64_sys_exit_group (kernel/exit.c:913) 
+[ 55.908630][ T6821] do_syscall_64 (arch/x86/entry/common.c:355) 
+[ 55.913032][ T6821] entry_SYSCALL_64_after_hwframe (arch/x86/entry/entry_64.S:125) 
+[   55.918896][ T6821] RIP: 0033:0x43ee48
+[ 55.922760][ T6821] Code: Bad RIP value.
+
+Code starting with the faulting instruction
+===========================================
+[   55.926796][ T6821] RSP: 002b:00007ffdd4c8f808 EFLAGS: 00000246 ORIG_RAX: 00000000000000e7
+[   55.935178][ T6821] RAX: ffffffffffffffda RBX: 0000000000000000 RCX: 000000000043ee48
+[   55.943132][ T6821] RDX: 0000000000000000 RSI: 000000000000003c RDI: 0000000000000000
+[   55.951078][ T6821] RBP: 00000000004be648 R08: 00000000000000e7 R09: ffffffffffffffd0
+[   55.959030][ T6821] R10: 0000000000000003 R11: 0000000000000246 R12: 0000000000000001
+[   55.966977][ T6821] R13: 00000000006d0180 R14: 0000000000000000 R15: 0000000000000000
+[   55.976246][ T6821] Kernel Offset: disabled
+[   55.980608][ T6821] Rebooting in 86400 seconds..
+
