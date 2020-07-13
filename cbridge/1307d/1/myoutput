@@ -1,0 +1,142 @@
+Jul 13 09:59:41 pesu-pes-edu kernel: [10824.286268] ------------[ cut here ]------------
+Jul 13 09:59:41 pesu-pes-edu kernel: [10824.286273] Trying to write to read-only block-device nullb0 (partno 0)
+Jul 13 09:59:41 pesu-pes-edu kernel: [10824.286301] WARNING: CPU: 1 PID: 9024 at block/blk-core.c:859 submit_bio_checks (block/blk-core.c:857 /home/bkkarthik/Workspace/eudyptula/linux-next/block/blk-core.c:985) 
+Jul 13 09:59:41 pesu-pes-edu kernel: [10824.286302] Modules linked in: fuse(E) rfcomm(E) cmac(E) bnep(E) nls_ascii(E) nls_cp437(E) vfat(E) fat(E) x86_pkg_temp_thermal(E) intel_powerclamp(E) coretemp(E) kvm_intel(E) kvm(E) btusb(E) btrtl(E) btbcm(E) btintel(E) snd_soc_skl(E) bluetooth(E) uvcvideo(E) irqbypass(E) snd_hda_ext_core(E) crct10dif_pclmul(E) snd_soc_sst_dsp(E) videobuf2_vmalloc(E) snd_soc_sst_ipc(E) snd_hda_codec_hdmi(E) videobuf2_memops(E) snd_soc_core(E) crc32_pclmul(E) videobuf2_v4l2(E) snd_soc_acpi_intel_match(E) snd_hda_codec_realtek(E) videobuf2_common(E) snd_hda_codec_generic(E) snd_soc_acpi(E) ghash_clmulni_intel(E) videodev(E) dell_wmi(E) dell_laptop(E) snd_hda_intel(E) sparse_keymap(E) snd_intel_dspcfg(E) ledtrig_audio(E) aesni_intel(E) rtsx_usb_ms(E) snd_hda_codec(E) glue_helper(E) dell_smbios(E) mc(E) memstick(E) crypto_simd(E) jitterentropy_rng(E) drbg(E) snd_hwdep(E) cryptd(E) ansi_cprng(E) ecdh_generic(E) intel_cstate(E) snd_hda_core(E) ecc(E) joydev(E) intel_uncore(E) snd_pcm(E) wmi_bmof(E)
+Jul 13 09:59:41 pesu-pes-edu kernel: [10824.286378]  dell_wmi_descriptor(E) snd_timer(E) efi_pstore(E) dcdbas(E) iTCO_wdt(E) iTCO_vendor_support(E) tpm_crb(E) mei_me(E) dell_smm_hwmon(E) hid_multitouch(E) snd(E) sg(E) mei(E) serio_raw(E) soundcore(E) intel_pch_thermal(E) tpm_tis(E) pcspkr(E) efivars(E) tpm_tis_core(E) wmi(E) tpm(E) dell_rbtn(E) ac(E) acpi_pad(E) rfkill(E) evdev(E) battery(E) rng_core(E) button(E) parport_pc(E) ppdev(E) lp(E) parport(E) efivarfs(E) ip_tables(E) x_tables(E) autofs4(E) ext4(E) crc32c_generic(E) crc16(E) mbcache(E) jbd2(E) rtsx_usb_sdmmc(E) mmc_core(E) rtsx_usb(E) hid_generic(E) usbhid(E) sr_mod(E) sd_mod(E) t10_pi(E) cdrom(E) i2c_designware_platform(E) i2c_designware_core(E) i915(E) xhci_pci(E) r8169(E) ahci(E) libahci(E) crc32c_intel(E) realtek(E) xhci_hcd(E) mdio_devres(E) libata(E) psmouse(E) i2c_algo_bit(E) i2c_i801(E) i2c_smbus(E) drm_kms_helper(E) intel_lpss_pci(E) intel_lpss(E) idma64(E) cec(E) libphy(E) scsi_mod(E) mfd_core(E) usbcore(E) i2c_hid(E) drm(E) fan(E) thermal(E) hid(E) video(E)
+Jul 13 09:59:41 pesu-pes-edu kernel: [10824.286477] CPU: 1 PID: 9024 Comm: repro1 Tainted: G          I E     5.8.0-rc4-next-20200710 #4
+Jul 13 09:59:41 pesu-pes-edu kernel: [10824.286479] Hardware name: Dell Inc. Inspiron 5559/07JM0H, BIOS 1.3.0 07/17/2017
+Jul 13 09:59:41 pesu-pes-edu kernel: [10824.286486] RIP: 0010:submit_bio_checks (block/blk-core.c:857 /home/bkkarthik/Workspace/eudyptula/linux-next/block/blk-core.c:985) 
+Jul 13 09:59:41 pesu-pes-edu kernel: [10824.286492] Code: 86 5a da ff 45 8b af 8c 03 00 00 48 89 df 48 8d 74 24 58 e8 c2 30 ff ff 44 89 ea 48 c7 c7 a0 4e c0 95 48 89 c6 e8 95 24 a8 ff <0f> 0b 4c 89 f7 e8 56 5b da ff 4c 8b 7b 08 e9 69 fc ff ff 49 8b 45
+All code
+========
+   0:	86 5a da             	xchg   %bl,-0x26(%rdx)
+   3:	ff 45 8b             	incl   -0x75(%rbp)
+   6:	af                   	scas   %es:(%rdi),%eax
+   7:	8c 03                	mov    %es,(%rbx)
+   9:	00 00                	add    %al,(%rax)
+   b:	48 89 df             	mov    %rbx,%rdi
+   e:	48 8d 74 24 58       	lea    0x58(%rsp),%rsi
+  13:	e8 c2 30 ff ff       	callq  0xffffffffffff30da
+  18:	44 89 ea             	mov    %r13d,%edx
+  1b:	48 c7 c7 a0 4e c0 95 	mov    $0xffffffff95c04ea0,%rdi
+  22:	48 89 c6             	mov    %rax,%rsi
+  25:	e8 95 24 a8 ff       	callq  0xffffffffffa824bf
+  2a:*	0f 0b                	ud2    		<-- trapping instruction
+  2c:	4c 89 f7             	mov    %r14,%rdi
+  2f:	e8 56 5b da ff       	callq  0xffffffffffda5b8a
+  34:	4c 8b 7b 08          	mov    0x8(%rbx),%r15
+  38:	e9 69 fc ff ff       	jmpq   0xfffffffffffffca6
+  3d:	49                   	rex.WB
+  3e:	8b                   	.byte 0x8b
+  3f:	45                   	rex.RB
+
+Code starting with the faulting instruction
+===========================================
+   0:	0f 0b                	ud2    
+   2:	4c 89 f7             	mov    %r14,%rdi
+   5:	e8 56 5b da ff       	callq  0xffffffffffda5b60
+   a:	4c 8b 7b 08          	mov    0x8(%rbx),%r15
+   e:	e9 69 fc ff ff       	jmpq   0xfffffffffffffc7c
+  13:	49                   	rex.WB
+  14:	8b                   	.byte 0x8b
+  15:	45                   	rex.RB
+Jul 13 09:59:41 pesu-pes-edu kernel: [10824.286495] RSP: 0018:ffff888217187440 EFLAGS: 00010282
+Jul 13 09:59:41 pesu-pes-edu kernel: [10824.286498] RAX: 0000000000000000 RBX: ffff88820787a800 RCX: 0000000000000027
+Jul 13 09:59:41 pesu-pes-edu kernel: [10824.286500] RDX: 0000000000000027 RSI: dffffc0000000000 RDI: ffff8882276a0a28
+Jul 13 09:59:41 pesu-pes-edu kernel: [10824.286503] RBP: ffff88820fa2f700 R08: ffffed1044ed4146 R09: ffffed1044ed4146
+Jul 13 09:59:41 pesu-pes-edu kernel: [10824.286506] R10: ffff8882276a0a2b R11: ffffed1044ed4145 R12: ffff88820787a810
+Jul 13 09:59:41 pesu-pes-edu kernel: [10824.286508] R13: 0000000000000000 R14: ffff88820787a808 R15: ffff88820fa38000
+Jul 13 09:59:41 pesu-pes-edu kernel: [10824.286511] FS:  0000000000000000(0000) GS:ffff888227680000(0000) knlGS:0000000000000000
+Jul 13 09:59:41 pesu-pes-edu kernel: [10824.286513] CS:  0010 DS: 0000 ES: 0000 CR0: 0000000080050033
+Jul 13 09:59:41 pesu-pes-edu kernel: [10824.286515] CR2: 00007fcbbeb1e9a0 CR3: 000000025780e005 CR4: 00000000003706e0
+Jul 13 09:59:41 pesu-pes-edu kernel: [10824.286517] DR0: 0000000000000000 DR1: 0000000000000000 DR2: 0000000000000000
+Jul 13 09:59:41 pesu-pes-edu kernel: [10824.286519] DR3: 0000000000000000 DR6: 00000000fffe0ff0 DR7: 0000000000000400
+Jul 13 09:59:41 pesu-pes-edu kernel: [10824.286520] Call Trace:
+Jul 13 09:59:41 pesu-pes-edu kernel: [10824.286527] ? blkdev_close (fs/block_dev.c:1933) 
+Jul 13 09:59:41 pesu-pes-edu kernel: [10824.286532] ? __fput (fs/file_table.c:282) 
+Jul 13 09:59:41 pesu-pes-edu kernel: [10824.286537] ? task_work_run (kernel/task_work.c:137 (discriminator 1)) 
+Jul 13 09:59:41 pesu-pes-edu kernel: [10824.286541] ? do_exit (kernel/exit.c:807) 
+Jul 13 09:59:41 pesu-pes-edu kernel: [10824.286546] ? trace_event_raw_event_block_rq_requeue (block/blk-core.c:960) 
+Jul 13 09:59:41 pesu-pes-edu kernel: [10824.286552] ? entry_SYSCALL_64_after_hwframe (arch/x86/entry/entry_64.S:125) 
+Jul 13 09:59:41 pesu-pes-edu kernel: [10824.286556] ? kasan_unpoison_shadow (mm/kasan/common.c:146) 
+Jul 13 09:59:41 pesu-pes-edu kernel: [10824.286560] ? __kasan_kmalloc.constprop.13 (mm/kasan/common.c:56 /home/bkkarthik/Workspace/eudyptula/linux-next/mm/kasan/common.c:461 /home/bkkarthik/Workspace/eudyptula/linux-next/mm/kasan/common.c:434) 
+Jul 13 09:59:41 pesu-pes-edu kernel: [10824.286566] submit_bio_noacct (block/blk-core.c:1197) 
+Jul 13 09:59:41 pesu-pes-edu kernel: [10824.286571] ? mempool_alloc (mm/mempool.c:393) 
+Jul 13 09:59:41 pesu-pes-edu kernel: [10824.286575] ? blk_queue_enter (block/blk-core.c:1196) 
+Jul 13 09:59:41 pesu-pes-edu kernel: [10824.286579] ? mempool_destroy (mm/mempool.c:376) 
+Jul 13 09:59:41 pesu-pes-edu kernel: [10824.286584] ? _raw_spin_trylock_bh (kernel/locking/spinlock.c:158) 
+Jul 13 09:59:41 pesu-pes-edu kernel: [10824.286589] ? __mod_memcg_state.part.68 (mm/memcontrol.c:789) 
+Jul 13 09:59:41 pesu-pes-edu kernel: [10824.286593] ? memset (mm/kasan/common.c:84) 
+Jul 13 09:59:41 pesu-pes-edu kernel: [10824.286598] submit_bio (block/blk-core.c:1231) 
+Jul 13 09:59:41 pesu-pes-edu kernel: [10824.286603] ? submit_bio_noacct (block/blk-core.c:1231) 
+Jul 13 09:59:41 pesu-pes-edu kernel: [10824.286608] ? bio_add_page (block/bio.c:943) 
+Jul 13 09:59:41 pesu-pes-edu kernel: [10824.286613] ? __bio_add_page (block/bio.c:935) 
+Jul 13 09:59:41 pesu-pes-edu kernel: [10824.286616] ? __wb_update_bandwidth (mm/page-writeback.c:2773) 
+Jul 13 09:59:41 pesu-pes-edu kernel: [10824.286622] submit_bh_wbc (fs/buffer.c:3109) 
+Jul 13 09:59:41 pesu-pes-edu kernel: [10824.286628] __block_write_full_page (fs/buffer.c:1852) 
+Jul 13 09:59:41 pesu-pes-edu kernel: [10824.286633] ? bdev_evict_inode (fs/block_dev.c:158) 
+Jul 13 09:59:41 pesu-pes-edu kernel: [10824.286638] ? end_bio_bh_io_sync (fs/buffer.c:343) 
+Jul 13 09:59:41 pesu-pes-edu kernel: [10824.286642] __writepage (mm/page-writeback.c:2311) 
+Jul 13 09:59:41 pesu-pes-edu kernel: [10824.286647] write_cache_pages (mm/page-writeback.c:2247) 
+Jul 13 09:59:41 pesu-pes-edu kernel: [10824.286653] ? wb_domain_writeout_inc.part.35 (mm/page-writeback.c:2309) 
+Jul 13 09:59:41 pesu-pes-edu kernel: [10824.286658] ? clear_page_dirty_for_io (mm/page-writeback.c:2171) 
+Jul 13 09:59:41 pesu-pes-edu kernel: [10824.286663] ? kernel_text_address (kernel/extable.c:123) 
+Jul 13 09:59:41 pesu-pes-edu kernel: [10824.286667] ? __unwind_start (arch/x86/kernel/unwind_orc.c:696) 
+Jul 13 09:59:41 pesu-pes-edu kernel: [10824.286671] ? __kernel_text_address (kernel/extable.c:105) 
+Jul 13 09:59:41 pesu-pes-edu kernel: [10824.286676] ? unwind_get_return_address (arch/x86/kernel/unwind_orc.c:317 /home/bkkarthik/Workspace/eudyptula/linux-next/arch/x86/kernel/unwind_orc.c:312) 
+Jul 13 09:59:41 pesu-pes-edu kernel: [10824.286681] ? profile_prepare_cpu (kernel/profile.c:353) 
+Jul 13 09:59:41 pesu-pes-edu kernel: [10824.286685] ? stack_access_ok (./arch/x86/include/asm/stacktrace.h:44 /home/bkkarthik/Workspace/eudyptula/linux-next/arch/x86/kernel/unwind_orc.c:348) 
+Jul 13 09:59:41 pesu-pes-edu kernel: [10824.286690] ? deref_stack_reg (arch/x86/kernel/unwind_orc.c:361 (discriminator 3)) 
+Jul 13 09:59:41 pesu-pes-edu kernel: [10824.286694] ? stack_access_ok (./arch/x86/include/asm/stacktrace.h:44 /home/bkkarthik/Workspace/eudyptula/linux-next/arch/x86/kernel/unwind_orc.c:348) 
+Jul 13 09:59:41 pesu-pes-edu kernel: [10824.286698] ? __orc_find (arch/x86/kernel/unwind_orc.c:29 /home/bkkarthik/Workspace/eudyptula/linux-next/arch/x86/kernel/unwind_orc.c:51) 
+Jul 13 09:59:41 pesu-pes-edu kernel: [10824.286702] ? stack_access_ok (./arch/x86/include/asm/stacktrace.h:44 /home/bkkarthik/Workspace/eudyptula/linux-next/arch/x86/kernel/unwind_orc.c:348) 
+Jul 13 09:59:41 pesu-pes-edu kernel: [10824.286706] ? unwind_next_frame (./arch/x86/include/asm/stacktrace.h:44 (discriminator 1) /home/bkkarthik/Workspace/eudyptula/linux-next/arch/x86/kernel/unwind_orc.c:604 (discriminator 1)) 
+Jul 13 09:59:41 pesu-pes-edu kernel: [10824.286710] ? entry_SYSCALL_64_after_hwframe (arch/x86/entry/entry_64.S:125) 
+Jul 13 09:59:41 pesu-pes-edu kernel: [10824.286714] generic_writepages (mm/page-writeback.c:2338 /home/bkkarthik/Workspace/eudyptula/linux-next/mm/page-writeback.c:2326) 
+Jul 13 09:59:41 pesu-pes-edu kernel: [10824.286718] ? write_cache_pages (mm/page-writeback.c:2328) 
+Jul 13 09:59:41 pesu-pes-edu kernel: [10824.286723] ? __kernel_text_address (kernel/extable.c:105) 
+Jul 13 09:59:41 pesu-pes-edu kernel: [10824.286728] ? unwind_get_return_address (arch/x86/kernel/unwind_orc.c:317 /home/bkkarthik/Workspace/eudyptula/linux-next/arch/x86/kernel/unwind_orc.c:312) 
+Jul 13 09:59:41 pesu-pes-edu kernel: [10824.286733] ? profile_setup.cold.14 (kernel/stacktrace.c:83) 
+Jul 13 09:59:41 pesu-pes-edu kernel: [10824.286738] ? arch_stack_walk (arch/x86/kernel/stacktrace.c:27) 
+Jul 13 09:59:41 pesu-pes-edu kernel: [10824.286743] do_writepages (mm/page-writeback.c:2352) 
+Jul 13 09:59:41 pesu-pes-edu kernel: [10824.286748] ? page_writeback_cpu_online (mm/page-writeback.c:2345) 
+Jul 13 09:59:41 pesu-pes-edu kernel: [10824.286753] ? _raw_spin_lock (./arch/x86/include/asm/atomic.h:204 /home/bkkarthik/Workspace/eudyptula/linux-next/./include/asm-generic/atomic-instrumented.h:707 /home/bkkarthik/Workspace/eudyptula/linux-next/./include/asm-generic/qspinlock.h:78 /home/bkkarthik/Workspace/eudyptula/linux-next/./include/linux/spinlock.h:183 /home/bkkarthik/Workspace/eudyptula/linux-next/./include/linux/spinlock_api_smp.h:143 /home/bkkarthik/Workspace/eudyptula/linux-next/kernel/locking/spinlock.c:151) 
+Jul 13 09:59:41 pesu-pes-edu kernel: [10824.286757] ? _raw_write_lock_irq (kernel/locking/spinlock.c:150) 
+Jul 13 09:59:41 pesu-pes-edu kernel: [10824.286764] __filemap_fdatawrite_range (mm/filemap.c:423) 
+Jul 13 09:59:41 pesu-pes-edu kernel: [10824.286769] ? kasan_save_stack (mm/kasan/common.c:51) 
+Jul 13 09:59:41 pesu-pes-edu kernel: [10824.286774] ? delete_from_page_cache_batch (mm/filemap.c:408) 
+Jul 13 09:59:41 pesu-pes-edu kernel: [10824.286781] ? task_work_add (./arch/x86/include/asm/bitops.h:138 /home/bkkarthik/Workspace/eudyptula/linux-next/./include/asm-generic/bitops/instrumented-atomic.h:71 /home/bkkarthik/Workspace/eudyptula/linux-next/./include/linux/thread_info.h:74 /home/bkkarthik/Workspace/eudyptula/linux-next/./include/linux/sched.h:1793 /home/bkkarthik/Workspace/eudyptula/linux-next/./include/linux/tracehook.h:161 /home/bkkarthik/Workspace/eudyptula/linux-next/kernel/task_work.c:42) 
+Jul 13 09:59:41 pesu-pes-edu kernel: [10824.286786] ? pidfd_get_pid (kernel/task_work.c:29) 
+Jul 13 09:59:41 pesu-pes-edu kernel: [10824.286791] ? __list_add_valid (lib/list_debug.c:26 (discriminator 8)) 
+Jul 13 09:59:41 pesu-pes-edu kernel: [10824.286797] filemap_write_and_wait_range (mm/filemap.c:655 /home/bkkarthik/Workspace/eudyptula/linux-next/mm/filemap.c:649) 
+Jul 13 09:59:41 pesu-pes-edu kernel: [10824.286802] __blkdev_put (fs/block_dev.c:489 /home/bkkarthik/Workspace/eudyptula/linux-next/fs/block_dev.c:1847) 
+Jul 13 09:59:41 pesu-pes-edu kernel: [10824.286808] ? freeze_bdev (fs/block_dev.c:1835) 
+Jul 13 09:59:41 pesu-pes-edu kernel: [10824.286813] ? __fsnotify_inode_delete (fs/notify/fsnotify.c:313) 
+Jul 13 09:59:41 pesu-pes-edu kernel: [10824.286819] ? mutex_unlock (./arch/x86/include/asm/atomic64_64.h:184 /home/bkkarthik/Workspace/eudyptula/linux-next/./include/asm-generic/atomic-instrumented.h:1485 /home/bkkarthik/Workspace/eudyptula/linux-next/./include/asm-generic/atomic-long.h:425 /home/bkkarthik/Workspace/eudyptula/linux-next/kernel/locking/mutex.c:181 /home/bkkarthik/Workspace/eudyptula/linux-next/kernel/locking/mutex.c:737) 
+Jul 13 09:59:41 pesu-pes-edu kernel: [10824.286824] blkdev_close (fs/block_dev.c:1933) 
+Jul 13 09:59:41 pesu-pes-edu kernel: [10824.286830] __fput (fs/file_table.c:282) 
+Jul 13 09:59:41 pesu-pes-edu kernel: [10824.286836] task_work_run (kernel/task_work.c:137 (discriminator 1)) 
+Jul 13 09:59:41 pesu-pes-edu kernel: [10824.286842] do_exit (kernel/exit.c:807) 
+Jul 13 09:59:41 pesu-pes-edu kernel: [10824.286849] ? copy_page_range (mm/memory.c:4439) 
+Jul 13 09:59:41 pesu-pes-edu kernel: [10824.286855] ? mm_update_next_owner (kernel/exit.c:710) 
+Jul 13 09:59:41 pesu-pes-edu kernel: [10824.286860] ? rwsem_spin_on_owner (kernel/locking/rwsem.c:1516) 
+Jul 13 09:59:41 pesu-pes-edu kernel: [10824.286865] ? vmacache_find (mm/vmacache.c:79 (discriminator 1)) 
+Jul 13 09:59:41 pesu-pes-edu kernel: [10824.286869] ? vmacache_update (mm/vmacache.c:38) 
+Jul 13 09:59:41 pesu-pes-edu kernel: [10824.286874] ? up_read (./arch/x86/include/asm/atomic64_64.h:160 /home/bkkarthik/Workspace/eudyptula/linux-next/./include/asm-generic/atomic-instrumented.h:903 /home/bkkarthik/Workspace/eudyptula/linux-next/./include/asm-generic/atomic-long.h:71 /home/bkkarthik/Workspace/eudyptula/linux-next/kernel/locking/rwsem.c:1434 /home/bkkarthik/Workspace/eudyptula/linux-next/kernel/locking/rwsem.c:1574) 
+Jul 13 09:59:41 pesu-pes-edu kernel: [10824.286879] do_group_exit (./include/linux/list.h:282 /home/bkkarthik/Workspace/eudyptula/linux-next/./include/linux/sched/signal.h:671 /home/bkkarthik/Workspace/eudyptula/linux-next/kernel/exit.c:888) 
+Jul 13 09:59:41 pesu-pes-edu kernel: [10824.286885] __x64_sys_exit_group (kernel/exit.c:914) 
+Jul 13 09:59:41 pesu-pes-edu kernel: [10824.286889] do_syscall_64 (arch/x86/entry/common.c:384) 
+Jul 13 09:59:41 pesu-pes-edu kernel: [10824.286894] entry_SYSCALL_64_after_hwframe (arch/x86/entry/entry_64.S:125) 
+Jul 13 09:59:41 pesu-pes-edu kernel: [10824.286898] RIP: 0033:0x7fcbbeb1e9d6
+Jul 13 09:59:41 pesu-pes-edu kernel: [10824.286899] Code: Bad RIP value.
+
+Code starting with the faulting instruction
+===========================================
+Jul 13 09:59:41 pesu-pes-edu kernel: [10824.286901] RSP: 002b:00007ffd9ead9258 EFLAGS: 00000246 ORIG_RAX: 00000000000000e7
+Jul 13 09:59:41 pesu-pes-edu kernel: [10824.286906] RAX: ffffffffffffffda RBX: 00007fcbbec0f760 RCX: 00007fcbbeb1e9d6
+Jul 13 09:59:41 pesu-pes-edu kernel: [10824.286908] RDX: 0000000000000000 RSI: 000000000000003c RDI: 0000000000000000
+Jul 13 09:59:41 pesu-pes-edu kernel: [10824.286911] RBP: 0000000000000000 R08: 00000000000000e7 R09: ffffffffffffff80
+Jul 13 09:59:41 pesu-pes-edu kernel: [10824.286913] R10: 00007ffd9ead9124 R11: 0000000000000246 R12: 00007fcbbec0f760
+Jul 13 09:59:41 pesu-pes-edu kernel: [10824.286915] R13: 0000000000000001 R14: 00007fcbbec18428 R15: 0000000000000000
+Jul 13 09:59:41 pesu-pes-edu kernel: [10824.286920] ---[ end trace bc8677d79e565e33 ]---
+
