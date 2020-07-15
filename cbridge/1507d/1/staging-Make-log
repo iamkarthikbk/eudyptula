@@ -1,0 +1,2413 @@
+  CC [M]  drivers/staging/media/atomisp/i2c/ov5693/atomisp-ov5693.o
+  CHECK   drivers/staging/media/atomisp/i2c/ov5693/atomisp-ov5693.c
+  AR      drivers/staging/media/atomisp/i2c/built-in.a
+  CC [M]  drivers/staging/media/atomisp/i2c/atomisp-mt9m114.o
+  CHECK   drivers/staging/media/atomisp/i2c/atomisp-mt9m114.c
+  CC [M]  drivers/staging/media/atomisp/i2c/atomisp-gc2235.o
+  CHECK   drivers/staging/media/atomisp/i2c/atomisp-gc2235.c
+  CC [M]  drivers/staging/media/atomisp/i2c/atomisp-ov2722.o
+  CHECK   drivers/staging/media/atomisp/i2c/atomisp-ov2722.c
+  CC [M]  drivers/staging/media/atomisp/i2c/atomisp-ov2680.o
+  CHECK   drivers/staging/media/atomisp/i2c/atomisp-ov2680.c
+  CC [M]  drivers/staging/media/atomisp/i2c/atomisp-gc0310.o
+  CHECK   drivers/staging/media/atomisp/i2c/atomisp-gc0310.c
+  CC [M]  drivers/staging/media/atomisp/i2c/atomisp-libmsrlisthelper.o
+  CHECK   drivers/staging/media/atomisp/i2c/atomisp-libmsrlisthelper.c
+  CC [M]  drivers/staging/media/atomisp/i2c/atomisp-lm3554.o
+  CHECK   drivers/staging/media/atomisp/i2c/atomisp-lm3554.c
+  AR      drivers/staging/media/atomisp/built-in.a
+  CC [M]  drivers/staging/media/atomisp/pci/atomisp_acc.o
+  CHECK   drivers/staging/media/atomisp/pci/atomisp_acc.c
+  CC [M]  drivers/staging/media/atomisp/pci/atomisp_cmd.o
+  CHECK   drivers/staging/media/atomisp/pci/atomisp_cmd.c
+  CC [M]  drivers/staging/media/atomisp/pci/atomisp_compat_css20.o
+  CHECK   drivers/staging/media/atomisp/pci/atomisp_compat_css20.c
+  CC [M]  drivers/staging/media/atomisp/pci/atomisp_compat_ioctl32.o
+  CHECK   drivers/staging/media/atomisp/pci/atomisp_compat_ioctl32.c
+  CC [M]  drivers/staging/media/atomisp/pci/atomisp_csi2.o
+  CHECK   drivers/staging/media/atomisp/pci/atomisp_csi2.c
+  CC [M]  drivers/staging/media/atomisp/pci/atomisp_drvfs.o
+  CHECK   drivers/staging/media/atomisp/pci/atomisp_drvfs.c
+  CC [M]  drivers/staging/media/atomisp/pci/atomisp_file.o
+  CHECK   drivers/staging/media/atomisp/pci/atomisp_file.c
+  CC [M]  drivers/staging/media/atomisp/pci/atomisp_fops.o
+  CHECK   drivers/staging/media/atomisp/pci/atomisp_fops.c
+  CC [M]  drivers/staging/media/atomisp/pci/atomisp_ioctl.o
+  CHECK   drivers/staging/media/atomisp/pci/atomisp_ioctl.c
+  CC [M]  drivers/staging/media/atomisp/pci/atomisp_subdev.o
+  CHECK   drivers/staging/media/atomisp/pci/atomisp_subdev.c
+  CC [M]  drivers/staging/media/atomisp/pci/atomisp_tpg.o
+  CHECK   drivers/staging/media/atomisp/pci/atomisp_tpg.c
+  CC [M]  drivers/staging/media/atomisp/pci/atomisp_v4l2.o
+  CHECK   drivers/staging/media/atomisp/pci/atomisp_v4l2.c
+  CC [M]  drivers/staging/media/atomisp/pci/sh_css_firmware.o
+  CHECK   drivers/staging/media/atomisp/pci/sh_css_firmware.c
+  CC [M]  drivers/staging/media/atomisp/pci/sh_css_host_data.o
+  CHECK   drivers/staging/media/atomisp/pci/sh_css_host_data.c
+  CC [M]  drivers/staging/media/atomisp/pci/sh_css_hrt.o
+  CHECK   drivers/staging/media/atomisp/pci/sh_css_hrt.c
+  CC [M]  drivers/staging/media/atomisp/pci/sh_css_metadata.o
+  CHECK   drivers/staging/media/atomisp/pci/sh_css_metadata.c
+  CC [M]  drivers/staging/media/atomisp/pci/sh_css_metrics.o
+  CHECK   drivers/staging/media/atomisp/pci/sh_css_metrics.c
+  CC [M]  drivers/staging/media/atomisp/pci/sh_css_mipi.o
+  CHECK   drivers/staging/media/atomisp/pci/sh_css_mipi.c
+  CC [M]  drivers/staging/media/atomisp/pci/sh_css_mmu.o
+  CHECK   drivers/staging/media/atomisp/pci/sh_css_mmu.c
+  CC [M]  drivers/staging/media/atomisp/pci/sh_css_morph.o
+  CHECK   drivers/staging/media/atomisp/pci/sh_css_morph.c
+  CC [M]  drivers/staging/media/atomisp/pci/sh_css.o
+  CHECK   drivers/staging/media/atomisp/pci/sh_css.c
+  CC [M]  drivers/staging/media/atomisp/pci/sh_css_param_dvs.o
+  CHECK   drivers/staging/media/atomisp/pci/sh_css_param_dvs.c
+  CC [M]  drivers/staging/media/atomisp/pci/sh_css_param_shading.o
+  CHECK   drivers/staging/media/atomisp/pci/sh_css_param_shading.c
+  CC [M]  drivers/staging/media/atomisp/pci/sh_css_params.o
+  CHECK   drivers/staging/media/atomisp/pci/sh_css_params.c
+  CC [M]  drivers/staging/media/atomisp/pci/sh_css_properties.o
+  CHECK   drivers/staging/media/atomisp/pci/sh_css_properties.c
+  CC [M]  drivers/staging/media/atomisp/pci/sh_css_shading.o
+  CHECK   drivers/staging/media/atomisp/pci/sh_css_shading.c
+  CC [M]  drivers/staging/media/atomisp/pci/sh_css_sp.o
+  CHECK   drivers/staging/media/atomisp/pci/sh_css_sp.c
+  CC [M]  drivers/staging/media/atomisp/pci/sh_css_stream_format.o
+  CHECK   drivers/staging/media/atomisp/pci/sh_css_stream_format.c
+  CC [M]  drivers/staging/media/atomisp/pci/sh_css_stream.o
+  CHECK   drivers/staging/media/atomisp/pci/sh_css_stream.c
+  CC [M]  drivers/staging/media/atomisp/pci/sh_css_version.o
+  CHECK   drivers/staging/media/atomisp/pci/sh_css_version.c
+  CC [M]  drivers/staging/media/atomisp/pci/base/circbuf/src/circbuf.o
+  CHECK   drivers/staging/media/atomisp/pci/base/circbuf/src/circbuf.c
+  CC [M]  drivers/staging/media/atomisp/pci/base/refcount/src/refcount.o
+  CHECK   drivers/staging/media/atomisp/pci/base/refcount/src/refcount.c
+  CC [M]  drivers/staging/media/atomisp/pci/camera/pipe/src/pipe_binarydesc.o
+  CHECK   drivers/staging/media/atomisp/pci/camera/pipe/src/pipe_binarydesc.c
+  CC [M]  drivers/staging/media/atomisp/pci/camera/pipe/src/pipe_stagedesc.o
+  CHECK   drivers/staging/media/atomisp/pci/camera/pipe/src/pipe_stagedesc.c
+  CC [M]  drivers/staging/media/atomisp/pci/camera/pipe/src/pipe_util.o
+  CHECK   drivers/staging/media/atomisp/pci/camera/pipe/src/pipe_util.c
+  CC [M]  drivers/staging/media/atomisp/pci/camera/util/src/util.o
+  CHECK   drivers/staging/media/atomisp/pci/camera/util/src/util.c
+  CC [M]  drivers/staging/media/atomisp/pci/hmm/hmm_bo.o
+  CHECK   drivers/staging/media/atomisp/pci/hmm/hmm_bo.c
+  CC [M]  drivers/staging/media/atomisp/pci/hmm/hmm_dynamic_pool.o
+  CHECK   drivers/staging/media/atomisp/pci/hmm/hmm_dynamic_pool.c
+  CC [M]  drivers/staging/media/atomisp/pci/hmm/hmm.o
+  CHECK   drivers/staging/media/atomisp/pci/hmm/hmm.c
+  CC [M]  drivers/staging/media/atomisp/pci/hmm/hmm_reserved_pool.o
+  CHECK   drivers/staging/media/atomisp/pci/hmm/hmm_reserved_pool.c
+  CC [M]  drivers/staging/media/atomisp/pci/ia_css_device_access.o
+  CHECK   drivers/staging/media/atomisp/pci/ia_css_device_access.c
+  CC [M]  drivers/staging/media/atomisp/pci/isp/kernels/aa/aa_2/ia_css_aa2.host.o
+  CHECK   drivers/staging/media/atomisp/pci/isp/kernels/aa/aa_2/ia_css_aa2.host.c
+  CC [M]  drivers/staging/media/atomisp/pci/isp/kernels/anr/anr_1.0/ia_css_anr.host.o
+  CHECK   drivers/staging/media/atomisp/pci/isp/kernels/anr/anr_1.0/ia_css_anr.host.c
+  CC [M]  drivers/staging/media/atomisp/pci/isp/kernels/anr/anr_2/ia_css_anr2.host.o
+  CHECK   drivers/staging/media/atomisp/pci/isp/kernels/anr/anr_2/ia_css_anr2.host.c
+  CC [M]  drivers/staging/media/atomisp/pci/isp/kernels/anr/anr_2/ia_css_anr2_table.host.o
+  CHECK   drivers/staging/media/atomisp/pci/isp/kernels/anr/anr_2/ia_css_anr2_table.host.c
+  CC [M]  drivers/staging/media/atomisp/pci/isp/kernels/bh/bh_2/ia_css_bh.host.o
+  CHECK   drivers/staging/media/atomisp/pci/isp/kernels/bh/bh_2/ia_css_bh.host.c
+  CC [M]  drivers/staging/media/atomisp/pci/isp/kernels/bnlm/ia_css_bnlm.host.o
+  CHECK   drivers/staging/media/atomisp/pci/isp/kernels/bnlm/ia_css_bnlm.host.c
+  CC [M]  drivers/staging/media/atomisp/pci/isp/kernels/bnr/bnr_1.0/ia_css_bnr.host.o
+  CHECK   drivers/staging/media/atomisp/pci/isp/kernels/bnr/bnr_1.0/ia_css_bnr.host.c
+  CC [M]  drivers/staging/media/atomisp/pci/isp/kernels/bnr/bnr2_2/ia_css_bnr2_2.host.o
+  CHECK   drivers/staging/media/atomisp/pci/isp/kernels/bnr/bnr2_2/ia_css_bnr2_2.host.c
+  CC [M]  drivers/staging/media/atomisp/pci/isp/kernels/cnr/cnr_1.0/ia_css_cnr.host.o
+  CHECK   drivers/staging/media/atomisp/pci/isp/kernels/cnr/cnr_1.0/ia_css_cnr.host.c
+  CC [M]  drivers/staging/media/atomisp/pci/isp/kernels/cnr/cnr_2/ia_css_cnr2.host.o
+  CHECK   drivers/staging/media/atomisp/pci/isp/kernels/cnr/cnr_2/ia_css_cnr2.host.c
+  CC [M]  drivers/staging/media/atomisp/pci/isp/kernels/conversion/conversion_1.0/ia_css_conversion.host.o
+  CHECK   drivers/staging/media/atomisp/pci/isp/kernels/conversion/conversion_1.0/ia_css_conversion.host.c
+  CC [M]  drivers/staging/media/atomisp/pci/isp/kernels/copy_output/copy_output_1.0/ia_css_copy_output.host.o
+  CHECK   drivers/staging/media/atomisp/pci/isp/kernels/copy_output/copy_output_1.0/ia_css_copy_output.host.c
+  CC [M]  drivers/staging/media/atomisp/pci/isp/kernels/crop/crop_1.0/ia_css_crop.host.o
+  CHECK   drivers/staging/media/atomisp/pci/isp/kernels/crop/crop_1.0/ia_css_crop.host.c
+  CC [M]  drivers/staging/media/atomisp/pci/isp/kernels/csc/csc_1.0/ia_css_csc.host.o
+  CHECK   drivers/staging/media/atomisp/pci/isp/kernels/csc/csc_1.0/ia_css_csc.host.c
+  CC [M]  drivers/staging/media/atomisp/pci/isp/kernels/ctc/ctc_1.0/ia_css_ctc.host.o
+  CHECK   drivers/staging/media/atomisp/pci/isp/kernels/ctc/ctc_1.0/ia_css_ctc.host.c
+  CC [M]  drivers/staging/media/atomisp/pci/isp/kernels/ctc/ctc_1.0/ia_css_ctc_table.host.o
+  CHECK   drivers/staging/media/atomisp/pci/isp/kernels/ctc/ctc_1.0/ia_css_ctc_table.host.c
+  CC [M]  drivers/staging/media/atomisp/pci/isp/kernels/ctc/ctc1_5/ia_css_ctc1_5.host.o
+  CHECK   drivers/staging/media/atomisp/pci/isp/kernels/ctc/ctc1_5/ia_css_ctc1_5.host.c
+  CC [M]  drivers/staging/media/atomisp/pci/isp/kernels/ctc/ctc2/ia_css_ctc2.host.o
+  CHECK   drivers/staging/media/atomisp/pci/isp/kernels/ctc/ctc2/ia_css_ctc2.host.c
+  CC [M]  drivers/staging/media/atomisp/pci/isp/kernels/de/de_1.0/ia_css_de.host.o
+  CHECK   drivers/staging/media/atomisp/pci/isp/kernels/de/de_1.0/ia_css_de.host.c
+  CC [M]  drivers/staging/media/atomisp/pci/isp/kernels/de/de_2/ia_css_de2.host.o
+  CHECK   drivers/staging/media/atomisp/pci/isp/kernels/de/de_2/ia_css_de2.host.c
+  CC [M]  drivers/staging/media/atomisp/pci/isp/kernels/dpc2/ia_css_dpc2.host.o
+  CHECK   drivers/staging/media/atomisp/pci/isp/kernels/dpc2/ia_css_dpc2.host.c
+  CC [M]  drivers/staging/media/atomisp/pci/isp/kernels/dp/dp_1.0/ia_css_dp.host.o
+  CHECK   drivers/staging/media/atomisp/pci/isp/kernels/dp/dp_1.0/ia_css_dp.host.c
+  CC [M]  drivers/staging/media/atomisp/pci/isp/kernels/dvs/dvs_1.0/ia_css_dvs.host.o
+  CHECK   drivers/staging/media/atomisp/pci/isp/kernels/dvs/dvs_1.0/ia_css_dvs.host.c
+  CC [M]  drivers/staging/media/atomisp/pci/isp/kernels/eed1_8/ia_css_eed1_8.host.o
+  CHECK   drivers/staging/media/atomisp/pci/isp/kernels/eed1_8/ia_css_eed1_8.host.c
+  CC [M]  drivers/staging/media/atomisp/pci/isp/kernels/fc/fc_1.0/ia_css_formats.host.o
+  CHECK   drivers/staging/media/atomisp/pci/isp/kernels/fc/fc_1.0/ia_css_formats.host.c
+  CC [M]  drivers/staging/media/atomisp/pci/isp/kernels/fpn/fpn_1.0/ia_css_fpn.host.o
+  CHECK   drivers/staging/media/atomisp/pci/isp/kernels/fpn/fpn_1.0/ia_css_fpn.host.c
+  CC [M]  drivers/staging/media/atomisp/pci/isp/kernels/gc/gc_1.0/ia_css_gc.host.o
+  CHECK   drivers/staging/media/atomisp/pci/isp/kernels/gc/gc_1.0/ia_css_gc.host.c
+  CC [M]  drivers/staging/media/atomisp/pci/isp/kernels/gc/gc_1.0/ia_css_gc_table.host.o
+  CHECK   drivers/staging/media/atomisp/pci/isp/kernels/gc/gc_1.0/ia_css_gc_table.host.c
+  CC [M]  drivers/staging/media/atomisp/pci/isp/kernels/gc/gc_2/ia_css_gc2.host.o
+  CHECK   drivers/staging/media/atomisp/pci/isp/kernels/gc/gc_2/ia_css_gc2.host.c
+  CC [M]  drivers/staging/media/atomisp/pci/isp/kernels/gc/gc_2/ia_css_gc2_table.host.o
+  CHECK   drivers/staging/media/atomisp/pci/isp/kernels/gc/gc_2/ia_css_gc2_table.host.c
+  CC [M]  drivers/staging/media/atomisp/pci/isp/kernels/hdr/ia_css_hdr.host.o
+  CHECK   drivers/staging/media/atomisp/pci/isp/kernels/hdr/ia_css_hdr.host.c
+  CC [M]  drivers/staging/media/atomisp/pci/isp/kernels/ipu2_io_ls/bayer_io_ls/ia_css_bayer_io.host.o
+  CHECK   drivers/staging/media/atomisp/pci/isp/kernels/ipu2_io_ls/bayer_io_ls/ia_css_bayer_io.host.c
+  CC [M]  drivers/staging/media/atomisp/pci/isp/kernels/ipu2_io_ls/yuv444_io_ls/ia_css_yuv444_io.host.o
+  CHECK   drivers/staging/media/atomisp/pci/isp/kernels/ipu2_io_ls/yuv444_io_ls/ia_css_yuv444_io.host.c
+  CC [M]  drivers/staging/media/atomisp/pci/isp/kernels/iterator/iterator_1.0/ia_css_iterator.host.o
+  CHECK   drivers/staging/media/atomisp/pci/isp/kernels/iterator/iterator_1.0/ia_css_iterator.host.c
+  CC [M]  drivers/staging/media/atomisp/pci/isp/kernels/macc/macc_1.0/ia_css_macc.host.o
+  CHECK   drivers/staging/media/atomisp/pci/isp/kernels/macc/macc_1.0/ia_css_macc.host.c
+  CC [M]  drivers/staging/media/atomisp/pci/isp/kernels/macc/macc_1.0/ia_css_macc_table.host.o
+  CHECK   drivers/staging/media/atomisp/pci/isp/kernels/macc/macc_1.0/ia_css_macc_table.host.c
+  CC [M]  drivers/staging/media/atomisp/pci/isp/kernels/macc/macc1_5/ia_css_macc1_5.host.o
+  CHECK   drivers/staging/media/atomisp/pci/isp/kernels/macc/macc1_5/ia_css_macc1_5.host.c
+  CC [M]  drivers/staging/media/atomisp/pci/isp/kernels/macc/macc1_5/ia_css_macc1_5_table.host.o
+  CHECK   drivers/staging/media/atomisp/pci/isp/kernels/macc/macc1_5/ia_css_macc1_5_table.host.c
+  CC [M]  drivers/staging/media/atomisp/pci/isp/kernels/norm/norm_1.0/ia_css_norm.host.o
+  CHECK   drivers/staging/media/atomisp/pci/isp/kernels/norm/norm_1.0/ia_css_norm.host.c
+  CC [M]  drivers/staging/media/atomisp/pci/isp/kernels/ob/ob_1.0/ia_css_ob.host.o
+  CHECK   drivers/staging/media/atomisp/pci/isp/kernels/ob/ob_1.0/ia_css_ob.host.c
+  CC [M]  drivers/staging/media/atomisp/pci/isp/kernels/ob/ob2/ia_css_ob2.host.o
+  CHECK   drivers/staging/media/atomisp/pci/isp/kernels/ob/ob2/ia_css_ob2.host.c
+  CC [M]  drivers/staging/media/atomisp/pci/isp/kernels/output/output_1.0/ia_css_output.host.o
+  CHECK   drivers/staging/media/atomisp/pci/isp/kernels/output/output_1.0/ia_css_output.host.c
+  CC [M]  drivers/staging/media/atomisp/pci/isp/kernels/qplane/qplane_2/ia_css_qplane.host.o
+  CHECK   drivers/staging/media/atomisp/pci/isp/kernels/qplane/qplane_2/ia_css_qplane.host.c
+  CC [M]  drivers/staging/media/atomisp/pci/isp/kernels/raw_aa_binning/raw_aa_binning_1.0/ia_css_raa.host.o
+  CHECK   drivers/staging/media/atomisp/pci/isp/kernels/raw_aa_binning/raw_aa_binning_1.0/ia_css_raa.host.c
+  CC [M]  drivers/staging/media/atomisp/pci/isp/kernels/raw/raw_1.0/ia_css_raw.host.o
+  CHECK   drivers/staging/media/atomisp/pci/isp/kernels/raw/raw_1.0/ia_css_raw.host.c
+  CC [M]  drivers/staging/media/atomisp/pci/isp/kernels/ref/ref_1.0/ia_css_ref.host.o
+  CHECK   drivers/staging/media/atomisp/pci/isp/kernels/ref/ref_1.0/ia_css_ref.host.c
+  CC [M]  drivers/staging/media/atomisp/pci/isp/kernels/s3a/s3a_1.0/ia_css_s3a.host.o
+  CHECK   drivers/staging/media/atomisp/pci/isp/kernels/s3a/s3a_1.0/ia_css_s3a.host.c
+  CC [M]  drivers/staging/media/atomisp/pci/isp/kernels/sc/sc_1.0/ia_css_sc.host.o
+  CHECK   drivers/staging/media/atomisp/pci/isp/kernels/sc/sc_1.0/ia_css_sc.host.c
+  CC [M]  drivers/staging/media/atomisp/pci/isp/kernels/sdis/sdis_1.0/ia_css_sdis.host.o
+  CHECK   drivers/staging/media/atomisp/pci/isp/kernels/sdis/sdis_1.0/ia_css_sdis.host.c
+  CC [M]  drivers/staging/media/atomisp/pci/isp/kernels/sdis/sdis_2/ia_css_sdis2.host.o
+  CHECK   drivers/staging/media/atomisp/pci/isp/kernels/sdis/sdis_2/ia_css_sdis2.host.c
+  CC [M]  drivers/staging/media/atomisp/pci/isp/kernels/tdf/tdf_1.0/ia_css_tdf.host.o
+  CHECK   drivers/staging/media/atomisp/pci/isp/kernels/tdf/tdf_1.0/ia_css_tdf.host.c
+  CC [M]  drivers/staging/media/atomisp/pci/isp/kernels/tnr/tnr_1.0/ia_css_tnr.host.o
+  CHECK   drivers/staging/media/atomisp/pci/isp/kernels/tnr/tnr_1.0/ia_css_tnr.host.c
+  CC [M]  drivers/staging/media/atomisp/pci/isp/kernels/vf/vf_1.0/ia_css_vf.host.o
+  CHECK   drivers/staging/media/atomisp/pci/isp/kernels/vf/vf_1.0/ia_css_vf.host.c
+  CC [M]  drivers/staging/media/atomisp/pci/isp/kernels/wb/wb_1.0/ia_css_wb.host.o
+  CHECK   drivers/staging/media/atomisp/pci/isp/kernels/wb/wb_1.0/ia_css_wb.host.c
+  CC [M]  drivers/staging/media/atomisp/pci/isp/kernels/xnr/xnr_1.0/ia_css_xnr.host.o
+  CHECK   drivers/staging/media/atomisp/pci/isp/kernels/xnr/xnr_1.0/ia_css_xnr.host.c
+  CC [M]  drivers/staging/media/atomisp/pci/isp/kernels/xnr/xnr_1.0/ia_css_xnr_table.host.o
+  CHECK   drivers/staging/media/atomisp/pci/isp/kernels/xnr/xnr_1.0/ia_css_xnr_table.host.c
+  CC [M]  drivers/staging/media/atomisp/pci/isp/kernels/xnr/xnr_3.0/ia_css_xnr3.host.o
+  CHECK   drivers/staging/media/atomisp/pci/isp/kernels/xnr/xnr_3.0/ia_css_xnr3.host.c
+  CC [M]  drivers/staging/media/atomisp/pci/isp/kernels/ynr/ynr_1.0/ia_css_ynr.host.o
+  CHECK   drivers/staging/media/atomisp/pci/isp/kernels/ynr/ynr_1.0/ia_css_ynr.host.c
+  CC [M]  drivers/staging/media/atomisp/pci/isp/kernels/ynr/ynr_2/ia_css_ynr2.host.o
+  CHECK   drivers/staging/media/atomisp/pci/isp/kernels/ynr/ynr_2/ia_css_ynr2.host.c
+  CC [M]  drivers/staging/media/atomisp/pci/mmu/isp_mmu.o
+  CHECK   drivers/staging/media/atomisp/pci/mmu/isp_mmu.c
+  CC [M]  drivers/staging/media/atomisp/pci/mmu/sh_mmu_mrfld.o
+  CHECK   drivers/staging/media/atomisp/pci/mmu/sh_mmu_mrfld.c
+  CC [M]  drivers/staging/media/atomisp/pci/runtime/binary/src/binary.o
+  CHECK   drivers/staging/media/atomisp/pci/runtime/binary/src/binary.c
+  CC [M]  drivers/staging/media/atomisp/pci/runtime/bufq/src/bufq.o
+  CHECK   drivers/staging/media/atomisp/pci/runtime/bufq/src/bufq.c
+  CC [M]  drivers/staging/media/atomisp/pci/runtime/debug/src/ia_css_debug.o
+  CHECK   drivers/staging/media/atomisp/pci/runtime/debug/src/ia_css_debug.c
+  CC [M]  drivers/staging/media/atomisp/pci/runtime/eventq/src/eventq.o
+  CHECK   drivers/staging/media/atomisp/pci/runtime/eventq/src/eventq.c
+  CC [M]  drivers/staging/media/atomisp/pci/runtime/event/src/event.o
+  CHECK   drivers/staging/media/atomisp/pci/runtime/event/src/event.c
+  CC [M]  drivers/staging/media/atomisp/pci/runtime/frame/src/frame.o
+  CHECK   drivers/staging/media/atomisp/pci/runtime/frame/src/frame.c
+  CC [M]  drivers/staging/media/atomisp/pci/runtime/ifmtr/src/ifmtr.o
+  CHECK   drivers/staging/media/atomisp/pci/runtime/ifmtr/src/ifmtr.c
+  CC [M]  drivers/staging/media/atomisp/pci/runtime/inputfifo/src/inputfifo.o
+  CHECK   drivers/staging/media/atomisp/pci/runtime/inputfifo/src/inputfifo.c
+  CC [M]  drivers/staging/media/atomisp/pci/runtime/isp_param/src/isp_param.o
+  CHECK   drivers/staging/media/atomisp/pci/runtime/isp_param/src/isp_param.c
+  CC [M]  drivers/staging/media/atomisp/pci/runtime/isys/src/csi_rx_rmgr.o
+  CHECK   drivers/staging/media/atomisp/pci/runtime/isys/src/csi_rx_rmgr.c
+  CC [M]  drivers/staging/media/atomisp/pci/runtime/isys/src/ibuf_ctrl_rmgr.o
+  CHECK   drivers/staging/media/atomisp/pci/runtime/isys/src/ibuf_ctrl_rmgr.c
+  CC [M]  drivers/staging/media/atomisp/pci/runtime/isys/src/isys_dma_rmgr.o
+  CHECK   drivers/staging/media/atomisp/pci/runtime/isys/src/isys_dma_rmgr.c
+  CC [M]  drivers/staging/media/atomisp/pci/runtime/isys/src/isys_init.o
+  CHECK   drivers/staging/media/atomisp/pci/runtime/isys/src/isys_init.c
+  CC [M]  drivers/staging/media/atomisp/pci/runtime/isys/src/isys_stream2mmio_rmgr.o
+  CHECK   drivers/staging/media/atomisp/pci/runtime/isys/src/isys_stream2mmio_rmgr.c
+  CC [M]  drivers/staging/media/atomisp/pci/runtime/isys/src/rx.o
+  CHECK   drivers/staging/media/atomisp/pci/runtime/isys/src/rx.c
+  CC [M]  drivers/staging/media/atomisp/pci/runtime/isys/src/virtual_isys.o
+  CHECK   drivers/staging/media/atomisp/pci/runtime/isys/src/virtual_isys.c
+  CC [M]  drivers/staging/media/atomisp/pci/runtime/pipeline/src/pipeline.o
+  CHECK   drivers/staging/media/atomisp/pci/runtime/pipeline/src/pipeline.c
+  CC [M]  drivers/staging/media/atomisp/pci/runtime/queue/src/queue_access.o
+  CHECK   drivers/staging/media/atomisp/pci/runtime/queue/src/queue_access.c
+  CC [M]  drivers/staging/media/atomisp/pci/runtime/queue/src/queue.o
+  CHECK   drivers/staging/media/atomisp/pci/runtime/queue/src/queue.c
+  CC [M]  drivers/staging/media/atomisp/pci/runtime/rmgr/src/rmgr.o
+  CHECK   drivers/staging/media/atomisp/pci/runtime/rmgr/src/rmgr.c
+  CC [M]  drivers/staging/media/atomisp/pci/runtime/rmgr/src/rmgr_vbuf.o
+  CHECK   drivers/staging/media/atomisp/pci/runtime/rmgr/src/rmgr_vbuf.c
+  CC [M]  drivers/staging/media/atomisp/pci/runtime/spctrl/src/spctrl.o
+  CHECK   drivers/staging/media/atomisp/pci/runtime/spctrl/src/spctrl.c
+  CC [M]  drivers/staging/media/atomisp/pci/runtime/timer/src/timer.o
+  CHECK   drivers/staging/media/atomisp/pci/runtime/timer/src/timer.c
+  CC [M]  drivers/staging/media/atomisp/pci/hive_isp_css_common/host/debug.o
+  CHECK   drivers/staging/media/atomisp/pci/hive_isp_css_common/host/debug.c
+  CC [M]  drivers/staging/media/atomisp/pci/hive_isp_css_common/host/dma.o
+  CHECK   drivers/staging/media/atomisp/pci/hive_isp_css_common/host/dma.c
+  CC [M]  drivers/staging/media/atomisp/pci/hive_isp_css_common/host/event_fifo.o
+  CHECK   drivers/staging/media/atomisp/pci/hive_isp_css_common/host/event_fifo.c
+  CC [M]  drivers/staging/media/atomisp/pci/hive_isp_css_common/host/fifo_monitor.o
+  CHECK   drivers/staging/media/atomisp/pci/hive_isp_css_common/host/fifo_monitor.c
+  CC [M]  drivers/staging/media/atomisp/pci/hive_isp_css_common/host/gdc.o
+  CHECK   drivers/staging/media/atomisp/pci/hive_isp_css_common/host/gdc.c
+  CC [M]  drivers/staging/media/atomisp/pci/hive_isp_css_common/host/gp_device.o
+  CHECK   drivers/staging/media/atomisp/pci/hive_isp_css_common/host/gp_device.c
+  CC [M]  drivers/staging/media/atomisp/pci/hive_isp_css_common/host/gp_timer.o
+  CHECK   drivers/staging/media/atomisp/pci/hive_isp_css_common/host/gp_timer.c
+  CC [M]  drivers/staging/media/atomisp/pci/hive_isp_css_common/host/hmem.o
+  CHECK   drivers/staging/media/atomisp/pci/hive_isp_css_common/host/hmem.c
+  CC [M]  drivers/staging/media/atomisp/pci/hive_isp_css_common/host/input_formatter.o
+  CHECK   drivers/staging/media/atomisp/pci/hive_isp_css_common/host/input_formatter.c
+  CC [M]  drivers/staging/media/atomisp/pci/hive_isp_css_common/host/input_system.o
+  CHECK   drivers/staging/media/atomisp/pci/hive_isp_css_common/host/input_system.c
+  CC [M]  drivers/staging/media/atomisp/pci/hive_isp_css_common/host/irq.o
+  CHECK   drivers/staging/media/atomisp/pci/hive_isp_css_common/host/irq.c
+  CC [M]  drivers/staging/media/atomisp/pci/hive_isp_css_common/host/isp.o
+  CHECK   drivers/staging/media/atomisp/pci/hive_isp_css_common/host/isp.c
+  CC [M]  drivers/staging/media/atomisp/pci/hive_isp_css_common/host/mmu.o
+  CHECK   drivers/staging/media/atomisp/pci/hive_isp_css_common/host/mmu.c
+  CC [M]  drivers/staging/media/atomisp/pci/hive_isp_css_common/host/sp.o
+  CHECK   drivers/staging/media/atomisp/pci/hive_isp_css_common/host/sp.c
+  CC [M]  drivers/staging/media/atomisp/pci/hive_isp_css_common/host/timed_ctrl.o
+  CHECK   drivers/staging/media/atomisp/pci/hive_isp_css_common/host/timed_ctrl.c
+  CC [M]  drivers/staging/media/atomisp/pci/hive_isp_css_common/host/vmem.o
+  CHECK   drivers/staging/media/atomisp/pci/hive_isp_css_common/host/vmem.c
+  CC [M]  drivers/staging/media/atomisp/pci/hive_isp_css_shared/host/tag.o
+  CHECK   drivers/staging/media/atomisp/pci/hive_isp_css_shared/host/tag.c
+  CC [M]  drivers/staging/media/atomisp/pci/css_2401_system/hive/ia_css_isp_configs.o
+  CHECK   drivers/staging/media/atomisp/pci/css_2401_system/hive/ia_css_isp_configs.c
+  CC [M]  drivers/staging/media/atomisp/pci/css_2401_system/hive/ia_css_isp_params.o
+  CHECK   drivers/staging/media/atomisp/pci/css_2401_system/hive/ia_css_isp_params.c
+  CC [M]  drivers/staging/media/atomisp/pci/css_2401_system/hive/ia_css_isp_states.o
+  CHECK   drivers/staging/media/atomisp/pci/css_2401_system/hive/ia_css_isp_states.c
+  CC [M]  drivers/staging/media/atomisp/pci/css_2401_system/host/csi_rx.o
+  CHECK   drivers/staging/media/atomisp/pci/css_2401_system/host/csi_rx.c
+  CC [M]  drivers/staging/media/atomisp/pci/css_2401_system/host/ibuf_ctrl.o
+  CHECK   drivers/staging/media/atomisp/pci/css_2401_system/host/ibuf_ctrl.c
+  CC [M]  drivers/staging/media/atomisp/pci/css_2401_system/host/isys_dma.o
+  CHECK   drivers/staging/media/atomisp/pci/css_2401_system/host/isys_dma.c
+  CC [M]  drivers/staging/media/atomisp/pci/css_2401_system/host/isys_irq.o
+  CHECK   drivers/staging/media/atomisp/pci/css_2401_system/host/isys_irq.c
+  CC [M]  drivers/staging/media/atomisp/pci/css_2401_system/host/isys_stream2mmio.o
+  CHECK   drivers/staging/media/atomisp/pci/css_2401_system/host/isys_stream2mmio.c
+  LD [M]  drivers/staging/media/atomisp/atomisp.o
+  CC [M]  drivers/staging/media/atomisp/pci/atomisp_gmin_platform.o
+  CHECK   drivers/staging/media/atomisp/pci/atomisp_gmin_platform.c
+  CC [M]  drivers/staging/media/sunxi/cedrus/cedrus.o
+  CHECK   drivers/staging/media/sunxi/cedrus/cedrus.c
+  CC [M]  drivers/staging/media/sunxi/cedrus/cedrus_video.o
+  CHECK   drivers/staging/media/sunxi/cedrus/cedrus_video.c
+  CC [M]  drivers/staging/media/sunxi/cedrus/cedrus_hw.o
+  CHECK   drivers/staging/media/sunxi/cedrus/cedrus_hw.c
+  CC [M]  drivers/staging/media/sunxi/cedrus/cedrus_dec.o
+  CHECK   drivers/staging/media/sunxi/cedrus/cedrus_dec.c
+  CC [M]  drivers/staging/media/sunxi/cedrus/cedrus_mpeg2.o
+  CHECK   drivers/staging/media/sunxi/cedrus/cedrus_mpeg2.c
+  CC [M]  drivers/staging/media/sunxi/cedrus/cedrus_h264.o
+  CHECK   drivers/staging/media/sunxi/cedrus/cedrus_h264.c
+  CC [M]  drivers/staging/media/sunxi/cedrus/cedrus_h265.o
+  CHECK   drivers/staging/media/sunxi/cedrus/cedrus_h265.c
+  LD [M]  drivers/staging/media/sunxi/cedrus/sunxi-cedrus.o
+  AR      drivers/staging/media/sunxi/built-in.a
+  CC [M]  drivers/staging/media/allegro-dvt/allegro-core.o
+  CHECK   drivers/staging/media/allegro-dvt/allegro-core.c
+  CC [M]  drivers/staging/media/allegro-dvt/nal-h264.o
+  CHECK   drivers/staging/media/allegro-dvt/nal-h264.c
+  CC [M]  drivers/staging/media/allegro-dvt/allegro-mail.o
+  CHECK   drivers/staging/media/allegro-dvt/allegro-mail.c
+  LD [M]  drivers/staging/media/allegro-dvt/allegro.o
+  CC [M]  drivers/staging/media/imx/imx-media-dev.o
+  CHECK   drivers/staging/media/imx/imx-media-dev.c
+  CC [M]  drivers/staging/media/imx/imx-media-internal-sd.o
+  CHECK   drivers/staging/media/imx/imx-media-internal-sd.c
+  CC [M]  drivers/staging/media/imx/imx-ic-common.o
+  CHECK   drivers/staging/media/imx/imx-ic-common.c
+  CC [M]  drivers/staging/media/imx/imx-ic-prp.o
+  CHECK   drivers/staging/media/imx/imx-ic-prp.c
+  CC [M]  drivers/staging/media/imx/imx-ic-prpencvf.o
+  CHECK   drivers/staging/media/imx/imx-ic-prpencvf.c
+  CC [M]  drivers/staging/media/imx/imx-media-vdic.o
+  CHECK   drivers/staging/media/imx/imx-media-vdic.c
+  CC [M]  drivers/staging/media/imx/imx-media-csc-scaler.o
+  CHECK   drivers/staging/media/imx/imx-media-csc-scaler.c
+  LD [M]  drivers/staging/media/imx/imx6-media.o
+  CC [M]  drivers/staging/media/imx/imx-media-capture.o
+  CHECK   drivers/staging/media/imx/imx-media-capture.c
+  CC [M]  drivers/staging/media/imx/imx-media-dev-common.o
+  CHECK   drivers/staging/media/imx/imx-media-dev-common.c
+  CC [M]  drivers/staging/media/imx/imx-media-of.o
+  CHECK   drivers/staging/media/imx/imx-media-of.c
+  CC [M]  drivers/staging/media/imx/imx-media-utils.o
+  CHECK   drivers/staging/media/imx/imx-media-utils.c
+  LD [M]  drivers/staging/media/imx/imx-media-common.o
+  CC [M]  drivers/staging/media/imx/imx-media-csi.o
+  CHECK   drivers/staging/media/imx/imx-media-csi.c
+  CC [M]  drivers/staging/media/imx/imx-media-fim.o
+  CHECK   drivers/staging/media/imx/imx-media-fim.c
+  LD [M]  drivers/staging/media/imx/imx6-media-csi.o
+  CC [M]  drivers/staging/media/imx/imx6-mipi-csi2.o
+  CHECK   drivers/staging/media/imx/imx6-mipi-csi2.c
+  CC [M]  drivers/staging/media/imx/imx7-media-csi.o
+  CHECK   drivers/staging/media/imx/imx7-media-csi.c
+  CC [M]  drivers/staging/media/imx/imx7-mipi-csis.o
+  CHECK   drivers/staging/media/imx/imx7-mipi-csis.c
+  CC [M]  drivers/staging/media/meson/vdec/esparser.o
+  CHECK   drivers/staging/media/meson/vdec/esparser.c
+  CC [M]  drivers/staging/media/meson/vdec/vdec.o
+  CHECK   drivers/staging/media/meson/vdec/vdec.c
+  CC [M]  drivers/staging/media/meson/vdec/vdec_helpers.o
+  CHECK   drivers/staging/media/meson/vdec/vdec_helpers.c
+  CC [M]  drivers/staging/media/meson/vdec/vdec_platform.o
+  CHECK   drivers/staging/media/meson/vdec/vdec_platform.c
+  CC [M]  drivers/staging/media/meson/vdec/vdec_1.o
+  CHECK   drivers/staging/media/meson/vdec/vdec_1.c
+  CC [M]  drivers/staging/media/meson/vdec/vdec_hevc.o
+  CHECK   drivers/staging/media/meson/vdec/vdec_hevc.c
+  CC [M]  drivers/staging/media/meson/vdec/codec_mpeg12.o
+  CHECK   drivers/staging/media/meson/vdec/codec_mpeg12.c
+  CC [M]  drivers/staging/media/meson/vdec/codec_h264.o
+  CHECK   drivers/staging/media/meson/vdec/codec_h264.c
+  CC [M]  drivers/staging/media/meson/vdec/codec_hevc_common.o
+  CHECK   drivers/staging/media/meson/vdec/codec_hevc_common.c
+  CC [M]  drivers/staging/media/meson/vdec/codec_vp9.o
+  CHECK   drivers/staging/media/meson/vdec/codec_vp9.c
+  LD [M]  drivers/staging/media/meson/vdec/meson-vdec.o
+  CC [M]  drivers/staging/media/omap4iss/iss.o
+  CHECK   drivers/staging/media/omap4iss/iss.c
+  CC [M]  drivers/staging/media/omap4iss/iss_csi2.o
+  CHECK   drivers/staging/media/omap4iss/iss_csi2.c
+  CC [M]  drivers/staging/media/omap4iss/iss_csiphy.o
+  CHECK   drivers/staging/media/omap4iss/iss_csiphy.c
+  CC [M]  drivers/staging/media/omap4iss/iss_ipipeif.o
+  CHECK   drivers/staging/media/omap4iss/iss_ipipeif.c
+  CC [M]  drivers/staging/media/omap4iss/iss_ipipe.o
+  CHECK   drivers/staging/media/omap4iss/iss_ipipe.c
+  CC [M]  drivers/staging/media/omap4iss/iss_resizer.o
+  CHECK   drivers/staging/media/omap4iss/iss_resizer.c
+  CC [M]  drivers/staging/media/omap4iss/iss_video.o
+  CHECK   drivers/staging/media/omap4iss/iss_video.c
+  LD [M]  drivers/staging/media/omap4iss/omap4-iss.o
+  CC [M]  drivers/staging/media/rkvdec/rkvdec.o
+  CHECK   drivers/staging/media/rkvdec/rkvdec.c
+  CC [M]  drivers/staging/media/rkvdec/rkvdec-h264.o
+  CHECK   drivers/staging/media/rkvdec/rkvdec-h264.c
+  LD [M]  drivers/staging/media/rkvdec/rockchip-vdec.o
+  CC [M]  drivers/staging/media/tegra-vde/vde.o
+  CHECK   drivers/staging/media/tegra-vde/vde.c
+  CC [M]  drivers/staging/media/tegra-vde/iommu.o
+  CHECK   drivers/staging/media/tegra-vde/iommu.c
+  CC [M]  drivers/staging/media/tegra-vde/dmabuf-cache.o
+  CHECK   drivers/staging/media/tegra-vde/dmabuf-cache.c
+  LD [M]  drivers/staging/media/tegra-vde/tegra-vde.o
+  CC [M]  drivers/staging/media/hantro/hantro_drv.o
+  CHECK   drivers/staging/media/hantro/hantro_drv.c
+  CC [M]  drivers/staging/media/hantro/hantro_v4l2.o
+  CHECK   drivers/staging/media/hantro/hantro_v4l2.c
+  CC [M]  drivers/staging/media/hantro/hantro_postproc.o
+  CHECK   drivers/staging/media/hantro/hantro_postproc.c
+  CC [M]  drivers/staging/media/hantro/hantro_h1_jpeg_enc.o
+  CHECK   drivers/staging/media/hantro/hantro_h1_jpeg_enc.c
+  CC [M]  drivers/staging/media/hantro/hantro_g1_h264_dec.o
+  CHECK   drivers/staging/media/hantro/hantro_g1_h264_dec.c
+  CC [M]  drivers/staging/media/hantro/hantro_g1_mpeg2_dec.o
+  CHECK   drivers/staging/media/hantro/hantro_g1_mpeg2_dec.c
+  CC [M]  drivers/staging/media/hantro/hantro_g1_vp8_dec.o
+  CHECK   drivers/staging/media/hantro/hantro_g1_vp8_dec.c
+  CC [M]  drivers/staging/media/hantro/rk3399_vpu_hw_jpeg_enc.o
+  CHECK   drivers/staging/media/hantro/rk3399_vpu_hw_jpeg_enc.c
+  CC [M]  drivers/staging/media/hantro/rk3399_vpu_hw_mpeg2_dec.o
+  CHECK   drivers/staging/media/hantro/rk3399_vpu_hw_mpeg2_dec.c
+  CC [M]  drivers/staging/media/hantro/rk3399_vpu_hw_vp8_dec.o
+  CHECK   drivers/staging/media/hantro/rk3399_vpu_hw_vp8_dec.c
+  CC [M]  drivers/staging/media/hantro/hantro_jpeg.o
+  CHECK   drivers/staging/media/hantro/hantro_jpeg.c
+  CC [M]  drivers/staging/media/hantro/hantro_h264.o
+  CHECK   drivers/staging/media/hantro/hantro_h264.c
+  CC [M]  drivers/staging/media/hantro/hantro_mpeg2.o
+  CHECK   drivers/staging/media/hantro/hantro_mpeg2.c
+  CC [M]  drivers/staging/media/hantro/hantro_vp8.o
+  CHECK   drivers/staging/media/hantro/hantro_vp8.c
+  CC [M]  drivers/staging/media/hantro/imx8m_vpu_hw.o
+  CHECK   drivers/staging/media/hantro/imx8m_vpu_hw.c
+  CC [M]  drivers/staging/media/hantro/rk3288_vpu_hw.o
+  CHECK   drivers/staging/media/hantro/rk3288_vpu_hw.c
+  CC [M]  drivers/staging/media/hantro/rk3399_vpu_hw.o
+  CHECK   drivers/staging/media/hantro/rk3399_vpu_hw.c
+  LD [M]  drivers/staging/media/hantro/hantro-vpu.o
+  CC [M]  drivers/staging/media/ipu3/ipu3-mmu.o
+  CHECK   drivers/staging/media/ipu3/ipu3-mmu.c
+  CC [M]  drivers/staging/media/ipu3/ipu3-dmamap.o
+  CHECK   drivers/staging/media/ipu3/ipu3-dmamap.c
+  CC [M]  drivers/staging/media/ipu3/ipu3-tables.o
+  CHECK   drivers/staging/media/ipu3/ipu3-tables.c
+  CC [M]  drivers/staging/media/ipu3/ipu3-css-pool.o
+  CHECK   drivers/staging/media/ipu3/ipu3-css-pool.c
+  CC [M]  drivers/staging/media/ipu3/ipu3-css-fw.o
+  CHECK   drivers/staging/media/ipu3/ipu3-css-fw.c
+  CC [M]  drivers/staging/media/ipu3/ipu3-css-params.o
+  CHECK   drivers/staging/media/ipu3/ipu3-css-params.c
+  CC [M]  drivers/staging/media/ipu3/ipu3-css.o
+  CHECK   drivers/staging/media/ipu3/ipu3-css.c
+  CC [M]  drivers/staging/media/ipu3/ipu3-v4l2.o
+  CHECK   drivers/staging/media/ipu3/ipu3-v4l2.c
+  CC [M]  drivers/staging/media/ipu3/ipu3.o
+  CHECK   drivers/staging/media/ipu3/ipu3.c
+  LD [M]  drivers/staging/media/ipu3/ipu3-imgu.o
+  CC [M]  drivers/staging/media/phy-rockchip-dphy-rx0/phy-rockchip-dphy-rx0.o
+  CHECK   drivers/staging/media/phy-rockchip-dphy-rx0/phy-rockchip-dphy-rx0.c
+  CC [M]  drivers/staging/media/rkisp1/rkisp1-capture.o
+  CHECK   drivers/staging/media/rkisp1/rkisp1-capture.c
+  CC [M]  drivers/staging/media/rkisp1/rkisp1-common.o
+  CHECK   drivers/staging/media/rkisp1/rkisp1-common.c
+  CC [M]  drivers/staging/media/rkisp1/rkisp1-dev.o
+  CHECK   drivers/staging/media/rkisp1/rkisp1-dev.c
+  CC [M]  drivers/staging/media/rkisp1/rkisp1-isp.o
+  CHECK   drivers/staging/media/rkisp1/rkisp1-isp.c
+  CC [M]  drivers/staging/media/rkisp1/rkisp1-resizer.o
+  CHECK   drivers/staging/media/rkisp1/rkisp1-resizer.c
+  CC [M]  drivers/staging/media/rkisp1/rkisp1-stats.o
+  CHECK   drivers/staging/media/rkisp1/rkisp1-stats.c
+  CC [M]  drivers/staging/media/rkisp1/rkisp1-params.o
+  CHECK   drivers/staging/media/rkisp1/rkisp1-params.c
+  LD [M]  drivers/staging/media/rkisp1/rockchip-isp1.o
+  CC [M]  drivers/staging/media/usbvision/usbvision-core.o
+  CHECK   drivers/staging/media/usbvision/usbvision-core.c
+  CC [M]  drivers/staging/media/usbvision/usbvision-video.o
+  CHECK   drivers/staging/media/usbvision/usbvision-video.c
+  CC [M]  drivers/staging/media/usbvision/usbvision-i2c.o
+  CHECK   drivers/staging/media/usbvision/usbvision-i2c.c
+  CC [M]  drivers/staging/media/usbvision/usbvision-cards.o
+  CHECK   drivers/staging/media/usbvision/usbvision-cards.c
+  LD [M]  drivers/staging/media/usbvision/usbvision.o
+  AR      drivers/staging/media/built-in.a
+  AR      drivers/staging/vme/devices/built-in.a
+  CC [M]  drivers/staging/vme/devices/vme_user.o
+  CHECK   drivers/staging/vme/devices/vme_user.c
+  AR      drivers/staging/vme/built-in.a
+  CC      drivers/staging/android/ion/ion.o
+  CHECK   drivers/staging/android/ion/ion.c
+  CC      drivers/staging/android/ion/ion_heap.o
+  CHECK   drivers/staging/android/ion/ion_heap.c
+  CC      drivers/staging/android/ion/ion_system_heap.o
+  CHECK   drivers/staging/android/ion/ion_system_heap.c
+  CC      drivers/staging/android/ion/ion_page_pool.o
+  CHECK   drivers/staging/android/ion/ion_page_pool.c
+  CC      drivers/staging/android/ion/ion_cma_heap.o
+  CHECK   drivers/staging/android/ion/ion_cma_heap.c
+  AR      drivers/staging/android/ion/built-in.a
+  CC      drivers/staging/android/ashmem.o
+  CHECK   drivers/staging/android/ashmem.c
+  AR      drivers/staging/android/built-in.a
+  CC      drivers/staging/board/board.o
+  CHECK   drivers/staging/board/board.c
+  AR      drivers/staging/board/built-in.a
+  AR      drivers/staging/goldfish/built-in.a
+  CC [M]  drivers/staging/goldfish/goldfish_audio.o
+  CHECK   drivers/staging/goldfish/goldfish_audio.c
+  CC [M]  drivers/staging/unisys/visornic/visornic_main.o
+  CHECK   drivers/staging/unisys/visornic/visornic_main.c
+  LD [M]  drivers/staging/unisys/visornic/visornic.o
+  CC [M]  drivers/staging/unisys/visorinput/visorinput.o
+  CHECK   drivers/staging/unisys/visorinput/visorinput.c
+  CC [M]  drivers/staging/unisys/visorhba/visorhba_main.o
+  CHECK   drivers/staging/unisys/visorhba/visorhba_main.c
+  LD [M]  drivers/staging/unisys/visorhba/visorhba.o
+  AR      drivers/staging/unisys/built-in.a
+  CC [M]  drivers/staging/fsl-dpaa2/ethsw/ethsw.o
+  CHECK   drivers/staging/fsl-dpaa2/ethsw/ethsw.c
+  CC [M]  drivers/staging/fsl-dpaa2/ethsw/ethsw-ethtool.o
+  CHECK   drivers/staging/fsl-dpaa2/ethsw/ethsw-ethtool.c
+  CC [M]  drivers/staging/fsl-dpaa2/ethsw/dpsw.o
+  CHECK   drivers/staging/fsl-dpaa2/ethsw/dpsw.c
+  LD [M]  drivers/staging/fsl-dpaa2/ethsw/dpaa2-ethsw.o
+  AR      drivers/staging/fsl-dpaa2/built-in.a
+  AR      drivers/staging/kpc2000/kpc2000/built-in.a
+  CC [M]  drivers/staging/kpc2000/kpc2000/core.o
+  CHECK   drivers/staging/kpc2000/kpc2000/core.c
+  CC [M]  drivers/staging/kpc2000/kpc2000/cell_probe.o
+  CHECK   drivers/staging/kpc2000/kpc2000/cell_probe.c
+  LD [M]  drivers/staging/kpc2000/kpc2000/kpc2000.o
+  CC [M]  drivers/staging/kpc2000/kpc_dma/dma.o
+  CHECK   drivers/staging/kpc2000/kpc_dma/dma.c
+  CC [M]  drivers/staging/kpc2000/kpc_dma/fileops.o
+  CHECK   drivers/staging/kpc2000/kpc_dma/fileops.c
+  CC [M]  drivers/staging/kpc2000/kpc_dma/kpc_dma_driver.o
+  CHECK   drivers/staging/kpc2000/kpc_dma/kpc_dma_driver.c
+  LD [M]  drivers/staging/kpc2000/kpc_dma/kpc_dma.o
+  AR      drivers/staging/kpc2000/built-in.a
+  CC [M]  drivers/staging/kpc2000/kpc2000_i2c.o
+  CHECK   drivers/staging/kpc2000/kpc2000_i2c.c
+  CC [M]  drivers/staging/kpc2000/kpc2000_spi.o
+  CHECK   drivers/staging/kpc2000/kpc2000_spi.c
+  CC [M]  drivers/staging/wlan-ng/prism2usb.o
+  CHECK   drivers/staging/wlan-ng/prism2usb.c
+  CC [M]  drivers/staging/wlan-ng/p80211conv.o
+  CHECK   drivers/staging/wlan-ng/p80211conv.c
+  CC [M]  drivers/staging/wlan-ng/p80211req.o
+  CHECK   drivers/staging/wlan-ng/p80211req.c
+  CC [M]  drivers/staging/wlan-ng/p80211wep.o
+  CHECK   drivers/staging/wlan-ng/p80211wep.c
+  CC [M]  drivers/staging/wlan-ng/p80211netdev.o
+  CHECK   drivers/staging/wlan-ng/p80211netdev.c
+  LD [M]  drivers/staging/wlan-ng/prism2_usb.o
+  CC [M]  drivers/staging/comedi/kcomedilib/kcomedilib_main.o
+  CHECK   drivers/staging/comedi/kcomedilib/kcomedilib_main.c
+  LD [M]  drivers/staging/comedi/kcomedilib/kcomedilib.o
+  CC [M]  drivers/staging/comedi/drivers/comedi_8254.o
+  CHECK   drivers/staging/comedi/drivers/comedi_8254.c
+  CC [M]  drivers/staging/comedi/drivers/comedi_isadma.o
+  CHECK   drivers/staging/comedi/drivers/comedi_isadma.c
+  CC [M]  drivers/staging/comedi/drivers/comedi_bond.o
+  CHECK   drivers/staging/comedi/drivers/comedi_bond.c
+  CC [M]  drivers/staging/comedi/drivers/comedi_test.o
+  CHECK   drivers/staging/comedi/drivers/comedi_test.c
+  CC [M]  drivers/staging/comedi/drivers/comedi_parport.o
+  CHECK   drivers/staging/comedi/drivers/comedi_parport.c
+  CC [M]  drivers/staging/comedi/drivers/amplc_dio200.o
+  CHECK   drivers/staging/comedi/drivers/amplc_dio200.c
+  CC [M]  drivers/staging/comedi/drivers/amplc_pc236.o
+  CHECK   drivers/staging/comedi/drivers/amplc_pc236.c
+  CC [M]  drivers/staging/comedi/drivers/amplc_pc263.o
+  CHECK   drivers/staging/comedi/drivers/amplc_pc263.c
+  CC [M]  drivers/staging/comedi/drivers/pcl711.o
+  CHECK   drivers/staging/comedi/drivers/pcl711.c
+  CC [M]  drivers/staging/comedi/drivers/pcl724.o
+  CHECK   drivers/staging/comedi/drivers/pcl724.c
+  CC [M]  drivers/staging/comedi/drivers/pcl726.o
+  CHECK   drivers/staging/comedi/drivers/pcl726.c
+  CC [M]  drivers/staging/comedi/drivers/pcl730.o
+  CHECK   drivers/staging/comedi/drivers/pcl730.c
+  CC [M]  drivers/staging/comedi/drivers/pcl812.o
+  CHECK   drivers/staging/comedi/drivers/pcl812.c
+  CC [M]  drivers/staging/comedi/drivers/pcl816.o
+  CHECK   drivers/staging/comedi/drivers/pcl816.c
+  CC [M]  drivers/staging/comedi/drivers/pcl818.o
+  CHECK   drivers/staging/comedi/drivers/pcl818.c
+  CC [M]  drivers/staging/comedi/drivers/pcm3724.o
+  CHECK   drivers/staging/comedi/drivers/pcm3724.c
+  CC [M]  drivers/staging/comedi/drivers/rti800.o
+  CHECK   drivers/staging/comedi/drivers/rti800.c
+  CC [M]  drivers/staging/comedi/drivers/rti802.o
+  CHECK   drivers/staging/comedi/drivers/rti802.c
+  CC [M]  drivers/staging/comedi/drivers/dac02.o
+  CHECK   drivers/staging/comedi/drivers/dac02.c
+  CC [M]  drivers/staging/comedi/drivers/das16m1.o
+  CHECK   drivers/staging/comedi/drivers/das16m1.c
+  CC [M]  drivers/staging/comedi/drivers/das08_isa.o
+  CHECK   drivers/staging/comedi/drivers/das08_isa.c
+  CC [M]  drivers/staging/comedi/drivers/das16.o
+  CHECK   drivers/staging/comedi/drivers/das16.c
+  CC [M]  drivers/staging/comedi/drivers/das800.o
+  CHECK   drivers/staging/comedi/drivers/das800.c
+  CC [M]  drivers/staging/comedi/drivers/das1800.o
+  CHECK   drivers/staging/comedi/drivers/das1800.c
+  CC [M]  drivers/staging/comedi/drivers/das6402.o
+  CHECK   drivers/staging/comedi/drivers/das6402.c
+  CC [M]  drivers/staging/comedi/drivers/dt2801.o
+  CHECK   drivers/staging/comedi/drivers/dt2801.c
+  CC [M]  drivers/staging/comedi/drivers/dt2811.o
+  CHECK   drivers/staging/comedi/drivers/dt2811.c
+  CC [M]  drivers/staging/comedi/drivers/dt2814.o
+  CHECK   drivers/staging/comedi/drivers/dt2814.c
+  CC [M]  drivers/staging/comedi/drivers/dt2815.o
+  CHECK   drivers/staging/comedi/drivers/dt2815.c
+  CC [M]  drivers/staging/comedi/drivers/dt2817.o
+  CHECK   drivers/staging/comedi/drivers/dt2817.c
+  CC [M]  drivers/staging/comedi/drivers/dt282x.o
+  CHECK   drivers/staging/comedi/drivers/dt282x.c
+  CC [M]  drivers/staging/comedi/drivers/dmm32at.o
+  CHECK   drivers/staging/comedi/drivers/dmm32at.c
+  CC [M]  drivers/staging/comedi/drivers/fl512.o
+  CHECK   drivers/staging/comedi/drivers/fl512.c
+  CC [M]  drivers/staging/comedi/drivers/aio_aio12_8.o
+  CHECK   drivers/staging/comedi/drivers/aio_aio12_8.c
+  CC [M]  drivers/staging/comedi/drivers/aio_iiro_16.o
+  CHECK   drivers/staging/comedi/drivers/aio_iiro_16.c
+  CC [M]  drivers/staging/comedi/drivers/ii_pci20kc.o
+  CHECK   drivers/staging/comedi/drivers/ii_pci20kc.c
+  CC [M]  drivers/staging/comedi/drivers/c6xdigio.o
+  CHECK   drivers/staging/comedi/drivers/c6xdigio.c
+  CC [M]  drivers/staging/comedi/drivers/mpc624.o
+  CHECK   drivers/staging/comedi/drivers/mpc624.c
+  CC [M]  drivers/staging/comedi/drivers/adq12b.o
+  CHECK   drivers/staging/comedi/drivers/adq12b.c
+  CC [M]  drivers/staging/comedi/drivers/ni_at_a2150.o
+  CHECK   drivers/staging/comedi/drivers/ni_at_a2150.c
+  CC [M]  drivers/staging/comedi/drivers/ni_at_ao.o
+  CHECK   drivers/staging/comedi/drivers/ni_at_ao.c
+  CC [M]  drivers/staging/comedi/drivers/ni_atmio.o
+  CHECK   drivers/staging/comedi/drivers/ni_atmio.c
+  CC [M]  drivers/staging/comedi/drivers/ni_atmio16d.o
+  CHECK   drivers/staging/comedi/drivers/ni_atmio16d.c
+  CC [M]  drivers/staging/comedi/drivers/ni_labpc.o
+  CHECK   drivers/staging/comedi/drivers/ni_labpc.c
+  CC [M]  drivers/staging/comedi/drivers/pcmad.o
+  CHECK   drivers/staging/comedi/drivers/pcmad.c
+  CC [M]  drivers/staging/comedi/drivers/pcmda12.o
+  CHECK   drivers/staging/comedi/drivers/pcmda12.c
+  CC [M]  drivers/staging/comedi/drivers/pcmmio.o
+  CHECK   drivers/staging/comedi/drivers/pcmmio.c
+  CC [M]  drivers/staging/comedi/drivers/pcmuio.o
+  CHECK   drivers/staging/comedi/drivers/pcmuio.c
+  CC [M]  drivers/staging/comedi/drivers/multiq3.o
+  CHECK   drivers/staging/comedi/drivers/multiq3.c
+  CC [M]  drivers/staging/comedi/drivers/s526.o
+  CHECK   drivers/staging/comedi/drivers/s526.c
+  CC [M]  drivers/staging/comedi/drivers/8255_pci.o
+  CHECK   drivers/staging/comedi/drivers/8255_pci.c
+  CC [M]  drivers/staging/comedi/drivers/addi_watchdog.o
+  CHECK   drivers/staging/comedi/drivers/addi_watchdog.c
+  CC [M]  drivers/staging/comedi/drivers/addi_apci_1032.o
+  CHECK   drivers/staging/comedi/drivers/addi_apci_1032.c
+  CC [M]  drivers/staging/comedi/drivers/addi_apci_1500.o
+  CHECK   drivers/staging/comedi/drivers/addi_apci_1500.c
+  CC [M]  drivers/staging/comedi/drivers/addi_apci_1516.o
+  CHECK   drivers/staging/comedi/drivers/addi_apci_1516.c
+  CC [M]  drivers/staging/comedi/drivers/addi_apci_1564.o
+  CHECK   drivers/staging/comedi/drivers/addi_apci_1564.c
+  CC [M]  drivers/staging/comedi/drivers/addi_apci_16xx.o
+  CHECK   drivers/staging/comedi/drivers/addi_apci_16xx.c
+  CC [M]  drivers/staging/comedi/drivers/addi_apci_2032.o
+  CHECK   drivers/staging/comedi/drivers/addi_apci_2032.c
+  CC [M]  drivers/staging/comedi/drivers/addi_apci_2200.o
+  CHECK   drivers/staging/comedi/drivers/addi_apci_2200.c
+  CC [M]  drivers/staging/comedi/drivers/addi_apci_3120.o
+  CHECK   drivers/staging/comedi/drivers/addi_apci_3120.c
+  CC [M]  drivers/staging/comedi/drivers/addi_apci_3501.o
+  CHECK   drivers/staging/comedi/drivers/addi_apci_3501.c
+  CC [M]  drivers/staging/comedi/drivers/addi_apci_3xxx.o
+  CHECK   drivers/staging/comedi/drivers/addi_apci_3xxx.c
+  CC [M]  drivers/staging/comedi/drivers/adl_pci6208.o
+  CHECK   drivers/staging/comedi/drivers/adl_pci6208.c
+  CC [M]  drivers/staging/comedi/drivers/adl_pci7x3x.o
+  CHECK   drivers/staging/comedi/drivers/adl_pci7x3x.c
+  CC [M]  drivers/staging/comedi/drivers/adl_pci8164.o
+  CHECK   drivers/staging/comedi/drivers/adl_pci8164.c
+  CC [M]  drivers/staging/comedi/drivers/adl_pci9111.o
+  CHECK   drivers/staging/comedi/drivers/adl_pci9111.c
+  CC [M]  drivers/staging/comedi/drivers/adl_pci9118.o
+  CHECK   drivers/staging/comedi/drivers/adl_pci9118.c
+  CC [M]  drivers/staging/comedi/drivers/adv_pci1710.o
+  CHECK   drivers/staging/comedi/drivers/adv_pci1710.c
+  CC [M]  drivers/staging/comedi/drivers/adv_pci1720.o
+  CHECK   drivers/staging/comedi/drivers/adv_pci1720.c
+  CC [M]  drivers/staging/comedi/drivers/adv_pci1723.o
+  CHECK   drivers/staging/comedi/drivers/adv_pci1723.c
+  CC [M]  drivers/staging/comedi/drivers/adv_pci1724.o
+  CHECK   drivers/staging/comedi/drivers/adv_pci1724.c
+  CC [M]  drivers/staging/comedi/drivers/adv_pci1760.o
+  CHECK   drivers/staging/comedi/drivers/adv_pci1760.c
+  CC [M]  drivers/staging/comedi/drivers/adv_pci_dio.o
+  CHECK   drivers/staging/comedi/drivers/adv_pci_dio.c
+  CC [M]  drivers/staging/comedi/drivers/amplc_dio200_pci.o
+  CHECK   drivers/staging/comedi/drivers/amplc_dio200_pci.c
+  CC [M]  drivers/staging/comedi/drivers/amplc_pci236.o
+  CHECK   drivers/staging/comedi/drivers/amplc_pci236.c
+  CC [M]  drivers/staging/comedi/drivers/amplc_pci263.o
+  CHECK   drivers/staging/comedi/drivers/amplc_pci263.c
+  CC [M]  drivers/staging/comedi/drivers/amplc_pci224.o
+  CHECK   drivers/staging/comedi/drivers/amplc_pci224.c
+  CC [M]  drivers/staging/comedi/drivers/amplc_pci230.o
+  CHECK   drivers/staging/comedi/drivers/amplc_pci230.c
+  CC [M]  drivers/staging/comedi/drivers/contec_pci_dio.o
+  CHECK   drivers/staging/comedi/drivers/contec_pci_dio.c
+  CC [M]  drivers/staging/comedi/drivers/das08_pci.o
+  CHECK   drivers/staging/comedi/drivers/das08_pci.c
+  CC [M]  drivers/staging/comedi/drivers/dt3000.o
+  CHECK   drivers/staging/comedi/drivers/dt3000.c
+  CC [M]  drivers/staging/comedi/drivers/dyna_pci10xx.o
+  CHECK   drivers/staging/comedi/drivers/dyna_pci10xx.c
+  CC [M]  drivers/staging/comedi/drivers/gsc_hpdi.o
+  CHECK   drivers/staging/comedi/drivers/gsc_hpdi.c
+  CC [M]  drivers/staging/comedi/drivers/icp_multi.o
+  CHECK   drivers/staging/comedi/drivers/icp_multi.c
+  CC [M]  drivers/staging/comedi/drivers/daqboard2000.o
+  CHECK   drivers/staging/comedi/drivers/daqboard2000.c
+  CC [M]  drivers/staging/comedi/drivers/jr3_pci.o
+  CHECK   drivers/staging/comedi/drivers/jr3_pci.c
+  CC [M]  drivers/staging/comedi/drivers/ke_counter.o
+  CHECK   drivers/staging/comedi/drivers/ke_counter.c
+  CC [M]  drivers/staging/comedi/drivers/cb_pcidas64.o
+  CHECK   drivers/staging/comedi/drivers/cb_pcidas64.c
+  CC [M]  drivers/staging/comedi/drivers/cb_pcidas.o
+  CHECK   drivers/staging/comedi/drivers/cb_pcidas.c
+  CC [M]  drivers/staging/comedi/drivers/cb_pcidda.o
+  CHECK   drivers/staging/comedi/drivers/cb_pcidda.c
+  CC [M]  drivers/staging/comedi/drivers/cb_pcimdas.o
+  CHECK   drivers/staging/comedi/drivers/cb_pcimdas.c
+  CC [M]  drivers/staging/comedi/drivers/cb_pcimdda.o
+  CHECK   drivers/staging/comedi/drivers/cb_pcimdda.c
+  CC [M]  drivers/staging/comedi/drivers/me4000.o
+  CHECK   drivers/staging/comedi/drivers/me4000.c
+  CC [M]  drivers/staging/comedi/drivers/me_daq.o
+  CHECK   drivers/staging/comedi/drivers/me_daq.c
+  CC [M]  drivers/staging/comedi/drivers/ni_6527.o
+  CHECK   drivers/staging/comedi/drivers/ni_6527.c
+  CC [M]  drivers/staging/comedi/drivers/ni_65xx.o
+  CHECK   drivers/staging/comedi/drivers/ni_65xx.c
+  CC [M]  drivers/staging/comedi/drivers/ni_660x.o
+  CHECK   drivers/staging/comedi/drivers/ni_660x.c
+  CC [M]  drivers/staging/comedi/drivers/ni_670x.o
+  CHECK   drivers/staging/comedi/drivers/ni_670x.c
+  CC [M]  drivers/staging/comedi/drivers/ni_labpc_pci.o
+  CHECK   drivers/staging/comedi/drivers/ni_labpc_pci.c
+  CC [M]  drivers/staging/comedi/drivers/ni_pcidio.o
+  CHECK   drivers/staging/comedi/drivers/ni_pcidio.c
+  CC [M]  drivers/staging/comedi/drivers/ni_pcimio.o
+  CHECK   drivers/staging/comedi/drivers/ni_pcimio.c
+  CC [M]  drivers/staging/comedi/drivers/rtd520.o
+  CHECK   drivers/staging/comedi/drivers/rtd520.c
+  CC [M]  drivers/staging/comedi/drivers/s626.o
+  CHECK   drivers/staging/comedi/drivers/s626.c
+  CC [M]  drivers/staging/comedi/drivers/ssv_dnp.o
+  CHECK   drivers/staging/comedi/drivers/ssv_dnp.c
+  CC [M]  drivers/staging/comedi/drivers/mf6x4.o
+  CHECK   drivers/staging/comedi/drivers/mf6x4.c
+  CC [M]  drivers/staging/comedi/drivers/cb_das16_cs.o
+  CHECK   drivers/staging/comedi/drivers/cb_das16_cs.c
+  CC [M]  drivers/staging/comedi/drivers/das08_cs.o
+  CHECK   drivers/staging/comedi/drivers/das08_cs.c
+  CC [M]  drivers/staging/comedi/drivers/ni_daq_700.o
+  CHECK   drivers/staging/comedi/drivers/ni_daq_700.c
+  CC [M]  drivers/staging/comedi/drivers/ni_daq_dio24.o
+  CHECK   drivers/staging/comedi/drivers/ni_daq_dio24.c
+  CC [M]  drivers/staging/comedi/drivers/ni_labpc_cs.o
+  CHECK   drivers/staging/comedi/drivers/ni_labpc_cs.c
+  CC [M]  drivers/staging/comedi/drivers/ni_mio_cs.o
+  CHECK   drivers/staging/comedi/drivers/ni_mio_cs.c
+  CC [M]  drivers/staging/comedi/drivers/quatech_daqp_cs.o
+  CHECK   drivers/staging/comedi/drivers/quatech_daqp_cs.c
+  CC [M]  drivers/staging/comedi/drivers/dt9812.o
+  CHECK   drivers/staging/comedi/drivers/dt9812.c
+  CC [M]  drivers/staging/comedi/drivers/ni_usb6501.o
+  CHECK   drivers/staging/comedi/drivers/ni_usb6501.c
+  CC [M]  drivers/staging/comedi/drivers/usbdux.o
+  CHECK   drivers/staging/comedi/drivers/usbdux.c
+  CC [M]  drivers/staging/comedi/drivers/usbduxfast.o
+  CHECK   drivers/staging/comedi/drivers/usbduxfast.c
+  CC [M]  drivers/staging/comedi/drivers/usbduxsigma.o
+  CHECK   drivers/staging/comedi/drivers/usbduxsigma.c
+  CC [M]  drivers/staging/comedi/drivers/vmk80xx.o
+  CHECK   drivers/staging/comedi/drivers/vmk80xx.c
+  CC [M]  drivers/staging/comedi/drivers/mite.o
+  CHECK   drivers/staging/comedi/drivers/mite.c
+  CC [M]  drivers/staging/comedi/drivers/ni_tio.o
+  CHECK   drivers/staging/comedi/drivers/ni_tio.c
+  CC [M]  drivers/staging/comedi/drivers/ni_tiocmd.o
+  CHECK   drivers/staging/comedi/drivers/ni_tiocmd.c
+  CC [M]  drivers/staging/comedi/drivers/ni_routes.o
+  CHECK   drivers/staging/comedi/drivers/ni_routes.c
+  CC [M]  drivers/staging/comedi/drivers/ni_routing/ni_route_values.o
+  CHECK   drivers/staging/comedi/drivers/ni_routing/ni_route_values.c
+  CC [M]  drivers/staging/comedi/drivers/ni_routing/ni_route_values/ni_660x.o
+  CHECK   drivers/staging/comedi/drivers/ni_routing/ni_route_values/ni_660x.c
+  CC [M]  drivers/staging/comedi/drivers/ni_routing/ni_route_values/ni_eseries.o
+  CHECK   drivers/staging/comedi/drivers/ni_routing/ni_route_values/ni_eseries.c
+  CC [M]  drivers/staging/comedi/drivers/ni_routing/ni_route_values/ni_mseries.o
+  CHECK   drivers/staging/comedi/drivers/ni_routing/ni_route_values/ni_mseries.c
+  CC [M]  drivers/staging/comedi/drivers/ni_routing/ni_device_routes.o
+  CHECK   drivers/staging/comedi/drivers/ni_routing/ni_device_routes.c
+  CC [M]  drivers/staging/comedi/drivers/ni_routing/ni_device_routes/pxi-6030e.o
+  CHECK   drivers/staging/comedi/drivers/ni_routing/ni_device_routes/pxi-6030e.c
+  CC [M]  drivers/staging/comedi/drivers/ni_routing/ni_device_routes/pci-6070e.o
+  CHECK   drivers/staging/comedi/drivers/ni_routing/ni_device_routes/pci-6070e.c
+  CC [M]  drivers/staging/comedi/drivers/ni_routing/ni_device_routes/pci-6220.o
+  CHECK   drivers/staging/comedi/drivers/ni_routing/ni_device_routes/pci-6220.c
+  CC [M]  drivers/staging/comedi/drivers/ni_routing/ni_device_routes/pci-6221.o
+  CHECK   drivers/staging/comedi/drivers/ni_routing/ni_device_routes/pci-6221.c
+  CC [M]  drivers/staging/comedi/drivers/ni_routing/ni_device_routes/pxi-6224.o
+  CHECK   drivers/staging/comedi/drivers/ni_routing/ni_device_routes/pxi-6224.c
+  CC [M]  drivers/staging/comedi/drivers/ni_routing/ni_device_routes/pxi-6225.o
+  CHECK   drivers/staging/comedi/drivers/ni_routing/ni_device_routes/pxi-6225.c
+  CC [M]  drivers/staging/comedi/drivers/ni_routing/ni_device_routes/pci-6229.o
+  CHECK   drivers/staging/comedi/drivers/ni_routing/ni_device_routes/pci-6229.c
+  CC [M]  drivers/staging/comedi/drivers/ni_routing/ni_device_routes/pci-6251.o
+  CHECK   drivers/staging/comedi/drivers/ni_routing/ni_device_routes/pci-6251.c
+  CC [M]  drivers/staging/comedi/drivers/ni_routing/ni_device_routes/pxi-6251.o
+  CHECK   drivers/staging/comedi/drivers/ni_routing/ni_device_routes/pxi-6251.c
+  CC [M]  drivers/staging/comedi/drivers/ni_routing/ni_device_routes/pxie-6251.o
+  CHECK   drivers/staging/comedi/drivers/ni_routing/ni_device_routes/pxie-6251.c
+  CC [M]  drivers/staging/comedi/drivers/ni_routing/ni_device_routes/pci-6254.o
+  CHECK   drivers/staging/comedi/drivers/ni_routing/ni_device_routes/pci-6254.c
+  CC [M]  drivers/staging/comedi/drivers/ni_routing/ni_device_routes/pci-6259.o
+  CHECK   drivers/staging/comedi/drivers/ni_routing/ni_device_routes/pci-6259.c
+  CC [M]  drivers/staging/comedi/drivers/ni_routing/ni_device_routes/pci-6534.o
+  CHECK   drivers/staging/comedi/drivers/ni_routing/ni_device_routes/pci-6534.c
+  CC [M]  drivers/staging/comedi/drivers/ni_routing/ni_device_routes/pxie-6535.o
+  CHECK   drivers/staging/comedi/drivers/ni_routing/ni_device_routes/pxie-6535.c
+  CC [M]  drivers/staging/comedi/drivers/ni_routing/ni_device_routes/pci-6602.o
+  CHECK   drivers/staging/comedi/drivers/ni_routing/ni_device_routes/pci-6602.c
+  CC [M]  drivers/staging/comedi/drivers/ni_routing/ni_device_routes/pci-6713.o
+  CHECK   drivers/staging/comedi/drivers/ni_routing/ni_device_routes/pci-6713.c
+  CC [M]  drivers/staging/comedi/drivers/ni_routing/ni_device_routes/pci-6723.o
+  CHECK   drivers/staging/comedi/drivers/ni_routing/ni_device_routes/pci-6723.c
+  CC [M]  drivers/staging/comedi/drivers/ni_routing/ni_device_routes/pci-6733.o
+  CHECK   drivers/staging/comedi/drivers/ni_routing/ni_device_routes/pci-6733.c
+  CC [M]  drivers/staging/comedi/drivers/ni_routing/ni_device_routes/pxi-6733.o
+  CHECK   drivers/staging/comedi/drivers/ni_routing/ni_device_routes/pxi-6733.c
+  CC [M]  drivers/staging/comedi/drivers/ni_routing/ni_device_routes/pxie-6738.o
+  CHECK   drivers/staging/comedi/drivers/ni_routing/ni_device_routes/pxie-6738.c
+  LD [M]  drivers/staging/comedi/drivers/ni_routing.o
+  CC [M]  drivers/staging/comedi/drivers/ni_labpc_common.o
+  CHECK   drivers/staging/comedi/drivers/ni_labpc_common.c
+  CC [M]  drivers/staging/comedi/drivers/ni_labpc_isadma.o
+  CHECK   drivers/staging/comedi/drivers/ni_labpc_isadma.c
+  CC [M]  drivers/staging/comedi/drivers/comedi_8255.o
+  CHECK   drivers/staging/comedi/drivers/comedi_8255.c
+  CC [M]  drivers/staging/comedi/drivers/8255.o
+  CHECK   drivers/staging/comedi/drivers/8255.c
+  CC [M]  drivers/staging/comedi/drivers/amplc_dio200_common.o
+  CHECK   drivers/staging/comedi/drivers/amplc_dio200_common.c
+  CC [M]  drivers/staging/comedi/drivers/amplc_pc236_common.o
+  CHECK   drivers/staging/comedi/drivers/amplc_pc236_common.c
+  CC [M]  drivers/staging/comedi/drivers/das08.o
+  CHECK   drivers/staging/comedi/drivers/das08.c
+  CC [M]  drivers/staging/comedi/comedi_pci.o
+  CHECK   drivers/staging/comedi/comedi_pci.c
+  CC [M]  drivers/staging/comedi/comedi_pcmcia.o
+  CHECK   drivers/staging/comedi/comedi_pcmcia.c
+  CC [M]  drivers/staging/comedi/comedi_usb.o
+  CHECK   drivers/staging/comedi/comedi_usb.c
+  CC [M]  drivers/staging/comedi/comedi_fops.o
+  CHECK   drivers/staging/comedi/comedi_fops.c
+  CC [M]  drivers/staging/comedi/range.o
+  CHECK   drivers/staging/comedi/range.c
+  CC [M]  drivers/staging/comedi/drivers.o
+  CHECK   drivers/staging/comedi/drivers.c
+  CC [M]  drivers/staging/comedi/comedi_buf.o
+  CHECK   drivers/staging/comedi/comedi_buf.c
+  CC [M]  drivers/staging/comedi/proc.o
+  CHECK   drivers/staging/comedi/proc.c
+  LD [M]  drivers/staging/comedi/comedi.o
+  CC [M]  drivers/staging/rtl8192u/r8192U_core.o
+  CHECK   drivers/staging/rtl8192u/r8192U_core.c
+  CC [M]  drivers/staging/rtl8192u/r8180_93cx6.o
+  CHECK   drivers/staging/rtl8192u/r8180_93cx6.c
+  CC [M]  drivers/staging/rtl8192u/r8192U_wx.o
+  CHECK   drivers/staging/rtl8192u/r8192U_wx.c
+  CC [M]  drivers/staging/rtl8192u/r8190_rtl8256.o
+  CHECK   drivers/staging/rtl8192u/r8190_rtl8256.c
+  CC [M]  drivers/staging/rtl8192u/r819xU_phy.o
+  CHECK   drivers/staging/rtl8192u/r819xU_phy.c
+  CC [M]  drivers/staging/rtl8192u/r819xU_firmware.o
+  CHECK   drivers/staging/rtl8192u/r819xU_firmware.c
+  CC [M]  drivers/staging/rtl8192u/r819xU_cmdpkt.o
+  CHECK   drivers/staging/rtl8192u/r819xU_cmdpkt.c
+  CC [M]  drivers/staging/rtl8192u/r8192U_dm.o
+  CHECK   drivers/staging/rtl8192u/r8192U_dm.c
+  CC [M]  drivers/staging/rtl8192u/r819xU_firmware_img.o
+  CHECK   drivers/staging/rtl8192u/r819xU_firmware_img.c
+  CC [M]  drivers/staging/rtl8192u/ieee80211/ieee80211_crypt.o
+  CHECK   drivers/staging/rtl8192u/ieee80211/ieee80211_crypt.c
+  CC [M]  drivers/staging/rtl8192u/ieee80211/ieee80211_crypt_tkip.o
+  CHECK   drivers/staging/rtl8192u/ieee80211/ieee80211_crypt_tkip.c
+  CC [M]  drivers/staging/rtl8192u/ieee80211/ieee80211_crypt_ccmp.o
+  CHECK   drivers/staging/rtl8192u/ieee80211/ieee80211_crypt_ccmp.c
+  CC [M]  drivers/staging/rtl8192u/ieee80211/ieee80211_crypt_wep.o
+  CHECK   drivers/staging/rtl8192u/ieee80211/ieee80211_crypt_wep.c
+  CC [M]  drivers/staging/rtl8192u/ieee80211/ieee80211_rx.o
+  CHECK   drivers/staging/rtl8192u/ieee80211/ieee80211_rx.c
+  CC [M]  drivers/staging/rtl8192u/ieee80211/ieee80211_softmac.o
+  CHECK   drivers/staging/rtl8192u/ieee80211/ieee80211_softmac.c
+  CC [M]  drivers/staging/rtl8192u/ieee80211/ieee80211_tx.o
+  CHECK   drivers/staging/rtl8192u/ieee80211/ieee80211_tx.c
+  CC [M]  drivers/staging/rtl8192u/ieee80211/ieee80211_wx.o
+  CHECK   drivers/staging/rtl8192u/ieee80211/ieee80211_wx.c
+  CC [M]  drivers/staging/rtl8192u/ieee80211/ieee80211_module.o
+  CHECK   drivers/staging/rtl8192u/ieee80211/ieee80211_module.c
+  CC [M]  drivers/staging/rtl8192u/ieee80211/ieee80211_softmac_wx.o
+  CHECK   drivers/staging/rtl8192u/ieee80211/ieee80211_softmac_wx.c
+  CC [M]  drivers/staging/rtl8192u/ieee80211/rtl819x_HTProc.o
+  CHECK   drivers/staging/rtl8192u/ieee80211/rtl819x_HTProc.c
+  CC [M]  drivers/staging/rtl8192u/ieee80211/rtl819x_TSProc.o
+  CHECK   drivers/staging/rtl8192u/ieee80211/rtl819x_TSProc.c
+  CC [M]  drivers/staging/rtl8192u/ieee80211/rtl819x_BAProc.o
+  CHECK   drivers/staging/rtl8192u/ieee80211/rtl819x_BAProc.c
+  CC [M]  drivers/staging/rtl8192u/ieee80211/dot11d.o
+  CHECK   drivers/staging/rtl8192u/ieee80211/dot11d.c
+  LD [M]  drivers/staging/rtl8192u/r8192u_usb.o
+  CC [M]  drivers/staging/rtl8192e/rtl8192e/r8192E_dev.o
+  CHECK   drivers/staging/rtl8192e/rtl8192e/r8192E_dev.c
+  CC [M]  drivers/staging/rtl8192e/rtl8192e/r8192E_phy.o
+  CHECK   drivers/staging/rtl8192e/rtl8192e/r8192E_phy.c
+  CC [M]  drivers/staging/rtl8192e/rtl8192e/r8192E_firmware.o
+  CHECK   drivers/staging/rtl8192e/rtl8192e/r8192E_firmware.c
+  CC [M]  drivers/staging/rtl8192e/rtl8192e/r8192E_cmdpkt.o
+  CHECK   drivers/staging/rtl8192e/rtl8192e/r8192E_cmdpkt.c
+  CC [M]  drivers/staging/rtl8192e/rtl8192e/r8192E_hwimg.o
+  CHECK   drivers/staging/rtl8192e/rtl8192e/r8192E_hwimg.c
+  CC [M]  drivers/staging/rtl8192e/rtl8192e/r8190P_rtl8256.o
+  CHECK   drivers/staging/rtl8192e/rtl8192e/r8190P_rtl8256.c
+  CC [M]  drivers/staging/rtl8192e/rtl8192e/rtl_cam.o
+  CHECK   drivers/staging/rtl8192e/rtl8192e/rtl_cam.c
+  CC [M]  drivers/staging/rtl8192e/rtl8192e/rtl_core.o
+  CHECK   drivers/staging/rtl8192e/rtl8192e/rtl_core.c
+  CC [M]  drivers/staging/rtl8192e/rtl8192e/rtl_dm.o
+  CHECK   drivers/staging/rtl8192e/rtl8192e/rtl_dm.c
+  CC [M]  drivers/staging/rtl8192e/rtl8192e/rtl_eeprom.o
+  CHECK   drivers/staging/rtl8192e/rtl8192e/rtl_eeprom.c
+  CC [M]  drivers/staging/rtl8192e/rtl8192e/rtl_ethtool.o
+  CHECK   drivers/staging/rtl8192e/rtl8192e/rtl_ethtool.c
+  CC [M]  drivers/staging/rtl8192e/rtl8192e/rtl_pci.o
+  CHECK   drivers/staging/rtl8192e/rtl8192e/rtl_pci.c
+  CC [M]  drivers/staging/rtl8192e/rtl8192e/rtl_pm.o
+  CHECK   drivers/staging/rtl8192e/rtl8192e/rtl_pm.c
+  CC [M]  drivers/staging/rtl8192e/rtl8192e/rtl_ps.o
+  CHECK   drivers/staging/rtl8192e/rtl8192e/rtl_ps.c
+  CC [M]  drivers/staging/rtl8192e/rtl8192e/rtl_wx.o
+  CHECK   drivers/staging/rtl8192e/rtl8192e/rtl_wx.c
+  LD [M]  drivers/staging/rtl8192e/rtl8192e/r8192e_pci.o
+  CC [M]  drivers/staging/rtl8192e/dot11d.o
+  CHECK   drivers/staging/rtl8192e/dot11d.c
+  CC [M]  drivers/staging/rtl8192e/rtllib_module.o
+  CHECK   drivers/staging/rtl8192e/rtllib_module.c
+  CC [M]  drivers/staging/rtl8192e/rtllib_rx.o
+  CHECK   drivers/staging/rtl8192e/rtllib_rx.c
+  CC [M]  drivers/staging/rtl8192e/rtllib_tx.o
+  CHECK   drivers/staging/rtl8192e/rtllib_tx.c
+  CC [M]  drivers/staging/rtl8192e/rtllib_wx.o
+  CHECK   drivers/staging/rtl8192e/rtllib_wx.c
+  CC [M]  drivers/staging/rtl8192e/rtllib_softmac.o
+  CHECK   drivers/staging/rtl8192e/rtllib_softmac.c
+  CC [M]  drivers/staging/rtl8192e/rtllib_softmac_wx.o
+  CHECK   drivers/staging/rtl8192e/rtllib_softmac_wx.c
+  CC [M]  drivers/staging/rtl8192e/rtl819x_BAProc.o
+  CHECK   drivers/staging/rtl8192e/rtl819x_BAProc.c
+  CC [M]  drivers/staging/rtl8192e/rtl819x_HTProc.o
+  CHECK   drivers/staging/rtl8192e/rtl819x_HTProc.c
+  CC [M]  drivers/staging/rtl8192e/rtl819x_TSProc.o
+  CHECK   drivers/staging/rtl8192e/rtl819x_TSProc.c
+  LD [M]  drivers/staging/rtl8192e/rtllib.o
+  CC [M]  drivers/staging/rtl8192e/rtllib_crypt_ccmp.o
+  CHECK   drivers/staging/rtl8192e/rtllib_crypt_ccmp.c
+  CC [M]  drivers/staging/rtl8192e/rtllib_crypt_tkip.o
+  CHECK   drivers/staging/rtl8192e/rtllib_crypt_tkip.c
+  CC [M]  drivers/staging/rtl8192e/rtllib_crypt_wep.o
+  CHECK   drivers/staging/rtl8192e/rtllib_crypt_wep.c
+  CC [M]  drivers/staging/rtl8723bs/core/rtw_ap.o
+  CHECK   drivers/staging/rtl8723bs/core/rtw_ap.c
+  CC [M]  drivers/staging/rtl8723bs/core/rtw_btcoex.o
+  CHECK   drivers/staging/rtl8723bs/core/rtw_btcoex.c
+  CC [M]  drivers/staging/rtl8723bs/core/rtw_cmd.o
+  CHECK   drivers/staging/rtl8723bs/core/rtw_cmd.c
+  CC [M]  drivers/staging/rtl8723bs/core/rtw_debug.o
+  CHECK   drivers/staging/rtl8723bs/core/rtw_debug.c
+  CC [M]  drivers/staging/rtl8723bs/core/rtw_efuse.o
+  CHECK   drivers/staging/rtl8723bs/core/rtw_efuse.c
+  CC [M]  drivers/staging/rtl8723bs/core/rtw_io.o
+  CHECK   drivers/staging/rtl8723bs/core/rtw_io.c
+  CC [M]  drivers/staging/rtl8723bs/core/rtw_ioctl_set.o
+  CHECK   drivers/staging/rtl8723bs/core/rtw_ioctl_set.c
+  CC [M]  drivers/staging/rtl8723bs/core/rtw_ieee80211.o
+  CHECK   drivers/staging/rtl8723bs/core/rtw_ieee80211.c
+  CC [M]  drivers/staging/rtl8723bs/core/rtw_mlme.o
+  CHECK   drivers/staging/rtl8723bs/core/rtw_mlme.c
+  CC [M]  drivers/staging/rtl8723bs/core/rtw_mlme_ext.o
+  CHECK   drivers/staging/rtl8723bs/core/rtw_mlme_ext.c
+  CC [M]  drivers/staging/rtl8723bs/core/rtw_odm.o
+  CHECK   drivers/staging/rtl8723bs/core/rtw_odm.c
+  CC [M]  drivers/staging/rtl8723bs/core/rtw_pwrctrl.o
+  CHECK   drivers/staging/rtl8723bs/core/rtw_pwrctrl.c
+  CC [M]  drivers/staging/rtl8723bs/core/rtw_recv.o
+  CHECK   drivers/staging/rtl8723bs/core/rtw_recv.c
+  CC [M]  drivers/staging/rtl8723bs/core/rtw_rf.o
+  CHECK   drivers/staging/rtl8723bs/core/rtw_rf.c
+  CC [M]  drivers/staging/rtl8723bs/core/rtw_security.o
+  CHECK   drivers/staging/rtl8723bs/core/rtw_security.c
+  CC [M]  drivers/staging/rtl8723bs/core/rtw_sta_mgt.o
+  CHECK   drivers/staging/rtl8723bs/core/rtw_sta_mgt.c
+  CC [M]  drivers/staging/rtl8723bs/core/rtw_wlan_util.o
+  CHECK   drivers/staging/rtl8723bs/core/rtw_wlan_util.c
+  CC [M]  drivers/staging/rtl8723bs/core/rtw_xmit.o
+  CHECK   drivers/staging/rtl8723bs/core/rtw_xmit.c
+  CC [M]  drivers/staging/rtl8723bs/hal/hal_intf.o
+  CHECK   drivers/staging/rtl8723bs/hal/hal_intf.c
+  CC [M]  drivers/staging/rtl8723bs/hal/hal_com.o
+  CHECK   drivers/staging/rtl8723bs/hal/hal_com.c
+  CC [M]  drivers/staging/rtl8723bs/hal/hal_com_phycfg.o
+  CHECK   drivers/staging/rtl8723bs/hal/hal_com_phycfg.c
+  CC [M]  drivers/staging/rtl8723bs/hal/hal_btcoex.o
+  CHECK   drivers/staging/rtl8723bs/hal/hal_btcoex.c
+  CC [M]  drivers/staging/rtl8723bs/hal/hal_sdio.o
+  CHECK   drivers/staging/rtl8723bs/hal/hal_sdio.c
+  CC [M]  drivers/staging/rtl8723bs/hal/hal_pwr_seq.o
+  CHECK   drivers/staging/rtl8723bs/hal/hal_pwr_seq.c
+  CC [M]  drivers/staging/rtl8723bs/hal/HalPhyRf.o
+  CHECK   drivers/staging/rtl8723bs/hal/HalPhyRf.c
+  CC [M]  drivers/staging/rtl8723bs/hal/HalPwrSeqCmd.o
+  CHECK   drivers/staging/rtl8723bs/hal/HalPwrSeqCmd.c
+  CC [M]  drivers/staging/rtl8723bs/hal/odm.o
+  CHECK   drivers/staging/rtl8723bs/hal/odm.c
+  CC [M]  drivers/staging/rtl8723bs/hal/odm_CfoTracking.o
+  CHECK   drivers/staging/rtl8723bs/hal/odm_CfoTracking.c
+  CC [M]  drivers/staging/rtl8723bs/hal/odm_debug.o
+  CHECK   drivers/staging/rtl8723bs/hal/odm_debug.c
+  CC [M]  drivers/staging/rtl8723bs/hal/odm_DIG.o
+  CHECK   drivers/staging/rtl8723bs/hal/odm_DIG.c
+  CC [M]  drivers/staging/rtl8723bs/hal/odm_DynamicBBPowerSaving.o
+  CHECK   drivers/staging/rtl8723bs/hal/odm_DynamicBBPowerSaving.c
+  CC [M]  drivers/staging/rtl8723bs/hal/odm_DynamicTxPower.o
+  CHECK   drivers/staging/rtl8723bs/hal/odm_DynamicTxPower.c
+  CC [M]  drivers/staging/rtl8723bs/hal/odm_EdcaTurboCheck.o
+  CHECK   drivers/staging/rtl8723bs/hal/odm_EdcaTurboCheck.c
+  CC [M]  drivers/staging/rtl8723bs/hal/odm_HWConfig.o
+  CHECK   drivers/staging/rtl8723bs/hal/odm_HWConfig.c
+  CC [M]  drivers/staging/rtl8723bs/hal/odm_NoiseMonitor.o
+  CHECK   drivers/staging/rtl8723bs/hal/odm_NoiseMonitor.c
+  CC [M]  drivers/staging/rtl8723bs/hal/odm_PathDiv.o
+  CHECK   drivers/staging/rtl8723bs/hal/odm_PathDiv.c
+  CC [M]  drivers/staging/rtl8723bs/hal/odm_RegConfig8723B.o
+  CHECK   drivers/staging/rtl8723bs/hal/odm_RegConfig8723B.c
+  CC [M]  drivers/staging/rtl8723bs/hal/odm_RTL8723B.o
+  CHECK   drivers/staging/rtl8723bs/hal/odm_RTL8723B.c
+  CC [M]  drivers/staging/rtl8723bs/hal/rtl8723b_cmd.o
+  CHECK   drivers/staging/rtl8723bs/hal/rtl8723b_cmd.c
+  CC [M]  drivers/staging/rtl8723bs/hal/rtl8723b_dm.o
+  CHECK   drivers/staging/rtl8723bs/hal/rtl8723b_dm.c
+  CC [M]  drivers/staging/rtl8723bs/hal/rtl8723b_hal_init.o
+  CHECK   drivers/staging/rtl8723bs/hal/rtl8723b_hal_init.c
+  CC [M]  drivers/staging/rtl8723bs/hal/rtl8723b_phycfg.o
+  CHECK   drivers/staging/rtl8723bs/hal/rtl8723b_phycfg.c
+  CC [M]  drivers/staging/rtl8723bs/hal/rtl8723b_rf6052.o
+  CHECK   drivers/staging/rtl8723bs/hal/rtl8723b_rf6052.c
+  CC [M]  drivers/staging/rtl8723bs/hal/rtl8723b_rxdesc.o
+  CHECK   drivers/staging/rtl8723bs/hal/rtl8723b_rxdesc.c
+  CC [M]  drivers/staging/rtl8723bs/hal/rtl8723bs_recv.o
+  CHECK   drivers/staging/rtl8723bs/hal/rtl8723bs_recv.c
+  CC [M]  drivers/staging/rtl8723bs/hal/rtl8723bs_xmit.o
+  CHECK   drivers/staging/rtl8723bs/hal/rtl8723bs_xmit.c
+  CC [M]  drivers/staging/rtl8723bs/hal/sdio_halinit.o
+  CHECK   drivers/staging/rtl8723bs/hal/sdio_halinit.c
+  CC [M]  drivers/staging/rtl8723bs/hal/sdio_ops.o
+  CHECK   drivers/staging/rtl8723bs/hal/sdio_ops.c
+  CC [M]  drivers/staging/rtl8723bs/hal/HalBtc8723b1Ant.o
+  CHECK   drivers/staging/rtl8723bs/hal/HalBtc8723b1Ant.c
+  CC [M]  drivers/staging/rtl8723bs/hal/HalBtc8723b2Ant.o
+  CHECK   drivers/staging/rtl8723bs/hal/HalBtc8723b2Ant.c
+  CC [M]  drivers/staging/rtl8723bs/hal/HalHWImg8723B_BB.o
+  CHECK   drivers/staging/rtl8723bs/hal/HalHWImg8723B_BB.c
+  CC [M]  drivers/staging/rtl8723bs/hal/HalHWImg8723B_MAC.o
+  CHECK   drivers/staging/rtl8723bs/hal/HalHWImg8723B_MAC.c
+  CC [M]  drivers/staging/rtl8723bs/hal/HalHWImg8723B_RF.o
+  CHECK   drivers/staging/rtl8723bs/hal/HalHWImg8723B_RF.c
+  CC [M]  drivers/staging/rtl8723bs/hal/HalPhyRf_8723B.o
+  CHECK   drivers/staging/rtl8723bs/hal/HalPhyRf_8723B.c
+  CC [M]  drivers/staging/rtl8723bs/os_dep/ioctl_cfg80211.o
+  CHECK   drivers/staging/rtl8723bs/os_dep/ioctl_cfg80211.c
+  CC [M]  drivers/staging/rtl8723bs/os_dep/ioctl_linux.o
+  CHECK   drivers/staging/rtl8723bs/os_dep/ioctl_linux.c
+  CC [M]  drivers/staging/rtl8723bs/os_dep/mlme_linux.o
+  CHECK   drivers/staging/rtl8723bs/os_dep/mlme_linux.c
+  CC [M]  drivers/staging/rtl8723bs/os_dep/osdep_service.o
+  CHECK   drivers/staging/rtl8723bs/os_dep/osdep_service.c
+  CC [M]  drivers/staging/rtl8723bs/os_dep/os_intfs.o
+  CHECK   drivers/staging/rtl8723bs/os_dep/os_intfs.c
+  CC [M]  drivers/staging/rtl8723bs/os_dep/recv_linux.o
+  CHECK   drivers/staging/rtl8723bs/os_dep/recv_linux.c
+  CC [M]  drivers/staging/rtl8723bs/os_dep/sdio_intf.o
+  CHECK   drivers/staging/rtl8723bs/os_dep/sdio_intf.c
+  CC [M]  drivers/staging/rtl8723bs/os_dep/sdio_ops_linux.o
+  CHECK   drivers/staging/rtl8723bs/os_dep/sdio_ops_linux.c
+  CC [M]  drivers/staging/rtl8723bs/os_dep/wifi_regd.o
+  CHECK   drivers/staging/rtl8723bs/os_dep/wifi_regd.c
+  CC [M]  drivers/staging/rtl8723bs/os_dep/xmit_linux.o
+  CHECK   drivers/staging/rtl8723bs/os_dep/xmit_linux.c
+  LD [M]  drivers/staging/rtl8723bs/r8723bs.o
+  CC [M]  drivers/staging/rtl8712/rtl871x_cmd.o
+  CHECK   drivers/staging/rtl8712/rtl871x_cmd.c
+  CC [M]  drivers/staging/rtl8712/rtl8712_cmd.o
+  CHECK   drivers/staging/rtl8712/rtl8712_cmd.c
+  CC [M]  drivers/staging/rtl8712/rtl871x_security.o
+  CHECK   drivers/staging/rtl8712/rtl871x_security.c
+  CC [M]  drivers/staging/rtl8712/rtl871x_eeprom.o
+  CHECK   drivers/staging/rtl8712/rtl871x_eeprom.c
+  CC [M]  drivers/staging/rtl8712/rtl8712_efuse.o
+  CHECK   drivers/staging/rtl8712/rtl8712_efuse.c
+  CC [M]  drivers/staging/rtl8712/hal_init.o
+  CHECK   drivers/staging/rtl8712/hal_init.c
+  CC [M]  drivers/staging/rtl8712/usb_halinit.o
+  CHECK   drivers/staging/rtl8712/usb_halinit.c
+  CC [M]  drivers/staging/rtl8712/usb_ops.o
+  CHECK   drivers/staging/rtl8712/usb_ops.c
+  CC [M]  drivers/staging/rtl8712/usb_ops_linux.o
+  CHECK   drivers/staging/rtl8712/usb_ops_linux.c
+  CC [M]  drivers/staging/rtl8712/rtl871x_io.o
+  CHECK   drivers/staging/rtl8712/rtl871x_io.c
+  CC [M]  drivers/staging/rtl8712/rtl8712_io.o
+  CHECK   drivers/staging/rtl8712/rtl8712_io.c
+  CC [M]  drivers/staging/rtl8712/rtl871x_ioctl_linux.o
+  CHECK   drivers/staging/rtl8712/rtl871x_ioctl_linux.c
+  CC [M]  drivers/staging/rtl8712/rtl871x_ioctl_rtl.o
+  CHECK   drivers/staging/rtl8712/rtl871x_ioctl_rtl.c
+  CC [M]  drivers/staging/rtl8712/rtl871x_ioctl_set.o
+  CHECK   drivers/staging/rtl8712/rtl871x_ioctl_set.c
+  CC [M]  drivers/staging/rtl8712/rtl8712_led.o
+  CHECK   drivers/staging/rtl8712/rtl8712_led.c
+  CC [M]  drivers/staging/rtl8712/rtl871x_mlme.o
+  CHECK   drivers/staging/rtl8712/rtl871x_mlme.c
+  CC [M]  drivers/staging/rtl8712/ieee80211.o
+  CHECK   drivers/staging/rtl8712/ieee80211.c
+  CC [M]  drivers/staging/rtl8712/rtl871x_mp_ioctl.o
+  CHECK   drivers/staging/rtl8712/rtl871x_mp_ioctl.c
+  CC [M]  drivers/staging/rtl8712/rtl871x_mp.o
+  CHECK   drivers/staging/rtl8712/rtl871x_mp.c
+  CC [M]  drivers/staging/rtl8712/mlme_linux.o
+  CHECK   drivers/staging/rtl8712/mlme_linux.c
+  CC [M]  drivers/staging/rtl8712/recv_linux.o
+  CHECK   drivers/staging/rtl8712/recv_linux.c
+  CC [M]  drivers/staging/rtl8712/xmit_linux.o
+  CHECK   drivers/staging/rtl8712/xmit_linux.c
+  CC [M]  drivers/staging/rtl8712/usb_intf.o
+  CHECK   drivers/staging/rtl8712/usb_intf.c
+  CC [M]  drivers/staging/rtl8712/os_intfs.o
+  CHECK   drivers/staging/rtl8712/os_intfs.c
+  CC [M]  drivers/staging/rtl8712/rtl871x_pwrctrl.o
+  CHECK   drivers/staging/rtl8712/rtl871x_pwrctrl.c
+  CC [M]  drivers/staging/rtl8712/rtl8712_recv.o
+  CHECK   drivers/staging/rtl8712/rtl8712_recv.c
+  CC [M]  drivers/staging/rtl8712/rtl871x_recv.o
+  CHECK   drivers/staging/rtl8712/rtl871x_recv.c
+  CC [M]  drivers/staging/rtl8712/rtl871x_sta_mgt.o
+  CHECK   drivers/staging/rtl8712/rtl871x_sta_mgt.c
+  CC [M]  drivers/staging/rtl8712/rtl871x_xmit.o
+  CHECK   drivers/staging/rtl8712/rtl871x_xmit.c
+  CC [M]  drivers/staging/rtl8712/rtl8712_xmit.o
+  CHECK   drivers/staging/rtl8712/rtl8712_xmit.c
+  LD [M]  drivers/staging/rtl8712/r8712u.o
+  CC [M]  drivers/staging/rtl8188eu/core/rtw_ap.o
+  CHECK   drivers/staging/rtl8188eu/core/rtw_ap.c
+  CC [M]  drivers/staging/rtl8188eu/core/rtw_cmd.o
+  CHECK   drivers/staging/rtl8188eu/core/rtw_cmd.c
+  CC [M]  drivers/staging/rtl8188eu/core/rtw_debug.o
+  CHECK   drivers/staging/rtl8188eu/core/rtw_debug.c
+  CC [M]  drivers/staging/rtl8188eu/core/rtw_efuse.o
+  CHECK   drivers/staging/rtl8188eu/core/rtw_efuse.c
+  CC [M]  drivers/staging/rtl8188eu/core/rtw_ieee80211.o
+  CHECK   drivers/staging/rtl8188eu/core/rtw_ieee80211.c
+  CC [M]  drivers/staging/rtl8188eu/core/rtw_ioctl_set.o
+  CHECK   drivers/staging/rtl8188eu/core/rtw_ioctl_set.c
+  CC [M]  drivers/staging/rtl8188eu/core/rtw_iol.o
+  CHECK   drivers/staging/rtl8188eu/core/rtw_iol.c
+  CC [M]  drivers/staging/rtl8188eu/core/rtw_led.o
+  CHECK   drivers/staging/rtl8188eu/core/rtw_led.c
+  CC [M]  drivers/staging/rtl8188eu/core/rtw_mlme.o
+  CHECK   drivers/staging/rtl8188eu/core/rtw_mlme.c
+  CC [M]  drivers/staging/rtl8188eu/core/rtw_mlme_ext.o
+  CHECK   drivers/staging/rtl8188eu/core/rtw_mlme_ext.c
+  CC [M]  drivers/staging/rtl8188eu/core/rtw_pwrctrl.o
+  CHECK   drivers/staging/rtl8188eu/core/rtw_pwrctrl.c
+  CC [M]  drivers/staging/rtl8188eu/core/rtw_recv.o
+  CHECK   drivers/staging/rtl8188eu/core/rtw_recv.c
+  CC [M]  drivers/staging/rtl8188eu/core/rtw_rf.o
+  CHECK   drivers/staging/rtl8188eu/core/rtw_rf.c
+  CC [M]  drivers/staging/rtl8188eu/core/rtw_security.o
+  CHECK   drivers/staging/rtl8188eu/core/rtw_security.c
+  CC [M]  drivers/staging/rtl8188eu/core/rtw_sreset.o
+  CHECK   drivers/staging/rtl8188eu/core/rtw_sreset.c
+  CC [M]  drivers/staging/rtl8188eu/core/rtw_sta_mgt.o
+  CHECK   drivers/staging/rtl8188eu/core/rtw_sta_mgt.c
+  CC [M]  drivers/staging/rtl8188eu/core/rtw_wlan_util.o
+  CHECK   drivers/staging/rtl8188eu/core/rtw_wlan_util.c
+  CC [M]  drivers/staging/rtl8188eu/core/rtw_xmit.o
+  CHECK   drivers/staging/rtl8188eu/core/rtw_xmit.c
+  CC [M]  drivers/staging/rtl8188eu/hal/fw.o
+  CHECK   drivers/staging/rtl8188eu/hal/fw.c
+  CC [M]  drivers/staging/rtl8188eu/hal/mac_cfg.o
+  CHECK   drivers/staging/rtl8188eu/hal/mac_cfg.c
+  CC [M]  drivers/staging/rtl8188eu/hal/bb_cfg.o
+  CHECK   drivers/staging/rtl8188eu/hal/bb_cfg.c
+  CC [M]  drivers/staging/rtl8188eu/hal/rf_cfg.o
+  CHECK   drivers/staging/rtl8188eu/hal/rf_cfg.c
+  CC [M]  drivers/staging/rtl8188eu/hal/pwrseqcmd.o
+  CHECK   drivers/staging/rtl8188eu/hal/pwrseqcmd.c
+  CC [M]  drivers/staging/rtl8188eu/hal/pwrseq.o
+  CHECK   drivers/staging/rtl8188eu/hal/pwrseq.c
+  CC [M]  drivers/staging/rtl8188eu/hal/hal8188e_rate_adaptive.o
+  CHECK   drivers/staging/rtl8188eu/hal/hal8188e_rate_adaptive.c
+  CC [M]  drivers/staging/rtl8188eu/hal/hal_intf.o
+  CHECK   drivers/staging/rtl8188eu/hal/hal_intf.c
+  CC [M]  drivers/staging/rtl8188eu/hal/hal_com.o
+  CHECK   drivers/staging/rtl8188eu/hal/hal_com.c
+  CC [M]  drivers/staging/rtl8188eu/hal/odm.o
+  CHECK   drivers/staging/rtl8188eu/hal/odm.c
+  CC [M]  drivers/staging/rtl8188eu/hal/odm_hwconfig.o
+  CHECK   drivers/staging/rtl8188eu/hal/odm_hwconfig.c
+  CC [M]  drivers/staging/rtl8188eu/hal/odm_rtl8188e.o
+  CHECK   drivers/staging/rtl8188eu/hal/odm_rtl8188e.c
+  CC [M]  drivers/staging/rtl8188eu/hal/rtl8188e_cmd.o
+  CHECK   drivers/staging/rtl8188eu/hal/rtl8188e_cmd.c
+  CC [M]  drivers/staging/rtl8188eu/hal/rtl8188e_dm.o
+  CHECK   drivers/staging/rtl8188eu/hal/rtl8188e_dm.c
+  CC [M]  drivers/staging/rtl8188eu/hal/rtl8188e_hal_init.o
+  CHECK   drivers/staging/rtl8188eu/hal/rtl8188e_hal_init.c
+  CC [M]  drivers/staging/rtl8188eu/hal/phy.o
+  CHECK   drivers/staging/rtl8188eu/hal/phy.c
+  CC [M]  drivers/staging/rtl8188eu/hal/rf.o
+  CHECK   drivers/staging/rtl8188eu/hal/rf.c
+  CC [M]  drivers/staging/rtl8188eu/hal/rtl8188e_rxdesc.o
+  CHECK   drivers/staging/rtl8188eu/hal/rtl8188e_rxdesc.c
+  CC [M]  drivers/staging/rtl8188eu/hal/rtl8188e_xmit.o
+  CHECK   drivers/staging/rtl8188eu/hal/rtl8188e_xmit.c
+  CC [M]  drivers/staging/rtl8188eu/hal/rtl8188eu_led.o
+  CHECK   drivers/staging/rtl8188eu/hal/rtl8188eu_led.c
+  CC [M]  drivers/staging/rtl8188eu/hal/rtl8188eu_recv.o
+  CHECK   drivers/staging/rtl8188eu/hal/rtl8188eu_recv.c
+  CC [M]  drivers/staging/rtl8188eu/hal/rtl8188eu_xmit.o
+  CHECK   drivers/staging/rtl8188eu/hal/rtl8188eu_xmit.c
+  CC [M]  drivers/staging/rtl8188eu/hal/usb_halinit.o
+  CHECK   drivers/staging/rtl8188eu/hal/usb_halinit.c
+  CC [M]  drivers/staging/rtl8188eu/os_dep/ioctl_linux.o
+  CHECK   drivers/staging/rtl8188eu/os_dep/ioctl_linux.c
+  CC [M]  drivers/staging/rtl8188eu/os_dep/mlme_linux.o
+  CHECK   drivers/staging/rtl8188eu/os_dep/mlme_linux.c
+  CC [M]  drivers/staging/rtl8188eu/os_dep/mon.o
+  CHECK   drivers/staging/rtl8188eu/os_dep/mon.c
+  CC [M]  drivers/staging/rtl8188eu/os_dep/os_intfs.o
+  CHECK   drivers/staging/rtl8188eu/os_dep/os_intfs.c
+  CC [M]  drivers/staging/rtl8188eu/os_dep/osdep_service.o
+  CHECK   drivers/staging/rtl8188eu/os_dep/osdep_service.c
+  CC [M]  drivers/staging/rtl8188eu/os_dep/recv_linux.o
+  CHECK   drivers/staging/rtl8188eu/os_dep/recv_linux.c
+  CC [M]  drivers/staging/rtl8188eu/os_dep/rtw_android.o
+  CHECK   drivers/staging/rtl8188eu/os_dep/rtw_android.c
+  CC [M]  drivers/staging/rtl8188eu/os_dep/usb_intf.o
+  CHECK   drivers/staging/rtl8188eu/os_dep/usb_intf.c
+  CC [M]  drivers/staging/rtl8188eu/os_dep/usb_ops_linux.o
+  CHECK   drivers/staging/rtl8188eu/os_dep/usb_ops_linux.c
+  CC [M]  drivers/staging/rtl8188eu/os_dep/xmit_linux.o
+  CHECK   drivers/staging/rtl8188eu/os_dep/xmit_linux.c
+  LD [M]  drivers/staging/rtl8188eu/r8188eu.o
+  CC [M]  drivers/staging/rts5208/rtsx.o
+  CHECK   drivers/staging/rts5208/rtsx.c
+  CC [M]  drivers/staging/rts5208/rtsx_chip.o
+  CHECK   drivers/staging/rts5208/rtsx_chip.c
+  CC [M]  drivers/staging/rts5208/rtsx_transport.o
+  CHECK   drivers/staging/rts5208/rtsx_transport.c
+  CC [M]  drivers/staging/rts5208/rtsx_scsi.o
+  CHECK   drivers/staging/rts5208/rtsx_scsi.c
+  CC [M]  drivers/staging/rts5208/rtsx_card.o
+  CHECK   drivers/staging/rts5208/rtsx_card.c
+  CC [M]  drivers/staging/rts5208/general.o
+  CHECK   drivers/staging/rts5208/general.c
+  CC [M]  drivers/staging/rts5208/sd.o
+  CHECK   drivers/staging/rts5208/sd.c
+  CC [M]  drivers/staging/rts5208/xd.o
+  CHECK   drivers/staging/rts5208/xd.c
+  CC [M]  drivers/staging/rts5208/ms.o
+  CHECK   drivers/staging/rts5208/ms.c
+  CC [M]  drivers/staging/rts5208/spi.o
+  CHECK   drivers/staging/rts5208/spi.c
+  LD [M]  drivers/staging/rts5208/rts5208.o
+  CC [M]  drivers/staging/octeon/ethernet.o
+  CHECK   drivers/staging/octeon/ethernet.c
+  CC [M]  drivers/staging/octeon/ethernet-mdio.o
+  CHECK   drivers/staging/octeon/ethernet-mdio.c
+  CC [M]  drivers/staging/octeon/ethernet-mem.o
+  CHECK   drivers/staging/octeon/ethernet-mem.c
+  CC [M]  drivers/staging/octeon/ethernet-rgmii.o
+  CHECK   drivers/staging/octeon/ethernet-rgmii.c
+  CC [M]  drivers/staging/octeon/ethernet-rx.o
+  CHECK   drivers/staging/octeon/ethernet-rx.c
+  CC [M]  drivers/staging/octeon/ethernet-sgmii.o
+  CHECK   drivers/staging/octeon/ethernet-sgmii.c
+  CC [M]  drivers/staging/octeon/ethernet-spi.o
+  CHECK   drivers/staging/octeon/ethernet-spi.c
+  CC [M]  drivers/staging/octeon/ethernet-tx.o
+  CHECK   drivers/staging/octeon/ethernet-tx.c
+  LD [M]  drivers/staging/octeon/octeon-ethernet.o
+  CC [M]  drivers/staging/vt6655/device_main.o
+  CHECK   drivers/staging/vt6655/device_main.c
+  CC [M]  drivers/staging/vt6655/card.o
+  CHECK   drivers/staging/vt6655/card.c
+  CC [M]  drivers/staging/vt6655/channel.o
+  CHECK   drivers/staging/vt6655/channel.c
+  CC [M]  drivers/staging/vt6655/mac.o
+  CHECK   drivers/staging/vt6655/mac.c
+  CC [M]  drivers/staging/vt6655/baseband.o
+  CHECK   drivers/staging/vt6655/baseband.c
+  CC [M]  drivers/staging/vt6655/rxtx.o
+  CHECK   drivers/staging/vt6655/rxtx.c
+  CC [M]  drivers/staging/vt6655/dpc.o
+  CHECK   drivers/staging/vt6655/dpc.c
+  CC [M]  drivers/staging/vt6655/power.o
+  CHECK   drivers/staging/vt6655/power.c
+  CC [M]  drivers/staging/vt6655/srom.o
+  CHECK   drivers/staging/vt6655/srom.c
+  CC [M]  drivers/staging/vt6655/key.o
+  CHECK   drivers/staging/vt6655/key.c
+  CC [M]  drivers/staging/vt6655/rf.o
+  CHECK   drivers/staging/vt6655/rf.c
+  LD [M]  drivers/staging/vt6655/vt6655_stage.o
+  CC [M]  drivers/staging/vt6656/main_usb.o
+  CHECK   drivers/staging/vt6656/main_usb.c
+  CC [M]  drivers/staging/vt6656/card.o
+  CHECK   drivers/staging/vt6656/card.c
+  CC [M]  drivers/staging/vt6656/mac.o
+  CHECK   drivers/staging/vt6656/mac.c
+  CC [M]  drivers/staging/vt6656/baseband.o
+  CHECK   drivers/staging/vt6656/baseband.c
+  CC [M]  drivers/staging/vt6656/wcmd.o
+  CHECK   drivers/staging/vt6656/wcmd.c
+  CC [M]  drivers/staging/vt6656/rxtx.o
+  CHECK   drivers/staging/vt6656/rxtx.c
+  CC [M]  drivers/staging/vt6656/power.o
+  CHECK   drivers/staging/vt6656/power.c
+  CC [M]  drivers/staging/vt6656/key.o
+  CHECK   drivers/staging/vt6656/key.c
+  CC [M]  drivers/staging/vt6656/rf.o
+  CHECK   drivers/staging/vt6656/rf.c
+  CC [M]  drivers/staging/vt6656/usbpipe.o
+  CHECK   drivers/staging/vt6656/usbpipe.c
+  CC [M]  drivers/staging/vt6656/channel.o
+  CHECK   drivers/staging/vt6656/channel.c
+  LD [M]  drivers/staging/vt6656/vt6656_stage.o
+  CC [M]  drivers/staging/iio/accel/adis16203.o
+  CHECK   drivers/staging/iio/accel/adis16203.c
+  CC [M]  drivers/staging/iio/accel/adis16240.o
+  CHECK   drivers/staging/iio/accel/adis16240.c
+  CC [M]  drivers/staging/iio/adc/ad7816.o
+  CHECK   drivers/staging/iio/adc/ad7816.c
+  CC [M]  drivers/staging/iio/adc/ad7280a.o
+  CHECK   drivers/staging/iio/adc/ad7280a.c
+  CC [M]  drivers/staging/iio/addac/adt7316.o
+  CHECK   drivers/staging/iio/addac/adt7316.c
+  CC [M]  drivers/staging/iio/addac/adt7316-spi.o
+  CHECK   drivers/staging/iio/addac/adt7316-spi.c
+  CC [M]  drivers/staging/iio/addac/adt7316-i2c.o
+  CHECK   drivers/staging/iio/addac/adt7316-i2c.c
+  CC [M]  drivers/staging/iio/cdc/ad7150.o
+  CHECK   drivers/staging/iio/cdc/ad7150.c
+  CC [M]  drivers/staging/iio/cdc/ad7746.o
+  CHECK   drivers/staging/iio/cdc/ad7746.c
+  CC [M]  drivers/staging/iio/frequency/ad9832.o
+  CHECK   drivers/staging/iio/frequency/ad9832.c
+  CC [M]  drivers/staging/iio/frequency/ad9834.o
+  CHECK   drivers/staging/iio/frequency/ad9834.c
+  CC [M]  drivers/staging/iio/impedance-analyzer/ad5933.o
+  CHECK   drivers/staging/iio/impedance-analyzer/ad5933.c
+  CC [M]  drivers/staging/iio/meter/ade7854.o
+  CHECK   drivers/staging/iio/meter/ade7854.c
+  CC [M]  drivers/staging/iio/meter/ade7854-i2c.o
+  CHECK   drivers/staging/iio/meter/ade7854-i2c.c
+  CC [M]  drivers/staging/iio/meter/ade7854-spi.o
+  CHECK   drivers/staging/iio/meter/ade7854-spi.c
+  CC [M]  drivers/staging/iio/resolver/ad2s1210.o
+  CHECK   drivers/staging/iio/resolver/ad2s1210.c
+  CC [M]  drivers/staging/sm750fb/sm750.o
+  CHECK   drivers/staging/sm750fb/sm750.c
+  CC [M]  drivers/staging/sm750fb/sm750_hw.o
+  CHECK   drivers/staging/sm750fb/sm750_hw.c
+  CC [M]  drivers/staging/sm750fb/sm750_accel.o
+  CHECK   drivers/staging/sm750fb/sm750_accel.c
+  CC [M]  drivers/staging/sm750fb/sm750_cursor.o
+  CHECK   drivers/staging/sm750fb/sm750_cursor.c
+  CC [M]  drivers/staging/sm750fb/ddk750_chip.o
+  CHECK   drivers/staging/sm750fb/ddk750_chip.c
+  CC [M]  drivers/staging/sm750fb/ddk750_power.o
+  CHECK   drivers/staging/sm750fb/ddk750_power.c
+  CC [M]  drivers/staging/sm750fb/ddk750_mode.o
+  CHECK   drivers/staging/sm750fb/ddk750_mode.c
+  CC [M]  drivers/staging/sm750fb/ddk750_display.o
+  CHECK   drivers/staging/sm750fb/ddk750_display.c
+  CC [M]  drivers/staging/sm750fb/ddk750_swi2c.o
+  CHECK   drivers/staging/sm750fb/ddk750_swi2c.c
+  CC [M]  drivers/staging/sm750fb/ddk750_sii164.o
+  CHECK   drivers/staging/sm750fb/ddk750_sii164.c
+  CC [M]  drivers/staging/sm750fb/ddk750_dvi.o
+  CHECK   drivers/staging/sm750fb/ddk750_dvi.c
+  CC [M]  drivers/staging/sm750fb/ddk750_hwi2c.o
+  CHECK   drivers/staging/sm750fb/ddk750_hwi2c.c
+  LD [M]  drivers/staging/sm750fb/sm750fb.o
+  CC [M]  drivers/staging/speakup/speakup_acntsa.o
+  CHECK   drivers/staging/speakup/speakup_acntsa.c
+  CC [M]  drivers/staging/speakup/speakup_acntpc.o
+  CHECK   drivers/staging/speakup/speakup_acntpc.c
+  CC [M]  drivers/staging/speakup/speakup_apollo.o
+  CHECK   drivers/staging/speakup/speakup_apollo.c
+  CC [M]  drivers/staging/speakup/speakup_audptr.o
+  CHECK   drivers/staging/speakup/speakup_audptr.c
+  CC [M]  drivers/staging/speakup/speakup_bns.o
+  CHECK   drivers/staging/speakup/speakup_bns.c
+  CC [M]  drivers/staging/speakup/speakup_dectlk.o
+  CHECK   drivers/staging/speakup/speakup_dectlk.c
+  CC [M]  drivers/staging/speakup/speakup_decext.o
+  CHECK   drivers/staging/speakup/speakup_decext.c
+  CC [M]  drivers/staging/speakup/speakup_decpc.o
+  CHECK   drivers/staging/speakup/speakup_decpc.c
+  CC [M]  drivers/staging/speakup/speakup_dtlk.o
+  CHECK   drivers/staging/speakup/speakup_dtlk.c
+  CC [M]  drivers/staging/speakup/speakup_keypc.o
+  CHECK   drivers/staging/speakup/speakup_keypc.c
+  CC [M]  drivers/staging/speakup/speakup_ltlk.o
+  CHECK   drivers/staging/speakup/speakup_ltlk.c
+  CC [M]  drivers/staging/speakup/speakup_soft.o
+  CHECK   drivers/staging/speakup/speakup_soft.c
+  CC [M]  drivers/staging/speakup/speakup_spkout.o
+  CHECK   drivers/staging/speakup/speakup_spkout.c
+  CC [M]  drivers/staging/speakup/speakup_txprt.o
+  CHECK   drivers/staging/speakup/speakup_txprt.c
+  CC [M]  drivers/staging/speakup/speakup_dummy.o
+  CHECK   drivers/staging/speakup/speakup_dummy.c
+  CC [M]  drivers/staging/speakup/buffers.o
+  CHECK   drivers/staging/speakup/buffers.c
+  CC [M]  drivers/staging/speakup/devsynth.o
+  CHECK   drivers/staging/speakup/devsynth.c
+  CC [M]  drivers/staging/speakup/i18n.o
+  CHECK   drivers/staging/speakup/i18n.c
+  CC [M]  drivers/staging/speakup/fakekey.o
+  CHECK   drivers/staging/speakup/fakekey.c
+  CC [M]  drivers/staging/speakup/main.o
+  CHECK   drivers/staging/speakup/main.c
+  CC [M]  drivers/staging/speakup/keyhelp.o
+  CHECK   drivers/staging/speakup/keyhelp.c
+  CC [M]  drivers/staging/speakup/kobjects.o
+  CHECK   drivers/staging/speakup/kobjects.c
+  CC [M]  drivers/staging/speakup/selection.o
+  CHECK   drivers/staging/speakup/selection.c
+  CC [M]  drivers/staging/speakup/serialio.o
+  CHECK   drivers/staging/speakup/serialio.c
+  CC [M]  drivers/staging/speakup/spk_ttyio.o
+  CHECK   drivers/staging/speakup/spk_ttyio.c
+  CC [M]  drivers/staging/speakup/synth.o
+  CHECK   drivers/staging/speakup/synth.c
+  CC [M]  drivers/staging/speakup/thread.o
+  CHECK   drivers/staging/speakup/thread.c
+  CC [M]  drivers/staging/speakup/varhandlers.o
+  CHECK   drivers/staging/speakup/varhandlers.c
+  LD [M]  drivers/staging/speakup/speakup.o
+  CC [M]  drivers/staging/gdm724x/gdm_lte.o
+  CHECK   drivers/staging/gdm724x/gdm_lte.c
+  CC [M]  drivers/staging/gdm724x/netlink_k.o
+  CHECK   drivers/staging/gdm724x/netlink_k.c
+  CC [M]  drivers/staging/gdm724x/gdm_usb.o
+  CHECK   drivers/staging/gdm724x/gdm_usb.c
+  CC [M]  drivers/staging/gdm724x/gdm_endian.o
+  CHECK   drivers/staging/gdm724x/gdm_endian.c
+  LD [M]  drivers/staging/gdm724x/gdmulte.o
+  CC [M]  drivers/staging/gdm724x/gdm_tty.o
+  CHECK   drivers/staging/gdm724x/gdm_tty.c
+  CC [M]  drivers/staging/gdm724x/gdm_mux.o
+  CHECK   drivers/staging/gdm724x/gdm_mux.c
+  LD [M]  drivers/staging/gdm724x/gdmtty.o
+  CC [M]  drivers/staging/fwserial/fwserial.o
+  CHECK   drivers/staging/fwserial/fwserial.c
+  CC [M]  drivers/staging/fwserial/dma_fifo.o
+  CHECK   drivers/staging/fwserial/dma_fifo.c
+  LD [M]  drivers/staging/fwserial/firewire-serial.o
+  CC [M]  drivers/staging/gs_fpgaboot/gs_fpgaboot.o
+  CHECK   drivers/staging/gs_fpgaboot/gs_fpgaboot.c
+  CC [M]  drivers/staging/gs_fpgaboot/io.o
+  CHECK   drivers/staging/gs_fpgaboot/io.c
+  LD [M]  drivers/staging/gs_fpgaboot/gs_fpga.o
+  CC [M]  drivers/staging/fbtft/fbtft-core.o
+  CHECK   drivers/staging/fbtft/fbtft-core.c
+  CC [M]  drivers/staging/fbtft/fbtft-sysfs.o
+  CHECK   drivers/staging/fbtft/fbtft-sysfs.c
+  CC [M]  drivers/staging/fbtft/fbtft-bus.o
+  CHECK   drivers/staging/fbtft/fbtft-bus.c
+  CC [M]  drivers/staging/fbtft/fbtft-io.o
+  CHECK   drivers/staging/fbtft/fbtft-io.c
+  LD [M]  drivers/staging/fbtft/fbtft.o
+  CC [M]  drivers/staging/fbtft/fb_agm1264k-fl.o
+  CHECK   drivers/staging/fbtft/fb_agm1264k-fl.c
+  CC [M]  drivers/staging/fbtft/fb_bd663474.o
+  CHECK   drivers/staging/fbtft/fb_bd663474.c
+  CC [M]  drivers/staging/fbtft/fb_hx8340bn.o
+  CHECK   drivers/staging/fbtft/fb_hx8340bn.c
+  CC [M]  drivers/staging/fbtft/fb_hx8347d.o
+  CHECK   drivers/staging/fbtft/fb_hx8347d.c
+  CC [M]  drivers/staging/fbtft/fb_hx8353d.o
+  CHECK   drivers/staging/fbtft/fb_hx8353d.c
+  CC [M]  drivers/staging/fbtft/fb_hx8357d.o
+  CHECK   drivers/staging/fbtft/fb_hx8357d.c
+  CC [M]  drivers/staging/fbtft/fb_ili9163.o
+  CHECK   drivers/staging/fbtft/fb_ili9163.c
+  CC [M]  drivers/staging/fbtft/fb_ili9320.o
+  CHECK   drivers/staging/fbtft/fb_ili9320.c
+  CC [M]  drivers/staging/fbtft/fb_ili9325.o
+  CHECK   drivers/staging/fbtft/fb_ili9325.c
+  CC [M]  drivers/staging/fbtft/fb_ili9340.o
+  CHECK   drivers/staging/fbtft/fb_ili9340.c
+  CC [M]  drivers/staging/fbtft/fb_ili9341.o
+  CHECK   drivers/staging/fbtft/fb_ili9341.c
+  CC [M]  drivers/staging/fbtft/fb_ili9481.o
+  CHECK   drivers/staging/fbtft/fb_ili9481.c
+  CC [M]  drivers/staging/fbtft/fb_ili9486.o
+  CHECK   drivers/staging/fbtft/fb_ili9486.c
+  CC [M]  drivers/staging/fbtft/fb_pcd8544.o
+  CHECK   drivers/staging/fbtft/fb_pcd8544.c
+  CC [M]  drivers/staging/fbtft/fb_ra8875.o
+  CHECK   drivers/staging/fbtft/fb_ra8875.c
+  CC [M]  drivers/staging/fbtft/fb_s6d02a1.o
+  CHECK   drivers/staging/fbtft/fb_s6d02a1.c
+  CC [M]  drivers/staging/fbtft/fb_s6d1121.o
+  CHECK   drivers/staging/fbtft/fb_s6d1121.c
+  CC [M]  drivers/staging/fbtft/fb_seps525.o
+  CHECK   drivers/staging/fbtft/fb_seps525.c
+  CC [M]  drivers/staging/fbtft/fb_sh1106.o
+  CHECK   drivers/staging/fbtft/fb_sh1106.c
+  CC [M]  drivers/staging/fbtft/fb_ssd1289.o
+  CHECK   drivers/staging/fbtft/fb_ssd1289.c
+  CC [M]  drivers/staging/fbtft/fb_ssd1305.o
+  CHECK   drivers/staging/fbtft/fb_ssd1305.c
+  CC [M]  drivers/staging/fbtft/fb_ssd1306.o
+  CHECK   drivers/staging/fbtft/fb_ssd1306.c
+  CC [M]  drivers/staging/fbtft/fb_ssd1325.o
+  CHECK   drivers/staging/fbtft/fb_ssd1325.c
+  CC [M]  drivers/staging/fbtft/fb_ssd1331.o
+  CHECK   drivers/staging/fbtft/fb_ssd1331.c
+  CC [M]  drivers/staging/fbtft/fb_ssd1351.o
+  CHECK   drivers/staging/fbtft/fb_ssd1351.c
+  CC [M]  drivers/staging/fbtft/fb_st7735r.o
+  CHECK   drivers/staging/fbtft/fb_st7735r.c
+  CC [M]  drivers/staging/fbtft/fb_st7789v.o
+  CHECK   drivers/staging/fbtft/fb_st7789v.c
+  CC [M]  drivers/staging/fbtft/fb_tinylcd.o
+  CHECK   drivers/staging/fbtft/fb_tinylcd.c
+  CC [M]  drivers/staging/fbtft/fb_tls8204.o
+  CHECK   drivers/staging/fbtft/fb_tls8204.c
+  CC [M]  drivers/staging/fbtft/fb_uc1611.o
+  CHECK   drivers/staging/fbtft/fb_uc1611.c
+  CC [M]  drivers/staging/fbtft/fb_uc1701.o
+  CHECK   drivers/staging/fbtft/fb_uc1701.c
+  CC [M]  drivers/staging/fbtft/fb_upd161704.o
+  CHECK   drivers/staging/fbtft/fb_upd161704.c
+  CC [M]  drivers/staging/fbtft/fb_watterott.o
+  CHECK   drivers/staging/fbtft/fb_watterott.c
+  CC [M]  drivers/staging/most/cdev/cdev.o
+  CHECK   drivers/staging/most/cdev/cdev.c
+  LD [M]  drivers/staging/most/cdev/most_cdev.o
+  CC [M]  drivers/staging/most/net/net.o
+  CHECK   drivers/staging/most/net/net.c
+  LD [M]  drivers/staging/most/net/most_net.o
+  CC [M]  drivers/staging/most/sound/sound.o
+  CHECK   drivers/staging/most/sound/sound.c
+  LD [M]  drivers/staging/most/sound/most_sound.o
+  CC [M]  drivers/staging/most/video/video.o
+  CHECK   drivers/staging/most/video/video.c
+  LD [M]  drivers/staging/most/video/most_video.o
+  CC [M]  drivers/staging/most/dim2/dim2.o
+  CHECK   drivers/staging/most/dim2/dim2.c
+  CC [M]  drivers/staging/most/dim2/hal.o
+  CHECK   drivers/staging/most/dim2/hal.c
+  CC [M]  drivers/staging/most/dim2/sysfs.o
+  CHECK   drivers/staging/most/dim2/sysfs.c
+  LD [M]  drivers/staging/most/dim2/most_dim2.o
+  CC [M]  drivers/staging/most/i2c/i2c.o
+  CHECK   drivers/staging/most/i2c/i2c.c
+  LD [M]  drivers/staging/most/i2c/most_i2c.o
+  CC [M]  drivers/staging/most/usb/usb.o
+  CHECK   drivers/staging/most/usb/usb.c
+  LD [M]  drivers/staging/most/usb/most_usb.o
+  CC [M]  drivers/staging/ks7010/ks_hostif.o
+  CHECK   drivers/staging/ks7010/ks_hostif.c
+  CC [M]  drivers/staging/ks7010/ks_wlan_net.o
+  CHECK   drivers/staging/ks7010/ks_wlan_net.c
+  CC [M]  drivers/staging/ks7010/ks7010_sdio.o
+  CHECK   drivers/staging/ks7010/ks7010_sdio.c
+  LD [M]  drivers/staging/ks7010/ks7010.o
+  CC [M]  drivers/staging/greybus/bootrom.o
+  CHECK   drivers/staging/greybus/bootrom.c
+  LD [M]  drivers/staging/greybus/gb-bootrom.o
+  CC [M]  drivers/staging/greybus/fw-core.o
+  CHECK   drivers/staging/greybus/fw-core.c
+  CC [M]  drivers/staging/greybus/fw-download.o
+  CHECK   drivers/staging/greybus/fw-download.c
+  CC [M]  drivers/staging/greybus/fw-management.o
+  CHECK   drivers/staging/greybus/fw-management.c
+  CC [M]  drivers/staging/greybus/authentication.o
+  CHECK   drivers/staging/greybus/authentication.c
+  LD [M]  drivers/staging/greybus/gb-firmware.o
+  CC [M]  drivers/staging/greybus/spilib.o
+  CHECK   drivers/staging/greybus/spilib.c
+  LD [M]  drivers/staging/greybus/gb-spilib.o
+  CC [M]  drivers/staging/greybus/hid.o
+  CHECK   drivers/staging/greybus/hid.c
+  LD [M]  drivers/staging/greybus/gb-hid.o
+  CC [M]  drivers/staging/greybus/light.o
+  CHECK   drivers/staging/greybus/light.c
+  LD [M]  drivers/staging/greybus/gb-light.o
+  CC [M]  drivers/staging/greybus/log.o
+  CHECK   drivers/staging/greybus/log.c
+  LD [M]  drivers/staging/greybus/gb-log.o
+  CC [M]  drivers/staging/greybus/loopback.o
+  CHECK   drivers/staging/greybus/loopback.c
+  LD [M]  drivers/staging/greybus/gb-loopback.o
+  CC [M]  drivers/staging/greybus/power_supply.o
+  CHECK   drivers/staging/greybus/power_supply.c
+  LD [M]  drivers/staging/greybus/gb-power-supply.o
+  CC [M]  drivers/staging/greybus/raw.o
+  CHECK   drivers/staging/greybus/raw.c
+  LD [M]  drivers/staging/greybus/gb-raw.o
+  CC [M]  drivers/staging/greybus/vibrator.o
+  CHECK   drivers/staging/greybus/vibrator.c
+  LD [M]  drivers/staging/greybus/gb-vibrator.o
+  CC [M]  drivers/staging/greybus/audio_gb.o
+  CHECK   drivers/staging/greybus/audio_gb.c
+  LD [M]  drivers/staging/greybus/gb-audio-gb.o
+  CC [M]  drivers/staging/greybus/audio_apbridgea.o
+  CHECK   drivers/staging/greybus/audio_apbridgea.c
+  LD [M]  drivers/staging/greybus/gb-audio-apbridgea.o
+  CC [M]  drivers/staging/greybus/audio_manager.o
+  CHECK   drivers/staging/greybus/audio_manager.c
+  CC [M]  drivers/staging/greybus/audio_manager_module.o
+  CHECK   drivers/staging/greybus/audio_manager_module.c
+  LD [M]  drivers/staging/greybus/gb-audio-manager.o
+  CC [M]  drivers/staging/greybus/gbphy.o
+  CHECK   drivers/staging/greybus/gbphy.c
+  LD [M]  drivers/staging/greybus/gb-gbphy.o
+  CC [M]  drivers/staging/greybus/gpio.o
+  CHECK   drivers/staging/greybus/gpio.c
+  LD [M]  drivers/staging/greybus/gb-gpio.o
+  CC [M]  drivers/staging/greybus/i2c.o
+  CHECK   drivers/staging/greybus/i2c.c
+  LD [M]  drivers/staging/greybus/gb-i2c.o
+  CC [M]  drivers/staging/greybus/pwm.o
+  CHECK   drivers/staging/greybus/pwm.c
+  LD [M]  drivers/staging/greybus/gb-pwm.o
+  CC [M]  drivers/staging/greybus/sdio.o
+  CHECK   drivers/staging/greybus/sdio.c
+  LD [M]  drivers/staging/greybus/gb-sdio.o
+  CC [M]  drivers/staging/greybus/spi.o
+  CHECK   drivers/staging/greybus/spi.c
+  LD [M]  drivers/staging/greybus/gb-spi.o
+  CC [M]  drivers/staging/greybus/uart.o
+  CHECK   drivers/staging/greybus/uart.c
+  LD [M]  drivers/staging/greybus/gb-uart.o
+  CC [M]  drivers/staging/greybus/usb.o
+  CHECK   drivers/staging/greybus/usb.c
+  LD [M]  drivers/staging/greybus/gb-usb.o
+  CC [M]  drivers/staging/greybus/arche-platform.o
+  CHECK   drivers/staging/greybus/arche-platform.c
+  CC [M]  drivers/staging/greybus/arche-apb-ctrl.o
+  CHECK   drivers/staging/greybus/arche-apb-ctrl.c
+  LD [M]  drivers/staging/greybus/gb-arche.o
+  CC [M]  drivers/staging/vc04_services/bcm2835-audio/bcm2835.o
+  CHECK   drivers/staging/vc04_services/bcm2835-audio/bcm2835.c
+  CC [M]  drivers/staging/vc04_services/bcm2835-audio/bcm2835-ctl.o
+  CHECK   drivers/staging/vc04_services/bcm2835-audio/bcm2835-ctl.c
+  CC [M]  drivers/staging/vc04_services/bcm2835-audio/bcm2835-pcm.o
+  CHECK   drivers/staging/vc04_services/bcm2835-audio/bcm2835-pcm.c
+  CC [M]  drivers/staging/vc04_services/bcm2835-audio/bcm2835-vchiq.o
+  CHECK   drivers/staging/vc04_services/bcm2835-audio/bcm2835-vchiq.c
+  LD [M]  drivers/staging/vc04_services/bcm2835-audio/snd-bcm2835.o
+  CC [M]  drivers/staging/vc04_services/bcm2835-camera/bcm2835-camera.o
+  CHECK   drivers/staging/vc04_services/bcm2835-camera/bcm2835-camera.c
+  CC [M]  drivers/staging/vc04_services/bcm2835-camera/controls.o
+  CHECK   drivers/staging/vc04_services/bcm2835-camera/controls.c
+  LD [M]  drivers/staging/vc04_services/bcm2835-camera/bcm2835-v4l2.o
+  CC [M]  drivers/staging/vc04_services/vchiq-mmal/mmal-vchiq.o
+  CHECK   drivers/staging/vc04_services/vchiq-mmal/mmal-vchiq.c
+  LD [M]  drivers/staging/vc04_services/vchiq-mmal/bcm2835-mmal-vchiq.o
+  CC [M]  drivers/staging/vc04_services/interface/vchiq_arm/vchiq_core.o
+  CHECK   drivers/staging/vc04_services/interface/vchiq_arm/vchiq_core.c
+  CC [M]  drivers/staging/vc04_services/interface/vchiq_arm/vchiq_arm.o
+  CHECK   drivers/staging/vc04_services/interface/vchiq_arm/vchiq_arm.c
+  CC [M]  drivers/staging/vc04_services/interface/vchiq_arm/vchiq_2835_arm.o
+  CHECK   drivers/staging/vc04_services/interface/vchiq_arm/vchiq_2835_arm.c
+  CC [M]  drivers/staging/vc04_services/interface/vchiq_arm/vchiq_debugfs.o
+  CHECK   drivers/staging/vc04_services/interface/vchiq_arm/vchiq_debugfs.c
+  CC [M]  drivers/staging/vc04_services/interface/vchiq_arm/vchiq_connected.o
+  CHECK   drivers/staging/vc04_services/interface/vchiq_arm/vchiq_connected.c
+  LD [M]  drivers/staging/vc04_services/vchiq.o
+  CC [M]  drivers/staging/pi433/pi433_if.o
+  CHECK   drivers/staging/pi433/pi433_if.c
+  CC [M]  drivers/staging/pi433/rf69.o
+  CHECK   drivers/staging/pi433/rf69.c
+  LD [M]  drivers/staging/pi433/pi433.o
+  CC [M]  drivers/staging/gasket/gasket_core.o
+  CHECK   drivers/staging/gasket/gasket_core.c
+  CC [M]  drivers/staging/gasket/gasket_ioctl.o
+  CHECK   drivers/staging/gasket/gasket_ioctl.c
+  CC [M]  drivers/staging/gasket/gasket_interrupt.o
+  CHECK   drivers/staging/gasket/gasket_interrupt.c
+  CC [M]  drivers/staging/gasket/gasket_page_table.o
+  CHECK   drivers/staging/gasket/gasket_page_table.c
+  CC [M]  drivers/staging/gasket/gasket_sysfs.o
+  CHECK   drivers/staging/gasket/gasket_sysfs.c
+  LD [M]  drivers/staging/gasket/gasket.o
+  CC [M]  drivers/staging/gasket/apex_driver.o
+  CHECK   drivers/staging/gasket/apex_driver.c
+  LD [M]  drivers/staging/gasket/apex.o
+  CC [M]  drivers/staging/axis-fifo/axis-fifo.o
+  CHECK   drivers/staging/axis-fifo/axis-fifo.c
+  CC [M]  drivers/staging/fieldbus/anybuss/host.o
+  CHECK   drivers/staging/fieldbus/anybuss/host.c
+  LD [M]  drivers/staging/fieldbus/anybuss/anybuss_core.o
+  CC [M]  drivers/staging/fieldbus/anybuss/arcx-anybus.o
+  CHECK   drivers/staging/fieldbus/anybuss/arcx-anybus.c
+  CC [M]  drivers/staging/fieldbus/anybuss/hms-profinet.o
+  CHECK   drivers/staging/fieldbus/anybuss/hms-profinet.c
+  CC [M]  drivers/staging/fieldbus/dev_core.o
+  CHECK   drivers/staging/fieldbus/dev_core.c
+  LD [M]  drivers/staging/fieldbus/fieldbus_dev.o
+  CC [M]  drivers/staging/qlge/qlge_main.o
+  CHECK   drivers/staging/qlge/qlge_main.c
+  CC [M]  drivers/staging/qlge/qlge_dbg.o
+  CHECK   drivers/staging/qlge/qlge_dbg.c
+  CC [M]  drivers/staging/qlge/qlge_mpi.o
+  CHECK   drivers/staging/qlge/qlge_mpi.c
+  CC [M]  drivers/staging/qlge/qlge_ethtool.o
+  CHECK   drivers/staging/qlge/qlge_ethtool.c
+  LD [M]  drivers/staging/qlge/qlge.o
+  CC [M]  drivers/staging/wfx/bh.o
+  CHECK   drivers/staging/wfx/bh.c
+  CC [M]  drivers/staging/wfx/hwio.o
+  CHECK   drivers/staging/wfx/hwio.c
+  CC [M]  drivers/staging/wfx/fwio.o
+  CHECK   drivers/staging/wfx/fwio.c
+  CC [M]  drivers/staging/wfx/hif_tx_mib.o
+  CHECK   drivers/staging/wfx/hif_tx_mib.c
+  CC [M]  drivers/staging/wfx/hif_tx.o
+  CHECK   drivers/staging/wfx/hif_tx.c
+  CC [M]  drivers/staging/wfx/hif_rx.o
+  CHECK   drivers/staging/wfx/hif_rx.c
+  CC [M]  drivers/staging/wfx/queue.o
+  CHECK   drivers/staging/wfx/queue.c
+  CC [M]  drivers/staging/wfx/data_tx.o
+  CHECK   drivers/staging/wfx/data_tx.c
+  CC [M]  drivers/staging/wfx/data_rx.o
+  CHECK   drivers/staging/wfx/data_rx.c
+  CC [M]  drivers/staging/wfx/scan.o
+  CHECK   drivers/staging/wfx/scan.c
+  CC [M]  drivers/staging/wfx/sta.o
+  CHECK   drivers/staging/wfx/sta.c
+  CC [M]  drivers/staging/wfx/key.o
+  CHECK   drivers/staging/wfx/key.c
+  CC [M]  drivers/staging/wfx/main.o
+  CHECK   drivers/staging/wfx/main.c
+  CC [M]  drivers/staging/wfx/debug.o
+  CHECK   drivers/staging/wfx/debug.c
+  CC [M]  drivers/staging/wfx/bus_spi.o
+  CHECK   drivers/staging/wfx/bus_spi.c
+  CC [M]  drivers/staging/wfx/bus_sdio.o
+  CHECK   drivers/staging/wfx/bus_sdio.c
+  LD [M]  drivers/staging/wfx/wfx.o
+  AR      drivers/staging/built-in.a
+  MODPOST drivers/staging/Module.symvers
+  CC [M]  drivers/staging/axis-fifo/axis-fifo.mod.o
+  LD [M]  drivers/staging/axis-fifo/axis-fifo.ko
+  CC [M]  drivers/staging/comedi/comedi.mod.o
+  LD [M]  drivers/staging/comedi/comedi.ko
+  CC [M]  drivers/staging/comedi/comedi_pci.mod.o
+  LD [M]  drivers/staging/comedi/comedi_pci.ko
+  CC [M]  drivers/staging/comedi/comedi_pcmcia.mod.o
+  LD [M]  drivers/staging/comedi/comedi_pcmcia.ko
+  CC [M]  drivers/staging/comedi/comedi_usb.mod.o
+  LD [M]  drivers/staging/comedi/comedi_usb.ko
+  CC [M]  drivers/staging/comedi/drivers/8255.mod.o
+  LD [M]  drivers/staging/comedi/drivers/8255.ko
+  CC [M]  drivers/staging/comedi/drivers/8255_pci.mod.o
+  LD [M]  drivers/staging/comedi/drivers/8255_pci.ko
+  CC [M]  drivers/staging/comedi/drivers/addi_apci_1032.mod.o
+  LD [M]  drivers/staging/comedi/drivers/addi_apci_1032.ko
+  CC [M]  drivers/staging/comedi/drivers/addi_apci_1500.mod.o
+  LD [M]  drivers/staging/comedi/drivers/addi_apci_1500.ko
+  CC [M]  drivers/staging/comedi/drivers/addi_apci_1516.mod.o
+  LD [M]  drivers/staging/comedi/drivers/addi_apci_1516.ko
+  CC [M]  drivers/staging/comedi/drivers/addi_apci_1564.mod.o
+  LD [M]  drivers/staging/comedi/drivers/addi_apci_1564.ko
+  CC [M]  drivers/staging/comedi/drivers/addi_apci_16xx.mod.o
+  LD [M]  drivers/staging/comedi/drivers/addi_apci_16xx.ko
+  CC [M]  drivers/staging/comedi/drivers/addi_apci_2032.mod.o
+  LD [M]  drivers/staging/comedi/drivers/addi_apci_2032.ko
+  CC [M]  drivers/staging/comedi/drivers/addi_apci_2200.mod.o
+  LD [M]  drivers/staging/comedi/drivers/addi_apci_2200.ko
+  CC [M]  drivers/staging/comedi/drivers/addi_apci_3120.mod.o
+  LD [M]  drivers/staging/comedi/drivers/addi_apci_3120.ko
+  CC [M]  drivers/staging/comedi/drivers/addi_apci_3501.mod.o
+  LD [M]  drivers/staging/comedi/drivers/addi_apci_3501.ko
+  CC [M]  drivers/staging/comedi/drivers/addi_apci_3xxx.mod.o
+  LD [M]  drivers/staging/comedi/drivers/addi_apci_3xxx.ko
+  CC [M]  drivers/staging/comedi/drivers/addi_watchdog.mod.o
+  LD [M]  drivers/staging/comedi/drivers/addi_watchdog.ko
+  CC [M]  drivers/staging/comedi/drivers/adl_pci6208.mod.o
+  LD [M]  drivers/staging/comedi/drivers/adl_pci6208.ko
+  CC [M]  drivers/staging/comedi/drivers/adl_pci7x3x.mod.o
+  LD [M]  drivers/staging/comedi/drivers/adl_pci7x3x.ko
+  CC [M]  drivers/staging/comedi/drivers/adl_pci8164.mod.o
+  LD [M]  drivers/staging/comedi/drivers/adl_pci8164.ko
+  CC [M]  drivers/staging/comedi/drivers/adl_pci9111.mod.o
+  LD [M]  drivers/staging/comedi/drivers/adl_pci9111.ko
+  CC [M]  drivers/staging/comedi/drivers/adl_pci9118.mod.o
+  LD [M]  drivers/staging/comedi/drivers/adl_pci9118.ko
+  CC [M]  drivers/staging/comedi/drivers/adq12b.mod.o
+  LD [M]  drivers/staging/comedi/drivers/adq12b.ko
+  CC [M]  drivers/staging/comedi/drivers/adv_pci1710.mod.o
+  LD [M]  drivers/staging/comedi/drivers/adv_pci1710.ko
+  CC [M]  drivers/staging/comedi/drivers/adv_pci1720.mod.o
+  LD [M]  drivers/staging/comedi/drivers/adv_pci1720.ko
+  CC [M]  drivers/staging/comedi/drivers/adv_pci1723.mod.o
+  LD [M]  drivers/staging/comedi/drivers/adv_pci1723.ko
+  CC [M]  drivers/staging/comedi/drivers/adv_pci1724.mod.o
+  LD [M]  drivers/staging/comedi/drivers/adv_pci1724.ko
+  CC [M]  drivers/staging/comedi/drivers/adv_pci1760.mod.o
+  LD [M]  drivers/staging/comedi/drivers/adv_pci1760.ko
+  CC [M]  drivers/staging/comedi/drivers/adv_pci_dio.mod.o
+  LD [M]  drivers/staging/comedi/drivers/adv_pci_dio.ko
+  CC [M]  drivers/staging/comedi/drivers/aio_aio12_8.mod.o
+  LD [M]  drivers/staging/comedi/drivers/aio_aio12_8.ko
+  CC [M]  drivers/staging/comedi/drivers/aio_iiro_16.mod.o
+  LD [M]  drivers/staging/comedi/drivers/aio_iiro_16.ko
+  CC [M]  drivers/staging/comedi/drivers/amplc_dio200.mod.o
+  LD [M]  drivers/staging/comedi/drivers/amplc_dio200.ko
+  CC [M]  drivers/staging/comedi/drivers/amplc_dio200_common.mod.o
+  LD [M]  drivers/staging/comedi/drivers/amplc_dio200_common.ko
+  CC [M]  drivers/staging/comedi/drivers/amplc_dio200_pci.mod.o
+  LD [M]  drivers/staging/comedi/drivers/amplc_dio200_pci.ko
+  CC [M]  drivers/staging/comedi/drivers/amplc_pc236.mod.o
+  LD [M]  drivers/staging/comedi/drivers/amplc_pc236.ko
+  CC [M]  drivers/staging/comedi/drivers/amplc_pc236_common.mod.o
+  LD [M]  drivers/staging/comedi/drivers/amplc_pc236_common.ko
+  CC [M]  drivers/staging/comedi/drivers/amplc_pc263.mod.o
+  LD [M]  drivers/staging/comedi/drivers/amplc_pc263.ko
+  CC [M]  drivers/staging/comedi/drivers/amplc_pci224.mod.o
+  LD [M]  drivers/staging/comedi/drivers/amplc_pci224.ko
+  CC [M]  drivers/staging/comedi/drivers/amplc_pci230.mod.o
+  LD [M]  drivers/staging/comedi/drivers/amplc_pci230.ko
+  CC [M]  drivers/staging/comedi/drivers/amplc_pci236.mod.o
+  LD [M]  drivers/staging/comedi/drivers/amplc_pci236.ko
+  CC [M]  drivers/staging/comedi/drivers/amplc_pci263.mod.o
+  LD [M]  drivers/staging/comedi/drivers/amplc_pci263.ko
+  CC [M]  drivers/staging/comedi/drivers/c6xdigio.mod.o
+  LD [M]  drivers/staging/comedi/drivers/c6xdigio.ko
+  CC [M]  drivers/staging/comedi/drivers/cb_das16_cs.mod.o
+  LD [M]  drivers/staging/comedi/drivers/cb_das16_cs.ko
+  CC [M]  drivers/staging/comedi/drivers/cb_pcidas.mod.o
+  LD [M]  drivers/staging/comedi/drivers/cb_pcidas.ko
+  CC [M]  drivers/staging/comedi/drivers/cb_pcidas64.mod.o
+  LD [M]  drivers/staging/comedi/drivers/cb_pcidas64.ko
+  CC [M]  drivers/staging/comedi/drivers/cb_pcidda.mod.o
+  LD [M]  drivers/staging/comedi/drivers/cb_pcidda.ko
+  CC [M]  drivers/staging/comedi/drivers/cb_pcimdas.mod.o
+  LD [M]  drivers/staging/comedi/drivers/cb_pcimdas.ko
+  CC [M]  drivers/staging/comedi/drivers/cb_pcimdda.mod.o
+  LD [M]  drivers/staging/comedi/drivers/cb_pcimdda.ko
+  CC [M]  drivers/staging/comedi/drivers/comedi_8254.mod.o
+  LD [M]  drivers/staging/comedi/drivers/comedi_8254.ko
+  CC [M]  drivers/staging/comedi/drivers/comedi_8255.mod.o
+  LD [M]  drivers/staging/comedi/drivers/comedi_8255.ko
+  CC [M]  drivers/staging/comedi/drivers/comedi_bond.mod.o
+  LD [M]  drivers/staging/comedi/drivers/comedi_bond.ko
+  CC [M]  drivers/staging/comedi/drivers/comedi_isadma.mod.o
+  LD [M]  drivers/staging/comedi/drivers/comedi_isadma.ko
+  CC [M]  drivers/staging/comedi/drivers/comedi_parport.mod.o
+  LD [M]  drivers/staging/comedi/drivers/comedi_parport.ko
+  CC [M]  drivers/staging/comedi/drivers/comedi_test.mod.o
+  LD [M]  drivers/staging/comedi/drivers/comedi_test.ko
+  CC [M]  drivers/staging/comedi/drivers/contec_pci_dio.mod.o
+  LD [M]  drivers/staging/comedi/drivers/contec_pci_dio.ko
+  CC [M]  drivers/staging/comedi/drivers/dac02.mod.o
+  LD [M]  drivers/staging/comedi/drivers/dac02.ko
+  CC [M]  drivers/staging/comedi/drivers/daqboard2000.mod.o
+  LD [M]  drivers/staging/comedi/drivers/daqboard2000.ko
+  CC [M]  drivers/staging/comedi/drivers/das08.mod.o
+  LD [M]  drivers/staging/comedi/drivers/das08.ko
+  CC [M]  drivers/staging/comedi/drivers/das08_cs.mod.o
+  LD [M]  drivers/staging/comedi/drivers/das08_cs.ko
+  CC [M]  drivers/staging/comedi/drivers/das08_isa.mod.o
+  LD [M]  drivers/staging/comedi/drivers/das08_isa.ko
+  CC [M]  drivers/staging/comedi/drivers/das08_pci.mod.o
+  LD [M]  drivers/staging/comedi/drivers/das08_pci.ko
+  CC [M]  drivers/staging/comedi/drivers/das16.mod.o
+  LD [M]  drivers/staging/comedi/drivers/das16.ko
+  CC [M]  drivers/staging/comedi/drivers/das16m1.mod.o
+  LD [M]  drivers/staging/comedi/drivers/das16m1.ko
+  CC [M]  drivers/staging/comedi/drivers/das1800.mod.o
+  LD [M]  drivers/staging/comedi/drivers/das1800.ko
+  CC [M]  drivers/staging/comedi/drivers/das6402.mod.o
+  LD [M]  drivers/staging/comedi/drivers/das6402.ko
+  CC [M]  drivers/staging/comedi/drivers/das800.mod.o
+  LD [M]  drivers/staging/comedi/drivers/das800.ko
+  CC [M]  drivers/staging/comedi/drivers/dmm32at.mod.o
+  LD [M]  drivers/staging/comedi/drivers/dmm32at.ko
+  CC [M]  drivers/staging/comedi/drivers/dt2801.mod.o
+  LD [M]  drivers/staging/comedi/drivers/dt2801.ko
+  CC [M]  drivers/staging/comedi/drivers/dt2811.mod.o
+  LD [M]  drivers/staging/comedi/drivers/dt2811.ko
+  CC [M]  drivers/staging/comedi/drivers/dt2814.mod.o
+  LD [M]  drivers/staging/comedi/drivers/dt2814.ko
+  CC [M]  drivers/staging/comedi/drivers/dt2815.mod.o
+  LD [M]  drivers/staging/comedi/drivers/dt2815.ko
+  CC [M]  drivers/staging/comedi/drivers/dt2817.mod.o
+  LD [M]  drivers/staging/comedi/drivers/dt2817.ko
+  CC [M]  drivers/staging/comedi/drivers/dt282x.mod.o
+  LD [M]  drivers/staging/comedi/drivers/dt282x.ko
+  CC [M]  drivers/staging/comedi/drivers/dt3000.mod.o
+  LD [M]  drivers/staging/comedi/drivers/dt3000.ko
+  CC [M]  drivers/staging/comedi/drivers/dt9812.mod.o
+  LD [M]  drivers/staging/comedi/drivers/dt9812.ko
+  CC [M]  drivers/staging/comedi/drivers/dyna_pci10xx.mod.o
+  LD [M]  drivers/staging/comedi/drivers/dyna_pci10xx.ko
+  CC [M]  drivers/staging/comedi/drivers/fl512.mod.o
+  LD [M]  drivers/staging/comedi/drivers/fl512.ko
+  CC [M]  drivers/staging/comedi/drivers/gsc_hpdi.mod.o
+  LD [M]  drivers/staging/comedi/drivers/gsc_hpdi.ko
+  CC [M]  drivers/staging/comedi/drivers/icp_multi.mod.o
+  LD [M]  drivers/staging/comedi/drivers/icp_multi.ko
+  CC [M]  drivers/staging/comedi/drivers/ii_pci20kc.mod.o
+  LD [M]  drivers/staging/comedi/drivers/ii_pci20kc.ko
+  CC [M]  drivers/staging/comedi/drivers/jr3_pci.mod.o
+  LD [M]  drivers/staging/comedi/drivers/jr3_pci.ko
+  CC [M]  drivers/staging/comedi/drivers/ke_counter.mod.o
+  LD [M]  drivers/staging/comedi/drivers/ke_counter.ko
+  CC [M]  drivers/staging/comedi/drivers/me4000.mod.o
+  LD [M]  drivers/staging/comedi/drivers/me4000.ko
+  CC [M]  drivers/staging/comedi/drivers/me_daq.mod.o
+  LD [M]  drivers/staging/comedi/drivers/me_daq.ko
+  CC [M]  drivers/staging/comedi/drivers/mf6x4.mod.o
+  LD [M]  drivers/staging/comedi/drivers/mf6x4.ko
+  CC [M]  drivers/staging/comedi/drivers/mite.mod.o
+  LD [M]  drivers/staging/comedi/drivers/mite.ko
+  CC [M]  drivers/staging/comedi/drivers/mpc624.mod.o
+  LD [M]  drivers/staging/comedi/drivers/mpc624.ko
+  CC [M]  drivers/staging/comedi/drivers/multiq3.mod.o
+  LD [M]  drivers/staging/comedi/drivers/multiq3.ko
+  CC [M]  drivers/staging/comedi/drivers/ni_6527.mod.o
+  LD [M]  drivers/staging/comedi/drivers/ni_6527.ko
+  CC [M]  drivers/staging/comedi/drivers/ni_65xx.mod.o
+  LD [M]  drivers/staging/comedi/drivers/ni_65xx.ko
+  CC [M]  drivers/staging/comedi/drivers/ni_660x.mod.o
+  LD [M]  drivers/staging/comedi/drivers/ni_660x.ko
+  CC [M]  drivers/staging/comedi/drivers/ni_670x.mod.o
+  LD [M]  drivers/staging/comedi/drivers/ni_670x.ko
+  CC [M]  drivers/staging/comedi/drivers/ni_at_a2150.mod.o
+  LD [M]  drivers/staging/comedi/drivers/ni_at_a2150.ko
+  CC [M]  drivers/staging/comedi/drivers/ni_at_ao.mod.o
+  LD [M]  drivers/staging/comedi/drivers/ni_at_ao.ko
+  CC [M]  drivers/staging/comedi/drivers/ni_atmio.mod.o
+  LD [M]  drivers/staging/comedi/drivers/ni_atmio.ko
+  CC [M]  drivers/staging/comedi/drivers/ni_atmio16d.mod.o
+  LD [M]  drivers/staging/comedi/drivers/ni_atmio16d.ko
+  CC [M]  drivers/staging/comedi/drivers/ni_daq_700.mod.o
+  LD [M]  drivers/staging/comedi/drivers/ni_daq_700.ko
+  CC [M]  drivers/staging/comedi/drivers/ni_daq_dio24.mod.o
+  LD [M]  drivers/staging/comedi/drivers/ni_daq_dio24.ko
+  CC [M]  drivers/staging/comedi/drivers/ni_labpc.mod.o
+  LD [M]  drivers/staging/comedi/drivers/ni_labpc.ko
+  CC [M]  drivers/staging/comedi/drivers/ni_labpc_common.mod.o
+  LD [M]  drivers/staging/comedi/drivers/ni_labpc_common.ko
+  CC [M]  drivers/staging/comedi/drivers/ni_labpc_cs.mod.o
+  LD [M]  drivers/staging/comedi/drivers/ni_labpc_cs.ko
+  CC [M]  drivers/staging/comedi/drivers/ni_labpc_isadma.mod.o
+  LD [M]  drivers/staging/comedi/drivers/ni_labpc_isadma.ko
+  CC [M]  drivers/staging/comedi/drivers/ni_labpc_pci.mod.o
+  LD [M]  drivers/staging/comedi/drivers/ni_labpc_pci.ko
+  CC [M]  drivers/staging/comedi/drivers/ni_mio_cs.mod.o
+  LD [M]  drivers/staging/comedi/drivers/ni_mio_cs.ko
+  CC [M]  drivers/staging/comedi/drivers/ni_pcidio.mod.o
+  LD [M]  drivers/staging/comedi/drivers/ni_pcidio.ko
+  CC [M]  drivers/staging/comedi/drivers/ni_pcimio.mod.o
+  LD [M]  drivers/staging/comedi/drivers/ni_pcimio.ko
+  CC [M]  drivers/staging/comedi/drivers/ni_routing.mod.o
+  LD [M]  drivers/staging/comedi/drivers/ni_routing.ko
+  CC [M]  drivers/staging/comedi/drivers/ni_tio.mod.o
+  LD [M]  drivers/staging/comedi/drivers/ni_tio.ko
+  CC [M]  drivers/staging/comedi/drivers/ni_tiocmd.mod.o
+  LD [M]  drivers/staging/comedi/drivers/ni_tiocmd.ko
+  CC [M]  drivers/staging/comedi/drivers/ni_usb6501.mod.o
+  LD [M]  drivers/staging/comedi/drivers/ni_usb6501.ko
+  CC [M]  drivers/staging/comedi/drivers/pcl711.mod.o
+  LD [M]  drivers/staging/comedi/drivers/pcl711.ko
+  CC [M]  drivers/staging/comedi/drivers/pcl724.mod.o
+  LD [M]  drivers/staging/comedi/drivers/pcl724.ko
+  CC [M]  drivers/staging/comedi/drivers/pcl726.mod.o
+  LD [M]  drivers/staging/comedi/drivers/pcl726.ko
+  CC [M]  drivers/staging/comedi/drivers/pcl730.mod.o
+  LD [M]  drivers/staging/comedi/drivers/pcl730.ko
+  CC [M]  drivers/staging/comedi/drivers/pcl812.mod.o
+  LD [M]  drivers/staging/comedi/drivers/pcl812.ko
+  CC [M]  drivers/staging/comedi/drivers/pcl816.mod.o
+  LD [M]  drivers/staging/comedi/drivers/pcl816.ko
+  CC [M]  drivers/staging/comedi/drivers/pcl818.mod.o
+  LD [M]  drivers/staging/comedi/drivers/pcl818.ko
+  CC [M]  drivers/staging/comedi/drivers/pcm3724.mod.o
+  LD [M]  drivers/staging/comedi/drivers/pcm3724.ko
+  CC [M]  drivers/staging/comedi/drivers/pcmad.mod.o
+  LD [M]  drivers/staging/comedi/drivers/pcmad.ko
+  CC [M]  drivers/staging/comedi/drivers/pcmda12.mod.o
+  LD [M]  drivers/staging/comedi/drivers/pcmda12.ko
+  CC [M]  drivers/staging/comedi/drivers/pcmmio.mod.o
+  LD [M]  drivers/staging/comedi/drivers/pcmmio.ko
+  CC [M]  drivers/staging/comedi/drivers/pcmuio.mod.o
+  LD [M]  drivers/staging/comedi/drivers/pcmuio.ko
+  CC [M]  drivers/staging/comedi/drivers/quatech_daqp_cs.mod.o
+  LD [M]  drivers/staging/comedi/drivers/quatech_daqp_cs.ko
+  CC [M]  drivers/staging/comedi/drivers/rtd520.mod.o
+  LD [M]  drivers/staging/comedi/drivers/rtd520.ko
+  CC [M]  drivers/staging/comedi/drivers/rti800.mod.o
+  LD [M]  drivers/staging/comedi/drivers/rti800.ko
+  CC [M]  drivers/staging/comedi/drivers/rti802.mod.o
+  LD [M]  drivers/staging/comedi/drivers/rti802.ko
+  CC [M]  drivers/staging/comedi/drivers/s526.mod.o
+  LD [M]  drivers/staging/comedi/drivers/s526.ko
+  CC [M]  drivers/staging/comedi/drivers/s626.mod.o
+  LD [M]  drivers/staging/comedi/drivers/s626.ko
+  CC [M]  drivers/staging/comedi/drivers/ssv_dnp.mod.o
+  LD [M]  drivers/staging/comedi/drivers/ssv_dnp.ko
+  CC [M]  drivers/staging/comedi/drivers/usbdux.mod.o
+  LD [M]  drivers/staging/comedi/drivers/usbdux.ko
+  CC [M]  drivers/staging/comedi/drivers/usbduxfast.mod.o
+  LD [M]  drivers/staging/comedi/drivers/usbduxfast.ko
+  CC [M]  drivers/staging/comedi/drivers/usbduxsigma.mod.o
+  LD [M]  drivers/staging/comedi/drivers/usbduxsigma.ko
+  CC [M]  drivers/staging/comedi/drivers/vmk80xx.mod.o
+  LD [M]  drivers/staging/comedi/drivers/vmk80xx.ko
+  CC [M]  drivers/staging/comedi/kcomedilib/kcomedilib.mod.o
+  LD [M]  drivers/staging/comedi/kcomedilib/kcomedilib.ko
+  CC [M]  drivers/staging/fbtft/fb_agm1264k-fl.mod.o
+  LD [M]  drivers/staging/fbtft/fb_agm1264k-fl.ko
+  CC [M]  drivers/staging/fbtft/fb_bd663474.mod.o
+  LD [M]  drivers/staging/fbtft/fb_bd663474.ko
+  CC [M]  drivers/staging/fbtft/fb_hx8340bn.mod.o
+  LD [M]  drivers/staging/fbtft/fb_hx8340bn.ko
+  CC [M]  drivers/staging/fbtft/fb_hx8347d.mod.o
+  LD [M]  drivers/staging/fbtft/fb_hx8347d.ko
+  CC [M]  drivers/staging/fbtft/fb_hx8353d.mod.o
+  LD [M]  drivers/staging/fbtft/fb_hx8353d.ko
+  CC [M]  drivers/staging/fbtft/fb_hx8357d.mod.o
+  LD [M]  drivers/staging/fbtft/fb_hx8357d.ko
+  CC [M]  drivers/staging/fbtft/fb_ili9163.mod.o
+  LD [M]  drivers/staging/fbtft/fb_ili9163.ko
+  CC [M]  drivers/staging/fbtft/fb_ili9320.mod.o
+  LD [M]  drivers/staging/fbtft/fb_ili9320.ko
+  CC [M]  drivers/staging/fbtft/fb_ili9325.mod.o
+  LD [M]  drivers/staging/fbtft/fb_ili9325.ko
+  CC [M]  drivers/staging/fbtft/fb_ili9340.mod.o
+  LD [M]  drivers/staging/fbtft/fb_ili9340.ko
+  CC [M]  drivers/staging/fbtft/fb_ili9341.mod.o
+  LD [M]  drivers/staging/fbtft/fb_ili9341.ko
+  CC [M]  drivers/staging/fbtft/fb_ili9481.mod.o
+  LD [M]  drivers/staging/fbtft/fb_ili9481.ko
+  CC [M]  drivers/staging/fbtft/fb_ili9486.mod.o
+  LD [M]  drivers/staging/fbtft/fb_ili9486.ko
+  CC [M]  drivers/staging/fbtft/fb_pcd8544.mod.o
+  LD [M]  drivers/staging/fbtft/fb_pcd8544.ko
+  CC [M]  drivers/staging/fbtft/fb_ra8875.mod.o
+  LD [M]  drivers/staging/fbtft/fb_ra8875.ko
+  CC [M]  drivers/staging/fbtft/fb_s6d02a1.mod.o
+  LD [M]  drivers/staging/fbtft/fb_s6d02a1.ko
+  CC [M]  drivers/staging/fbtft/fb_s6d1121.mod.o
+  LD [M]  drivers/staging/fbtft/fb_s6d1121.ko
+  CC [M]  drivers/staging/fbtft/fb_seps525.mod.o
+  LD [M]  drivers/staging/fbtft/fb_seps525.ko
+  CC [M]  drivers/staging/fbtft/fb_sh1106.mod.o
+  LD [M]  drivers/staging/fbtft/fb_sh1106.ko
+  CC [M]  drivers/staging/fbtft/fb_ssd1289.mod.o
+  LD [M]  drivers/staging/fbtft/fb_ssd1289.ko
+  CC [M]  drivers/staging/fbtft/fb_ssd1305.mod.o
+  LD [M]  drivers/staging/fbtft/fb_ssd1305.ko
+  CC [M]  drivers/staging/fbtft/fb_ssd1306.mod.o
+  LD [M]  drivers/staging/fbtft/fb_ssd1306.ko
+  CC [M]  drivers/staging/fbtft/fb_ssd1325.mod.o
+  LD [M]  drivers/staging/fbtft/fb_ssd1325.ko
+  CC [M]  drivers/staging/fbtft/fb_ssd1331.mod.o
+  LD [M]  drivers/staging/fbtft/fb_ssd1331.ko
+  CC [M]  drivers/staging/fbtft/fb_ssd1351.mod.o
+  LD [M]  drivers/staging/fbtft/fb_ssd1351.ko
+  CC [M]  drivers/staging/fbtft/fb_st7735r.mod.o
+  LD [M]  drivers/staging/fbtft/fb_st7735r.ko
+  CC [M]  drivers/staging/fbtft/fb_st7789v.mod.o
+  LD [M]  drivers/staging/fbtft/fb_st7789v.ko
+  CC [M]  drivers/staging/fbtft/fb_tinylcd.mod.o
+  LD [M]  drivers/staging/fbtft/fb_tinylcd.ko
+  CC [M]  drivers/staging/fbtft/fb_tls8204.mod.o
+  LD [M]  drivers/staging/fbtft/fb_tls8204.ko
+  CC [M]  drivers/staging/fbtft/fb_uc1611.mod.o
+  LD [M]  drivers/staging/fbtft/fb_uc1611.ko
+  CC [M]  drivers/staging/fbtft/fb_uc1701.mod.o
+  LD [M]  drivers/staging/fbtft/fb_uc1701.ko
+  CC [M]  drivers/staging/fbtft/fb_upd161704.mod.o
+  LD [M]  drivers/staging/fbtft/fb_upd161704.ko
+  CC [M]  drivers/staging/fbtft/fb_watterott.mod.o
+  LD [M]  drivers/staging/fbtft/fb_watterott.ko
+  CC [M]  drivers/staging/fbtft/fbtft.mod.o
+  LD [M]  drivers/staging/fbtft/fbtft.ko
+  CC [M]  drivers/staging/fieldbus/anybuss/anybuss_core.mod.o
+  LD [M]  drivers/staging/fieldbus/anybuss/anybuss_core.ko
+  CC [M]  drivers/staging/fieldbus/anybuss/arcx-anybus.mod.o
+  LD [M]  drivers/staging/fieldbus/anybuss/arcx-anybus.ko
+  CC [M]  drivers/staging/fieldbus/anybuss/hms-profinet.mod.o
+  LD [M]  drivers/staging/fieldbus/anybuss/hms-profinet.ko
+  CC [M]  drivers/staging/fieldbus/fieldbus_dev.mod.o
+  LD [M]  drivers/staging/fieldbus/fieldbus_dev.ko
+  CC [M]  drivers/staging/fsl-dpaa2/ethsw/dpaa2-ethsw.mod.o
+  LD [M]  drivers/staging/fsl-dpaa2/ethsw/dpaa2-ethsw.ko
+  CC [M]  drivers/staging/fwserial/firewire-serial.mod.o
+  LD [M]  drivers/staging/fwserial/firewire-serial.ko
+  CC [M]  drivers/staging/gasket/apex.mod.o
+  LD [M]  drivers/staging/gasket/apex.ko
+  CC [M]  drivers/staging/gasket/gasket.mod.o
+  LD [M]  drivers/staging/gasket/gasket.ko
+  CC [M]  drivers/staging/gdm724x/gdmtty.mod.o
+  LD [M]  drivers/staging/gdm724x/gdmtty.ko
+  CC [M]  drivers/staging/gdm724x/gdmulte.mod.o
+  LD [M]  drivers/staging/gdm724x/gdmulte.ko
+  CC [M]  drivers/staging/goldfish/goldfish_audio.mod.o
+  LD [M]  drivers/staging/goldfish/goldfish_audio.ko
+  CC [M]  drivers/staging/greybus/gb-arche.mod.o
+  LD [M]  drivers/staging/greybus/gb-arche.ko
+  CC [M]  drivers/staging/greybus/gb-audio-apbridgea.mod.o
+  LD [M]  drivers/staging/greybus/gb-audio-apbridgea.ko
+  CC [M]  drivers/staging/greybus/gb-audio-gb.mod.o
+  LD [M]  drivers/staging/greybus/gb-audio-gb.ko
+  CC [M]  drivers/staging/greybus/gb-audio-manager.mod.o
+  LD [M]  drivers/staging/greybus/gb-audio-manager.ko
+  CC [M]  drivers/staging/greybus/gb-bootrom.mod.o
+  LD [M]  drivers/staging/greybus/gb-bootrom.ko
+  CC [M]  drivers/staging/greybus/gb-firmware.mod.o
+  LD [M]  drivers/staging/greybus/gb-firmware.ko
+  CC [M]  drivers/staging/greybus/gb-gbphy.mod.o
+  LD [M]  drivers/staging/greybus/gb-gbphy.ko
+  CC [M]  drivers/staging/greybus/gb-gpio.mod.o
+  LD [M]  drivers/staging/greybus/gb-gpio.ko
+  CC [M]  drivers/staging/greybus/gb-hid.mod.o
+  LD [M]  drivers/staging/greybus/gb-hid.ko
+  CC [M]  drivers/staging/greybus/gb-i2c.mod.o
+  LD [M]  drivers/staging/greybus/gb-i2c.ko
+  CC [M]  drivers/staging/greybus/gb-light.mod.o
+  LD [M]  drivers/staging/greybus/gb-light.ko
+  CC [M]  drivers/staging/greybus/gb-log.mod.o
+  LD [M]  drivers/staging/greybus/gb-log.ko
+  CC [M]  drivers/staging/greybus/gb-loopback.mod.o
+  LD [M]  drivers/staging/greybus/gb-loopback.ko
+  CC [M]  drivers/staging/greybus/gb-power-supply.mod.o
+  LD [M]  drivers/staging/greybus/gb-power-supply.ko
+  CC [M]  drivers/staging/greybus/gb-pwm.mod.o
+  LD [M]  drivers/staging/greybus/gb-pwm.ko
+  CC [M]  drivers/staging/greybus/gb-raw.mod.o
+  LD [M]  drivers/staging/greybus/gb-raw.ko
+  CC [M]  drivers/staging/greybus/gb-sdio.mod.o
+  LD [M]  drivers/staging/greybus/gb-sdio.ko
+  CC [M]  drivers/staging/greybus/gb-spi.mod.o
+  LD [M]  drivers/staging/greybus/gb-spi.ko
+  CC [M]  drivers/staging/greybus/gb-spilib.mod.o
+  LD [M]  drivers/staging/greybus/gb-spilib.ko
+  CC [M]  drivers/staging/greybus/gb-uart.mod.o
+  LD [M]  drivers/staging/greybus/gb-uart.ko
+  CC [M]  drivers/staging/greybus/gb-usb.mod.o
+  LD [M]  drivers/staging/greybus/gb-usb.ko
+  CC [M]  drivers/staging/greybus/gb-vibrator.mod.o
+  LD [M]  drivers/staging/greybus/gb-vibrator.ko
+  CC [M]  drivers/staging/gs_fpgaboot/gs_fpga.mod.o
+  LD [M]  drivers/staging/gs_fpgaboot/gs_fpga.ko
+  CC [M]  drivers/staging/iio/accel/adis16203.mod.o
+  LD [M]  drivers/staging/iio/accel/adis16203.ko
+  CC [M]  drivers/staging/iio/accel/adis16240.mod.o
+  LD [M]  drivers/staging/iio/accel/adis16240.ko
+  CC [M]  drivers/staging/iio/adc/ad7280a.mod.o
+  LD [M]  drivers/staging/iio/adc/ad7280a.ko
+  CC [M]  drivers/staging/iio/adc/ad7816.mod.o
+  LD [M]  drivers/staging/iio/adc/ad7816.ko
+  CC [M]  drivers/staging/iio/addac/adt7316-i2c.mod.o
+  LD [M]  drivers/staging/iio/addac/adt7316-i2c.ko
+  CC [M]  drivers/staging/iio/addac/adt7316-spi.mod.o
+  LD [M]  drivers/staging/iio/addac/adt7316-spi.ko
+  CC [M]  drivers/staging/iio/addac/adt7316.mod.o
+  LD [M]  drivers/staging/iio/addac/adt7316.ko
+  CC [M]  drivers/staging/iio/cdc/ad7150.mod.o
+  LD [M]  drivers/staging/iio/cdc/ad7150.ko
+  CC [M]  drivers/staging/iio/cdc/ad7746.mod.o
+  LD [M]  drivers/staging/iio/cdc/ad7746.ko
+  CC [M]  drivers/staging/iio/frequency/ad9832.mod.o
+  LD [M]  drivers/staging/iio/frequency/ad9832.ko
+  CC [M]  drivers/staging/iio/frequency/ad9834.mod.o
+  LD [M]  drivers/staging/iio/frequency/ad9834.ko
+  CC [M]  drivers/staging/iio/impedance-analyzer/ad5933.mod.o
+  LD [M]  drivers/staging/iio/impedance-analyzer/ad5933.ko
+  CC [M]  drivers/staging/iio/meter/ade7854-i2c.mod.o
+  LD [M]  drivers/staging/iio/meter/ade7854-i2c.ko
+  CC [M]  drivers/staging/iio/meter/ade7854-spi.mod.o
+  LD [M]  drivers/staging/iio/meter/ade7854-spi.ko
+  CC [M]  drivers/staging/iio/meter/ade7854.mod.o
+  LD [M]  drivers/staging/iio/meter/ade7854.ko
+  CC [M]  drivers/staging/iio/resolver/ad2s1210.mod.o
+  LD [M]  drivers/staging/iio/resolver/ad2s1210.ko
+  CC [M]  drivers/staging/kpc2000/kpc2000/kpc2000.mod.o
+  LD [M]  drivers/staging/kpc2000/kpc2000/kpc2000.ko
+  CC [M]  drivers/staging/kpc2000/kpc2000_i2c.mod.o
+  LD [M]  drivers/staging/kpc2000/kpc2000_i2c.ko
+  CC [M]  drivers/staging/kpc2000/kpc2000_spi.mod.o
+  LD [M]  drivers/staging/kpc2000/kpc2000_spi.ko
+  CC [M]  drivers/staging/kpc2000/kpc_dma/kpc_dma.mod.o
+  LD [M]  drivers/staging/kpc2000/kpc_dma/kpc_dma.ko
+  CC [M]  drivers/staging/ks7010/ks7010.mod.o
+  LD [M]  drivers/staging/ks7010/ks7010.ko
+  CC [M]  drivers/staging/media/allegro-dvt/allegro.mod.o
+  LD [M]  drivers/staging/media/allegro-dvt/allegro.ko
+  CC [M]  drivers/staging/media/atomisp/atomisp.mod.o
+  LD [M]  drivers/staging/media/atomisp/atomisp.ko
+  CC [M]  drivers/staging/media/atomisp/i2c/atomisp-gc0310.mod.o
+  LD [M]  drivers/staging/media/atomisp/i2c/atomisp-gc0310.ko
+  CC [M]  drivers/staging/media/atomisp/i2c/atomisp-gc2235.mod.o
+  LD [M]  drivers/staging/media/atomisp/i2c/atomisp-gc2235.ko
+  CC [M]  drivers/staging/media/atomisp/i2c/atomisp-libmsrlisthelper.mod.o
+  LD [M]  drivers/staging/media/atomisp/i2c/atomisp-libmsrlisthelper.ko
+  CC [M]  drivers/staging/media/atomisp/i2c/atomisp-lm3554.mod.o
+  LD [M]  drivers/staging/media/atomisp/i2c/atomisp-lm3554.ko
+  CC [M]  drivers/staging/media/atomisp/i2c/atomisp-mt9m114.mod.o
+  LD [M]  drivers/staging/media/atomisp/i2c/atomisp-mt9m114.ko
+  CC [M]  drivers/staging/media/atomisp/i2c/atomisp-ov2680.mod.o
+  LD [M]  drivers/staging/media/atomisp/i2c/atomisp-ov2680.ko
+  CC [M]  drivers/staging/media/atomisp/i2c/atomisp-ov2722.mod.o
+  LD [M]  drivers/staging/media/atomisp/i2c/atomisp-ov2722.ko
+  CC [M]  drivers/staging/media/atomisp/i2c/ov5693/atomisp-ov5693.mod.o
+  LD [M]  drivers/staging/media/atomisp/i2c/ov5693/atomisp-ov5693.ko
+  CC [M]  drivers/staging/media/atomisp/pci/atomisp_gmin_platform.mod.o
+  LD [M]  drivers/staging/media/atomisp/pci/atomisp_gmin_platform.ko
+  CC [M]  drivers/staging/media/hantro/hantro-vpu.mod.o
+  LD [M]  drivers/staging/media/hantro/hantro-vpu.ko
+  CC [M]  drivers/staging/media/imx/imx-media-common.mod.o
+  LD [M]  drivers/staging/media/imx/imx-media-common.ko
+  CC [M]  drivers/staging/media/imx/imx6-media-csi.mod.o
+  LD [M]  drivers/staging/media/imx/imx6-media-csi.ko
+  CC [M]  drivers/staging/media/imx/imx6-media.mod.o
+  LD [M]  drivers/staging/media/imx/imx6-media.ko
+  CC [M]  drivers/staging/media/imx/imx6-mipi-csi2.mod.o
+  LD [M]  drivers/staging/media/imx/imx6-mipi-csi2.ko
+  CC [M]  drivers/staging/media/imx/imx7-media-csi.mod.o
+  LD [M]  drivers/staging/media/imx/imx7-media-csi.ko
+  CC [M]  drivers/staging/media/imx/imx7-mipi-csis.mod.o
+  LD [M]  drivers/staging/media/imx/imx7-mipi-csis.ko
+  CC [M]  drivers/staging/media/ipu3/ipu3-imgu.mod.o
+  LD [M]  drivers/staging/media/ipu3/ipu3-imgu.ko
+  CC [M]  drivers/staging/media/meson/vdec/meson-vdec.mod.o
+  LD [M]  drivers/staging/media/meson/vdec/meson-vdec.ko
+  CC [M]  drivers/staging/media/omap4iss/omap4-iss.mod.o
+  LD [M]  drivers/staging/media/omap4iss/omap4-iss.ko
+  CC [M]  drivers/staging/media/phy-rockchip-dphy-rx0/phy-rockchip-dphy-rx0.mod.o
+  LD [M]  drivers/staging/media/phy-rockchip-dphy-rx0/phy-rockchip-dphy-rx0.ko
+  CC [M]  drivers/staging/media/rkisp1/rockchip-isp1.mod.o
+  LD [M]  drivers/staging/media/rkisp1/rockchip-isp1.ko
+  CC [M]  drivers/staging/media/rkvdec/rockchip-vdec.mod.o
+  LD [M]  drivers/staging/media/rkvdec/rockchip-vdec.ko
+  CC [M]  drivers/staging/media/sunxi/cedrus/sunxi-cedrus.mod.o
+  LD [M]  drivers/staging/media/sunxi/cedrus/sunxi-cedrus.ko
+  CC [M]  drivers/staging/media/tegra-vde/tegra-vde.mod.o
+  LD [M]  drivers/staging/media/tegra-vde/tegra-vde.ko
+  CC [M]  drivers/staging/media/usbvision/usbvision.mod.o
+  LD [M]  drivers/staging/media/usbvision/usbvision.ko
+  CC [M]  drivers/staging/most/cdev/most_cdev.mod.o
+  LD [M]  drivers/staging/most/cdev/most_cdev.ko
+  CC [M]  drivers/staging/most/dim2/most_dim2.mod.o
+  LD [M]  drivers/staging/most/dim2/most_dim2.ko
+  CC [M]  drivers/staging/most/i2c/most_i2c.mod.o
+  LD [M]  drivers/staging/most/i2c/most_i2c.ko
+  CC [M]  drivers/staging/most/net/most_net.mod.o
+  LD [M]  drivers/staging/most/net/most_net.ko
+  CC [M]  drivers/staging/most/sound/most_sound.mod.o
+  LD [M]  drivers/staging/most/sound/most_sound.ko
+  CC [M]  drivers/staging/most/usb/most_usb.mod.o
+  LD [M]  drivers/staging/most/usb/most_usb.ko
+  CC [M]  drivers/staging/most/video/most_video.mod.o
+  LD [M]  drivers/staging/most/video/most_video.ko
+  CC [M]  drivers/staging/octeon/octeon-ethernet.mod.o
+  LD [M]  drivers/staging/octeon/octeon-ethernet.ko
+  CC [M]  drivers/staging/pi433/pi433.mod.o
+  LD [M]  drivers/staging/pi433/pi433.ko
+  CC [M]  drivers/staging/qlge/qlge.mod.o
+  LD [M]  drivers/staging/qlge/qlge.ko
+  CC [M]  drivers/staging/rtl8188eu/r8188eu.mod.o
+  LD [M]  drivers/staging/rtl8188eu/r8188eu.ko
+  CC [M]  drivers/staging/rtl8192e/rtl8192e/r8192e_pci.mod.o
+  LD [M]  drivers/staging/rtl8192e/rtl8192e/r8192e_pci.ko
+  CC [M]  drivers/staging/rtl8192e/rtllib.mod.o
+  LD [M]  drivers/staging/rtl8192e/rtllib.ko
+  CC [M]  drivers/staging/rtl8192e/rtllib_crypt_ccmp.mod.o
+  LD [M]  drivers/staging/rtl8192e/rtllib_crypt_ccmp.ko
+  CC [M]  drivers/staging/rtl8192e/rtllib_crypt_tkip.mod.o
+  LD [M]  drivers/staging/rtl8192e/rtllib_crypt_tkip.ko
+  CC [M]  drivers/staging/rtl8192e/rtllib_crypt_wep.mod.o
+  LD [M]  drivers/staging/rtl8192e/rtllib_crypt_wep.ko
+  CC [M]  drivers/staging/rtl8192u/r8192u_usb.mod.o
+  LD [M]  drivers/staging/rtl8192u/r8192u_usb.ko
+  CC [M]  drivers/staging/rtl8712/r8712u.mod.o
+  LD [M]  drivers/staging/rtl8712/r8712u.ko
+  CC [M]  drivers/staging/rtl8723bs/r8723bs.mod.o
+  LD [M]  drivers/staging/rtl8723bs/r8723bs.ko
+  CC [M]  drivers/staging/rts5208/rts5208.mod.o
+  LD [M]  drivers/staging/rts5208/rts5208.ko
+  CC [M]  drivers/staging/sm750fb/sm750fb.mod.o
+  LD [M]  drivers/staging/sm750fb/sm750fb.ko
+  CC [M]  drivers/staging/speakup/speakup.mod.o
+  LD [M]  drivers/staging/speakup/speakup.ko
+  CC [M]  drivers/staging/speakup/speakup_acntpc.mod.o
+  LD [M]  drivers/staging/speakup/speakup_acntpc.ko
+  CC [M]  drivers/staging/speakup/speakup_acntsa.mod.o
+  LD [M]  drivers/staging/speakup/speakup_acntsa.ko
+  CC [M]  drivers/staging/speakup/speakup_apollo.mod.o
+  LD [M]  drivers/staging/speakup/speakup_apollo.ko
+  CC [M]  drivers/staging/speakup/speakup_audptr.mod.o
+  LD [M]  drivers/staging/speakup/speakup_audptr.ko
+  CC [M]  drivers/staging/speakup/speakup_bns.mod.o
+  LD [M]  drivers/staging/speakup/speakup_bns.ko
+  CC [M]  drivers/staging/speakup/speakup_decext.mod.o
+  LD [M]  drivers/staging/speakup/speakup_decext.ko
+  CC [M]  drivers/staging/speakup/speakup_decpc.mod.o
+  LD [M]  drivers/staging/speakup/speakup_decpc.ko
+  CC [M]  drivers/staging/speakup/speakup_dectlk.mod.o
+  LD [M]  drivers/staging/speakup/speakup_dectlk.ko
+  CC [M]  drivers/staging/speakup/speakup_dtlk.mod.o
+  LD [M]  drivers/staging/speakup/speakup_dtlk.ko
+  CC [M]  drivers/staging/speakup/speakup_dummy.mod.o
+  LD [M]  drivers/staging/speakup/speakup_dummy.ko
+  CC [M]  drivers/staging/speakup/speakup_keypc.mod.o
+  LD [M]  drivers/staging/speakup/speakup_keypc.ko
+  CC [M]  drivers/staging/speakup/speakup_ltlk.mod.o
+  LD [M]  drivers/staging/speakup/speakup_ltlk.ko
+  CC [M]  drivers/staging/speakup/speakup_soft.mod.o
+  LD [M]  drivers/staging/speakup/speakup_soft.ko
+  CC [M]  drivers/staging/speakup/speakup_spkout.mod.o
+  LD [M]  drivers/staging/speakup/speakup_spkout.ko
+  CC [M]  drivers/staging/speakup/speakup_txprt.mod.o
+  LD [M]  drivers/staging/speakup/speakup_txprt.ko
+  CC [M]  drivers/staging/unisys/visorhba/visorhba.mod.o
+  LD [M]  drivers/staging/unisys/visorhba/visorhba.ko
+  CC [M]  drivers/staging/unisys/visorinput/visorinput.mod.o
+  LD [M]  drivers/staging/unisys/visorinput/visorinput.ko
+  CC [M]  drivers/staging/unisys/visornic/visornic.mod.o
+  LD [M]  drivers/staging/unisys/visornic/visornic.ko
+  CC [M]  drivers/staging/vc04_services/bcm2835-audio/snd-bcm2835.mod.o
+  LD [M]  drivers/staging/vc04_services/bcm2835-audio/snd-bcm2835.ko
+  CC [M]  drivers/staging/vc04_services/bcm2835-camera/bcm2835-v4l2.mod.o
+  LD [M]  drivers/staging/vc04_services/bcm2835-camera/bcm2835-v4l2.ko
+  CC [M]  drivers/staging/vc04_services/vchiq-mmal/bcm2835-mmal-vchiq.mod.o
+  LD [M]  drivers/staging/vc04_services/vchiq-mmal/bcm2835-mmal-vchiq.ko
+  CC [M]  drivers/staging/vc04_services/vchiq.mod.o
+  LD [M]  drivers/staging/vc04_services/vchiq.ko
+  CC [M]  drivers/staging/vme/devices/vme_user.mod.o
+  LD [M]  drivers/staging/vme/devices/vme_user.ko
+  CC [M]  drivers/staging/vt6655/vt6655_stage.mod.o
+  LD [M]  drivers/staging/vt6655/vt6655_stage.ko
+  CC [M]  drivers/staging/vt6656/vt6656_stage.mod.o
+  LD [M]  drivers/staging/vt6656/vt6656_stage.ko
+  CC [M]  drivers/staging/wfx/wfx.mod.o
+  LD [M]  drivers/staging/wfx/wfx.ko
+  CC [M]  drivers/staging/wlan-ng/prism2_usb.mod.o
+  LD [M]  drivers/staging/wlan-ng/prism2_usb.ko

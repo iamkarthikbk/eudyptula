@@ -1,0 +1,131 @@
+$ make C=1 M=drivers/staging > ../cbridge/1507d/1/staging-Make-log
+drivers/staging/media/atomisp/pci/atomisp_cmd.c:683:25: warning: dereference of noderef expression
+drivers/staging/media/atomisp/pci/atomisp_compat_css20.c:76:10: warning: dereference of noderef expression
+drivers/staging/media/atomisp/pci/atomisp_compat_css20.c:86:10: warning: dereference of noderef expression
+drivers/staging/media/atomisp/pci/atomisp_compat_css20.c:96:10: warning: dereference of noderef expression
+drivers/staging/media/atomisp/pci/atomisp_compat_css20.c:107:16: warning: dereference of noderef expression
+drivers/staging/media/atomisp/pci/atomisp_compat_css20.c:119:16: warning: dereference of noderef expression
+drivers/staging/media/atomisp/pci/atomisp_compat_css20.c:131:16: warning: dereference of noderef expression
+drivers/staging/media/atomisp/pci/atomisp_compat_css20.c:145:18: warning: dereference of noderef expression
+drivers/staging/media/atomisp/pci/atomisp_compat_css20.c:157:30: warning: dereference of noderef expression
+drivers/staging/media/atomisp/pci/atomisp_compat_ioctl32.c:73:13: warning: incorrect type in assignment (different address spaces)
+drivers/staging/media/atomisp/pci/atomisp_compat_ioctl32.c:73:13:    expected void *__pu_val
+drivers/staging/media/atomisp/pci/atomisp_compat_ioctl32.c:73:13:    got void [noderef] __user *
+drivers/staging/media/atomisp/pci/atomisp_compat_ioctl32.c:247:13: warning: incorrect type in assignment (different address spaces)
+drivers/staging/media/atomisp/pci/atomisp_compat_ioctl32.c:247:13:    expected unsigned int [usertype] *__pu_val
+drivers/staging/media/atomisp/pci/atomisp_compat_ioctl32.c:247:13:    got void [noderef] __user *
+drivers/staging/media/atomisp/pci/atomisp_compat_ioctl32.c:248:13: warning: incorrect type in assignment (different address spaces)
+drivers/staging/media/atomisp/pci/atomisp_compat_ioctl32.c:248:13:    expected unsigned int [usertype] *__pu_val
+drivers/staging/media/atomisp/pci/atomisp_compat_ioctl32.c:248:13:    got void [noderef] __user *
+drivers/staging/media/atomisp/pci/atomisp_compat_ioctl32.c:249:13: warning: incorrect type in assignment (different address spaces)
+drivers/staging/media/atomisp/pci/atomisp_compat_ioctl32.c:249:13:    expected unsigned int [usertype] *__pu_val
+drivers/staging/media/atomisp/pci/atomisp_compat_ioctl32.c:249:13:    got void [noderef] __user *
+drivers/staging/media/atomisp/pci/atomisp_compat_ioctl32.c:250:13: warning: incorrect type in assignment (different address spaces)
+drivers/staging/media/atomisp/pci/atomisp_compat_ioctl32.c:250:13:    expected unsigned int [usertype] *__pu_val
+drivers/staging/media/atomisp/pci/atomisp_compat_ioctl32.c:250:13:    got void [noderef] __user *
+drivers/staging/media/atomisp/pci/atomisp_compat_ioctl32.c:282:30: warning: incorrect type in argument 2 (different address spaces)
+drivers/staging/media/atomisp/pci/atomisp_compat_ioctl32.c:282:30:    expected void const *from
+drivers/staging/media/atomisp/pci/atomisp_compat_ioctl32.c:282:30:    got struct atomisp_3a_statistics [noderef] __user *kp
+drivers/staging/media/atomisp/pci/atomisp_compat_ioctl32.c:308:13: warning: incorrect type in assignment (different address spaces)
+drivers/staging/media/atomisp/pci/atomisp_compat_ioctl32.c:308:13:    expected unsigned int [usertype] *__pu_val
+drivers/staging/media/atomisp/pci/atomisp_compat_ioctl32.c:308:13:    got void [noderef] __user *
+drivers/staging/media/atomisp/pci/atomisp_compat_ioctl32.c:327:13: warning: incorrect type in assignment (different address spaces)
+drivers/staging/media/atomisp/pci/atomisp_compat_ioctl32.c:327:13:    expected void [noderef] __user *effective_width
+drivers/staging/media/atomisp/pci/atomisp_compat_ioctl32.c:327:13:    got unsigned int [usertype] *
+drivers/staging/media/atomisp/pci/atomisp_compat_ioctl32.c:348:13: warning: incorrect type in assignment (different address spaces)
+drivers/staging/media/atomisp/pci/atomisp_compat_ioctl32.c:348:13:    expected void [noderef] __user *effective_width
+drivers/staging/media/atomisp/pci/atomisp_compat_ioctl32.c:348:13:    got unsigned int [usertype] *
+drivers/staging/media/atomisp/pci/atomisp_compat_ioctl32.c:372:13: warning: incorrect type in assignment (different address spaces)
+drivers/staging/media/atomisp/pci/atomisp_compat_ioctl32.c:372:13:    expected unsigned int [usertype] *__pu_val
+drivers/staging/media/atomisp/pci/atomisp_compat_ioctl32.c:372:13:    got void [noderef] __user *
+drivers/staging/media/atomisp/pci/atomisp_compat_ioctl32.c:433:13: warning: incorrect type in assignment (different address spaces)
+drivers/staging/media/atomisp/pci/atomisp_compat_ioctl32.c:433:13:    expected struct v4l2_framebuffer *__pu_val
+drivers/staging/media/atomisp/pci/atomisp_compat_ioctl32.c:433:13:    got void [noderef] __user *
+drivers/staging/media/atomisp/pci/atomisp_compat_ioctl32.c:462:13: warning: incorrect type in assignment (different address spaces)
+drivers/staging/media/atomisp/pci/atomisp_compat_ioctl32.c:462:13:    expected void [noderef] __user *frame
+drivers/staging/media/atomisp/pci/atomisp_compat_ioctl32.c:462:13:    got struct v4l2_framebuffer *
+drivers/staging/media/atomisp/pci/atomisp_compat_ioctl32.c:496:13: warning: incorrect type in assignment (different address spaces)
+drivers/staging/media/atomisp/pci/atomisp_compat_ioctl32.c:496:13:    expected unsigned short *__pu_val
+drivers/staging/media/atomisp/pci/atomisp_compat_ioctl32.c:496:13:    got void [noderef] __user *
+drivers/staging/media/atomisp/pci/atomisp_compat_ioctl32.c:511:13: warning: incorrect type in assignment (different address spaces)
+drivers/staging/media/atomisp/pci/atomisp_compat_ioctl32.c:511:13:    expected void [noderef] __user *calb_grp_values
+drivers/staging/media/atomisp/pci/atomisp_compat_ioctl32.c:511:13:    got unsigned short *
+drivers/staging/media/atomisp/pci/atomisp_compat_ioctl32.c:630:21: warning: incorrect type in assignment (different address spaces)
+drivers/staging/media/atomisp/pci/atomisp_compat_ioctl32.c:630:21:    expected unsigned short [usertype] *__pu_val
+drivers/staging/media/atomisp/pci/atomisp_compat_ioctl32.c:630:21:    got void [noderef] __user *
+drivers/staging/media/atomisp/pci/atomisp_compat_ioctl32.c:715:27: warning: cast removes address space '__user' of expression
+drivers/staging/media/atomisp/pci/atomisp_compat_ioctl32.c:715:27: warning: incorrect type in initializer (different address spaces)
+drivers/staging/media/atomisp/pci/atomisp_compat_ioctl32.c:715:27:    expected struct <noident> [noderef] __user *karg
+drivers/staging/media/atomisp/pci/atomisp_compat_ioctl32.c:715:27:    got void *
+drivers/staging/media/atomisp/pci/atomisp_compat_ioctl32.c:721:39: warning: cast removes address space '__user' of expression
+drivers/staging/media/atomisp/pci/atomisp_compat_ioctl32.c:725:21: warning: incorrect type in argument 1 (different address spaces)
+drivers/staging/media/atomisp/pci/atomisp_compat_ioctl32.c:725:21:    expected void const volatile [noderef] __user *
+drivers/staging/media/atomisp/pci/atomisp_compat_ioctl32.c:725:21:    got unsigned int [usertype] *src
+drivers/staging/media/atomisp/pci/atomisp_compat_ioctl32.c:725:43: warning: incorrect type in assignment (different address spaces)
+drivers/staging/media/atomisp/pci/atomisp_compat_ioctl32.c:725:43:    expected void *__pu_val
+drivers/staging/media/atomisp/pci/atomisp_compat_ioctl32.c:725:43:    got void [noderef] __user *
+drivers/staging/media/atomisp/pci/atomisp_compat_ioctl32.c:741:21: warning: incorrect type in assignment (different address spaces)
+drivers/staging/media/atomisp/pci/atomisp_compat_ioctl32.c:741:21:    expected struct atomisp_shading_table *__pu_val
+drivers/staging/media/atomisp/pci/atomisp_compat_ioctl32.c:741:21:    got struct atomisp_shading_table [noderef] __user *
+drivers/staging/media/atomisp/pci/atomisp_compat_ioctl32.c:747:21: warning: incorrect type in assignment (different address spaces)
+drivers/staging/media/atomisp/pci/atomisp_compat_ioctl32.c:747:21:    expected struct atomisp_morph_table *__pu_val
+drivers/staging/media/atomisp/pci/atomisp_compat_ioctl32.c:747:21:    got struct atomisp_morph_table [noderef] __user *
+drivers/staging/media/atomisp/pci/atomisp_compat_ioctl32.c:753:21: warning: incorrect type in assignment (different address spaces)
+drivers/staging/media/atomisp/pci/atomisp_compat_ioctl32.c:753:21:    expected struct atomisp_dis_coefficients *__pu_val
+drivers/staging/media/atomisp/pci/atomisp_compat_ioctl32.c:753:21:    got struct atomisp_dis_coefficients [noderef] __user *
+drivers/staging/media/atomisp/pci/atomisp_compat_ioctl32.c:760:14: warning: incorrect type in assignment (different address spaces)
+drivers/staging/media/atomisp/pci/atomisp_compat_ioctl32.c:760:14:    expected struct atomisp_dvs_6axis_config *__pu_val
+drivers/staging/media/atomisp/pci/atomisp_compat_ioctl32.c:760:14:    got struct atomisp_dvs_6axis_config [noderef] __user *
+drivers/staging/media/atomisp/pci/atomisp_compat_ioctl32.c:817:13: warning: incorrect type in assignment (different address spaces)
+drivers/staging/media/atomisp/pci/atomisp_compat_ioctl32.c:817:13:    expected struct atomisp_sensor_ae_bracketing_lut_entry *__pu_val
+drivers/staging/media/atomisp/pci/atomisp_compat_ioctl32.c:817:13:    got void [noderef] __user *
+drivers/staging/media/atomisp/pci/isp/kernels/vf/vf_1.0/ia_css_vf.host.c:61:25: warning: dubious: !x | !y
+drivers/staging/media/atomisp/pci/css_2401_system/host/ibuf_ctrl.c:19:11: warning: symbol 'N_IBUF_CTRL_PROCS' was not declared. Should it be static?
+drivers/staging/media/atomisp/pci/css_2401_system/host/isys_irq_private.h:32:35: warning: function 'isys_irqc_state_get' with external linkage has definition
+drivers/staging/media/atomisp/pci/css_2401_system/host/isys_irq_private.h:51:35: warning: function 'isys_irqc_state_dump' with external linkage has definition
+drivers/staging/media/atomisp/pci/css_2401_system/host/isys_irq_private.h:68:35: warning: function 'isys_irqc_reg_store' with external linkage has definition
+drivers/staging/media/atomisp/pci/css_2401_system/host/isys_irq_private.h:85:39: warning: function 'isys_irqc_reg_load' with external linkage has definition
+drivers/staging/media/atomisp/pci/css_2401_system/host/isys_irq.c:31:35: warning: function 'isys_irqc_status_enable' with external linkage has definition
+drivers/staging/comedi/comedi_fops.c:2959:23: warning: incorrect type in assignment (different address spaces)
+drivers/staging/comedi/comedi_fops.c:2959:23:    expected unsigned int *chanlist
+drivers/staging/comedi/comedi_fops.c:2959:23:    got void [noderef] __user *
+drivers/staging/comedi/comedi_fops.c:2986:41: warning: incorrect type in argument 1 (different address spaces)
+drivers/staging/comedi/comedi_fops.c:2986:41:    expected void [noderef] __user *uptr
+drivers/staging/comedi/comedi_fops.c:2986:41:    got unsigned int *chanlist
+drivers/staging/vc04_services/interface/vchiq_arm/vchiq_arm.c:1508:13: warning: incorrect type in assignment (different address spaces)
+drivers/staging/vc04_services/interface/vchiq_arm/vchiq_arm.c:1508:13:    expected int enum vchiq_status ( *__pu_val )( ... )
+drivers/staging/vc04_services/interface/vchiq_arm/vchiq_arm.c:1508:13:    got void [noderef] __user *
+drivers/staging/vc04_services/interface/vchiq_arm/vchiq_arm.c:1510:13: warning: incorrect type in assignment (different address spaces)
+drivers/staging/vc04_services/interface/vchiq_arm/vchiq_arm.c:1510:13:    expected void *__pu_val
+drivers/staging/vc04_services/interface/vchiq_arm/vchiq_arm.c:1510:13:    got void [noderef] __user *
+drivers/staging/vc04_services/interface/vchiq_arm/vchiq_arm.c:1636:13: warning: incorrect type in assignment (different address spaces)
+drivers/staging/vc04_services/interface/vchiq_arm/vchiq_arm.c:1636:13:    expected void *__pu_val
+drivers/staging/vc04_services/interface/vchiq_arm/vchiq_arm.c:1636:13:    got void [noderef] __user *
+drivers/staging/vc04_services/interface/vchiq_arm/vchiq_arm.c:1638:13: warning: incorrect type in assignment (different address spaces)
+drivers/staging/vc04_services/interface/vchiq_arm/vchiq_arm.c:1638:13:    expected void *__pu_val
+drivers/staging/vc04_services/interface/vchiq_arm/vchiq_arm.c:1638:13:    got void [noderef] __user *
+drivers/staging/vc04_services/interface/vchiq_arm/vchiq_arm.c:1713:13: warning: incorrect type in assignment (different address spaces)
+drivers/staging/vc04_services/interface/vchiq_arm/vchiq_arm.c:1713:13:    expected struct vchiq_completion_data *__pu_val
+drivers/staging/vc04_services/interface/vchiq_arm/vchiq_arm.c:1713:13:    got void [noderef] __user *
+drivers/staging/vc04_services/interface/vchiq_arm/vchiq_arm.c:1716:13: warning: incorrect type in assignment (different address spaces)
+drivers/staging/vc04_services/interface/vchiq_arm/vchiq_arm.c:1716:13:    expected void **__pu_val
+drivers/staging/vc04_services/interface/vchiq_arm/vchiq_arm.c:1716:13:    got void [noderef] __user *
+drivers/staging/vc04_services/interface/vchiq_arm/vchiq_arm.c:1763:13: warning: incorrect type in assignment (different address spaces)
+drivers/staging/vc04_services/interface/vchiq_arm/vchiq_arm.c:1763:13:    expected struct vchiq_completion_data *__pu_val
+drivers/staging/vc04_services/interface/vchiq_arm/vchiq_arm.c:1763:13:    got struct vchiq_completion_data [noderef] __user *[assigned] completion
+drivers/staging/vc04_services/interface/vchiq_arm/vchiq_arm.c:1793:59: warning: incorrect type in argument 1 (different address spaces)
+drivers/staging/vc04_services/interface/vchiq_arm/vchiq_arm.c:1793:59:    expected void [noderef] __user *uptr
+drivers/staging/vc04_services/interface/vchiq_arm/vchiq_arm.c:1793:59:    got struct vchiq_header *[addressable] header
+drivers/staging/vc04_services/interface/vchiq_arm/vchiq_arm.c:1795:45: warning: incorrect type in argument 1 (different address spaces)
+drivers/staging/vc04_services/interface/vchiq_arm/vchiq_arm.c:1795:45:    expected void [noderef] __user *uptr
+drivers/staging/vc04_services/interface/vchiq_arm/vchiq_arm.c:1795:45:    got void *[addressable] service_userdata
+drivers/staging/vc04_services/interface/vchiq_arm/vchiq_arm.c:1797:45: warning: incorrect type in argument 1 (different address spaces)
+drivers/staging/vc04_services/interface/vchiq_arm/vchiq_arm.c:1797:45:    expected void [noderef] __user *uptr
+drivers/staging/vc04_services/interface/vchiq_arm/vchiq_arm.c:1797:45:    got void *[addressable] bulk_userdata
+drivers/staging/vc04_services/interface/vchiq_arm/vchiq_arm.c:1851:13: warning: incorrect type in assignment (different address spaces)
+drivers/staging/vc04_services/interface/vchiq_arm/vchiq_arm.c:1851:13:    expected void *__pu_val
+drivers/staging/vc04_services/interface/vchiq_arm/vchiq_arm.c:1851:13:    got void [noderef] __user *
+WARNING: Symbol version dump "Module.symvers" is missing.
+         Modules may not have dependencies or modversions.
+WARNING: modpost: Symbol info of vmlinux is missing. Unresolved symbol check will be entirely skipped.
+
