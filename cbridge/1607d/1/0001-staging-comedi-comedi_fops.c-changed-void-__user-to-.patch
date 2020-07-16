@@ -1,0 +1,31 @@
+From 07fe8e2fa16ac3d0200198414eb79ac74af31494 Mon Sep 17 00:00:00 2001
+From: B K Karthik <karthik.bk2000@live.com>
+Date: Wed, 15 Jul 2020 00:37:26 -0400
+Subject: [PATCH] staging: comedi: comedi_fops.c: changed void __user * to
+ unsigned int *
+
+fixed a sparse warning by changing the type in
+assignment from void [noderef] __user * to unsigned int *
+(different address space)
+
+Signed-off-by: B K Karthik <karthik.bk2000@live.com>
+---
+ drivers/staging/comedi/comedi_fops.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/drivers/staging/comedi/comedi_fops.c b/drivers/staging/comedi/comedi_fops.c
+index 3f70e5dfac39..4cc012e231b7 100644
+--- a/drivers/staging/comedi/comedi_fops.c
++++ b/drivers/staging/comedi/comedi_fops.c
+@@ -2956,7 +2956,7 @@ static int get_compat_cmd(struct comedi_cmd *cmd,
+ 	cmd->scan_end_arg = v32.scan_end_arg;
+ 	cmd->stop_src = v32.stop_src;
+ 	cmd->stop_arg = v32.stop_arg;
+-	cmd->chanlist = compat_ptr(v32.chanlist);
++	cmd->chanlist = (unsigned int *) compat_ptr(v32.chanlist);
+ 	cmd->chanlist_len = v32.chanlist_len;
+ 	cmd->data = compat_ptr(v32.data);
+ 	cmd->data_len = v32.data_len;
+-- 
+2.20.1
+

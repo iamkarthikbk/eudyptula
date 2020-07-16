@@ -1,0 +1,37 @@
+From dbdc5b38d639b37b4244e2663c5cadb39242fbe5 Mon Sep 17 00:00:00 2001
+From: B K Karthik <karthik.bk2000@live.com>
+Date: Wed, 15 Jul 2020 07:51:11 -0400
+Subject: [PATCH] fs: block_dev.c: fix WARNING in submit_bio_check
+
+blkdev_put was failing because we were trying to write
+to a read-only device. blkdev_get_by_path checks for
+write permissions by looking at (mode & FMODE_WRITE)
+but bdev_get_by_dev does not do that.
+
+This issue can be fixed by doing the same with bdev_get_by_dev.
+
+Reported-by: syzbot+4c50ac32e5b10e4133e1@syzkaller.appspotmail.com
+Signed-off-by: B K Karthik <karthik.bk2000@live.com>
+---
+ fs/block_dev.c | 5 +++++
+ 1 file changed, 5 insertions(+)
+
+diff --git a/fs/block_dev.c b/fs/block_dev.c
+index 64c4fe8181f2..472e3b046406 100644
+--- a/fs/block_dev.c
++++ b/fs/block_dev.c
+@@ -1796,6 +1796,11 @@ struct block_device *blkdev_get_by_dev(dev_t dev, fmode_t mode, void *holder)
+ 	if (err)
+ 		return ERR_PTR(err);
+ 
++	if ((mode & FMODE_WRITE) && bdev_read_only(bdev)) {
++		blkdev_put(bdev, mode);
++		return ERR_PTR(-EACCES);
++	}
++
+ 	return bdev;
+ }
+ EXPORT_SYMBOL(blkdev_get_by_dev);
+-- 
+2.20.1
+

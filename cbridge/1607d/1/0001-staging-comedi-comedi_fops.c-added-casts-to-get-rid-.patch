@@ -1,0 +1,41 @@
+From 359fd7afde08672f68fad66919e1062180da36f9 Mon Sep 17 00:00:00 2001
+From: B K Karthik <karthik.bk2000@live.com>
+Date: Wed, 15 Jul 2020 07:33:22 -0400
+Subject: [PATCH] staging: comedi: comedi_fops.c: added casts to get rid of
+ sparse warnings
+
+fixed sparse warnings by adding a cast in assignment from
+void [noderef] __user * to unsigned int __force *
+and a reverse cast in argument from
+void [noderef] __user * to  unsigned int __user * .
+
+Signed-off-by: B K Karthik <karthik.bk2000@live.com>
+---
+ drivers/staging/comedi/comedi_fops.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/drivers/staging/comedi/comedi_fops.c b/drivers/staging/comedi/comedi_fops.c
+index 3f70e5dfac39..9cdc1e8a022d 100644
+--- a/drivers/staging/comedi/comedi_fops.c
++++ b/drivers/staging/comedi/comedi_fops.c
+@@ -2956,7 +2956,7 @@ static int get_compat_cmd(struct comedi_cmd *cmd,
+ 	cmd->scan_end_arg = v32.scan_end_arg;
+ 	cmd->stop_src = v32.stop_src;
+ 	cmd->stop_arg = v32.stop_arg;
+-	cmd->chanlist = compat_ptr(v32.chanlist);
++	cmd->chanlist = (unsigned int __force *)compat_ptr(v32.chanlist);
+ 	cmd->chanlist_len = v32.chanlist_len;
+ 	cmd->data = compat_ptr(v32.data);
+ 	cmd->data_len = v32.data_len;
+@@ -2983,7 +2983,7 @@ static int put_compat_cmd(struct comedi32_cmd_struct __user *cmd32,
+ 	v32.stop_src = cmd->stop_src;
+ 	v32.stop_arg = cmd->stop_arg;
+ 	/* Assume chanlist pointer is unchanged. */
+-	v32.chanlist = ptr_to_compat(cmd->chanlist);
++	v32.chanlist = ptr_to_compat((unsigned int __user *)cmd->chanlist);
+ 	v32.chanlist_len = cmd->chanlist_len;
+ 	v32.data = ptr_to_compat(cmd->data);
+ 	v32.data_len = cmd->data_len;
+-- 
+2.20.1
+
