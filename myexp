@@ -1,0 +1,36 @@
+It has been an excellent learning expirience so far with the linux kernel bug fixing mentorship.
+
+Since this was the first time I ever looked into the kernel code and actually made changes to it,
+I did get to understand about a lot of simple things that are essential.
+
+I have a much better understanding of the way kernel code is written and compiled.
+Before that, I actually have a much better understanding of how to read code.
+That's right. The first few week of this mentorship program (There was a slight delay in the kick off email)
+was spent reading kernel code. This way, I tried to make myself more comfortable with reading code somebody else has written.
+
+The first challenge I faced right away was during the selection process.
+
+It was communicating through email and trying to make my point.
+It might sound a little odd but I did face a little bit of a difficulty switching to command line
+email clients.
+
+The next and one of the most important things I learnt about writing emails is how to not write them.
+Yes, I am talking about top posting. Greg and a lot of other people from the kernel community constantly pointed out
+why top posting was such a bad thing.
+
+I had to make myself more comfortable with tools that I will need to use on a day-to-day basis.
+
+They were scripts/checkpath.pl, scripts/get_maintainer.pl, scripts/decode_stacktrace.sh and make.
+
+Once I started looking at bugs reported by syzbot, I analysed the following.
+https://syzkaller.appspot.com/bug?id=b47f3dd244f4ee90c67488ea27e74e7777e0a48c
+https://syzkaller.appspot.com/bug?id=9ef8c538552daecf5ee8a9314d051763ef372080
+https://syzkaller.appspot.com/bug?id=5e3ac329b6304aacc6304cfaab1a514bca12ce82
+https://syzkaller.appspot.com/bug?id=0f447249960c780cab5f203c1537c825c74904ae
+
+The first one was a NULL pointer dereference in bpf_test_run()
+It calls bpf_prog_run_xdp() which triggers a syscall.
+This code seemed a little complicated and I thought I would be better off stating with something a little simpler.
+
+The second one was an implementation of kernel_write using __kernel_write()
+I was unable to understand the warning.

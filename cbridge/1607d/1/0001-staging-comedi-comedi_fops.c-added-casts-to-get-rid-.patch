@@ -7,7 +7,14 @@ Subject: [PATCH] staging: comedi: comedi_fops.c: added casts to get rid of
 fixed sparse warnings by adding a cast in assignment from
 void [noderef] __user * to unsigned int __force *
 and a reverse cast in argument from
-void [noderef] __user * to  unsigned int __user * .
+unsigned int * to  unsigned int __user * .
+
+v1 -> v2:
+- Added a reverse cast in argument
+v2 -> v3:
+- Changed commit description
+v3 -> v4:
+- Added versioning info in commit description
 
 Signed-off-by: B K Karthik <karthik.bk2000@live.com>
 ---
