@@ -1,0 +1,30 @@
+ Jul 18 12:48:18 bkkarthik <2067> :~/Workspace/eudyptula/task17$ make
+make -C /lib/modules/5.8.0-rc5-next-20200716/build M=/home/bkkarthik/Workspace/eudyptula/task17 modules
+make[1]: Entering directory '/home/bkkarthik/Workspace/eudyptula/linux-next'
+  CC [M]  /home/bkkarthik/Workspace/eudyptula/task17/task17.o
+  MODPOST /home/bkkarthik/Workspace/eudyptula/task17/Module.symvers
+  CC [M]  /home/bkkarthik/Workspace/eudyptula/task17/task17.mod.o
+  LD [M]  /home/bkkarthik/Workspace/eudyptula/task17/task17.ko
+make[1]: Leaving directory '/home/bkkarthik/Workspace/eudyptula/linux-next'
+ Jul 18 12:48:22 bkkarthik <2068> :~/Workspace/eudyptula/task17$ sudo ./run.sh
+Linux pesu-pes-edu 5.8.0-rc5-next-20200716 #1 SMP Fri Jul 17 02:19:37 EDT 2020 x86_64 GNU/Linux
+   Static hostname: pesu-pes-edu
+   Pretty hostname: pesu.pes.edu
+         Icon name: computer-laptop
+           Chassis: laptop
+        Machine ID: b7c50698e32b41718c2a16b2718f23fd
+           Boot ID: db4c7fb86e194749b4ca45d1aad9b724
+  Operating System: Debian GNU/Linux 10 (buster)
+            Kernel: Linux 5.8.0-rc5-next-20200716
+      Architecture: x86-64
+c-w--w--w- 1 root root 10, 60 Jul 18 00:48 /dev/eudyptula
+/dev/eudyptula: character special (10/60)
+root     11845     2  0 00:48 ?        00:00:00 [eudyptula]
+root     11851 11839  0 00:48 pts/0    00:00:00 grep eudyptula
+echo: write error: Invalid argument
+1
+0
+ls: cannot access '/dev/eudyptula': No such file or directory
+root     11860 11839  0 00:48 pts/0    00:00:00 grep eudyptula
+ Jul 18 12:48:29 bkkarthik <2069> :~/Workspace/eudyptula/task17$
+
