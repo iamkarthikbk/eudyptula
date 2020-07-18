@@ -1,0 +1,29 @@
+From 84d1605174c8c79ccbf5dee2d3937aa61e2844ce Mon Sep 17 00:00:00 2001
+From: B K Karthik <karthik.bk2000@live.com>
+Date: Sat, 18 Jul 2020 00:02:33 -0400
+Subject: [PATCH] fs: block_dev.c: removing an unnecessary sync to avoid a user
+ triggerable WARN
+
+The sync was unnecessary, and was responsible for a user triggerable WARN.
+
+Signed-off-by: B K Karthik <karthik.bk2000@live.com>
+---
+ fs/block_dev.c | 2 --
+ 1 file changed, 2 deletions(-)
+
+diff --git a/fs/block_dev.c b/fs/block_dev.c
+index 5b07f2665e41..03cb13ef5a0a 100644
+--- a/fs/block_dev.c
++++ b/fs/block_dev.c
+@@ -1765,8 +1765,6 @@ static void __blkdev_put(struct block_device *bdev, fmode_t mode, int for_part)
+ 	 * of the world and we want to avoid long (could be several minute)
+ 	 * syncs while holding the mutex.
+ 	 */
+-	if (bdev->bd_openers == 1)
+-		sync_blockdev(bdev);
+ 
+ 	mutex_lock_nested(&bdev->bd_mutex, for_part);
+ 	if (for_part)
+-- 
+2.20.1
+

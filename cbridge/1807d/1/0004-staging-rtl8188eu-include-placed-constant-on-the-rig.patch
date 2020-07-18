@@ -1,0 +1,53 @@
+From 7ea439ce3404715c3d1b1325705a000774072438 Mon Sep 17 00:00:00 2001
+From: B K Karthik <karthik.bk2000@live.com>
+Date: Sat, 18 Jul 2020 04:48:37 -0400
+Subject: [PATCH 4/4] staging: rtl8188eu: include: placed constant on the right
+ side of the test in comparisons
+
+placed constant on the right side of the test
+to fix warnings issued by checkpatch
+
+Signed-off-by: B K Karthik <karthik.bk2000@live.com>
+---
+ drivers/staging/rtl8188eu/include/rtw_mlme.h | 4 ++--
+ drivers/staging/rtl8188eu/include/wifi.h     | 2 +-
+ 2 files changed, 3 insertions(+), 3 deletions(-)
+
+diff --git a/drivers/staging/rtl8188eu/include/rtw_mlme.h b/drivers/staging/rtl8188eu/include/rtw_mlme.h
+index 010f0c42368a..1b74b32b8a81 100644
+--- a/drivers/staging/rtl8188eu/include/rtw_mlme.h
++++ b/drivers/staging/rtl8188eu/include/rtw_mlme.h
+@@ -266,7 +266,7 @@ static inline void set_fwstate(struct mlme_priv *pmlmepriv, int state)
+ {
+ 	pmlmepriv->fw_state |= state;
+ 	/* FOR HW integration */
+-	if (_FW_UNDER_SURVEY == state)
++	if (state == _FW_UNDER_SURVEY)
+ 		pmlmepriv->bScanInProcess = true;
+ }
+ 
+@@ -274,7 +274,7 @@ static inline void _clr_fwstate_(struct mlme_priv *pmlmepriv, int state)
+ {
+ 	pmlmepriv->fw_state &= ~state;
+ 	/* FOR HW integration */
+-	if (_FW_UNDER_SURVEY == state)
++	if (state == _FW_UNDER_SURVEY)
+ 		pmlmepriv->bScanInProcess = false;
+ }
+ 
+diff --git a/drivers/staging/rtl8188eu/include/wifi.h b/drivers/staging/rtl8188eu/include/wifi.h
+index 677827900607..dcef3da21970 100644
+--- a/drivers/staging/rtl8188eu/include/wifi.h
++++ b/drivers/staging/rtl8188eu/include/wifi.h
+@@ -326,7 +326,7 @@ static inline unsigned char *get_hdr_bssid(unsigned char *pframe)
+ 
+ static inline int IsFrameTypeCtrl(unsigned char *pframe)
+ {
+-	if (WIFI_CTRL_TYPE == GetFrameType(pframe))
++	if (GetFrameType(pframe) == WIFI_CTRL_TYPE)
+ 		return true;
+ 	else
+ 		return false;
+-- 
+2.20.1
+

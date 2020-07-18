@@ -1,0 +1,58 @@
+From 90150c96bd0382e8a728c79fc5ad7d3a85adf564 Mon Sep 17 00:00:00 2001
+From: B K Karthik <karthik.bk2000@live.com>
+Date: Sat, 18 Jul 2020 04:38:21 -0400
+Subject: [PATCH 3/4] staging: rtl8188eu: include: enclosed macros in do-while
+ loops
+
+enclosed macros starting with if inside do-while loops to
+avoid possible if-else logic defects
+
+Signed-off-by: B K Karthik <karthik.bk2000@live.com>
+---
+ drivers/staging/rtl8188eu/include/odm_debug.h | 28 +++++++++++--------
+ 1 file changed, 16 insertions(+), 12 deletions(-)
+
+diff --git a/drivers/staging/rtl8188eu/include/odm_debug.h b/drivers/staging/rtl8188eu/include/odm_debug.h
+index 857c64b8d2f4..c7a928d396b0 100644
+--- a/drivers/staging/rtl8188eu/include/odm_debug.h
++++ b/drivers/staging/rtl8188eu/include/odm_debug.h
+@@ -76,20 +76,24 @@
+ #endif
+ 
+ #define ODM_RT_TRACE(pDM_Odm, comp, level, fmt)				\
+-	if (((comp) & pDM_Odm->DebugComponents) &&			\
+-	    (level <= pDM_Odm->DebugLevel)) {				\
+-		pr_info("[ODM-8188E] ");				\
+-		RT_PRINTK fmt;						\
+-	}
++	do {
++		if (((comp) & pDM_Odm->DebugComponents) &&			\
++			(level <= pDM_Odm->DebugLevel)) {			\
++			pr_info("[ODM-8188E] ");				\
++			RT_PRINTK fmt;						\
++		}
++	} while (0)
+ 
+ #define ODM_RT_ASSERT(pDM_Odm, expr, fmt)				\
+-	if (!(expr)) {							\
+-		pr_info("Assertion failed! %s at ......\n", #expr);	\
+-		pr_info("      ......%s,%s,line=%d\n", __FILE__,	\
+-			__func__, __LINE__);				\
+-		RT_PRINTK fmt;						\
+-		ASSERT(false);						\
+-	}
++	do {
++		if (!(expr)) {							\
++			pr_info("Assertion failed! %s at ......\n", #expr);	\
++			pr_info("      ......%s,%s,line=%d\n", __FILE__,	\
++				__func__, __LINE__);				\
++			RT_PRINTK fmt;						\
++			ASSERT(false);						\
++		}
++	} while (0)
+ 
+ void ODM_InitDebugSetting(struct odm_dm_struct *pDM_Odm);
+ 
+-- 
+2.20.1
+

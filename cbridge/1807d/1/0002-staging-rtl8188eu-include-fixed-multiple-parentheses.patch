@@ -1,0 +1,147 @@
+From e8d7f1c5a79970302d56dba56f5294eece1ca814 Mon Sep 17 00:00:00 2001
+From: B K Karthik <karthik.bk2000@live.com>
+Date: Sat, 18 Jul 2020 04:26:23 -0400
+Subject: [PATCH 2/4] staging: rtl8188eu: include: fixed multiple parentheses
+ coding style issues
+
+fixed multiple parentheses coding style issues reported by checkpatch.
+
+Signed-off-by: B K Karthik <karthik.bk2000@live.com>
+---
+ drivers/staging/rtl8188eu/include/ieee80211.h |  4 +--
+ .../staging/rtl8188eu/include/osdep_service.h |  4 +--
+ drivers/staging/rtl8188eu/include/wifi.h      | 34 +++++++++----------
+ 3 files changed, 21 insertions(+), 21 deletions(-)
+
+diff --git a/drivers/staging/rtl8188eu/include/ieee80211.h b/drivers/staging/rtl8188eu/include/ieee80211.h
+index 83218e7ec0a9..a872a86f89ab 100644
+--- a/drivers/staging/rtl8188eu/include/ieee80211.h
++++ b/drivers/staging/rtl8188eu/include/ieee80211.h
+@@ -646,8 +646,8 @@ struct rtw_ieee80211_channel {
+ 	"flags:0x%08x" \
+ 
+ #define CHAN_ARG(channel) \
+-	(channel)->hw_value \
+-	, (channel)->flags \
++	((channel)->hw_value \
++	, (channel)->flags)
+ 
+ /* Parsed Information Elements */
+ struct rtw_ieee802_11_elems {
+diff --git a/drivers/staging/rtl8188eu/include/osdep_service.h b/drivers/staging/rtl8188eu/include/osdep_service.h
+index 31d897f1d21f..2245cc430981 100644
+--- a/drivers/staging/rtl8188eu/include/osdep_service.h
++++ b/drivers/staging/rtl8188eu/include/osdep_service.h
+@@ -76,9 +76,9 @@ struct net_device *rtw_alloc_etherdev_with_old_priv(void *old_priv);
+ void rtw_free_netdev(struct net_device *netdev);
+ 
+ #define FUNC_NDEV_FMT "%s(%s)"
+-#define FUNC_NDEV_ARG(ndev) __func__, ndev->name
++#define FUNC_NDEV_ARG(ndev) (__func__, (ndev)->name)
+ #define FUNC_ADPT_FMT "%s(%s)"
+-#define FUNC_ADPT_ARG(adapter) __func__, adapter->pnetdev->name
++#define FUNC_ADPT_ARG(adapter) (__func__, (adapter)->pnetdev->name)
+ 
+ /* Macros for handling unaligned memory accesses */
+ 
+diff --git a/drivers/staging/rtl8188eu/include/wifi.h b/drivers/staging/rtl8188eu/include/wifi.h
+index 791f287a546d..677827900607 100644
+--- a/drivers/staging/rtl8188eu/include/wifi.h
++++ b/drivers/staging/rtl8188eu/include/wifi.h
+@@ -143,57 +143,57 @@ enum WIFI_REG_DOMAIN {
+ #define _ORDER_		BIT(15)
+ 
+ #define SetToDs(pbuf)	\
+-	*(__le16 *)(pbuf) |= cpu_to_le16(_TO_DS_)
++	(*(__le16 *)(pbuf) |= cpu_to_le16(_TO_DS_))
+ 
+ #define GetToDs(pbuf)	(((*(__le16 *)(pbuf)) & cpu_to_le16(_TO_DS_)) != 0)
+ 
+ #define ClearToDs(pbuf)	\
+-	*(__le16 *)(pbuf) &= (~cpu_to_le16(_TO_DS_))
++	(*(__le16 *)(pbuf) &= (~cpu_to_le16(_TO_DS_)))
+ 
+ #define SetFrDs(pbuf)	\
+-	*(__le16 *)(pbuf) |= cpu_to_le16(_FROM_DS_)
++	(*(__le16 *)(pbuf) |= cpu_to_le16(_FROM_DS_))
+ 
+ #define GetFrDs(pbuf)	(((*(__le16 *)(pbuf)) & cpu_to_le16(_FROM_DS_)) != 0)
+ 
+ #define ClearFrDs(pbuf)	\
+-	*(__le16 *)(pbuf) &= (~cpu_to_le16(_FROM_DS_))
++	(*(__le16 *)(pbuf) &= (~cpu_to_le16(_FROM_DS_)))
+ 
+ #define get_tofr_ds(pframe)	((GetToDs(pframe) << 1) | GetFrDs(pframe))
+ 
+ #define SetMFrag(pbuf)	\
+-	*(__le16 *)(pbuf) |= cpu_to_le16(_MORE_FRAG_)
++	(*(__le16 *)(pbuf) |= cpu_to_le16(_MORE_FRAG_))
+ 
+ #define GetMFrag(pbuf)	(((*(__le16 *)(pbuf)) & cpu_to_le16(_MORE_FRAG_)) != 0)
+ 
+ #define ClearMFrag(pbuf)	\
+-	*(__le16 *)(pbuf) &= (~cpu_to_le16(_MORE_FRAG_))
++	(*(__le16 *)(pbuf) &= (~cpu_to_le16(_MORE_FRAG_)))
+ 
+ #define SetRetry(pbuf)	\
+-	*(__le16 *)(pbuf) |= cpu_to_le16(_RETRY_)
++	(*(__le16 *)(pbuf) |= cpu_to_le16(_RETRY_))
+ 
+ #define GetRetry(pbuf)	(((*(__le16 *)(pbuf)) & cpu_to_le16(_RETRY_)) != 0)
+ 
+ #define ClearRetry(pbuf)	\
+-	*(__le16 *)(pbuf) &= (~cpu_to_le16(_RETRY_))
++	(*(__le16 *)(pbuf) &= (~cpu_to_le16(_RETRY_)))
+ 
+ #define SetPwrMgt(pbuf)	\
+-	*(__le16 *)(pbuf) |= cpu_to_le16(_PWRMGT_)
++	(*(__le16 *)(pbuf) |= cpu_to_le16(_PWRMGT_))
+ 
+ #define GetPwrMgt(pbuf)	(((*(__le16 *)(pbuf)) & cpu_to_le16(_PWRMGT_)) != 0)
+ 
+ #define ClearPwrMgt(pbuf)	\
+-	*(__le16 *)(pbuf) &= (~cpu_to_le16(_PWRMGT_))
++	(*(__le16 *)(pbuf) &= (~cpu_to_le16(_PWRMGT_)))
+ 
+ #define SetMData(pbuf)	\
+-	*(__le16 *)(pbuf) |= cpu_to_le16(_MORE_DATA_)
++	(*(__le16 *)(pbuf) |= cpu_to_le16(_MORE_DATA_))
+ 
+ #define GetMData(pbuf)	(((*(__le16 *)(pbuf)) & cpu_to_le16(_MORE_DATA_)) != 0)
+ 
+ #define ClearMData(pbuf)	\
+-	*(__le16 *)(pbuf) &= (~cpu_to_le16(_MORE_DATA_))
++	(*(__le16 *)(pbuf) &= (~cpu_to_le16(_MORE_DATA_)))
+ 
+ #define SetPrivacy(pbuf)	\
+-	*(__le16 *)(pbuf) |= cpu_to_le16(_PRIVACY_)
++	(*(__le16 *)(pbuf) |= cpu_to_le16(_PRIVACY_))
+ 
+ #define GetPrivacy(pbuf)					\
+ 	(((*(__le16 *)(pbuf)) & cpu_to_le16(_PRIVACY_)) != 0)
+@@ -228,18 +228,18 @@ enum WIFI_REG_DOMAIN {
+ 	} while (0)
+ 
+ #define SetDuration(pbuf, dur) \
+-	*(__le16 *)((size_t)(pbuf) + 2) = cpu_to_le16(0xffff & (dur))
++	(*(__le16 *)((size_t)(pbuf) + 2) = cpu_to_le16(0xffff & (dur)))
+ 
+ #define SetPriority(pbuf, tid)	\
+-	*(__le16 *)(pbuf) |= cpu_to_le16(tid & 0xf)
++	(*(__le16 *)(pbuf) |= cpu_to_le16(tid & 0xf))
+ 
+ #define GetPriority(pbuf)	((le16_to_cpu(*(__le16 *)(pbuf))) & 0xf)
+ 
+ #define SetEOSP(pbuf, eosp)	\
+-		*(__le16 *)(pbuf) |= cpu_to_le16((eosp & 1) << 4)
++		(*(__le16 *)(pbuf) |= cpu_to_le16((eosp & 1) << 4))
+ 
+ #define SetAckpolicy(pbuf, ack)	\
+-	*(__le16 *)(pbuf) |= cpu_to_le16((ack & 3) << 5)
++	(*(__le16 *)(pbuf) |= cpu_to_le16((ack & 3) << 5))
+ 
+ #define GetAckpolicy(pbuf) (((le16_to_cpu(*(__le16 *)pbuf)) >> 5) & 0x3)
+ 
+-- 
+2.20.1
+
