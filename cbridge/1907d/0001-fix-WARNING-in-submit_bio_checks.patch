@@ -1,0 +1,77 @@
+From 828e95566387f9aa271aa8d5396b71e96d2522b8 Mon Sep 17 00:00:00 2001
+From: bkkarthik <bkkarthik@pesu.pes.edu>
+Date: Sun, 19 Jul 2020 08:31:43 -0400
+Subject: [PATCH] fix WARNING in submit_bio_checks
+
+fix warning in submit_bio_check trying to write
+to a read only block device by looking for
+(mode & FMODE_WRITE) in blkdev_get_by_dev() and
+changing REQ_OP_WRITE to 1 where 1 is the least
+significant bit. Delaying an unnecessary sync until
+the write operation completes
+
+Reported-by: syzbot+4c50ac32e5b10e4133e1@syzkaller.appspotmail.com
+Signed-off-by: bkkarthik <bkkarthik@pesu.pes.edu>
+---
+ fs/block_dev.c | 17 +++++++----------
+ fs/buffer.c    |  2 +-
+ 2 files changed, 8 insertions(+), 11 deletions(-)
+
+diff --git a/fs/block_dev.c b/fs/block_dev.c
+index 5b07f2665e41..34042e231fca 100644
+--- a/fs/block_dev.c
++++ b/fs/block_dev.c
+@@ -1718,6 +1718,11 @@ struct block_device *blkdev_get_by_dev(dev_t dev, fmode_t mode, void *holder)
+ 	if (err)
+ 		return ERR_PTR(err);
+ 
++	if ((mode & FMODE_WRITE) && bdev_read_only(bdev)) {
++		blkdev_put(bdev, mode);
++		return ERR_PTR(-EACCES);
++	}
++
+ 	return bdev;
+ }
+ EXPORT_SYMBOL(blkdev_get_by_dev);
+@@ -1758,16 +1763,6 @@ static void __blkdev_put(struct block_device *bdev, fmode_t mode, int for_part)
+ 	struct gendisk *disk = bdev->bd_disk;
+ 	struct block_device *victim = NULL;
+ 
+-	/*
+-	 * Sync early if it looks like we're the last one.  If someone else
+-	 * opens the block device between now and the decrement of bd_openers
+-	 * then we did a sync that we didn't need to, but that's not the end
+-	 * of the world and we want to avoid long (could be several minute)
+-	 * syncs while holding the mutex.
+-	 */
+-	if (bdev->bd_openers == 1)
+-		sync_blockdev(bdev);
+-
+ 	mutex_lock_nested(&bdev->bd_mutex, for_part);
+ 	if (for_part)
+ 		bdev->bd_part_count--;
+@@ -1795,6 +1790,8 @@ static void __blkdev_put(struct block_device *bdev, fmode_t mode, int for_part)
+ 	}
+ 	mutex_unlock(&bdev->bd_mutex);
+ 	bdput(bdev);
++	sync_blockdev(bdev);
++
+ 	if (victim)
+ 		__blkdev_put(victim, mode, 1);
+ }
+diff --git a/fs/buffer.c b/fs/buffer.c
+index ac0310d24657..e16ac96585c4 100644
+--- a/fs/buffer.c
++++ b/fs/buffer.c
+@@ -1844,7 +1844,7 @@ int __block_write_full_page(struct inode *inode, struct page *page,
+ 	do {
+ 		struct buffer_head *next = bh->b_this_page;
+ 		if (buffer_async_write(bh)) {
+-			submit_bh_wbc(REQ_OP_WRITE, write_flags, bh,
++			submit_bh_wbc(1, write_flags, bh,
+ 					inode->i_write_hint, wbc);
+ 			nr_underway++;
+ 		}
+-- 
+2.20.1
+

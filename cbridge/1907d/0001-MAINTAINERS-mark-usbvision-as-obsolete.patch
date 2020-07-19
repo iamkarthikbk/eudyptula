@@ -1,0 +1,29 @@
+From f4ea94bc59d3449c66abe85cc27755e8b6ad4fe7 Mon Sep 17 00:00:00 2001
+From: bkkarthik <bkkarthik@pesu.pes.edu>
+Date: Sun, 19 Jul 2020 13:58:29 -0400
+Subject: [PATCH] MAINTAINERS: mark usbvision as obsolete
+
+mark staging/media/usbvision as obsolete so
+checkpatch tells people not to send patches.
+
+Signed-off-by: bkkarthik <bkkarthik@pesu.pes.edu>
+---
+ MAINTAINERS | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/MAINTAINERS b/MAINTAINERS
+index a88bf0759c90..82120c2fcedd 100644
+--- a/MAINTAINERS
++++ b/MAINTAINERS
+@@ -17946,7 +17946,7 @@ F:	include/uapi/linux/uvcvideo.h
+ USB VISION DRIVER
+ M:	Hans Verkuil <hverkuil@xs4all.nl>
+ L:	linux-media@vger.kernel.org
+-S:	Odd Fixes
++S:	Odd Fixes / Obsolete
+ W:	https://linuxtv.org
+ T:	git git://linuxtv.org/media_tree.git
+ F:	drivers/staging/media/usbvision/
+-- 
+2.20.1
+
