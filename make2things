@@ -1,0 +1,27 @@
+In file included from ./include/linux/pid.h:5,
+                 from ./include/linux/sched.h:14,
+                 from ./include/linux/kvm_host.h:12,
+                 from arch/x86/kvm/mmu/page_track.c:14:
+arch/x86/kvm/mmu/page_track.c: In function ‘kvm_page_track_write’:
+./include/linux/rculist.h:727:30: error: left-hand operand of comma expression has no effect [-Werror=unused-value]
+  for (__list_check_srcu(cond),     \
+                              ^
+arch/x86/kvm/mmu/page_track.c:232:2: note: in expansion of macro ‘hlist_for_each_entry_srcu’
+  hlist_for_each_entry_srcu(n, &head->track_notifier_list, node,
+  ^~~~~~~~~~~~~~~~~~~~~~~~~
+arch/x86/kvm/mmu/page_track.c: In function ‘kvm_page_track_flush_slot’:
+./include/linux/rculist.h:727:30: error: left-hand operand of comma expression has no effect [-Werror=unused-value]
+  for (__list_check_srcu(cond),     \
+                              ^
+arch/x86/kvm/mmu/page_track.c:258:2: note: in expansion of macro ‘hlist_for_each_entry_srcu’
+  hlist_for_each_entry_srcu(n, &head->track_notifier_list, node,
+  ^~~~~~~~~~~~~~~~~~~~~~~~~
+cc1: all warnings being treated as errors
+make[2]: *** [scripts/Makefile.build:280: arch/x86/kvm/mmu/page_track.o] Error 1
+make[2]: *** Waiting for unfinished jobs....
+make[1]: *** No rule to make target 'debian/certs/debian-uefi-certs.pem', needed by 'certs/x509_certificate_list'.  Stop.
+make[1]: *** Waiting for unfinished jobs....
+make: *** [Makefile:1779: certs] Error 2
+make: *** Waiting for unfinished jobs....
+make[1]: *** [scripts/Makefile.build:497: arch/x86/kvm] Error 2
+make: *** [Makefile:1779: arch/x86] Error 2
