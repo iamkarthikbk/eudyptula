@@ -1,0 +1,1 @@
+cmd_/home/bkkarthik/Workspace/eudyptula/task18/Module.symvers := sed 's/ko$$/o/' /home/bkkarthik/Workspace/eudyptula/task18/modules.order | scripts/mod/modpost -m    -o /home/bkkarthik/Workspace/eudyptula/task18/Module.symvers -e    -T -
