@@ -1,0 +1,79 @@
+From f0004869c0e37e7febcd545711ca3b18ecaf4257 Mon Sep 17 00:00:00 2001
+From: B K Karthik <bkkarthik@pesu.pes.edu>
+Date: Wed, 22 Jul 2020 08:38:55 +0530
+Subject: [PATCH v2] i2c: fix WARNING in pvr2_i2c_core_done
+
+fix WARNING in pvr2_i2c_core_done by
+unregistering device in the release handler
+instead of the disconnect handler, setting the
+linked flag after adding adapter to i2c,
+and removing a call to acpi_ut_delete_generic_state()
+
+Reported-by: syzbot+e74a998ca8f1df9cc332@syzkaller.appspotmail.com
+Signed-off-by: B K Karthik <bkkarthik@pesu.pes.edu>
+---
+v1 -> v2:
+	remove a call to acpi_ut_delete_generic state
+	and set linked flag after adding adapter to
+	i2c as suggested by Hillf Danton <hdanton@sina.com>
+
+ drivers/acpi/acpica/utdelete.c               | 5 -----
+ drivers/i2c/i2c-core-base.c                  | 2 +-
+ drivers/media/usb/pvrusb2/pvrusb2-i2c-core.c | 4 ++--
+ 3 files changed, 3 insertions(+), 8 deletions(-)
+
+diff --git a/drivers/acpi/acpica/utdelete.c b/drivers/acpi/acpica/utdelete.c
+index c365faf4e6cd..e36f51725854 100644
+--- a/drivers/acpi/acpica/utdelete.c
++++ b/drivers/acpi/acpica/utdelete.c
+@@ -648,11 +648,6 @@ acpi_ut_update_object_reference(union acpi_operand_object *object, u16 action)
+ 
+ 	/* Free any stacked Update State objects */
+ 
+-	while (state_list) {
+-		state = acpi_ut_pop_generic_state(&state_list);
+-		acpi_ut_delete_generic_state(state);
+-	}
+-
+ 	return (status);
+ }
+ 
+diff --git a/drivers/i2c/i2c-core-base.c b/drivers/i2c/i2c-core-base.c
+index 26f03a14a478..2d377d2e89f1 100644
+--- a/drivers/i2c/i2c-core-base.c
++++ b/drivers/i2c/i2c-core-base.c
+@@ -462,6 +462,7 @@ static void i2c_device_shutdown(struct device *dev)
+ 
+ static void i2c_client_dev_release(struct device *dev)
+ {
++	i2c_unregister_device(to_i2c_client(dev));
+ 	kfree(to_i2c_client(dev));
+ }
+ 
+@@ -1527,7 +1528,6 @@ void i2c_del_adapter(struct i2c_adapter *adap)
+ 		dev_dbg(&adap->dev, "Removing %s at 0x%x\n", client->name,
+ 			client->addr);
+ 		list_del(&client->detected);
+-		i2c_unregister_device(client);
+ 	}
+ 	mutex_unlock(&adap->userspace_clients_lock);
+ 
+diff --git a/drivers/media/usb/pvrusb2/pvrusb2-i2c-core.c b/drivers/media/usb/pvrusb2/pvrusb2-i2c-core.c
+index 63db04fe12d3..09b2c878f459 100644
+--- a/drivers/media/usb/pvrusb2/pvrusb2-i2c-core.c
++++ b/drivers/media/usb/pvrusb2/pvrusb2-i2c-core.c
+@@ -623,9 +623,9 @@ void pvr2_i2c_core_init(struct pvr2_hdw *hdw)
+ 	hdw->i2c_adap.dev.parent = &hdw->usb_dev->dev;
+ 	hdw->i2c_adap.algo = &hdw->i2c_algo;
+ 	hdw->i2c_adap.algo_data = hdw;
+-	hdw->i2c_linked = !0;
+ 	i2c_set_adapdata(&hdw->i2c_adap, &hdw->v4l2_dev);
+-	i2c_add_adapter(&hdw->i2c_adap);
++	if (!i2c_add_adapter(&hdw->i2c_adap))
++		hdw->i2c_linked =!0;
+ 	if (hdw->i2c_func[0x18] == i2c_24xxx_ir) {
+ 		/* Probe for a different type of IR receiver on this
+ 		   device.  This is really the only way to differentiate
+-- 
+2.20.1
+
