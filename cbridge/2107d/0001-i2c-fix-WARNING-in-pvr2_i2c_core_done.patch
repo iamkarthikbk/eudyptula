@@ -1,0 +1,38 @@
+From a014ac81811f4313459565b785f8cbdf9020e7f9 Mon Sep 17 00:00:00 2001
+From: B K Karthik <bkkarthik@pesu.pes.edu>
+Date: Tue, 21 Jul 2020 16:29:57 +0530
+Subject: [PATCH] i2c: fix WARNING in pvr2_i2c_core_done
+
+fix WARNING in pvr2_i2c_core_done by
+unregistering device in the release handler
+instead of the disconnect handler.
+
+Reported-by: syzbot+e74a998ca8f1df9cc332@syzkaller.appspotmail.com
+Signed-off-by: B K Karthik <bkkarthik@pesu.pes.edu>
+---
+ drivers/i2c/i2c-core-base.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/drivers/i2c/i2c-core-base.c b/drivers/i2c/i2c-core-base.c
+index 26f03a14a478..2d377d2e89f1 100644
+--- a/drivers/i2c/i2c-core-base.c
++++ b/drivers/i2c/i2c-core-base.c
+@@ -462,6 +462,7 @@ static void i2c_device_shutdown(struct device *dev)
+ 
+ static void i2c_client_dev_release(struct device *dev)
+ {
++	i2c_unregister_device(to_i2c_client(dev));
+ 	kfree(to_i2c_client(dev));
+ }
+ 
+@@ -1527,7 +1528,6 @@ void i2c_del_adapter(struct i2c_adapter *adap)
+ 		dev_dbg(&adap->dev, "Removing %s at 0x%x\n", client->name,
+ 			client->addr);
+ 		list_del(&client->detected);
+-		i2c_unregister_device(client);
+ 	}
+ 	mutex_unlock(&adap->userspace_clients_lock);
+ 
+-- 
+2.20.1
+

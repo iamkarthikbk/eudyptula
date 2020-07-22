@@ -1,0 +1,30 @@
+From b4743bab9e163a83fa2431bcfda7728651d78e3b Mon Sep 17 00:00:00 2001
+From: B K Karthik <bkkarthik@pesu.pes.edu>
+Date: Tue, 21 Jul 2020 22:36:41 +0530
+Subject: [PATCH 2/2] tty: serial: fsl_lpuart.c: fix a parentheses coding style
+ issue
+
+add parentheses to expression to improve
+code readability
+
+Signed-off-by: B K Karthik <bkkarthik@pesu.pes.edu>
+---
+ drivers/tty/serial/fsl_lpuart.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/drivers/tty/serial/fsl_lpuart.c b/drivers/tty/serial/fsl_lpuart.c
+index 0cc64279cd2d..3108f5ab57fa 100644
+--- a/drivers/tty/serial/fsl_lpuart.c
++++ b/drivers/tty/serial/fsl_lpuart.c
+@@ -1167,7 +1167,7 @@ static inline int lpuart_start_rx_dma(struct lpuart_port *sport)
+ 	 * Calculate length of one DMA buffer size to keep latency below
+ 	 * 10ms at any baud rate.
+ 	 */
+-	sport->rx_dma_rng_buf_len = (DMA_RX_TIMEOUT * baud /  bits / 1000) * 2;
++	sport->rx_dma_rng_buf_len = (((DMA_RX_TIMEOUT * baud) / bits) / 1000) * 2;
+ 	if (sport->rx_dma_rng_buf_len != 0)
+ 		sport->rx_dma_rng_buf_len = (1 << (fls(sport->rx_dma_rng_buf_len) - 1));
+ 	if (sport->rx_dma_rng_buf_len < 16)
+-- 
+2.20.1
+

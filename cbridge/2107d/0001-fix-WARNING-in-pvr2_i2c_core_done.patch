@@ -1,0 +1,34 @@
+From 337065f0b9d0e5c49b4239d4ed3c2350fe1cb650 Mon Sep 17 00:00:00 2001
+From: B K Karthik <bkkarthik@pesu.pes.edu>
+Date: Tue, 21 Jul 2020 13:14:03 +0530
+Subject: [PATCH] fix WARNING in pvr2_i2c_core_done
+
+i2c_acpi_remove_space_handler makes a call to
+kmem_cache_free() through acpi_ut_delete_generic_state
+in drivers/acpi/osl.c. since this removes the kobject,
+there is a warning thrown in i2c_del_adapter. The group
+can not be found because it has already been removed.
+
+Reported-by: syzbot+e74a998ca8f1df9cc332@syzkaller.appspotmail.com
+Signed-off-by: B K Karthik <bkkarthik@pesu.pes.edu>
+---
+ drivers/i2c/i2c-core-base.c | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+diff --git a/drivers/i2c/i2c-core-base.c b/drivers/i2c/i2c-core-base.c
+index 26f03a14a478..cecf27fcc4f9 100644
+--- a/drivers/i2c/i2c-core-base.c
++++ b/drivers/i2c/i2c-core-base.c
+@@ -1527,7 +1527,8 @@ void i2c_del_adapter(struct i2c_adapter *adap)
+ 		dev_dbg(&adap->dev, "Removing %s at 0x%x\n", client->name,
+ 			client->addr);
+ 		list_del(&client->detected);
+-		i2c_unregister_device(client);
++		if (client->dev->kobj)
++			i2c_unregister_device(client);
+ 	}
+ 	mutex_unlock(&adap->userspace_clients_lock);
+ 
+-- 
+2.20.1
+

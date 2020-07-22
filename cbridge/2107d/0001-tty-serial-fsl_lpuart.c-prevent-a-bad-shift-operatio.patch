@@ -1,0 +1,34 @@
+From 0af8b1103bcee9f669bd72d35991d39aa1bbdb58 Mon Sep 17 00:00:00 2001
+From: B K Karthik <bkkarthik@pesu.pes.edu>
+Date: Tue, 21 Jul 2020 22:32:43 +0530
+Subject: [PATCH v2] tty: serial: fsl_lpuart.c: prevent a bad shift operation
+
+prevent a bad shift operation by verifying that
+the argument to fls is non zero.
+
+Reported-by: "Vabhav Sharma (OSS)" <vabhav.sharma@oss.nxp.com>
+Signed-off-by: B K Karthik <bkkarthik@pesu.pes.edu>
+---
+v1 -> v2:
+	added Reported-by tag
+
+ drivers/tty/serial/fsl_lpuart.c | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+diff --git a/drivers/tty/serial/fsl_lpuart.c b/drivers/tty/serial/fsl_lpuart.c
+index 7ca642249224..0cc64279cd2d 100644
+--- a/drivers/tty/serial/fsl_lpuart.c
++++ b/drivers/tty/serial/fsl_lpuart.c
+@@ -1168,7 +1168,8 @@ static inline int lpuart_start_rx_dma(struct lpuart_port *sport)
+ 	 * 10ms at any baud rate.
+ 	 */
+ 	sport->rx_dma_rng_buf_len = (DMA_RX_TIMEOUT * baud /  bits / 1000) * 2;
+-	sport->rx_dma_rng_buf_len = (1 << (fls(sport->rx_dma_rng_buf_len) - 1));
++	if (sport->rx_dma_rng_buf_len != 0)
++		sport->rx_dma_rng_buf_len = (1 << (fls(sport->rx_dma_rng_buf_len) - 1));
+ 	if (sport->rx_dma_rng_buf_len < 16)
+ 		sport->rx_dma_rng_buf_len = 16;
+ 
+-- 
+2.20.1
+
