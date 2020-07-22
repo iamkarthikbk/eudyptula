@@ -1,0 +1,57 @@
+From 1a22723458934f23ed9fc7309fa2bf3708609ffc Mon Sep 17 00:00:00 2001
+From: B K Karthik <bkkarthik@pesu.pes.edu>
+Date: Wed, 22 Jul 2020 12:27:28 +0530
+Subject: [PATCH] net: core: skbuff.c: fix kernel BUG invalid opcode
+
+# syz test: https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git master
+
+fix kernel BUG at net/core/skbuff.c:LINE! (3)
+
+Reported-by: syzbot+b2bf2652983d23734c5c@syzkaller.appspotmail.com
+Signed-off-by: B K Karthik <bkkarthik@pesu.pes.edu>
+---
+ net/ipv6/mcast.c         | 6 +++---
+ net/sctp/sm_make_chunk.c | 3 +++
+ 2 files changed, 6 insertions(+), 3 deletions(-)
+
+diff --git a/net/ipv6/mcast.c b/net/ipv6/mcast.c
+index 8cd2782a31e4..1405ba44fb36 100644
+--- a/net/ipv6/mcast.c
++++ b/net/ipv6/mcast.c
+@@ -1790,8 +1790,8 @@ static struct sk_buff *add_grec(struct sk_buff *skb, struct ifmcaddr6 *pmc,
+ 		if (isquery)
+ 			psf->sf_gsresp = 0;
+ 
+-		if (AVAILABLE(skb) < sizeof(*psrc) +
+-		    first*sizeof(struct mld2_grec)) {
++		if (AVAILABLE(skb) < (int)(sizeof(*psrc) +
++		    first * sizeof(*pgr))) {
+ 			if (truncate && !first)
+ 				break;	 /* truncate these */
+ 			if (pgr)
+@@ -1834,7 +1834,7 @@ static struct sk_buff *add_grec(struct sk_buff *skb, struct ifmcaddr6 *pmc,
+ 			return skb;
+ 		if (pmc->mca_crcount || isquery || crsend) {
+ 			/* make sure we have room for group header */
+-			if (skb && AVAILABLE(skb) < sizeof(struct mld2_grec)) {
++			if (skb && AVAILABLE(skb) < (int)sizeof(*pgr)) {
+ 				mld_sendpack(skb);
+ 				skb = NULL; /* add_grhead will get a new one */
+ 			}
+diff --git a/net/sctp/sm_make_chunk.c b/net/sctp/sm_make_chunk.c
+index 47910470e532..0919ed3bc51f 100644
+--- a/net/sctp/sm_make_chunk.c
++++ b/net/sctp/sm_make_chunk.c
+@@ -3641,6 +3641,9 @@ struct sctp_chunk *sctp_make_strreset_req(
+ 	outlen = (sizeof(outreq) + stream_len) * out;
+ 	inlen = (sizeof(inreq) + stream_len) * in;
+ 
++	if (outlen + inlen > SCTP_MAX_CHUNK_LEN - sizeof(struct sctp_chunkhdr))
++		return NULL;
++
+ 	retval = sctp_make_reconf(asoc, outlen + inlen);
+ 	if (!retval)
+ 		return NULL;
+-- 
+2.20.1
+

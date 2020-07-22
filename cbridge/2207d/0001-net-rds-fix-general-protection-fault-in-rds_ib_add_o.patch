@@ -1,0 +1,34 @@
+From 45dfce668325a65e3ba71eb81805a67b8e88b954 Mon Sep 17 00:00:00 2001
+From: B K Karthik <bkkarthik@pesu.pes.edu>
+Date: Wed, 22 Jul 2020 22:23:45 +0530
+Subject: [PATCH] net: rds: fix general protection fault in rds_ib_add_one
+
+#syz test:
+https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git master
+
+this should fix general protection fault in rds_ib_add_one
+because 'attrs' is a (struct ib_device_attr) type and
+not (struct ib_device_attr *)
+
+Reported-by: syzbot+274094e62023782eeb17@syzkaller.appspotmail.com
+Signed-off-by: B K Karthik <bkkarthik@pesu.pes.edu>
+---
+ net/rds/ib.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/net/rds/ib.c b/net/rds/ib.c
+index deecbdcdae84..82a8295c44e0 100644
+--- a/net/rds/ib.c
++++ b/net/rds/ib.c
+@@ -137,7 +137,7 @@ static int rds_ib_add_one(struct ib_device *device)
+ 		return -EOPNOTSUPP;
+ 
+ 	/* Device must support FRWR */
+-	if (!(device->attrs.device_cap_flags & IB_DEVICE_MEM_MGT_EXTENSIONS))
++	if (!(device.attrs.device_cap_flags & IB_DEVICE_MEM_MGT_EXTENSIONS))
+ 		return -EOPNOTSUPP;
+ 
+ 	rds_ibdev = kzalloc_node(sizeof(struct rds_ib_device), GFP_KERNEL,
+-- 
+2.20.1
+

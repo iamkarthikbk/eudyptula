@@ -1,0 +1,34 @@
+From 7555bf0ef6210c3dd465d423d1dee62e6523d4ef Mon Sep 17 00:00:00 2001
+From: B K Karthik <bkkarthik@pesu.pes.edu>
+Date: Wed, 22 Jul 2020 14:08:56 +0530
+Subject: [PATCH] mm: khugepaged.c: check for anonymous VMA
+
+#syz test: https://git.kernel.org/pub/scm/linux/kernel/git/netdev/net-next.git master
+
+fix general protection fault in khugepaged by checking
+for anonymous VMA in hugepage_vma_revalidate()
+
+Cc: Kirill A. Shutemov <kirill@shutemov.name>
+Cc: Hillf Danton <hdanton@sina.com>
+Reported-by: syzbot+ed318e8b790ca72c5ad0@syzkaller.appspotmail.com
+Signed-off-by: B K Karthik <bkkarthik@pesu.pes.edu>
+---
+ mm/khugepaged.c | 2 ++
+ 1 file changed, 2 insertions(+)
+
+diff --git a/mm/khugepaged.c b/mm/khugepaged.c
+index b043c40a21d4..9df73cea8cca 100644
+--- a/mm/khugepaged.c
++++ b/mm/khugepaged.c
+@@ -958,6 +958,8 @@ static int hugepage_vma_revalidate(struct mm_struct *mm, unsigned long address,
+ 		return SCAN_ADDRESS_RANGE;
+ 	if (!hugepage_vma_check(vma, vma->vm_flags))
+ 		return SCAN_VMA_CHECK;
++	if (vma->anon_vma)
++		return SCAN_VMA_NULL;
+ 	return 0;
+ }
+ 
+-- 
+2.20.1
+
