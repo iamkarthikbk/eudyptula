@@ -1,0 +1,32 @@
+From 540416f74c7ef01b25e8bc8c58bc216be598ea07 Mon Sep 17 00:00:00 2001
+From: B K Karthik <bkkarthik@pesu.pes.edu>
+Date: Wed, 22 Jul 2020 22:42:13 +0530
+Subject: [PATCH] net: qrtr: fix general protection fault in qrtr_endpoint_post
+
+#syz test: https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git master
+
+since we are casting skb->cb where cb is a char type,
+we are supposed to dereference it with a '.' instead of an '->'
+
+Reported-by: syzbot+03e343dbccf82a5242a2@syzkaller.appspotmail.com
+Signed-off-by: B K Karthik <bkkarthik@pesu.pes.edu>
+---
+ net/qrtr/qrtr.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/net/qrtr/qrtr.c b/net/qrtr/qrtr.c
+index 0cb4adfc6641..045340db4e5e 100644
+--- a/net/qrtr/qrtr.c
++++ b/net/qrtr/qrtr.c
+@@ -436,7 +436,7 @@ int qrtr_endpoint_post(struct qrtr_endpoint *ep, const void *data, size_t len)
+ 	if (!skb)
+ 		return -ENOMEM;
+ 
+-	cb = (struct qrtr_cb *)skb->cb;
++	cb = (struct qrtr_cb *)skb.cb;
+ 
+ 	/* Version field in v1 is little endian, so this works for both cases */
+ 	ver = *(u8*)data;
+-- 
+2.20.1
+
