@@ -1,0 +1,35 @@
+From 8e8c921288b72c4bf459629b955c1cbeed1099a2 Mon Sep 17 00:00:00 2001
+From: B K Karthik <bkkarthik@pesu.pes.edu>
+Date: Sat, 25 Jul 2020 21:25:12 +0530
+Subject: [PATCH] net: ipv6: fix slab-out-of-bounds Read in __xfrm6_tunnel_spi_check
+
+#syz test: https://git.kernel.org/pub/scm/linux/kernel/git/next/linux-next.git master
+
+use spi_byaddr instead of spi_byspi
+
+Reported-by: syzbot+72ff2fa98097767b5a27@syzkaller.appspotmail.com
+Signed-off-by: B K Karthik <bkkarthik@pesu.pes.edu>
+---
+ net/ipv6/xfrm6_tunnel.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/net/ipv6/xfrm6_tunnel.c b/net/ipv6/xfrm6_tunnel.c
+index 25b7ebda2fab..cab7693ccfe3 100644
+--- a/net/ipv6/xfrm6_tunnel.c
++++ b/net/ipv6/xfrm6_tunnel.c
+@@ -103,10 +103,10 @@ static int __xfrm6_tunnel_spi_check(struct net *net, u32 spi)
+ {
+ 	struct xfrm6_tunnel_net *xfrm6_tn = xfrm6_tunnel_pernet(net);
+ 	struct xfrm6_tunnel_spi *x6spi;
+-	int index = xfrm6_tunnel_spi_hash_byspi(spi);
++	int index = xfrm6_tunnel_spi_hash_byaddr(spi);
+ 
+ 	hlist_for_each_entry(x6spi,
+-			     &xfrm6_tn->spi_byspi[index],
++			     &xfrm6_tn->spi_byaddr[index],
+ 			     list_byspi) {
+ 		if (x6spi->spi == spi)
+ 			return -1;
+-- 
+2.20.1
+
